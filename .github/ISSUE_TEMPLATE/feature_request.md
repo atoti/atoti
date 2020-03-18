@@ -18,7 +18,7 @@ Describe the new feature clearly and concisely.
 ## Context
 
 <!--
-Please describe the use-case and context which justify the need for this feature.
+Describe the use-case and context that justify the need for this feature.
 For example, solving a client's use case with the Python library.
 -->
 

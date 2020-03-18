@@ -1,6 +1,6 @@
 ---
 name: UI bug report
-about: Report a bug about the JupyterLab extension or the app
+about: Report a bug concerning the JupyterLab extension or the app
 labels: "bug :bug:, ui :bar_chart:"
 ---
 
@@ -10,27 +10,23 @@ labels: "bug :bug:, ui :bar_chart:"
 
 <!--
 Describe the bug clearly and concisely.
-If you have an error message please include it.
+Include the error message if you have one.
 You can also look at the console logs in your browser devtools and include them between HTML tags like that <details><pre>{paste logs here}</pre></details>.
-If you don't have any errors, please specify what the expected behaviour is.
+If you don't have any errors, specify the expected behaviour.
 -->
-
-## Screenshot
-
-<!-- Please include a screenshot of the bug. -->
 
 ## Reproduce
 
 <!--
-Include concise code and steps to reproduce your issue.
-If necessary attach a small dataset.
+Include a screenshot, GIF, video, and/or concise code and steps to reproduce your issue.
+If necessary, attach a small dataset.
 -->
 
 ## Context
 
 <!--
-Please include the following information about your context and add any other versions relevant to your issue.
-The atoti version can be retrieved by calling `atoti.__version__` in python or `pip show atoti` in a shell.
+Include the following information about your context and add any other versions relevant to your issue.
+Tip: Atoti's version can be seen in the browser console when using the JupyterLab extension or in the "About" menu of the application.
 -->
 
 - Atoti version:

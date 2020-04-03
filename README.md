@@ -1,11 +1,16 @@
-# Atoti
+[![Gitter](https://badges.gitter.im/atoti/atoti.svg)](https://gitter.im/atoti/atoti)
 
-This repository is used for issue tracking only.
+Welcome to the official **Atoti** issue tracking repository!
 
-## Issues
+### Issues
 
-Please submit Atoti issues to the [issue tracker of this repository](https://github.com/atoti/atoti/issues).
+You may:
 
-## More
+- Check out [existing issues](https://github.com/atoti/atoti/issues).
+- Create a [new issue](https://github.com/atoti/atoti/issues/new/choose)
 
-Find more information about Atoti on [atoti.io](https://www.atoti.io)
+### About
+
+Checkout [atoti.io](https://www.atoti.io) for more info!
+
+By opening an issue or a pull request, you agree with Atoti's [terms of use](https://www.atoti.io/terms) and [privacy policy](https://www.atoti.io/privacy-policy).

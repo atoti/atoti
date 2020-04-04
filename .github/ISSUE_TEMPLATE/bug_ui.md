@@ -4,7 +4,11 @@ about: Report a bug concerning the JupyterLab extension or the app
 labels: "bug :bug:, ui :bar_chart:"
 ---
 
-<!-- Thank you for reporting a bug! Please follow these instructions to help us solve it. -->
+<!--
+Thank you for reporting a bug! Please make sure you have searched for similar issues.
+
+By opening an issue, you agree with Atoti's terms of use and privacy policy available at https://www.atoti.io/terms and https://www.atoti.io/privacy-policy
+-->
 
 ## Description
 

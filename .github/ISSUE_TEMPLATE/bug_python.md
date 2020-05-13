@@ -17,13 +17,13 @@ Include a concise notebook and dataset with the issue.
 If possible, indicate which cell triggers the error.
 -->
 
-## Expected Result
-
 ## Actual Result
 
 <!--
 Include the error message if you have one.
 -->
+
+## Expected Result
 
 ## Environment
 

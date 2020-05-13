@@ -17,14 +17,14 @@ Include a screenshot, GIF, video, and/or concise code and steps to reproduce you
 If necessary, attach a small dataset.
 -->
 
-## Expected Result
-
 ## Actual Result
 
 <!--
 Include the error message if you have one.
 You can also look at the console logs in your browser devtools and include them between HTML tags like that <details><pre>{paste logs here}</pre></details>.
 -->
+
+## Expected Result
 
 ## Environment
 

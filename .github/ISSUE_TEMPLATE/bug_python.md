@@ -44,8 +44,8 @@ print(f"""
 
 -->
 
-- Atoti version:
-- Python version:
+- Atoti:
+- Python:
 - Operating System:
 
 ## Logs (if relevant)

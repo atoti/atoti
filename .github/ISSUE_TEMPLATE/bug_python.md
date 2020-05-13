@@ -10,25 +10,35 @@ Thank you for reporting a bug! Please make sure you have searched for similar is
 By opening an issue, you agree with Atoti's terms of use and privacy policy available at https://www.atoti.io/terms and https://www.atoti.io/privacy-policy
 -->
 
-## Description
-
-<!--
-Describe the bug clearly and concisely.
-Include the error message if you have one or specify the expected behavior.
--->
-
-## Reproduce
+## Steps to reproduce
 
 <!--
 Include a concise notebook and dataset with the issue.
 If possible, indicate which cell triggers the error.
 -->
 
-## Context
+## Expected Result
+
+## Actual Result
 
 <!--
-Include the following information about your context and add any other versions relevant to your issue.
-Tip: Atoti's version can be retrieved with `atoti.__version__` in Python or `pip show atoti` in a shell.
+Include the error message if you have one.
+-->
+
+## Environment
+
+<!--
+Add any other versions relevant to your issue.
+
+You may run the following python code:
+
+    import sys
+    import platform
+    import atoti as tt
+    print('- Atoti: '+tt.__version__)
+    print('- Python: '+platform.python_version())
+    print('- Operating System: '+sys.platform)
+
 -->
 
 - Atoti version:

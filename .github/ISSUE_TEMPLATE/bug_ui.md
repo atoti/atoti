@@ -10,29 +10,37 @@ Thank you for reporting a bug! Please make sure you have searched for similar is
 By opening an issue, you agree with Atoti's terms of use and privacy policy available at https://www.atoti.io/terms and https://www.atoti.io/privacy-policy
 -->
 
-## Description
-
-<!--
-Describe the bug clearly and concisely.
-Include the error message if you have one.
-You can also look at the console logs in your browser devtools and include them between HTML tags like that <details><pre>{paste logs here}</pre></details>.
-If you don't have any errors, specify the expected behaviour.
--->
-
-## Reproduce
+## Steps to reproduce
 
 <!--
 Include a screenshot, GIF, video, and/or concise code and steps to reproduce your issue.
 If necessary, attach a small dataset.
 -->
 
-## Context
+## Expected Result
+
+## Actual Result
 
 <!--
-Include the following information about your context and add any other versions relevant to your issue.
-Tip: Atoti's version can be seen in the browser console when using the JupyterLab extension or in the "About" menu of the application.
+Include the error message if you have one.
+You can also look at the console logs in your browser devtools and include them between HTML tags like that <details><pre>{paste logs here}</pre></details>.
 -->
 
-- Atoti version:
-- Browser:
+## Environment
+
+<!--
+Add any other versions relevant to your issue.
+
+Tip: Atoti's version can be seen in the browser console when using the JupyterLab extension or in the "About" menu of the application.
+
+You may run the following python code:
+
+    import sys
+    import atoti as tt
+    print('- Atoti: '+tt.__version__)
+    print('- Operating System: '+sys.platform)
+-->
+
+- Atoti:
 - Operating System:
+- Browser:

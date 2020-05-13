@@ -32,12 +32,15 @@ Add any other versions relevant to your issue.
 
 You may run the following Python code:
 
-    import sys
-    import platform
-    import atoti as tt
-    print('- Atoti: '+tt.__version__)
-    print('- Python: '+platform.python_version())
-    print('- Operating System: '+sys.platform)
+import platform
+import sys
+import atoti
+
+print(f"""
+- Atoti: {atoti.__version__}
+- Python: {platform.python_version()}
+- Operating System: {sys.platform}
+""")
 
 -->
 

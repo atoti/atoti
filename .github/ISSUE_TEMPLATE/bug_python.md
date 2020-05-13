@@ -13,7 +13,7 @@ By opening an issue, you agree with Atoti's terms of use and privacy policy avai
 ## Steps to reproduce
 
 <!--
-Include a concise notebook and dataset with the issue.
+Include a code sample and dataset with the issue.
 If possible, indicate which cell triggers the error.
 -->
 

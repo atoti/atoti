@@ -30,7 +30,7 @@ Include the error message if you have one.
 <!--
 Add any other versions relevant to your issue.
 
-You may run the following python code:
+You may run the following Python code:
 
     import sys
     import platform

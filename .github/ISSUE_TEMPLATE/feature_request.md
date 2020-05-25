@@ -1,13 +1,13 @@
 ---
 name: Feature Request
 about: Request a new feature for the Python library or JupyterLab extension
-labels: "new feature :sparkles:"
+labels: "enhancement :sparkles:"
 ---
 
 <!--
 Thank you for helping us improve our product! Please make sure you have searched for similar issues.
 
-By opening an issue, you agree with Atoti's terms of use and privacy policy available at https://www.atoti.io/terms and https://www.atoti.io/privacy-policy
+By opening an issue, you agree with atoti's terms of use and privacy policy available at https://www.atoti.io/terms and https://www.atoti.io/privacy-policy
 -->
 
 ## Description

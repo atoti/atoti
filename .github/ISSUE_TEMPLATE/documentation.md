@@ -1,7 +1,7 @@
 ---
 name: Documentation issue
 about: Request a change or enhancement in the documentation
-labels: "documentation :book:"
+labels: ":memo: documentation"
 ---
 
 <!--

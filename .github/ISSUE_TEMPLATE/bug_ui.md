@@ -1,7 +1,7 @@
 ---
 name: UI bug report
 about: Report a bug concerning the JupyterLab extension or the app
-labels: "bug :bug:, ui :bar_chart:"
+labels: ":bug: bug, :lipstick: ui"
 ---
 
 <!--

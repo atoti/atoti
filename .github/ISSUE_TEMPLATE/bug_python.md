@@ -1,7 +1,7 @@
 ---
 name: Python bug report
 about: Report a bug concerning the Python library
-labels: "bug :bug:"
+labels: ":bug: bug"
 ---
 
 <!--

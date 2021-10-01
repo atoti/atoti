@@ -1,7 +1,7 @@
 ---
 name: Feature Request
 about: Request a new feature for the Python library or JupyterLab extension
-labels: "enhancement :sparkles:"
+labels: ":sparkles: enhancement"
 ---
 
 <!--

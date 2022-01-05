@@ -30,16 +30,19 @@ Include the error message if you have one.
 <!--
 Add any other versions relevant to your issue.
 
-You may run the following Python code:
+You may run the following Python (>= 3.8) code:
 
 import platform
 import sys
+
+from importlib.metadata import version
+
 import atoti
 
 print(f"""
-- atoti: {atoti.__version__}
+- atoti: {version("atoti")}
 - Python: {platform.python_version()}
-- Operating System: {sys.platform}
+- Operating system: {sys.platform}
 """)
 
 -->
@@ -51,6 +54,6 @@ print(f"""
 ## Logs (if relevant)
 
 <!--
-You can get your full session logs by calling: `session.logs_tail(0)`.
+You can get your full session logs by calling: `session.logs_path.read_text(encoding="utf8")`.
 Include them between HTML tags like that <details><pre>{paste logs here}</pre></details>.
 -->

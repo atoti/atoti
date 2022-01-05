@@ -16,7 +16,7 @@ atoti is a free Python BI analytics platform for Quants, Data Analysts, Data Sci
     <a href="https://www.youtube.com/watch?v=KNvheH-ifAI" target="_blank"><img src="./assets/youtube-preview.png" alt="youtube"></a>
 </p>
 
-Checkout [atoti.io](https://www.atoti.io) for more info!
+Check out [atoti.io](https://www.atoti.io) for more info!
 
 ### 🔭 Highlights
 
@@ -39,12 +39,6 @@ Conda package [(docs)](https://docs.atoti.io/latest/installation.html#conda-pack
 
 ```console
 > conda install atoti atoti-jupyterlab python -c conda-forge -c https://conda.atoti.io
-```
-
-Docker image [(docs)](https://docs.atoti.io/latest/installation.html#docker-image):
-
-```console
-> docker pull atoti/atoti
 ```
 
 ### 🎫 Issues

@@ -33,14 +33,17 @@ Add any other versions relevant to your issue.
 
 Tip: atoti's version can be seen in the browser console when using the JupyterLab extension or in the "About" menu of the application.
 
-You may run the following Python code:
+You may run the following Python (>= 3.8) code:
 
 import sys
+
+from importlib.metadata import version
+
 import atoti
 
 print(f"""
-- atoti: {atoti.__version__}
-- Operating System: {sys.platform}
+- atoti: {version("atoti")}
+- Operating system: {sys.platform}
 """)
 -->
 

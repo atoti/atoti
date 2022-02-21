@@ -40,14 +40,14 @@ Conda package [(docs)](https://docs.atoti.io/latest/installation.html#conda-pack
 > conda install atoti atoti-jupyterlab python -c conda-forge -c https://conda.atoti.io
 ```
 
-### :speech_balloon: Discussions
+###  Discussions
 
 You may:
 
 - Check out [existing discussions](https://github.com/atoti/atoti/discussions).
 - Start a [new discussion](https://github.com/atoti/atoti/discussions/new)
 
-By opening a discussion, you agree with atoti's [terms of use](https://www.atoti.io/terms) and [privacy policy](https://www.atoti.io/privacy-policy).
+By starting a discussion, you agree with atoti's [terms of use](https://www.atoti.io/terms) and [privacy policy](https://www.atoti.io/privacy-policy).
 
 ### 🎫 Issues
 

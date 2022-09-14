@@ -1,6 +1,6 @@
 ---
 name: Documentation issue
-about: Request a change or enhancement in the documentation
+about: Report something missing or incorrect in the documentation
 labels: ":memo: documentation"
 ---
 

@@ -3,3 +3,6 @@ contact_links:
   - name: Community Discussions
     url: https://github.com/atoti/atoti/discussions
     about: Discuss with the community for simple questions and tips.
+  - name: Atoti+ customers support
+    url: https://support.activeviam.com/
+    about: If you are an Atoti+ customer, please use your dedicated support portal with guaranteed privacy and SLAs.

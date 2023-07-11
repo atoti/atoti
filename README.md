@@ -10,7 +10,7 @@
 
 ### 🔍 Overview  
 
-Atoti is a Data Analytics platform with a best-in-class calculation engine, a visualization suite and a real time OLAP cube, all rolled into one. Atoti is made by ActiveViam, with a free Community Edition.  
+Atoti is a Data Analytics platform with a best-in-class calculation engine, a visualization suite, and a real-time OLAP cube, all rolled into one. Atoti is made by ActiveViam, with a free Community Edition.  
 
 <p align="center">
     <a href="https://www.youtube.com/watch?v=KNvheH-ifAI" target="_blank"><img src="./assets/youtube-preview.png" alt="youtube"></a>

@@ -37,7 +37,7 @@ Navigate to the Gallery folder to see sample Atoti use cases:
   
 <a href="./notebooks/01-use-cases/finance"><img src="https://img.shields.io/badge/Financial%20Use%20Cases-blue" alt="Financial Use Cases"></a>&nbsp;
 <a href="./notebooks/01-use-cases/other-industries"><img src="https://img.shields.io/badge/Other%20Industries%20Use%20Cases-blue" alt="Other Industries Use Cases"></a>&nbsp;
-<a href="./notebooks/01-use-cases/02-technical-tutorials"><img src="https://img.shields.io/badge/Technical%20Tutorials-blue" alt="Technical Tutorials"></a>&nbsp;
+<a href="./notebooks/02-technical-tutorials"><img src="https://img.shields.io/badge/Technical%20Tutorials-blue" alt="Technical Tutorials"></a>&nbsp;
 
 #### Projects  
 

@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "notebooks"
+version = "0.1.0"
+description = "Gallery of atoti notebooks"
+authors = ["atoti <contact@atoti.io>"]
+
+[tool.poetry.dependencies]
+python = ">=3.9.0,<3.9.7 || >3.9.7,<3.11"
+boto3 = {version = "^1.17.102", source = "PyPi"}
+s3fs = {version = "^2021.10.0", source = "PyPi"}
+fsspec = {version = "^2021.10.0", source = "PyPI"}
+wget = {version = "^3.2", source = "PyPI"}
+treelib = {version = "^1.6.4", source = "PyPI"}
+matplotlib = {version = "^3.7.1", source = "PyPI"}
+praw = {version = "^7.7.0", source = "PyPI"}
+seaborn = {version = "^0.12.2", source = "PyPI"}
+statsmodels = {version = "^0.14.0", source = "PyPI"}
+imblearn = {version = "^0.0", source = "PyPI"}
+ipywidgets = {version = "^8.0.6", source = "PyPI"}
+openpyxl = {version = "^3.1.2", source = "PyPI"}
+haversine = {version = "^2.8.0", source = "PyPI"}
+watchdog = {version = "^3.0.0", source = "PyPI"}
+quantlib = {version = "^1.30", source = "PyPI"}
+kafka-python = {version = "^2.0.2", source = "PyPI"}
+xgboost = {version = "^1.7.5", source = "PyPI"}
+natsort = {version = "^8.3.1", source = "PyPI"}
+tabulate = {version = "^0.9.0", source = "PyPI"}
+orjson = {version = "^3.8.14", source = "PyPI"}
+lxml = {version = "^4.9.2", source = "PyPI"}
+html5lib = {version = "^1.1", source = "PyPI"}
+yfinance = {version = "^0.2.18", source = "PyPI"}
+pyopls = {version = "^20.3.post1", source = "PyPI"}
+nltk = {version = "^3.8.1", source = "PyPI"}
+textblob = {version = "^0.17.1", source = "PyPI"}
+llvmlite = {version = "^0.40.0", source = "PyPI"}
+protobuf = {version = "^4.23.2", source = "PyPI"}
+pyportfolioopt = {version = "^1.5.3", source = "PyPI"}
+gluonts = {version = "^0.13.1", source = "PyPI"}
+tsfresh = {version = "^0.20.0", source = "PyPI"}
+scikit-learn = {version = "^1.3.0", source = "PyPI"}
+folium = {version = "^0.14.0", source = "PyPI"}
+atoti = {extras = ["aws", "azure", "gcp", "jupyterlab3", "kafka", "sql"], version = "^0.8.2", source = "PyPI"}
+
+[tool.poetry.dev-dependencies]
+black-nb = "^0.7"
+black = { extras = ["jupyter"], version = "*" }
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

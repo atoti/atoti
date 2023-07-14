@@ -35,14 +35,14 @@ Navigate to the Gallery folder to see sample Atoti use cases:
 
 #### Notebooks  
   
-<a href="./notebooks/01-use-cases/finance"><img src="https://img.shields.io/badge/Financial%20Use%20Cases-blue" alt="Financial Use Cases"></a>&nbsp;
-<a href="./notebooks/01-use-cases/other-industries"><img src="https://img.shields.io/badge/Other%20Industries%20Use%20Cases-blue" alt="Other Industries Use Cases"></a>&nbsp;
-<a href="./notebooks/02-technical-tutorials"><img src="https://img.shields.io/badge/Technical%20Tutorials-blue" alt="Technical Tutorials"></a>&nbsp;
+<a href="./notebooks/01-use-cases/finance"><img src="https://img.shields.io/badge/Financial%20Use%20Cases-AF4D61" alt="Financial Use Cases"></a>&nbsp;
+<a href="./notebooks/01-use-cases/other-industries"><img src="https://img.shields.io/badge/Other%20Industries%20Use%20Cases-AF4D61" alt="Other Industries Use Cases"></a>&nbsp;
+<a href="./notebooks/02-technical-tutorials"><img src="https://img.shields.io/badge/Technical%20Tutorials-AF4D61" alt="Technical Tutorials"></a>&nbsp;
 
 #### Projects  
 
-<a href="https://github.com/atoti/project-template"><img src="https://img.shields.io/badge/Project%20Templates-blue" alt="Project Templates"></a>&nbsp;
-<a href="./projects/french-presidential-election"><img src="https://img.shields.io/badge/Other%20Industries%20Use%20Cases-blue" alt="Other Industries Use Cases"></a>&nbsp;
+<a href="https://github.com/atoti/project-template"><img src="https://img.shields.io/badge/Project%20Template-AF4D61" alt="Project Templates"></a>&nbsp;
+<a href="./projects/french-presidential-election"><img src="https://img.shields.io/badge/French%20Presidential%20election-AF4D61" alt="French Presidential election"></a>&nbsp;
 
 
 ### 🧰 Installation
@@ -63,8 +63,8 @@ Conda package [(docs)](https://docs.atoti.io/latest/installation.html#conda-pack
 ### 💬 Discussions and issues
 
 You can use:
-- [discussions](https://github.com/atoti/atoti/discussions) to ask questions or suggest new features
-- [issues](https://github.com/atoti/atoti/issues) to report problems.
+- [Discussions](https://github.com/atoti/atoti/discussions) to ask questions or suggest new features
+- [Issues](https://github.com/atoti/atoti/issues) to report problems.
 
 By starting a discussion or opening an issue, you agree with Atoti's [terms of use](https://www.atoti.io/terms) and [privacy policy](https://www.atoti.io/privacy-policy).
 
@@ -72,9 +72,9 @@ By starting a discussion or opening an issue, you agree with Atoti's [terms of u
 ### 📚 Other Resources  
 
 - [Tutorial](https://docs.atoti.io/latest/getting_started/tutorial/tutorial.html)
-- [Guides](https://atoti.io/guides/)
-- [Articles](https://atoti.io/articles/)
-- [Videos](https://alto.atoti.io/resources/videos/)
+- [Guides](https://www.atoti.io/guides/)
+- [Articles](https://www.atoti.io/articles/)
+- [Videos](https://www.atoti.io/resources/videos/)
 
 
 <br/>

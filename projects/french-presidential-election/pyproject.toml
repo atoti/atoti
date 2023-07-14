@@ -1,0 +1,105 @@
+[tool.poetry]
+name = "app"
+version = "0.1.0"
+description = "French presidential election 2022"
+authors = ["atoti <contact@atoti.io>"]
+
+[tool.poetry.dependencies]
+atoti = {extras = ["sql","aws"], version = "*"}
+pandas = "*"
+pydantic = "*"
+pydantic-settings = "*"
+# Cannot use pinned version as it leads to NoCompatiblePythonVersionFound error when doing a fresh install.
+python = "^3.9, !=3.9.7"
+requests = "*"
+typing-extensions = "*"
+
+
+[tool.poetry.dev-dependencies]
+black = "*"
+colorama = "*"
+docker = "*"
+isort = "*"
+mypy = "*"
+pandas-stubs = "*"
+pylint = "*"
+pytest = "*"
+ruff = "*"
+tomli = "*"
+typer = "*"
+types-requests = "*"
+
+[tool.poetry.scripts]
+app = "cli:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+combine_as_imports = "True"
+
+[tool.mypy]
+strict = true
+warn_redundant_casts = true
+warn_unused_configs = true
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_calls = false
+
+[[tool.mypy.overrides]]
+module = ["docker", "docker.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+filterwarnings = ["error"]
+
+[tool.ruff]
+ignore = [
+  # The type checkers can infer the following `ANN` rules.
+  "ANN101",
+  "ANN102",
+  "COM812", # Covered by Black.
+  "E501", # Covered by Black.
+  "E741", # `l` is used for level (consistency with `h` for hierarchy and `m` for measure).
+  "EM101", # Not worth the annoyance.
+  "EM102", # Not worth the annoyance.
+  # The following `D` rules are unnecessary.
+  "D100",
+  "D101",
+  "D102",
+  "D103",
+  "D104",
+  "D105",
+  "D106",
+  "D107",
+  "D203",
+  "D213",
+  "F403", # Useful to reexport all public symbols from an imported modules in an `__init__.py`.
+  "PLC0414", # redundant imports are used for re-exporting (See https://peps.python.org/pep-0484/#stub-files).
+  "PT004", # Useless distinction.
+  "S101", # `assert` is useful when used correctly (https://realpython.com/python-assert-statement).
+  "TCH", # Circular dependencies of any kind must be avoided.
+  "TRY003", # Not worth the annoyance.
+]
+select = ["ALL"]
+target-version = "py39"
+unfixable = [
+  "ERA001", # To prevent deleting code commented while debugging.
+  "F401", # To prevent deleting code commented while debugging.
+  "F841", # To prevent deleting code commented while debugging.
+]
+
+[tool.ruff.flake8-import-conventions]
+banned-from = ["atoti"]
+
+[tool.ruff.flake8-import-conventions.aliases]
+atoti = "tt"
+pandas = "pd"
+
+[tool.ruff.isort]
+combine-as-imports = true
+required-imports = ["from __future__ import annotations"]

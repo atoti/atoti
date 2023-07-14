@@ -1,0 +1,3 @@
+[virtualenvs]
+# Easier to explore the virtual environment when it's inside the project.
+in-project = true

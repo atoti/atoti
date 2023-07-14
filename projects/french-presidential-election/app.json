@@ -1,0 +1,33 @@
+{
+  "name": "atoti template",
+  "description": "A template for atoti projects",
+  "repository": "https://github.com/atoti/french-presidential-election",
+  "keywords": ["atoti", "dataviz", "python", "visualization"],
+  "addons": ["heroku-postgresql:hobby-dev"],
+  "buildpacks": [
+    {
+      "url": "https://github.com/moneymeets/python-poetry-buildpack.git"
+    },
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "env": {
+    "JAVA_TOOL_OPTIONS": {
+      "description": "Options to pass to the JVM.",
+      "value": "-Xmx250m"
+    },
+    "POETRY_VERSION": {
+      "description": "The version of Poetry (should be the same as the one used in CI).",
+      "value": "1.1.12"
+    },
+    "PYTHON_RUNTIME_VERSION": {
+      "description": "The Python version to use (should be a pinned version compatible with the one declared in pyproject.toml).",
+      "value": "3.9.9"
+    },
+    "ATOTI_LICENSE":{
+      "description": "Path to license file or base64 string for license key",
+      "value": ""
+    }
+  }
+}

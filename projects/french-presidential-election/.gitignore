@@ -1,0 +1,6 @@
+__pycache__/
+.docker/
+.mypy_cache/
+.pytest_cache/
+.venv/
+content/

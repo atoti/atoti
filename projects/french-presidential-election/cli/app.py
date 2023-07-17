@@ -8,7 +8,7 @@ from ._get_executable_path import get_executable_path
 from ._run_command import run_command
 
 _APP_PACKAGE = "app"
-_PACKAGES = (_APP_PACKAGE, "cli", "tests")
+_PACKAGES = (_APP_PACKAGE, "cli")
 
 _CheckOption = Annotated[bool, typer.Option("--check/--fix")]
 

@@ -2,9 +2,10 @@ from __future__ import annotations
 
 import sys
 from pathlib import Path
-from app.create_users import create_users
 
 import atoti as tt
+
+from app.create_users import create_users
 
 from .config import Config
 from .create_and_join_tables import create_and_join_tables

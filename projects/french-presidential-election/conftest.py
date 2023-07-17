@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 import os
 
 # Doing this before any import of `atoti`.

@@ -27,6 +27,15 @@ Check out the [Atoti repository](https://github.com/atoti/atoti) for more info o
 
 ## The notebooks 
 
+Feel free to download the Atoti notebooks and run locally. You may install the Python dependencies required for the use cases using either of these:
+- poetry: `poetry install`
+- requirement.txt: `pip install -r requirements.txt`
+
+You may install 
+- use case specific dependencies from the root directory of
+  <a href="./01-use-cases/finance">Financial Use Cases</a>, <a href="./01-use-cases/other-industries">Other Industries Use Cases</a> and <a href="./02-technical-tutorials">Technical Tutorials</a>&nbsp;; or
+- the dependencies for all the notebooks from the [root directory of the repository](./..).
+ 
 ### Browse by Use Cases  
 
 <a href="./01-use-cases/finance"><img src="https://img.shields.io/badge/Financial%20Use%20Cases-AF4D61" alt="Financial Use Cases"></a>&nbsp;
@@ -291,7 +300,9 @@ Check out the [Atoti repository](https://github.com/atoti/atoti) for more info o
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/01-use-cases/finance/quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/01-use-cases/finance/quantitative-strategy/bucket-analysis
+/main.ipynb">bucket-analysis
+&nbsp;</a></td>
 <td><a href="https://www.atoti.io/articles/bucket-analysis-with-atoti/?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;</td>
 </tr>
 </table>
@@ -920,7 +931,9 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/01-use-cases/finance/quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/01-use-cases/finance/quantitative-strategy/bucket-analysis
+/main.ipynb">bucket-analysis
+&nbsp;</a></td>
 <td><a href="https://www.atoti.io/articles/bucket-analysis-with-atoti/?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;</td>
 </tr>
 <tr>
@@ -1394,7 +1407,9 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/01-use-cases/finance/quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/01-use-cases/finance/quantitative-strategy/bucket-analysis
+/main.ipynb">bucket-analysis
+&nbsp;</a></td>
 <td><a href="https://www.atoti.io/articles/bucket-analysis-with-atoti/?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;</td>
 </tr>
 <tr>
@@ -2013,7 +2028,9 @@ Coming soon...
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/01-use-cases/finance/quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/01-use-cases/finance/quantitative-strategy/bucket-analysis
+/main.ipynb">bucket-analysis
+&nbsp;</a></td>
 <td><a href="https://www.atoti.io/articles/bucket-analysis-with-atoti/?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;</td>
 </tr>
 <tr>
@@ -2686,7 +2703,9 @@ Coming soon...
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/01-use-cases/finance/quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/01-use-cases/finance/quantitative-strategy/bucket-analysis
+/main.ipynb">bucket-analysis
+&nbsp;</a></td>
 <td><a href="https://www.atoti.io/articles/bucket-analysis-with-atoti/?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;</td>
 </tr>
 <tr>
@@ -3095,7 +3114,9 @@ Coming soon...
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/01-use-cases/finance/quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/01-use-cases/finance/quantitative-strategy/bucket-analysis
+/main.ipynb">bucket-analysis
+&nbsp;</a></td>
 <td><a href="https://www.atoti.io/articles/bucket-analysis-with-atoti/?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;</td>
 </tr>
 <tr>
@@ -3299,7 +3320,9 @@ Coming soon...
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/01-use-cases/finance/quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/01-use-cases/finance/quantitative-strategy/bucket-analysis
+/main.ipynb">bucket-analysis
+&nbsp;</a></td>
 <td><a href="https://www.atoti.io/articles/bucket-analysis-with-atoti/?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;</td>
 </tr>
 <tr>
@@ -3643,7 +3666,9 @@ Coming soon...
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/01-use-cases/finance/quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/01-use-cases/finance/quantitative-strategy/bucket-analysis
+/main.ipynb">bucket-analysis
+&nbsp;</a></td>
 <td><a href="https://www.atoti.io/articles/bucket-analysis-with-atoti/?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;</td>
 </tr>
 <tr>
@@ -4046,7 +4071,9 @@ Coming soon...
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/01-use-cases/finance/quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/01-use-cases/finance/quantitative-strategy/bucket-analysis
+/main.ipynb">bucket-analysis
+&nbsp;</a></td>
 <td><a href="https://www.atoti.io/articles/bucket-analysis-with-atoti/?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;</td>
 </tr>
 <tr>

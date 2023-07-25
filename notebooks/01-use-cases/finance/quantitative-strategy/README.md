@@ -23,7 +23,7 @@
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/01-use-cases/finance/quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/01-use-cases/finance/quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td>
 <td><a href="https://www.atoti.io/articles/bucket-analysis-with-atoti/?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;</td>
 </tr>
 </table>

@@ -42,7 +42,7 @@ Navigate to the Gallery folder to see sample Atoti use cases:
 #### Projects  
 
 <a href="https://github.com/atoti/project-template"><img src="https://img.shields.io/badge/Project%20Template-AF4D61" alt="Project Templates"></a>&nbsp;
-<a href="./projects"><img src="https://img.shields.io/badge/Sample%20Projects-AF4D61" alt="Sample Projects"></a>&nbsp;
+<a href="https://github.com/atoti/french-presidential-election"><img src="https://img.shields.io/badge/Sample%20Projects-AF4D61" alt="Sample Projects"></a>&nbsp;
 
 
 ### 🧰 Installation

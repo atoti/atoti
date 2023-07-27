@@ -47,13 +47,13 @@ Navigate to the Gallery folder to see sample Atoti use cases:
 
 ### 🧰 Installation
 
-Python package [(docs)](https://docs.atoti.io/latest/installation.html#python-package):
+Python package [(docs)](https://docs.atoti.io/latest/getting_started/installation.html#python-package):
 
 ```console
 > pip install atoti[jupyterlab3]
 ```
 
-Conda package [(docs)](https://docs.atoti.io/latest/installation.html#conda-package):
+Conda package [(docs)](https://docs.atoti.io/latest/getting_started/installation.html#conda-package):
 
 ```console
 > conda install atoti atoti-jupyterlab3 python -c conda-forge -c https://conda.atoti.io

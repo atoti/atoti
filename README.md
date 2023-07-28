@@ -31,7 +31,7 @@ Check out [atoti.io](https://www.atoti.io/) for more info. For enterprise soluti
 
 ### 🎭 Showcase 
   
-Navigate to the Gallery folder to see sample Atoti use cases:
+Navigate to the [Notebook Gallery folder](./notebooks) to see sample Atoti use cases:
 
 #### Notebooks  
   

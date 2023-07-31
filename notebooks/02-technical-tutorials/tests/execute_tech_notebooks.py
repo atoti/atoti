@@ -13,7 +13,7 @@ DATA_PREPROCESSING_NOTEBOOKS = [
     "var-benchmark/data_generator.ipynb",  # Timeout
 ]
 NOTEBOOKS_WTIH_ALT_CONNECTORS = [
-    f"auto-cube/{_MAIN}",    
+    f"auto-cube/{_MAIN}",
     f"var-benchmark/{_MAIN}",  # data generation timeout TO FIX
 ]
 UNLOCK_NOTEBOOKS = [
@@ -26,9 +26,7 @@ UNLOCK_NOTEBOOKS = [
 ]
 
 NOTEBOOKS_TO_SKIP = sorted(
-    DATA_PREPROCESSING_NOTEBOOKS
-    + NOTEBOOKS_WTIH_ALT_CONNECTORS
-    + UNLOCK_NOTEBOOKS
+    DATA_PREPROCESSING_NOTEBOOKS + NOTEBOOKS_WTIH_ALT_CONNECTORS + UNLOCK_NOTEBOOKS
 )
 
 
@@ -36,7 +34,9 @@ def execute_notebooks():
     notebooks_path = sorted(
         [
             notebook_path
-            for notebook_path in NOTEBOOKS_DIRECTORY.glob("02-technical-tutorials/**/*.ipynb")
+            for notebook_path in NOTEBOOKS_DIRECTORY.glob(
+                "02-technical-tutorials/**/*.ipynb"
+            )
             if "ipynb_checkpoints" not in str(notebook_path)
             and not any(
                 str(notebook_path).endswith(os.path.normpath(exclude_nb))

@@ -43,6 +43,7 @@ NOTEBOOKS_WTIH_ALT_CONNECTORS = [
     f"auto-cube/{_MAIN}",
     f"reddit/{_MAIN}",  # http 401 error TO FIX
     f"var-benchmark/{_MAIN}",  # data generation timeout TO FIX
+    f"virtual-hierarchies/{_MAIN}",  # DirectQuery connection to Clickhouse
 ]
 ATOTI_PLUS_NOTEBOOKS = [
     "security-implementation/01-Basic-authentication.ipynb",

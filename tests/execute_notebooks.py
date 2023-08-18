@@ -38,14 +38,14 @@ DATA_PREPROCESSING_NOTEBOOKS = [
     "var-benchmark/data_generator.ipynb",  # Timeout
 ]
 NOTEBOOKS_WTIH_ALT_CONNECTORS = [
-    "customer360/02-main-vertica-db.ipynb",
-    f"real-time-risk/{_MAIN}",
-    f"auto-cube/{_MAIN}",
-    f"reddit/{_MAIN}",  # http 401 error TO FIX
-    f"var-benchmark/{_MAIN}",  # data generation timeout TO FIX
-    f"virtual-hierarchies/{_MAIN}",  # DirectQuery connection to Clickhouse
+    "customer360/02-main-vertica-db.ipynb",  # requires vertica db
+    f"real-time-risk/{_MAIN}",  # requires kafka installation
+    f"auto-cube/{_MAIN}",  # requires user csv input
+    f"reddit/{_MAIN}",  # requires api key
+    f"var-benchmark/{_MAIN}",  # requires data generation (large data volume)
+    f"directquery-vector/{_MAIN}",  # Direct Query notebook
 ]
-ATOTI_PLUS_NOTEBOOKS = [
+ATOTI_UNLOCKED_NOTEBOOKS = [
     "security-implementation/01-Basic-authentication.ipynb",
     "security-implementation/02-OIDC-Auth0.ipynb",
     "security-implementation/03-OIDC-Google.ipynb",
@@ -80,7 +80,7 @@ NOTEBOOKS_TO_SKIP = sorted(
     + NOTEBOOKS_WITH_ERRORS
     + NOTEBOOKS_WTIH_ALT_CONNECTORS
     + NON_ATOTI_NOTEBOOKS
-    + ATOTI_PLUS_NOTEBOOKS
+    + ATOTI_UNLOCKED_NOTEBOOKS
 )
 
 

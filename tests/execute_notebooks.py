@@ -43,7 +43,7 @@ NOTEBOOKS_WTIH_ALT_CONNECTORS = [
     f"auto-cube/{_MAIN}",  # requires user csv input
     f"reddit/{_MAIN}",  # requires api key
     f"var-benchmark/{_MAIN}",  # requires data generation (large data volume)
-    f"direct-query-vector/{_MAIN}",  # Direct Query notebook
+    f"directquery-vector/{_MAIN}",  # Direct Query notebook
 ]
 ATOTI_UNLOCKED_NOTEBOOKS = [
     "security-implementation/01-Basic-authentication.ipynb",

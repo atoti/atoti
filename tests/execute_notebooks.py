@@ -44,6 +44,7 @@ NOTEBOOKS_WTIH_ALT_CONNECTORS = [
     f"reddit/{_MAIN}",  # requires api key
     f"var-benchmark/{_MAIN}",  # requires data generation (large data volume)
     f"directquery-vector/{_MAIN}",  # Direct Query notebook
+    f"intro-directquery/{_MAIN}",  # Direct Query notebook
 ]
 ATOTI_UNLOCKED_NOTEBOOKS = [
     "security-implementation/01-Basic-authentication.ipynb",

@@ -49,16 +49,16 @@
 <td><a href="https://www.atoti.io/guides/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
 </tr>
 <tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-intro/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ bigquery-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;</td>
+</tr>
+<tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td>
 <td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ nonlinear aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ snowflake-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/internationalization/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td>
 <td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ CSV-grey" />&nbsp;<img src="https://img.shields.io/badge/ s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/intro-directquery/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;intro-directquery&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ bigquery-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
@@ -418,6 +418,10 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/guides/currency-conversion-with-atoti/?utm_source=github">📰&nbsp;Currency conversion with atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;</td>
 </tr>
 <tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-intro/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ bigquery-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;</td>
+</tr>
+<tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td>
 <td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ nonlinear aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ snowflake-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
 </tr>
@@ -431,10 +435,6 @@ Double-click on tile to go to feature section.
 <tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/internationalization/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td>
 <td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ CSV-grey" />&nbsp;<img src="https://img.shields.io/badge/ s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/intro-directquery/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;intro-directquery&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ bigquery-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
@@ -867,12 +867,12 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ nonlinear aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ snowflake-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-intro/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ bigquery-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/intro-directquery/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;intro-directquery&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ bigquery-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;</td>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ nonlinear aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ snowflake-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/virtual-hierarchies/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;virtual-hierarchies&nbsp;</a></td>
@@ -971,12 +971,12 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ nonlinear aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ snowflake-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-intro/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ bigquery-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/intro-directquery/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;intro-directquery&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ bigquery-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;</td>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ nonlinear aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ snowflake-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td>

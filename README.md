@@ -31,15 +31,21 @@ Check out [atoti.io](https://www.atoti.io/) for more info. For enterprise soluti
 
 ### 🎭 Showcase 
   
-Navigate to the [Notebook Gallery folder](./notebooks) to see sample Atoti use cases:
 
-#### Notebooks  
-  
+This repository is not the only one to have some neat things (though, that it does)! Stay here to find out:  
+
+<a href="./notebooks/02-technical-tutorials/"><img src="https://img.shields.io/badge/Technical%20Tutorials-AF4D61" alt="Technical Tutorials"></a>&nbsp;
+<a href="./01-atoti-academy/"><img src="https://img.shields.io/badge/Atoti%20Academy-AF4D61" alt="Atoti Academy"></a>&nbsp;
+
+
+Check out our Use Cases repository to find sample prototypes of various solutions:  
+
 <a href="./notebooks/01-use-cases/finance"><img src="https://img.shields.io/badge/Financial%20Use%20Cases-AF4D61" alt="Financial Use Cases"></a>&nbsp;
 <a href="./notebooks/01-use-cases/other-industries"><img src="https://img.shields.io/badge/Other%20Industries%20Use%20Cases-AF4D61" alt="Other Industries Use Cases"></a>&nbsp;
-<a href="./notebooks/02-technical-tutorials"><img src="https://img.shields.io/badge/Technical%20Tutorials-AF4D61" alt="Technical Tutorials"></a>&nbsp;
 
-#### Projects  
+
+
+Navigate to our Project related repositories to learn how to implement projects:
 
 <a href="https://github.com/atoti/project-template"><img src="https://img.shields.io/badge/Project%20Template-AF4D61" alt="Project Templates"></a>&nbsp;
 <a href="https://github.com/atoti/french-presidential-election"><img src="https://img.shields.io/badge/Sample%20Projects-AF4D61" alt="Sample Projects"></a>&nbsp;

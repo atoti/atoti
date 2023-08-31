@@ -76,12 +76,14 @@ NOTEBOOKS_WITH_ERRORS = [
     # f"collateral-shortfall-forecast/notebooks/{_MAIN}",  # removed tsfresh due to conflict with protobuf
     "food-processing/main.ipynb",  # Validation of the RECORD file of mxnet-1.7.0.post1-py2.py3-none-win_amd64.whl failed
 ]
+NOTEBOOKS_ACADEMY = ["introduction-to-atoti/main.ipynb"]  # error on purpose
 NOTEBOOKS_TO_SKIP = sorted(
     DATA_PREPROCESSING_NOTEBOOKS
     + NOTEBOOKS_WITH_ERRORS
     + NOTEBOOKS_WTIH_ALT_CONNECTORS
     + NON_ATOTI_NOTEBOOKS
     + ATOTI_UNLOCKED_NOTEBOOKS
+    + NOTEBOOKS_ACADEMY
 )
 
 

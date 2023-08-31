@@ -35,7 +35,7 @@ Check out [atoti.io](https://www.atoti.io/) for more info. For enterprise soluti
 This repository is not the only one to have some neat things (though, that it does)! Stay here to find out:  
 
 <a href="./notebooks/02-technical-tutorials/"><img src="https://img.shields.io/badge/Technical%20Tutorials-AF4D61" alt="Technical Tutorials"></a>&nbsp;
-<a href="./01-atoti-academy/"><img src="https://img.shields.io/badge/Training%20Courses-AF4D61" alt="Atoti Academy"></a>&nbsp;
+<a href="./01-atoti-academy/"><img src="https://img.shields.io/badge/Atoti%20Academy-AF4D61" alt="Atoti Academy"></a>&nbsp;
 
 
 Check out our Use Cases repository to find sample prototypes of various solutions:  

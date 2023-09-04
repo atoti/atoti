@@ -49,16 +49,16 @@
 <td><a href="https://www.atoti.io/guides/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
 </tr>
 <tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-intro/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ bigquery-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;</td>
+</tr>
+<tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td>
 <td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ nonlinear aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ snowflake-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/internationalization/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td>
 <td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ CSV-grey" />&nbsp;<img src="https://img.shields.io/badge/ s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/intro-directquery/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;intro-directquery&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ bigquery-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
@@ -75,6 +75,10 @@
 <tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/var-benchmark/main.ipynb">var-benchmark&nbsp;</a></td>
 <td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ parquet-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ hierarchy manipulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;<img src="https://img.shields.io/badge/ table partition-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/virtual-hierarchies/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;virtual-hierarchies&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ clickhouse-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/weighted-averages/main.ipynb">weighted-averages&nbsp;</a></td>
@@ -168,449 +172,6 @@ Double-click on tile to go to feature section.
     </tbody>
 </table>
 
-#### 🗃&nbsp;Conditionality 
-
-
-<details>
-<summary><b>Technical Tutorials</b></summary><blockquote>
-<br/>
-
-<table>
-
-
-
-<tr>
-    <td><b>Notebooks</b></td>
-    <td><b>Related media</b></td>
-    <td><b>Features</b></td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/conditional-functions/main.ipynb">conditional-functions&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ filter-grey" />&nbsp;<img src="https://img.shields.io/badge/ switch-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/currency-conv-with-weighted-ave/main.ipynb">currency-conv-with-weighted-ave&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/currency-conversion/main.ipynb">currency-conversion&nbsp;</a></td>
-<td><a href="https://www.atoti.io/guides/currency-conversion-with-atoti/?utm_source=github">📰&nbsp;Currency conversion with atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/currency-conversion-with-lookup/main.ipynb">currency-conversion-with-lookup&nbsp;</a></td>
-<td><a href="https://www.atoti.io/guides/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ source simulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ shift-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/topcount/atoti.ipynb">topcount&nbsp;</a></td>
-<td><a href="https://www.atoti.io/articles/top-count-in-jupyter-notebook-atoti-vs-pandas-matplotlib/?utm_source=github">📰&nbsp;Top count in Jupyter notebook: atoti vs Pandas + Matplotlib</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ hierarchy manipulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;</td>
-</tr>
-</table>
-<br/>
-</blockquote></details>
-
-
- <hr/> 
-
-#### 🗃&nbsp;Data Visualization 
-
-
-<details>
-<summary><b>Technical Tutorials</b></summary><blockquote>
-<br/>
-
-<table>
-
-<img src="https://img.shields.io/badge/🔒-Atoti-291A40" /><b> indicates the licensed version of Atoti is required.</b>
-
-<tr>
-    <td><b>Notebooks</b></td>
-    <td><b>Related media</b></td>
-    <td><b>Features</b></td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/currency-conversion-with-lookup/main.ipynb">currency-conversion-with-lookup&nbsp;</a></td>
-<td><a href="https://www.atoti.io/guides/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="2"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/excel-and-atoti/main.ipynb">excel-and-atoti&nbsp;</a></td>
-<td><a href="https://www.youtube.com/watch?v=dFYZkTxiaOU&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=9?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Asia</a></td><td rowspan="2"><img src="https://img.shields.io/badge/atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;<img src="https://img.shields.io/badge/ local file-grey" />&nbsp;<img src="https://img.shields.io/badge/ parameter simulation-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td valign="center"><a href="https://www.youtube.com/watch?v=qd8RTFDJUMI&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=10?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Europe</a></td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/internationalization/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ CSV-grey" />&nbsp;<img src="https://img.shields.io/badge/ s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ source simulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ shift-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/topcount/atoti.ipynb">topcount&nbsp;</a></td>
-<td><a href="https://www.atoti.io/articles/top-count-in-jupyter-notebook-atoti-vs-pandas-matplotlib/?utm_source=github">📰&nbsp;Top count in Jupyter notebook: atoti vs Pandas + Matplotlib</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ hierarchy manipulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;</td>
-</tr>
-</table>
-<br/>
-</blockquote></details>
-
-
- <hr/> 
-
-#### 🗃&nbsp;Security 
-
-
-<details>
-<summary><b>Technical Tutorials</b></summary><blockquote>
-<br/>
-
-<table>
-
-<img src="https://img.shields.io/badge/🔒-Atoti-291A40" /><b> indicates the licensed version of Atoti is required.</b>
-
-<tr>
-    <td><b>Notebooks</b></td>
-    <td><b>Related media</b></td>
-    <td><b>Features</b></td>
-</tr>
-<tr>
-<td rowspan="2"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/security-implementation/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td>
-<td><a href="https://www.atoti.io/guides/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="2"><img src="https://img.shields.io/badge/s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ CSV-grey" />&nbsp;<img src="https://img.shields.io/badge/ s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ logs configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ roles and restrictions-grey" />&nbsp;<img src="https://img.shields.io/badge/ authentication-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td valign="center"><a href="https://www.atoti.io/guides/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
-</tr>
-</table>
-<br/>
-</blockquote></details>
-
-
- <hr/> 
-
-#### 🗃&nbsp;Directquery 
-
-
-<details>
-<summary><b>Technical Tutorials</b></summary><blockquote>
-<br/>
-
-<table>
-
-<img src="https://img.shields.io/badge/🔒-Atoti-291A40" /><b> indicates the licensed version of Atoti is required.</b>
-
-<tr>
-    <td><b>Notebooks</b></td>
-    <td><b>Related media</b></td>
-    <td><b>Features</b></td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ nonlinear aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ snowflake-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/intro-directquery/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;intro-directquery&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ bigquery-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;</td>
-</tr>
-</table>
-<br/>
-</blockquote></details>
-
-
- <hr/> 
-
-#### 🗃&nbsp;Data Preprocessing 
-
-
-<details>
-<summary><b>Technical Tutorials</b></summary><blockquote>
-<br/>
-
-<table>
-
-
-
-<tr>
-    <td><b>Notebooks</b></td>
-    <td><b>Related media</b></td>
-    <td><b>Features</b></td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ source simulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ shift-grey" />&nbsp;</td>
-</tr>
-</table>
-<br/>
-</blockquote></details>
-
-
- <hr/> 
-
-#### 🗃&nbsp;Data Load 
-
-Use case is currently not available for these industries. Reach out to <a href="mailto:support@atoti.io">Atoti team</a> if you have a use case to request or share.
- <hr/> 
-
-#### 🗃&nbsp;Data Model 
-
-
-<details>
-<summary><b>Technical Tutorials</b></summary><blockquote>
-<br/>
-
-<table>
-
-
-
-<tr>
-    <td><b>Notebooks</b></td>
-    <td><b>Related media</b></td>
-    <td><b>Features</b></td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/currency-conv-with-weighted-ave/main.ipynb">currency-conv-with-weighted-ave&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/currency-conversion/main.ipynb">currency-conversion&nbsp;</a></td>
-<td><a href="https://www.atoti.io/guides/currency-conversion-with-atoti/?utm_source=github">📰&nbsp;Currency conversion with atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="2"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/excel-and-atoti/main.ipynb">excel-and-atoti&nbsp;</a></td>
-<td><a href="https://www.youtube.com/watch?v=dFYZkTxiaOU&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=9?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Asia</a></td><td rowspan="2"><img src="https://img.shields.io/badge/atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;<img src="https://img.shields.io/badge/ local file-grey" />&nbsp;<img src="https://img.shields.io/badge/ parameter simulation-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td valign="center"><a href="https://www.youtube.com/watch?v=qd8RTFDJUMI&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=10?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Europe</a></td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ source simulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ shift-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/multidimensional-analysis/main.ipynb">multidimensional-analysis&nbsp;</a></td>
-<td><a href="https://www.atoti.io/articles/why-do-we-need-multidimensional-analysis/?utm_source=github">📰&nbsp;Why do we need multidimensional analysis?</a></td><td rowspan="1"><img src="https://img.shields.io/badge/cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill through-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/topcount/atoti.ipynb">topcount&nbsp;</a></td>
-<td><a href="https://www.atoti.io/articles/top-count-in-jupyter-notebook-atoti-vs-pandas-matplotlib/?utm_source=github">📰&nbsp;Top count in Jupyter notebook: atoti vs Pandas + Matplotlib</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ hierarchy manipulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/var-benchmark/main.ipynb">var-benchmark&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ parquet-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ hierarchy manipulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;<img src="https://img.shields.io/badge/ table partition-grey" />&nbsp;</td>
-</tr>
-</table>
-<br/>
-</blockquote></details>
-
-
- <hr/> 
-
-#### 🗃&nbsp;Data Etl 
-
-
-<details>
-<summary><b>Technical Tutorials</b></summary><blockquote>
-<br/>
-
-<table>
-
-<img src="https://img.shields.io/badge/🔒-Atoti-291A40" /><b> indicates the licensed version of Atoti is required.</b>
-
-<tr>
-    <td><b>Notebooks</b></td>
-    <td><b>Related media</b></td>
-    <td><b>Features</b></td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/currency-conversion-with-lookup/main.ipynb">currency-conversion-with-lookup&nbsp;</a></td>
-<td><a href="https://www.atoti.io/guides/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="2"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/excel-and-atoti/main.ipynb">excel-and-atoti&nbsp;</a></td>
-<td><a href="https://www.youtube.com/watch?v=dFYZkTxiaOU&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=9?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Asia</a></td><td rowspan="2"><img src="https://img.shields.io/badge/atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;<img src="https://img.shields.io/badge/ local file-grey" />&nbsp;<img src="https://img.shields.io/badge/ parameter simulation-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td valign="center"><a href="https://www.youtube.com/watch?v=qd8RTFDJUMI&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=10?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Europe</a></td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/internationalization/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ CSV-grey" />&nbsp;<img src="https://img.shields.io/badge/ s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ source simulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ shift-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/multidimensional-analysis/main.ipynb">multidimensional-analysis&nbsp;</a></td>
-<td><a href="https://www.atoti.io/articles/why-do-we-need-multidimensional-analysis/?utm_source=github">📰&nbsp;Why do we need multidimensional analysis?</a></td><td rowspan="1"><img src="https://img.shields.io/badge/cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill through-grey" />&nbsp;</td>
-</tr>
-</table>
-<br/>
-</blockquote></details>
-
-
- <hr/> 
-
-#### 🗃&nbsp;Data Bucket 
-
-
-<details>
-<summary><b>Technical Tutorials</b></summary><blockquote>
-<br/>
-
-<table>
-
-
-
-<tr>
-    <td><b>Notebooks</b></td>
-    <td><b>Related media</b></td>
-    <td><b>Features</b></td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ source simulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ shift-grey" />&nbsp;</td>
-</tr>
-</table>
-<br/>
-</blockquote></details>
-
-
- <hr/> 
-
-#### 🗃&nbsp;Optimization 
-
-
-<details>
-<summary><b>Technical Tutorials</b></summary><blockquote>
-<br/>
-
-<table>
-
-<img src="https://img.shields.io/badge/🔒-Atoti-291A40" /><b> indicates the licensed version of Atoti is required.</b>
-
-<tr>
-    <td><b>Notebooks</b></td>
-    <td><b>Related media</b></td>
-    <td><b>Features</b></td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ nonlinear aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ snowflake-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/intro-directquery/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;intro-directquery&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ bigquery-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td>
-<td><a href="https://www.atoti.io/guides/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ CSV-grey" />&nbsp;<img src="https://img.shields.io/badge/ s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/var-benchmark/main.ipynb">var-benchmark&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ parquet-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ hierarchy manipulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;<img src="https://img.shields.io/badge/ table partition-grey" />&nbsp;</td>
-</tr>
-</table>
-<br/>
-</blockquote></details>
-
-
- <hr/> 
-
-#### 🗃&nbsp;Simulation 
-
-
-<details>
-<summary><b>Technical Tutorials</b></summary><blockquote>
-<br/>
-
-<table>
-
-
-
-<tr>
-    <td><b>Notebooks</b></td>
-    <td><b>Related media</b></td>
-    <td><b>Features</b></td>
-</tr>
-<tr>
-<td rowspan="2"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/excel-and-atoti/main.ipynb">excel-and-atoti&nbsp;</a></td>
-<td><a href="https://www.youtube.com/watch?v=dFYZkTxiaOU&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=9?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Asia</a></td><td rowspan="2"><img src="https://img.shields.io/badge/atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;<img src="https://img.shields.io/badge/ local file-grey" />&nbsp;<img src="https://img.shields.io/badge/ parameter simulation-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td valign="center"><a href="https://www.youtube.com/watch?v=qd8RTFDJUMI&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=10?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Europe</a></td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ source simulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ shift-grey" />&nbsp;</td>
-</tr>
-</table>
-<br/>
-</blockquote></details>
-
-
- <hr/> 
-
-#### 🗃&nbsp;Excel 
-
-
-<details>
-<summary><b>Technical Tutorials</b></summary><blockquote>
-<br/>
-
-<table>
-
-
-
-<tr>
-    <td><b>Notebooks</b></td>
-    <td><b>Related media</b></td>
-    <td><b>Features</b></td>
-</tr>
-<tr>
-<td rowspan="2"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/excel-and-atoti/main.ipynb">excel-and-atoti&nbsp;</a></td>
-<td><a href="https://www.youtube.com/watch?v=dFYZkTxiaOU&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=9?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Asia</a></td><td rowspan="2"><img src="https://img.shields.io/badge/atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;<img src="https://img.shields.io/badge/ local file-grey" />&nbsp;<img src="https://img.shields.io/badge/ parameter simulation-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td valign="center"><a href="https://www.youtube.com/watch?v=qd8RTFDJUMI&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=10?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Europe</a></td>
-</tr>
-</table>
-<br/>
-</blockquote></details>
-
-
- <hr/> 
-
-#### 🗃&nbsp;Dates Data 
-
-
-<details>
-<summary><b>Technical Tutorials</b></summary><blockquote>
-<br/>
-
-<table>
-
-
-
-<tr>
-    <td><b>Notebooks</b></td>
-    <td><b>Related media</b></td>
-    <td><b>Features</b></td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ source simulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ shift-grey" />&nbsp;</td>
-</tr>
-</table>
-<br/>
-</blockquote></details>
-
-
- <hr/> 
-
 #### 🗃&nbsp;Cloud Storage 
 
 
@@ -653,7 +214,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 
  <hr/> 
 
-#### 🗃&nbsp;Data Aggregation 
+#### 🗃&nbsp;Conditionality 
 
 
 <details>
@@ -662,7 +223,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 
 <table>
 
-<img src="https://img.shields.io/badge/🔒-Atoti-291A40" /><b> indicates the licensed version of Atoti is required.</b>
+
 
 <tr>
     <td><b>Notebooks</b></td>
@@ -674,55 +235,20 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ filter-grey" />&nbsp;<img src="https://img.shields.io/badge/ switch-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ nonlinear aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ snowflake-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/currency-conv-with-weighted-ave/main.ipynb">currency-conv-with-weighted-ave&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/internationalization/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ CSV-grey" />&nbsp;<img src="https://img.shields.io/badge/ s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;</td>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/currency-conversion/main.ipynb">currency-conversion&nbsp;</a></td>
+<td><a href="https://www.atoti.io/guides/currency-conversion-with-atoti/?utm_source=github">📰&nbsp;Currency conversion with atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ source simulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ shift-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/multidimensional-analysis/main.ipynb">multidimensional-analysis&nbsp;</a></td>
-<td><a href="https://www.atoti.io/articles/why-do-we-need-multidimensional-analysis/?utm_source=github">📰&nbsp;Why do we need multidimensional analysis?</a></td><td rowspan="1"><img src="https://img.shields.io/badge/cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill through-grey" />&nbsp;</td>
-</tr>
-</table>
-<br/>
-</blockquote></details>
-
-
- <hr/> 
-
-#### 🗃&nbsp;Multidimensional Analysis 
-
-
-<details>
-<summary><b>Technical Tutorials</b></summary><blockquote>
-<br/>
-
-<table>
-
-
-
-<tr>
-    <td><b>Notebooks</b></td>
-    <td><b>Related media</b></td>
-    <td><b>Features</b></td>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/currency-conversion-with-lookup/main.ipynb">currency-conversion-with-lookup&nbsp;</a></td>
+<td><a href="https://www.atoti.io/guides/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
 <td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ source simulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ shift-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/multidimensional-analysis/main.ipynb">multidimensional-analysis&nbsp;</a></td>
-<td><a href="https://www.atoti.io/articles/why-do-we-need-multidimensional-analysis/?utm_source=github">📰&nbsp;Why do we need multidimensional analysis?</a></td><td rowspan="1"><img src="https://img.shields.io/badge/cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill through-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td>
-<td><a href="https://www.atoti.io/guides/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ CSV-grey" />&nbsp;<img src="https://img.shields.io/badge/ s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/topcount/atoti.ipynb">topcount&nbsp;</a></td>
@@ -793,7 +319,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 
  <hr/> 
 
-#### 🗃&nbsp;Data Metric 
+#### 🗃&nbsp;Data Aggregation 
 
 
 <details>
@@ -810,16 +336,24 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/conditional-functions/main.ipynb">conditional-functions&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ filter-grey" />&nbsp;<img src="https://img.shields.io/badge/ switch-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;</td>
+</tr>
+<tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td>
 <td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ nonlinear aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ snowflake-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/internationalization/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ CSV-grey" />&nbsp;<img src="https://img.shields.io/badge/ s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
 <td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ source simulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ shift-grey" />&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/var-benchmark/main.ipynb">var-benchmark&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ parquet-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ hierarchy manipulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;<img src="https://img.shields.io/badge/ table partition-grey" />&nbsp;</td>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/multidimensional-analysis/main.ipynb">multidimensional-analysis&nbsp;</a></td>
+<td><a href="https://www.atoti.io/articles/why-do-we-need-multidimensional-analysis/?utm_source=github">📰&nbsp;Why do we need multidimensional analysis?</a></td><td rowspan="1"><img src="https://img.shields.io/badge/cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill through-grey" />&nbsp;</td>
 </tr>
 </table>
 <br/>
@@ -828,7 +362,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 
  <hr/> 
 
-#### 🗃&nbsp;Ordinality 
+#### 🗃&nbsp;Data Bucket 
 
 
 <details>
@@ -837,7 +371,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 
 <table>
 
-<img src="https://img.shields.io/badge/🔒-Atoti-291A40" /><b> indicates the licensed version of Atoti is required.</b>
+
 
 <tr>
     <td><b>Notebooks</b></td>
@@ -845,19 +379,8 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/currency-conversion-with-lookup/main.ipynb">currency-conversion-with-lookup&nbsp;</a></td>
-<td><a href="https://www.atoti.io/guides/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ nonlinear aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ snowflake-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="2"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/excel-and-atoti/main.ipynb">excel-and-atoti&nbsp;</a></td>
-<td><a href="https://www.youtube.com/watch?v=dFYZkTxiaOU&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=9?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Asia</a></td><td rowspan="2"><img src="https://img.shields.io/badge/atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;<img src="https://img.shields.io/badge/ local file-grey" />&nbsp;<img src="https://img.shields.io/badge/ parameter simulation-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td valign="center"><a href="https://www.youtube.com/watch?v=qd8RTFDJUMI&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=10?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Europe</a></td>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ source simulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ shift-grey" />&nbsp;</td>
 </tr>
 </table>
 <br/>
@@ -895,6 +418,10 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td><a href="https://www.atoti.io/guides/currency-conversion-with-atoti/?utm_source=github">📰&nbsp;Currency conversion with atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;</td>
 </tr>
 <tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-intro/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ bigquery-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;</td>
+</tr>
+<tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td>
 <td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ nonlinear aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ snowflake-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
 </tr>
@@ -908,10 +435,6 @@ Use case is currently not available for these industries. Reach out to <a href="
 <tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/internationalization/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td>
 <td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ CSV-grey" />&nbsp;<img src="https://img.shields.io/badge/ s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/intro-directquery/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;intro-directquery&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ bigquery-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
@@ -933,6 +456,10 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ parquet-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ hierarchy manipulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;<img src="https://img.shields.io/badge/ table partition-grey" />&nbsp;</td>
 </tr>
 <tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/virtual-hierarchies/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;virtual-hierarchies&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ clickhouse-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;</td>
+</tr>
+<tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/weighted-averages/main.ipynb">weighted-averages&nbsp;</a></td>
 <td><a href="https://www.atoti.io/guides/weighted-averages-with-atoti/?utm_source=github">📰&nbsp;Weighted averages with atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;</td>
 </tr>
@@ -943,7 +470,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 
  <hr/> 
 
-#### 🗃&nbsp;Deployment 
+#### 🗃&nbsp;Data Etl 
 
 
 <details>
@@ -960,16 +487,15 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/auto-cube/main.ipynb">auto-cube&nbsp;</a></td>
-<td><a href="https://www.atoti.io/articles/auto-cube-creation/?utm_source=github">📰&nbsp;Create a Python web application with a few clicks</a></td><td rowspan="1"><img src="https://img.shields.io/badge/s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ CSV-grey" />&nbsp;<img src="https://img.shields.io/badge/ s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;</td>
-</tr>
-<tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/currency-conversion-with-lookup/main.ipynb">currency-conversion-with-lookup&nbsp;</a></td>
 <td><a href="https://www.atoti.io/guides/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td>
-<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ nonlinear aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ snowflake-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
+<td rowspan="2"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/excel-and-atoti/main.ipynb">excel-and-atoti&nbsp;</a></td>
+<td><a href="https://www.youtube.com/watch?v=dFYZkTxiaOU&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=9?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Asia</a></td><td rowspan="2"><img src="https://img.shields.io/badge/atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;<img src="https://img.shields.io/badge/ local file-grey" />&nbsp;<img src="https://img.shields.io/badge/ parameter simulation-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td valign="center"><a href="https://www.youtube.com/watch?v=qd8RTFDJUMI&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=10?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Europe</a></td>
 </tr>
 <tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/internationalization/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td>
@@ -980,15 +506,94 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ source simulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ shift-grey" />&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td>
-<td><a href="https://www.atoti.io/guides/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ CSV-grey" />&nbsp;<img src="https://img.shields.io/badge/ s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;</td>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/multidimensional-analysis/main.ipynb">multidimensional-analysis&nbsp;</a></td>
+<td><a href="https://www.atoti.io/articles/why-do-we-need-multidimensional-analysis/?utm_source=github">📰&nbsp;Why do we need multidimensional analysis?</a></td><td rowspan="1"><img src="https://img.shields.io/badge/cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill through-grey" />&nbsp;</td>
+</tr>
+</table>
+<br/>
+</blockquote></details>
+
+
+ <hr/> 
+
+#### 🗃&nbsp;Data Load 
+
+Use case is currently not available for these industries. Reach out to <a href="mailto:support@atoti.io">Atoti team</a> if you have a use case to request or share.
+ <hr/> 
+
+#### 🗃&nbsp;Data Metric 
+
+
+<details>
+<summary><b>Technical Tutorials</b></summary><blockquote>
+<br/>
+
+<table>
+
+<img src="https://img.shields.io/badge/🔒-Atoti-291A40" /><b> indicates the licensed version of Atoti is required.</b>
+
+<tr>
+    <td><b>Notebooks</b></td>
+    <td><b>Related media</b></td>
+    <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="2"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/security-implementation/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td>
-<td><a href="https://www.atoti.io/guides/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="2"><img src="https://img.shields.io/badge/s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ CSV-grey" />&nbsp;<img src="https://img.shields.io/badge/ s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ logs configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ roles and restrictions-grey" />&nbsp;<img src="https://img.shields.io/badge/ authentication-grey" />&nbsp;</td>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ nonlinear aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ snowflake-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
 </tr>
 <tr>
-<td valign="center"><a href="https://www.atoti.io/guides/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ source simulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ shift-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/var-benchmark/main.ipynb">var-benchmark&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ parquet-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ hierarchy manipulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;<img src="https://img.shields.io/badge/ table partition-grey" />&nbsp;</td>
+</tr>
+</table>
+<br/>
+</blockquote></details>
+
+
+ <hr/> 
+
+#### 🗃&nbsp;Data Model 
+
+
+<details>
+<summary><b>Technical Tutorials</b></summary><blockquote>
+<br/>
+
+<table>
+
+
+
+<tr>
+    <td><b>Notebooks</b></td>
+    <td><b>Related media</b></td>
+    <td><b>Features</b></td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/currency-conv-with-weighted-ave/main.ipynb">currency-conv-with-weighted-ave&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/currency-conversion/main.ipynb">currency-conversion&nbsp;</a></td>
+<td><a href="https://www.atoti.io/guides/currency-conversion-with-atoti/?utm_source=github">📰&nbsp;Currency conversion with atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="2"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/excel-and-atoti/main.ipynb">excel-and-atoti&nbsp;</a></td>
+<td><a href="https://www.youtube.com/watch?v=dFYZkTxiaOU&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=9?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Asia</a></td><td rowspan="2"><img src="https://img.shields.io/badge/atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;<img src="https://img.shields.io/badge/ local file-grey" />&nbsp;<img src="https://img.shields.io/badge/ parameter simulation-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td valign="center"><a href="https://www.youtube.com/watch?v=qd8RTFDJUMI&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=10?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Europe</a></td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ source simulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ shift-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/multidimensional-analysis/main.ipynb">multidimensional-analysis&nbsp;</a></td>
+<td><a href="https://www.atoti.io/articles/why-do-we-need-multidimensional-analysis/?utm_source=github">📰&nbsp;Why do we need multidimensional analysis?</a></td><td rowspan="1"><img src="https://img.shields.io/badge/cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill through-grey" />&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/topcount/atoti.ipynb">topcount&nbsp;</a></td>
@@ -1005,7 +610,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 
  <hr/> 
 
-#### 🗃&nbsp;Trend Analysis 
+#### 🗃&nbsp;Data Preprocessing 
 
 
 <details>
@@ -1024,36 +629,6 @@ Use case is currently not available for these industries. Reach out to <a href="
 <tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
 <td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ source simulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ shift-grey" />&nbsp;</td>
-</tr>
-</table>
-<br/>
-</blockquote></details>
-
-
- <hr/> 
-
-#### 🗃&nbsp;Real Time 
-
-
-<details>
-<summary><b>Technical Tutorials</b></summary><blockquote>
-<br/>
-
-<table>
-
-
-
-<tr>
-    <td><b>Notebooks</b></td>
-    <td><b>Related media</b></td>
-    <td><b>Features</b></td>
-</tr>
-<tr>
-<td rowspan="2"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/excel-and-atoti/main.ipynb">excel-and-atoti&nbsp;</a></td>
-<td><a href="https://www.youtube.com/watch?v=dFYZkTxiaOU&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=9?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Asia</a></td><td rowspan="2"><img src="https://img.shields.io/badge/atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;<img src="https://img.shields.io/badge/ local file-grey" />&nbsp;<img src="https://img.shields.io/badge/ parameter simulation-grey" />&nbsp;</td>
-</tr>
-<tr>
-<td valign="center"><a href="https://www.youtube.com/watch?v=qd8RTFDJUMI&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=10?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Europe</a></td>
 </tr>
 </table>
 <br/>
@@ -1132,6 +707,447 @@ Use case is currently not available for these industries. Reach out to <a href="
 <tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/weighted-averages/main.ipynb">weighted-averages&nbsp;</a></td>
 <td><a href="https://www.atoti.io/guides/weighted-averages-with-atoti/?utm_source=github">📰&nbsp;Weighted averages with atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;</td>
+</tr>
+</table>
+<br/>
+</blockquote></details>
+
+
+ <hr/> 
+
+#### 🗃&nbsp;Data Visualization 
+
+
+<details>
+<summary><b>Technical Tutorials</b></summary><blockquote>
+<br/>
+
+<table>
+
+<img src="https://img.shields.io/badge/🔒-Atoti-291A40" /><b> indicates the licensed version of Atoti is required.</b>
+
+<tr>
+    <td><b>Notebooks</b></td>
+    <td><b>Related media</b></td>
+    <td><b>Features</b></td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/currency-conversion-with-lookup/main.ipynb">currency-conversion-with-lookup&nbsp;</a></td>
+<td><a href="https://www.atoti.io/guides/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="2"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/excel-and-atoti/main.ipynb">excel-and-atoti&nbsp;</a></td>
+<td><a href="https://www.youtube.com/watch?v=dFYZkTxiaOU&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=9?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Asia</a></td><td rowspan="2"><img src="https://img.shields.io/badge/atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;<img src="https://img.shields.io/badge/ local file-grey" />&nbsp;<img src="https://img.shields.io/badge/ parameter simulation-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td valign="center"><a href="https://www.youtube.com/watch?v=qd8RTFDJUMI&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=10?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Europe</a></td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/internationalization/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ CSV-grey" />&nbsp;<img src="https://img.shields.io/badge/ s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ source simulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ shift-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/topcount/atoti.ipynb">topcount&nbsp;</a></td>
+<td><a href="https://www.atoti.io/articles/top-count-in-jupyter-notebook-atoti-vs-pandas-matplotlib/?utm_source=github">📰&nbsp;Top count in Jupyter notebook: atoti vs Pandas + Matplotlib</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ hierarchy manipulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;</td>
+</tr>
+</table>
+<br/>
+</blockquote></details>
+
+
+ <hr/> 
+
+#### 🗃&nbsp;Dates Data 
+
+
+<details>
+<summary><b>Technical Tutorials</b></summary><blockquote>
+<br/>
+
+<table>
+
+
+
+<tr>
+    <td><b>Notebooks</b></td>
+    <td><b>Related media</b></td>
+    <td><b>Features</b></td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ source simulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ shift-grey" />&nbsp;</td>
+</tr>
+</table>
+<br/>
+</blockquote></details>
+
+
+ <hr/> 
+
+#### 🗃&nbsp;Deployment 
+
+
+<details>
+<summary><b>Technical Tutorials</b></summary><blockquote>
+<br/>
+
+<table>
+
+<img src="https://img.shields.io/badge/🔒-Atoti-291A40" /><b> indicates the licensed version of Atoti is required.</b>
+
+<tr>
+    <td><b>Notebooks</b></td>
+    <td><b>Related media</b></td>
+    <td><b>Features</b></td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/auto-cube/main.ipynb">auto-cube&nbsp;</a></td>
+<td><a href="https://www.atoti.io/articles/auto-cube-creation/?utm_source=github">📰&nbsp;Create a Python web application with a few clicks</a></td><td rowspan="1"><img src="https://img.shields.io/badge/s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ CSV-grey" />&nbsp;<img src="https://img.shields.io/badge/ s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/currency-conversion-with-lookup/main.ipynb">currency-conversion-with-lookup&nbsp;</a></td>
+<td><a href="https://www.atoti.io/guides/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ nonlinear aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ snowflake-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/internationalization/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ CSV-grey" />&nbsp;<img src="https://img.shields.io/badge/ s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ source simulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ shift-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td>
+<td><a href="https://www.atoti.io/guides/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ CSV-grey" />&nbsp;<img src="https://img.shields.io/badge/ s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="2"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/security-implementation/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td>
+<td><a href="https://www.atoti.io/guides/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="2"><img src="https://img.shields.io/badge/s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ CSV-grey" />&nbsp;<img src="https://img.shields.io/badge/ s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ logs configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ roles and restrictions-grey" />&nbsp;<img src="https://img.shields.io/badge/ authentication-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td valign="center"><a href="https://www.atoti.io/guides/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/topcount/atoti.ipynb">topcount&nbsp;</a></td>
+<td><a href="https://www.atoti.io/articles/top-count-in-jupyter-notebook-atoti-vs-pandas-matplotlib/?utm_source=github">📰&nbsp;Top count in Jupyter notebook: atoti vs Pandas + Matplotlib</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ hierarchy manipulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/var-benchmark/main.ipynb">var-benchmark&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ parquet-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ hierarchy manipulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;<img src="https://img.shields.io/badge/ table partition-grey" />&nbsp;</td>
+</tr>
+</table>
+<br/>
+</blockquote></details>
+
+
+ <hr/> 
+
+#### 🗃&nbsp;Directquery 
+
+
+<details>
+<summary><b>Technical Tutorials</b></summary><blockquote>
+<br/>
+
+<table>
+
+<img src="https://img.shields.io/badge/🔒-Atoti-291A40" /><b> indicates the licensed version of Atoti is required.</b>
+
+<tr>
+    <td><b>Notebooks</b></td>
+    <td><b>Related media</b></td>
+    <td><b>Features</b></td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-intro/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ bigquery-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ nonlinear aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ snowflake-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/virtual-hierarchies/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;virtual-hierarchies&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ clickhouse-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;</td>
+</tr>
+</table>
+<br/>
+</blockquote></details>
+
+
+ <hr/> 
+
+#### 🗃&nbsp;Excel 
+
+
+<details>
+<summary><b>Technical Tutorials</b></summary><blockquote>
+<br/>
+
+<table>
+
+
+
+<tr>
+    <td><b>Notebooks</b></td>
+    <td><b>Related media</b></td>
+    <td><b>Features</b></td>
+</tr>
+<tr>
+<td rowspan="2"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/excel-and-atoti/main.ipynb">excel-and-atoti&nbsp;</a></td>
+<td><a href="https://www.youtube.com/watch?v=dFYZkTxiaOU&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=9?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Asia</a></td><td rowspan="2"><img src="https://img.shields.io/badge/atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;<img src="https://img.shields.io/badge/ local file-grey" />&nbsp;<img src="https://img.shields.io/badge/ parameter simulation-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td valign="center"><a href="https://www.youtube.com/watch?v=qd8RTFDJUMI&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=10?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Europe</a></td>
+</tr>
+</table>
+<br/>
+</blockquote></details>
+
+
+ <hr/> 
+
+#### 🗃&nbsp;Multidimensional Analysis 
+
+
+<details>
+<summary><b>Technical Tutorials</b></summary><blockquote>
+<br/>
+
+<table>
+
+
+
+<tr>
+    <td><b>Notebooks</b></td>
+    <td><b>Related media</b></td>
+    <td><b>Features</b></td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ source simulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ shift-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/multidimensional-analysis/main.ipynb">multidimensional-analysis&nbsp;</a></td>
+<td><a href="https://www.atoti.io/articles/why-do-we-need-multidimensional-analysis/?utm_source=github">📰&nbsp;Why do we need multidimensional analysis?</a></td><td rowspan="1"><img src="https://img.shields.io/badge/cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill through-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td>
+<td><a href="https://www.atoti.io/guides/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ CSV-grey" />&nbsp;<img src="https://img.shields.io/badge/ s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/topcount/atoti.ipynb">topcount&nbsp;</a></td>
+<td><a href="https://www.atoti.io/articles/top-count-in-jupyter-notebook-atoti-vs-pandas-matplotlib/?utm_source=github">📰&nbsp;Top count in Jupyter notebook: atoti vs Pandas + Matplotlib</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ hierarchy manipulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;</td>
+</tr>
+</table>
+<br/>
+</blockquote></details>
+
+
+ <hr/> 
+
+#### 🗃&nbsp;Optimization 
+
+
+<details>
+<summary><b>Technical Tutorials</b></summary><blockquote>
+<br/>
+
+<table>
+
+<img src="https://img.shields.io/badge/🔒-Atoti-291A40" /><b> indicates the licensed version of Atoti is required.</b>
+
+<tr>
+    <td><b>Notebooks</b></td>
+    <td><b>Related media</b></td>
+    <td><b>Features</b></td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-intro/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ bigquery-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ nonlinear aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ snowflake-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td>
+<td><a href="https://www.atoti.io/guides/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ CSV-grey" />&nbsp;<img src="https://img.shields.io/badge/ s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/var-benchmark/main.ipynb">var-benchmark&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ parquet-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ hierarchy manipulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;<img src="https://img.shields.io/badge/ table partition-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/virtual-hierarchies/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;virtual-hierarchies&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ clickhouse-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;</td>
+</tr>
+</table>
+<br/>
+</blockquote></details>
+
+
+ <hr/> 
+
+#### 🗃&nbsp;Ordinality 
+
+
+<details>
+<summary><b>Technical Tutorials</b></summary><blockquote>
+<br/>
+
+<table>
+
+<img src="https://img.shields.io/badge/🔒-Atoti-291A40" /><b> indicates the licensed version of Atoti is required.</b>
+
+<tr>
+    <td><b>Notebooks</b></td>
+    <td><b>Related media</b></td>
+    <td><b>Features</b></td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/currency-conversion-with-lookup/main.ipynb">currency-conversion-with-lookup&nbsp;</a></td>
+<td><a href="https://www.atoti.io/guides/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ nonlinear aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ direct query-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ snowflake-grey" />&nbsp;<img src="https://img.shields.io/badge/ aggregate provider-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="2"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/excel-and-atoti/main.ipynb">excel-and-atoti&nbsp;</a></td>
+<td><a href="https://www.youtube.com/watch?v=dFYZkTxiaOU&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=9?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Asia</a></td><td rowspan="2"><img src="https://img.shields.io/badge/atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;<img src="https://img.shields.io/badge/ local file-grey" />&nbsp;<img src="https://img.shields.io/badge/ parameter simulation-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td valign="center"><a href="https://www.youtube.com/watch?v=qd8RTFDJUMI&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=10?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Europe</a></td>
+</tr>
+</table>
+<br/>
+</blockquote></details>
+
+
+ <hr/> 
+
+#### 🗃&nbsp;Real Time 
+
+
+<details>
+<summary><b>Technical Tutorials</b></summary><blockquote>
+<br/>
+
+<table>
+
+
+
+<tr>
+    <td><b>Notebooks</b></td>
+    <td><b>Related media</b></td>
+    <td><b>Features</b></td>
+</tr>
+<tr>
+<td rowspan="2"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/excel-and-atoti/main.ipynb">excel-and-atoti&nbsp;</a></td>
+<td><a href="https://www.youtube.com/watch?v=dFYZkTxiaOU&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=9?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Asia</a></td><td rowspan="2"><img src="https://img.shields.io/badge/atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;<img src="https://img.shields.io/badge/ local file-grey" />&nbsp;<img src="https://img.shields.io/badge/ parameter simulation-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td valign="center"><a href="https://www.youtube.com/watch?v=qd8RTFDJUMI&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=10?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Europe</a></td>
+</tr>
+</table>
+<br/>
+</blockquote></details>
+
+
+ <hr/> 
+
+#### 🗃&nbsp;Security 
+
+
+<details>
+<summary><b>Technical Tutorials</b></summary><blockquote>
+<br/>
+
+<table>
+
+<img src="https://img.shields.io/badge/🔒-Atoti-291A40" /><b> indicates the licensed version of Atoti is required.</b>
+
+<tr>
+    <td><b>Notebooks</b></td>
+    <td><b>Related media</b></td>
+    <td><b>Features</b></td>
+</tr>
+<tr>
+<td rowspan="2"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/security-implementation/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td>
+<td><a href="https://www.atoti.io/guides/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="2"><img src="https://img.shields.io/badge/s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ CSV-grey" />&nbsp;<img src="https://img.shields.io/badge/ s3-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ logs configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ roles and restrictions-grey" />&nbsp;<img src="https://img.shields.io/badge/ authentication-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td valign="center"><a href="https://www.atoti.io/guides/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
+</tr>
+</table>
+<br/>
+</blockquote></details>
+
+
+ <hr/> 
+
+#### 🗃&nbsp;Simulation 
+
+
+<details>
+<summary><b>Technical Tutorials</b></summary><blockquote>
+<br/>
+
+<table>
+
+
+
+<tr>
+    <td><b>Notebooks</b></td>
+    <td><b>Related media</b></td>
+    <td><b>Features</b></td>
+</tr>
+<tr>
+<td rowspan="2"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/excel-and-atoti/main.ipynb">excel-and-atoti&nbsp;</a></td>
+<td><a href="https://www.youtube.com/watch?v=dFYZkTxiaOU&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=9?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Asia</a></td><td rowspan="2"><img src="https://img.shields.io/badge/atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ atoti to excel connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data ordering-grey" />&nbsp;<img src="https://img.shields.io/badge/ local file-grey" />&nbsp;<img src="https://img.shields.io/badge/ parameter simulation-grey" />&nbsp;</td>
+</tr>
+<tr>
+<td valign="center"><a href="https://www.youtube.com/watch?v=qd8RTFDJUMI&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=10?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Europe</a></td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ source simulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ shift-grey" />&nbsp;</td>
+</tr>
+</table>
+<br/>
+</blockquote></details>
+
+
+ <hr/> 
+
+#### 🗃&nbsp;Trend Analysis 
+
+
+<details>
+<summary><b>Technical Tutorials</b></summary><blockquote>
+<br/>
+
+<table>
+
+
+
+<tr>
+    <td><b>Notebooks</b></td>
+    <td><b>Related media</b></td>
+    <td><b>Features</b></td>
+</tr>
+<tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/02-technical-tutorials/introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/where-grey" />&nbsp;<img src="https://img.shields.io/badge/ configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ pandas-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ table join-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ JupyterLab extension-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ port-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ drill down-grey" />&nbsp;<img src="https://img.shields.io/badge/ roll up-grey" />&nbsp;<img src="https://img.shields.io/badge/ source simulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ shift-grey" />&nbsp;</td>
 </tr>
 </table>
 <br/>

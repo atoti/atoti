@@ -2,8 +2,8 @@ import datetime
 import datetime as dt
 import pandas as pd
 
+
 def get_historical_vector(df_close):
-    
     # compute returns
     df_daily_ret = df_close.diff().iloc[1:]
     df_daily_ret = df_daily_ret[(df_daily_ret == 0).sum(1) < 2]
@@ -56,10 +56,16 @@ def get_historical_vector(df_close):
     df_dates[["date_index", "monthly_date_index"]] = df_dates[
         ["date_index", "monthly_date_index"]
     ].astype(int)
-    
-    df_ror["daily_returns_vector"] = [",".join(map(str, l)) for l in df_ror["daily_returns_vector"]]
-    df_ror["daily_ROR_vector"] = [",".join(map(str, l)) for l in df_ror["daily_ROR_vector"]]
-    df_ror["monthly_ROR_vector"] = [",".join(map(str, l)) for l in df_ror["monthly_ROR_vector"]]
+
+    df_ror["daily_returns_vector"] = [
+        ",".join(map(str, l)) for l in df_ror["daily_returns_vector"]
+    ]
+    df_ror["daily_ROR_vector"] = [
+        ",".join(map(str, l)) for l in df_ror["daily_ROR_vector"]
+    ]
+    df_ror["monthly_ROR_vector"] = [
+        ",".join(map(str, l)) for l in df_ror["monthly_ROR_vector"]
+    ]
     df_ror["closing_price"] = [",".join(map(str, l)) for l in df_ror["closing_price"]]
 
     return df_ror, df_dates

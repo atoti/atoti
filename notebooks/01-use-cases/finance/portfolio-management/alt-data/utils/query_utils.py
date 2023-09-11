@@ -1,4 +1,6 @@
 import pandas as pd
+
+
 class Query:
     def __init__(self, session):
         self.session = session
@@ -51,10 +53,7 @@ class Query:
                 self.l[("Portfolios Allocation", "iteration", "iteration")]
                 == _iteration
             )
-            & (
-                self.l[("Portfolios Allocation", "method", "method")]
-                == _opt_mtd
-            ),
+            & (self.l[("Portfolios Allocation", "method", "method")] == _opt_mtd),
         )
 
         portfolio_dtl = portfolio_dtl.reset_index()
@@ -194,42 +193,41 @@ class Query:
         )
 
         return df_price
-    
+
     # i believe there should / maybe want a function to do get_esg_data_by_sector
-    
+
     def get_past_pricing(self):
-            df_historical_price = self.cube.query(
-                self.m["Daily Price"],
-                levels=[
-                    self.l["historical_date"],
-                    self.l["symbol"],
-                ],
-            )
+        df_historical_price = self.cube.query(
+            self.m["Daily Price"],
+            levels=[
+                self.l["historical_date"],
+                self.l["symbol"],
+            ],
+        )
 
-            df_historical_price.reset_index(inplace=True)
-            df_price = df_historical_price.pivot(
-                index="historical_date", columns="symbol", values="Daily Price"
-            )
+        df_historical_price.reset_index(inplace=True)
+        df_price = df_historical_price.pivot(
+            index="historical_date", columns="symbol", values="Daily Price"
+        )
 
-            return df_price
-        
+        return df_price
+
     def get_esg(self):
         esg_df = self.cube.query(
             self.m["ESG Score"],
             levels=[self.l["symbol"]],
         )
-        
+
         return esg_df
 
-    
-    def get_departures_by_office(self, office)->pd.DataFrame:
-        """ 
+    def get_departures_by_office(self, office) -> pd.DataFrame:
+        """
         This function will return a dataframe defined by a measure and only that measure,
         relative to the symbols in the cube. This is used to optimize values relative to the
         symbol later.
         """
         office_df = self.cube.query(
-            self.m[office], 
+            self.m[office],
             levels=[self.l["symbol"]],
         )
         return office_df

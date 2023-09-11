@@ -7,6 +7,7 @@ def get_iteration(request, user, session):
 
     return opt_mtd
 
+
 @session.endpoint("optimize", method="POST")
 def trigger_optimization(request, user, session):
     helper_util = helper.Helper(session)
@@ -17,6 +18,7 @@ def trigger_optimization(request, user, session):
     selected_iteration = data["iteration"]
     # helper_util.query_and_optimize(selected_port, selected_method, selected_iteration)
     return f"hello {selected_port}, {selected_method}, {selected_iteration} "
+
 
 @session.endpoint("upload/portfolio", method="POST")
 def upload_portfolio(request, user, session):

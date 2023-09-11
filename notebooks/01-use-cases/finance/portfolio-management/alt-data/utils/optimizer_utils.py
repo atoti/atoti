@@ -8,6 +8,7 @@ from pypfopt import (
 import pandas as pd
 import cvxpy as cp
 
+
 class Optimizer:
     def init_model(self, df_price):
         mu = expected_returns.mean_historical_return(df_price)
@@ -53,7 +54,7 @@ class Optimizer:
         )
 
         return weights_df
-    
+
     def basic_max_sharpe(self, df_price):
         ef = self.init_model(df_price)
         ef.max_sharpe()

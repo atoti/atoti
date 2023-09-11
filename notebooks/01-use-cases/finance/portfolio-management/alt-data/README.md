@@ -2,7 +2,7 @@
 
 This project is a collaboration between [Atoti Community](https://www.atoti.io) and [CloudQuant](https://www.cloudquant.com/).
 
-<center><img src="./images/AtotiCommunity.png" alt="Atoti Community" style="height: 100px;" hspace="50"></a></div><img src="./images/CloudQuantPNGLogo.png" alt="CloudQuant" style="height: 100px;" hspace="50"></a></div></center>
+<center><img src="https://data.atoti.io/notebooks/banners/AtotiCommunity.png" alt="Atoti Community" style="height: 100px;" hspace="50"></a></div><img src="https://data.atoti.io/notebooks/alt-data/img/CloudQuantPNGLogo.png" alt="CloudQuant" style="height: 100px;" hspace="50"></a></div></center>
 
 
 It's no secret that access to the right data along with the right aggregation engine allows Quants and portfolio managers to achieve their goals. The problem? How do you find good data, and what is the right aggregation tool?  

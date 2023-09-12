@@ -1,6 +1,7 @@
 # Incorporating Alternative Data into your Portfolio Rebalancing
 
-This project is a collaboration between [Atoti Community](https://www.atoti.io) and [CloudQuant](https://www.cloudquant.com/).
+This project is a collaboration between [Atoti Community](https://www.atoti.io) and [CloudQuant](https://www.cloudquant.com/).  
+
 
 <center><img src="https://data.atoti.io/notebooks/banners/AtotiCommunity.png" alt="Atoti Community" style="height: 100px;" hspace="50"></a></div><img src="https://data.atoti.io/notebooks/alt-data/img/CloudQuantPNGLogo.png" alt="CloudQuant" style="height: 100px;" hspace="50"></a></div></center>
 

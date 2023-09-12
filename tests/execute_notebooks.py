@@ -17,6 +17,7 @@ DATA_PREPROCESSING_NOTEBOOKS = [
     "credit-card-fraud-detection/02-AutoML-PyCaret-anomaly.ipynb",
     "credit-card-fraud-detection/03-AutoML-PyCaret-classification.ipynb",
     # Portfolio management
+    "alt-data/01_data_gen.ipynb",
     "cvar-optimizer/01_data_generation.ipynb",
     # insurance notebooks
     "customer360/01-Dataupload-to-Vertica.ipynb",

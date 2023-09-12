@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "composite": true,
+    "incremental": true,
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
+    "importHelpers": true,
+    "declarationMap": false,
+    "declaration": true,
+    "emitDeclarationOnly": false,
+    "sourceMap": false,
+    "strict": false,
+    "noEmitOnError": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "isolatedModules": true,
+    "noImplicitThis": false,
+    "alwaysStrict": false,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "Node",
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+  }
+}

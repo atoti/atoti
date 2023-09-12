@@ -23,6 +23,10 @@
     <td><b>Features</b></td>
 </tr>
 <tr>
+<td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/01-use-cases/finance/portfolio-management/alt-data/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;alt-data&nbsp;</a></td>
+<td>&nbsp</td><td rowspan="1"><img src="https://img.shields.io/badge/custom widget-grey" />&nbsp;<img src="https://img.shields.io/badge/ nonlinear aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ endpoint-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ parameter simulation-grey" />&nbsp;</td>
+</tr>
+<tr>
 <td rowspan="1"><a href="https://github.com/atoti/atoti/blob/main/notebooks/01-use-cases/finance/portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td>
 <td><a href="https://www.atoti.io/articles/integrating-an-external-portfolio-optimizer-with-atoti?utm_source=github">📰&nbsp;Integrating an External Portfolio Optimizer with atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/custom widget-grey" />&nbsp;<img src="https://img.shields.io/badge/ nonlinear aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ endpoint-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube query-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ parameter simulation-grey" />&nbsp;</td>
 </tr>

@@ -68,7 +68,7 @@ These commands can be used while developing:
 - Reformat notebooks using black-nb :
 
   ```bash
-  poetry run black-nb */*.ipynb
+  poetry run black-nb --exclude '/(\.ipynb_checkpoints)/' .
   ```
 
 - Execute all the notebooks:

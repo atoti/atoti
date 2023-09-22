@@ -32,7 +32,7 @@ jobs:
         run: poetry run black . --check
 
       - name: Run Black on notebooks
-        run: poetry run black-nb */*.ipynb --check
+        run: poetry run black-nb --exclude '/(\.ipynb_checkpoints)/' . --check
 
       - name: Run notebooks
         run: poetry run python tests/execute_notebooks.py

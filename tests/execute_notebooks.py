@@ -53,7 +53,6 @@ NOTEBOOKS_TO_SKIP = sorted(
 
 
 def execute_notebooks():
-    
     # Gather the list of notebooks under the project directory
     nb_list = [
         nb_path.replace("\\", "/")

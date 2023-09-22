@@ -31,7 +31,7 @@
 <td><a href="https://www.atoti.io/articles/market-risk-analytics-in-python-interactive-rolling-var/?utm_source=github">📰&nbsp;Market risk analytics in python: Interactive rolling VaR</a></td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ nonlinear aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ data type mapping-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ hierarchy manipulation-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ rolling windows-grey" />&nbsp;<img src="https://img.shields.io/badge/ content persistence-grey" />&nbsp;<img src="https://img.shields.io/badge/ parameter simulation-grey" />&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="|PLACEHOLDER|/notebooks/01-use-cases/finance/front-offices/main.ipynb">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./../../../../../notebooks/01-use-cases/finance/front-office/pnl-explained/main.ipynb">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.atoti.io/articles/pnl-explained-with-atoti/?utm_source=github">📰&nbsp;PnL Explained with atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/table join-grey" />&nbsp;</td>
 </tr>
 <tr>

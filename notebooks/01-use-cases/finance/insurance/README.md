@@ -23,7 +23,7 @@
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="|PLACEHOLDER|//notebooks/01-use-cases/finance/insurance/customer360/03-main-csv.ipynb">customer 360&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./customer360/03-main-csv.ipynb">customer360&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.atoti.io/articles/customer-360-how-it-can-be-achieved-with-atoti/?utm_source=github">📰&nbsp;Customer 360: How it can be achieved with atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/switch-grey" />&nbsp;<img src="https://img.shields.io/badge/ cumulative aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ date bucket-grey" />&nbsp;<img src="https://img.shields.io/badge/ sql connector-grey" />&nbsp;<img src="https://img.shields.io/badge/ data load-grey" />&nbsp;<img src="https://img.shields.io/badge/ date format-grey" />&nbsp;<img src="https://img.shields.io/badge/ date difference-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ table load-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;</td>
 </tr>
 <tr>

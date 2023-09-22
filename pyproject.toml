@@ -43,7 +43,6 @@ atoti = {extras = ["aws", "azure", "gcp", "jupyterlab3", "kafka", "sql"], versio
 pandas = {version = "2.0.3", source = "PyPI"}
 
 [tool.poetry.dev-dependencies]
-black-nb = "^0.7"
 black = { extras = ["jupyter"], version = "*" }
 
 [[tool.poetry.source]]

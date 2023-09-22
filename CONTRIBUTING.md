@@ -68,7 +68,7 @@ These commands can be used while developing:
 - Reformat notebooks using black-nb :
 
   ```bash
-  poetry run black-nb notebooks/
+  poetry run black-nb */*.ipynb
   ```
 
 - Execute all the notebooks:

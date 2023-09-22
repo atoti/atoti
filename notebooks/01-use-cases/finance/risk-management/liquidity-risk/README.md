@@ -24,7 +24,7 @@
 </tr>
 <tr>
 <td rowspan="1"><a href="./irrbb/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="https://atoti.io/articles/irrbb-with-atoti/?utm_source=github">📰&nbsp;Measuring Interest Rate Risk in the Banking Book (IRRBB) with Atoti</a></td><td rowspan="1"><img src="https://img.shields.io/badge/configuration-grey" />&nbsp;<img src="https://img.shields.io/badge/ vector aggregation-grey" />&nbsp;<img src="https://img.shields.io/badge/ quantile-grey" />&nbsp;<img src="https://img.shields.io/badge/ session query-grey" />&nbsp;<img src="https://img.shields.io/badge/ visualization-grey" />&nbsp;<img src="https://img.shields.io/badge/ dashboarding-grey" />&nbsp;<img src="https://img.shields.io/badge/ cube-grey" />&nbsp;<img src="https://img.shields.io/badge/ memory-grey" />&nbsp;</td>
+<td><a href="https://atoti.io/articles/irrbb-with-atoti/?utm_source=github">📰&nbsp;Measuring Interest Rate Risk in the Banking Book (IRRBB) with Atoti</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> cube</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 </table>
 

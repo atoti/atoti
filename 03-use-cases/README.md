@@ -24,7 +24,7 @@ Want to try Atoti Python API? You can [register online for an evaluation license
 Check out the [Atoti repository](https://github.com/atoti/atoti) for more info on Atoti.
 
 
-### Browse by Use Cases  
+### Browse by use case  
 
 <a href="./01-finance"><img src="https://img.shields.io/badge/Financial-AF4D61" alt="Financial"></a>&nbsp;
 <a href="./02-other-industries"><img src="https://img.shields.io/badge/Other%20Industries%20Use%20Cases-AF4D61" alt="Other Industries"></a>&nbsp;
@@ -492,7 +492,7 @@ Check out the [Atoti repository](https://github.com/atoti/atoti) for more info o
 </table>
 </details><hr />
 
-### Browse by Features
+### Browse by features
   
 Double-click on tile to go to feature section.  
 

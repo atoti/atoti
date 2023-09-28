@@ -38,9 +38,9 @@ This repository is not the only one to have some neat things (though, that it do
 <a href="./03-use-cases/"><img src="https://img.shields.io/badge/Use%20Cases-AF4D61" alt="Use Cases"></a>&nbsp;
 
 
-Navigate to our Project related repositories to learn how to implement projects:
+Navigate to our Project Template repository to learn how to implement projects:
 
-<a href="https://github.com/atoti/project-template"><img src="https://img.shields.io/badge/Project%20Template-AF4D61" alt="Project Templates"></a>&nbsp;
+<a href="https://github.com/atoti/project-template"><img src="https://img.shields.io/badge/Project%20Template-AF4D61" alt="Project Template"></a>&nbsp;
 
 
 ### 🧰 Installation

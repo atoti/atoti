@@ -288,7 +288,7 @@
 
 </li></ul><hr />
 
-### Browse by Features
+### Browse by features
   
 Double-click on tile to go to feature section.  
 

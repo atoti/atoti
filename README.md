@@ -67,7 +67,7 @@ You can use:
 By starting a discussion or opening an issue, you agree with Atoti's [terms of use](https://www.atoti.io/terms) and [privacy policy](https://www.atoti.io/privacy-policy).
 
 
-### 📚 Other Resources  
+### 📚 Other resources  
 
 - [Tutorial](https://docs.atoti.io/latest/getting_started/tutorial/tutorial.html)
 - [Guides](https://www.atoti.io/guides/)

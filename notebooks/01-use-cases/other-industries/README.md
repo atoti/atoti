@@ -13,7 +13,7 @@
 ## Other industries 
 
 
-### Browse by Use Cases
+### Browse by use cases
 
 <details>
 <summary><b>Other industries</b></summary><blockquote>

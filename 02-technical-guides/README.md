@@ -13,7 +13,7 @@
 ## Technical guides
 
 
-### Browse by Use Cases
+### Browse by use cases
 
 <details>
 <summary><b>Technical guides</b></summary><blockquote>

@@ -13,7 +13,7 @@
 ## Technical Tutorials
 
 
-### Browse by Use Cases
+### Browse by use cases
 
 <details>
 <summary><b>Technical tutorials</b></summary><blockquote>

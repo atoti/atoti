@@ -13,7 +13,7 @@
 ## Community fun
 
 
-### Browse by Use Cases
+### Browse by use cases
 
 
 <details>

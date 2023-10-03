@@ -246,7 +246,8 @@ def create_app(ses_name="training1", port=9091):
         user_content_storage=f"./{ses_name}",
         port=port,
         java_options=["-Xms1G", "-Xmx8G"],
-        app_extensions=tt.ADVANCED_APP_EXTENSION,
+        # requires Atoti license
+        # app_extensions=tt.ADVANCED_APP_EXTENSION,
     )
 
     base_table = setup_tables(session)

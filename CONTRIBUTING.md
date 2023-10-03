@@ -65,12 +65,6 @@ These commands can be used while developing:
   poetry run black .
   ```
 
-- Reformat notebooks using black-nb :
-
-  ```bash
-  poetry run black-nb notebooks/
-  ```
-
 - Execute all the notebooks:
 
   ```bash

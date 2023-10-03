@@ -30,10 +30,6 @@
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./aggregate-provider/main.ipynb">aggregate-provider&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
-</tr>
-<tr>
 <td rowspan="1"><a href="./auto-cube/main.ipynb">auto-cube&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/auto-cube-creation/?utm_source=github">📰&nbsp;Create a Python web application with a few clicks</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
 </tr>
@@ -543,10 +539,6 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./aggregate-provider/main.ipynb">aggregate-provider&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
-</tr>
-<tr>
 <td rowspan="1"><a href="./directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> direct query</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> snowflake</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
@@ -661,10 +653,6 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Version</b></td>
     <td><b>Related media</b></td>
     <td><b>Features</b></td>
-</tr>
-<tr>
-<td rowspan="1"><a href="./aggregate-provider/main.ipynb">aggregate-provider&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./auto-cube/main.ipynb">auto-cube&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
@@ -816,10 +804,6 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Version</b></td>
     <td><b>Related media</b></td>
     <td><b>Features</b></td>
-</tr>
-<tr>
-<td rowspan="1"><a href="./aggregate-provider/main.ipynb">aggregate-provider&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./auto-cube/main.ipynb">auto-cube&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
@@ -986,10 +970,6 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Version</b></td>
     <td><b>Related media</b></td>
     <td><b>Features</b></td>
-</tr>
-<tr>
-<td rowspan="1"><a href="./aggregate-provider/main.ipynb">aggregate-provider&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./directquery-intro/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>

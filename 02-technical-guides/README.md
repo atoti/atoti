@@ -30,6 +30,10 @@
     <td><b>Features</b></td>
 </tr>
 <tr>
+<td rowspan="1"><a href="./aggregate-provider/main.ipynb">aggregate-provider&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
+</tr>
+<tr>
 <td rowspan="1"><a href="./auto-cube/main.ipynb">auto-cube&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/auto-cube-creation/?utm_source=github">📰&nbsp;Create a Python web application with a few clicks</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
 </tr>
@@ -51,7 +55,7 @@
 </tr>
 <tr>
 <td rowspan="1"><a href="./directquery-intro/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> bigquery</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
+<td><a href="https://atoti.io/articles/what-is-directquery/?utm_source=github">📰&nbsp;What is DirectQuery</a></td><td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> bigquery</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
@@ -102,6 +106,10 @@
 </tr>
 <tr>
 <td valign="center"><a href="https://www.youtube.com/watch?v=qd8RTFDJUMI&list=PLAUN-EQdSx7jeORLVmP-qMo-tVqkMbwpW&index=10?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;atoti & Excel - Europe</a></td>
+</tr>
+<tr>
+<td rowspan="1"><a href="./table-creation-and-data-loads/main.ipynb">table-creation-and-data-loads&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>CSV</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;</td>
 </tr>
 </table>
 <br/>
@@ -421,7 +429,7 @@ Double-click on tile to go to feature section.
 </tr>
 <tr>
 <td rowspan="1"><a href="./directquery-intro/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> bigquery</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
+<td><a href="https://atoti.io/articles/what-is-directquery/?utm_source=github">📰&nbsp;What is DirectQuery</a></td><td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> bigquery</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
@@ -452,6 +460,10 @@ Double-click on tile to go to feature section.
 </tr>
 <tr>
 <td valign="center"><a href="https://www.atoti.io/guides/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
+</tr>
+<tr>
+<td rowspan="1"><a href="./table-creation-and-data-loads/main.ipynb">table-creation-and-data-loads&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>CSV</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./var-benchmark/main.ipynb">var-benchmark&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
@@ -511,6 +523,10 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><a href="./multidimensional-analysis/main.ipynb">multidimensional-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/why-do-we-need-multidimensional-analysis/?utm_source=github">📰&nbsp;Why do we need multidimensional analysis?</a></td><td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> drill through</kbd>&nbsp;</td>
 </tr>
+<tr>
+<td rowspan="1"><a href="./table-creation-and-data-loads/main.ipynb">table-creation-and-data-loads&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>CSV</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;</td>
+</tr>
 </table>
 <br/>
 </blockquote></details>
@@ -537,6 +553,10 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Version</b></td>
     <td><b>Related media</b></td>
     <td><b>Features</b></td>
+</tr>
+<tr>
+<td rowspan="1"><a href="./aggregate-provider/main.ipynb">aggregate-provider&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
@@ -597,6 +617,10 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td><a href="https://www.atoti.io/articles/why-do-we-need-multidimensional-analysis/?utm_source=github">📰&nbsp;Why do we need multidimensional analysis?</a></td><td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> drill through</kbd>&nbsp;</td>
 </tr>
 <tr>
+<td rowspan="1"><a href="./table-creation-and-data-loads/main.ipynb">table-creation-and-data-loads&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>CSV</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;</td>
+</tr>
+<tr>
 <td rowspan="1"><a href="./topcount/atoti.ipynb">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/top-count-in-jupyter-notebook-atoti-vs-pandas-matplotlib/?utm_source=github">📰&nbsp;Top count in Jupyter notebook: atoti vs Pandas + Matplotlib</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;</td>
 </tr>
@@ -653,6 +677,10 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Version</b></td>
     <td><b>Related media</b></td>
     <td><b>Features</b></td>
+</tr>
+<tr>
+<td rowspan="1"><a href="./aggregate-provider/main.ipynb">aggregate-provider&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./auto-cube/main.ipynb">auto-cube&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
@@ -806,6 +834,10 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
+<td rowspan="1"><a href="./aggregate-provider/main.ipynb">aggregate-provider&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
+</tr>
+<tr>
 <td rowspan="1"><a href="./auto-cube/main.ipynb">auto-cube&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/auto-cube-creation/?utm_source=github">📰&nbsp;Create a Python web application with a few clicks</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
 </tr>
@@ -869,7 +901,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./directquery-intro/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> bigquery</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
+<td><a href="https://atoti.io/articles/what-is-directquery/?utm_source=github">📰&nbsp;What is DirectQuery</a></td><td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> bigquery</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
@@ -972,8 +1004,12 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
+<td rowspan="1"><a href="./aggregate-provider/main.ipynb">aggregate-provider&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
+</tr>
+<tr>
 <td rowspan="1"><a href="./directquery-intro/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> bigquery</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
+<td><a href="https://atoti.io/articles/what-is-directquery/?utm_source=github">📰&nbsp;What is DirectQuery</a></td><td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> bigquery</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-1C900C" alt="Latest version" /></td>

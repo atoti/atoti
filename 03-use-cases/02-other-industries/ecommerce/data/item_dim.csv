@@ -1,0 +1,265 @@
+item_key,item_name,desc,unit_price,man_country,supplier,unit
+I00001,A&W Root Beer - 12 oz cans,a. Beverage - Soda,11.5,Netherlands,Bolsius Boxmeer,cans
+I00002,A&W Root Beer Diet - 12 oz cans,a. Beverage - Soda,6.75,poland,CHROMADURLIN S.A.S,cans
+I00003,Barq's Root Beer - 12 oz cans,a. Beverage - Soda,6.75,Bangladesh,DENIMACH LTD,cans
+I00004,Cherry Coke 12oz,a. Beverage - Soda,6.75,Netherlands,Bolsius Boxmeer,cans
+I00005,Cherry Coke Zero 12 pack,a. Beverage - Soda,6.75,Finland,HARDFORD AB,cans
+I00006,Coke Classic 12 oz cans,a. Beverage - Soda,16.25,Lithuania,BIGSO AB,cans
+I00007,Coke Classic 12 oz cans,a. Beverage - Soda,6.75,India,Indo Count Industries Ltd,cans
+I00008,Coke Zero Sugar 12 oz cans,a. Beverage - Soda,16.25,India,Indo Count Industries Ltd,cans
+I00009,Diet Coke - 12 oz cans,a. Beverage - Soda,16.25,Netherlands,Bolsius Boxmeer,cans
+I00010,Diet Coke - 12 oz cans,a. Beverage - Soda,6.75,Lithuania,BIGSO AB,cans
+I00011,Diet Coke Caffeine Free 12oz cans,a. Beverage - Soda,6.75,Germany,Friedola 1888 GmbH,cans
+I00012,Diet Dr. Pepper - 12 oz cans,a. Beverage - Soda,16.25,China,"CHERRY GROUP CO.,LTD",cans
+I00013,Diet Gingerale 12 oz cans,a. Beverage - Soda,6.75,United States,MAESA SAS,cans
+I00014,Diet Mountain Dew 12oz cans,a. Beverage - Soda,6.75,Finland,HARDFORD AB,cans
+I00015,Diet Pepsi - 12 oz cans,a. Beverage - Soda,6.75,India,Indo Count Industries Ltd,cans
+I00016,Dr. Pepper - 12 oz cans,a. Beverage - Soda,16.25,China,"CHERRY GROUP CO.,LTD",cans
+I00017,Fresca Black Cherry - 12 oz cans,a. Beverage - Soda,6.75,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,cans
+I00018,Fresca Original - 12 oz cans,a. Beverage - Soda,6.75,India,Indo Count Industries Ltd,cans
+I00019,Fresca Peach Citrus - 12 oz cans,a. Beverage - Soda,6.75,Finland,HARDFORD AB,cans
+I00020,Ginger Ale - 12 oz cans,a. Beverage - Soda,6.75,poland,CHROMADURLIN S.A.S,cans
+I00021,Hawaiian Punch - 12 oz cans,a. Beverage - Soda,6.75,Germany,Friedola 1888 GmbH,cans
+I00022,Mountain Dew - 12 oz cans,a. Beverage - Soda,16.25,Germany,Friedola 1888 GmbH,cans
+I00023,Pepsi - 12 oz cans,a. Beverage - Soda,6.75,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,cans
+I00024,Pepsi - 12 oz cans,a. Beverage - Soda,16.25,Lithuania,BIGSO AB,cans
+I00025,Seven Up - 12 oz cans,a. Beverage - Soda,11.5,China,"CHERRY GROUP CO.,LTD",cans
+I00026,Sprite - 12 oz cans,a. Beverage - Soda,6.75,Lithuania,BIGSO AB,cans
+I00027,Sprite - 12 oz cans,a. Beverage - Soda,16.25,poland,CHROMADURLIN S.A.S,cans
+I00028,Sprite Zero - 12 pack,a. Beverage - Soda,6.75,poland,CHROMADURLIN S.A.S,cans
+I00029,Sunkist Orange - 12 oz cans,a. Beverage - Soda,11.5,Netherlands,Bolsius Boxmeer,cans
+I00030,La Croix Sparkling Berry 12 ozv,a. Beverage Sparkling Water,16,Finland,HARDFORD AB,cans
+I00031,La Croix Sparkling Coconut 12 oz,a. Beverage Sparkling Water,16,Bangladesh,DENIMACH LTD,cans
+I00032,La Croix Sparkling Cran-Raspberry 12 oz,a. Beverage Sparkling Water,16,Lithuania,BIGSO AB,cans
+I00033,La Croix Sparkling Grapefruit 12 oz,a. Beverage Sparkling Water,16,poland,CHROMADURLIN S.A.S,cans
+I00034,La Croix Sparkling Lemon 12 oz,a. Beverage Sparkling Water,16,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,cans
+I00035,La Croix Sparkling Lime 12 oz,a. Beverage Sparkling Water,16,United States,MAESA SAS,cans
+I00036,La Croix Sparkling Orange 12 oz,a. Beverage Sparkling Water,16,China,"CHERRY GROUP CO.,LTD",cans
+I00037,La Croix Sparkling Pure 12 oz,a. Beverage Sparkling Water,16,Finland,HARDFORD AB,cans
+I00038,Perrier Flavors Sparkling Water 16.9oz,a. Beverage Sparkling Water,23,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,bottles
+I00039,Perrier Sparkling Water glass 11oz,a. Beverage Sparkling Water,26,Bangladesh,DENIMACH LTD,bottles
+I00040,Perrier Sparkling Water plastic 16.9oz,a. Beverage Sparkling Water,22,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,bottles
+I00041,San Pelligrino 16oz Plastic ,a. Beverage Sparkling Water,23,Finland,HARDFORD AB,bottles
+I00042,Topo Chico 12 oz glass,a. Beverage Sparkling Water,28,United States,MAESA SAS,bottles
+I00043,Topo Chico 20oz plastic,a. Beverage Sparkling Water,24,China,"CHERRY GROUP CO.,LTD",bottles
+I00044,Waterloo Sparkling Blackcherry 12oz,a. Beverage Sparkling Water,8,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,cans
+I00045,Waterloo Sparkling Grapefruit 12oz,a. Beverage Sparkling Water,8,China,"CHERRY GROUP CO.,LTD",cans
+I00046,Waterloo Sparkling Lemon 12oz,a. Beverage Sparkling Water,8,Germany,Friedola 1888 GmbH,cans
+I00047,Waterloo Sparkling Lime 12oz,a. Beverage Sparkling Water,8,India,Indo Count Industries Ltd,cans
+I00048,Waterloo Sparkling Mango 12oz,a. Beverage Sparkling Water,8,Bangladesh,DENIMACH LTD,cans
+I00049,Waterloo Sparkling Original 12oz,a. Beverage Sparkling Water,8,Netherlands,Bolsius Boxmeer,cans
+I00050,Waterloo Sparkling Watermelon 12oz,a. Beverage Sparkling Water,8,poland,CHROMADURLIN S.A.S,cans
+I00051,Monster Java 15 oz,Beverage - Energy/Protein ,23,Germany,Friedola 1888 GmbH,cans
+I00052,Monster Lo-Carb 16 oz,Beverage - Energy/Protein,40,poland,CHROMADURLIN S.A.S,cans
+I00053,Monster Original Green 16 oz,Beverage - Energy/Protein,40,Netherlands,Bolsius Boxmeer,cans
+I00054,Monster Zero Ultra 16 oz,Beverage - Energy/Protein,40,poland,CHROMADURLIN S.A.S,cans
+I00055,Monster Zero Ultra Variety 16 oz,Beverage - Energy/Protein,40,Bangladesh,DENIMACH LTD,cans
+I00056,Muscle Milk Protein Shake Choc. 11oz,Beverage - Energy/Protein,24,Netherlands,Bolsius Boxmeer,bottles
+I00057,Muscle Milk Protein Shake Van. 11oz,Beverage - Energy/Protein,24,Germany,Friedola 1888 GmbH,bottles
+I00058,Premier Protein Shake Choc. 11oz,Beverage - Energy/Protein,22,United States,MAESA SAS,bottles
+I00059,Muscle Milk Protein Shake Van. 11oz,Beverage - Energy/Protein,22,Lithuania,BIGSO AB,bottles
+I00060,Muscle Milk Protein Shake Strbry. 11oz,Beverage - Energy/Protein,22,poland,CHROMADURLIN S.A.S,bottles
+I00061,Red Bull 12oz,Beverage - Energy/Protein,55,United States,MAESA SAS,cans
+I00062,Red Bull 16oz,Beverage - Energy/Protein,37,Bangladesh,DENIMACH LTD,cans
+I00063,Red Bull 8.4 oz,Beverage - Energy/Protein,40,Lithuania,BIGSO AB,cans
+I00064,Red Bull Sugar Free 8.4 oz,Beverage - Energy/Protein,40,Lithuania,BIGSO AB,cans
+I00065,G2 Lo Calorie Variety 20 oz,Beverage - Gatorade,20,Lithuania,BIGSO AB,bottles
+I00066,Gatorade Frost Variety 20 oz ,Beverage - Gatorade,20,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,bottles
+I00067,Gatorade Lemon Lime 12oz,Beverage - Gatorade,8,Finland,HARDFORD AB,bottles
+I00068,Gatorade Liberty Variety 20 oz ,Beverage - Gatorade,20,India,Indo Count Industries Ltd,bottles
+I00069,Gatorade Frost Variety 12 oz,Beverage - Gatorade,17.5,Bangladesh,DENIMACH LTD,bottles
+I00070,Gatorade Liberty Variety 12 oz,Beverage - Gatorade,17.5,United States,MAESA SAS,bottles
+I00071,Gatorade Original Variety 12 oz,Beverage - Gatorade,17.5,Germany,Friedola 1888 GmbH,bottles
+I00072,Gatorade Variety 20 oz ,Beverage - Gatorade,20,Bangladesh,DENIMACH LTD,bottles
+I00073,Gatorade X-Factor Fierce Variety 20 oz,Beverage - Gatorade,20,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,bottles
+I00074,Gatorade Zero Variety 20 oz,Beverage - Gatorade,20,Netherlands,Bolsius Boxmeer,bottles
+I00075,Brisk Lemon Iced Tea - 12 oz cans,Beverage - Iced Tea,15.5,United States,MAESA SAS,cans
+I00076,Diet Fuze Iced Tea,Beverage - Iced Tea,6.75,Germany,Friedola 1888 GmbH,cans
+I00077,Fuze Iced Tea,Beverage - Iced Tea,6.75,poland,CHROMADURLIN S.A.S,cans
+I00078,Pure Leaf Sweet Tea 8.5oz,Beverage - Iced Tea,17,Netherlands,Bolsius Boxmeer,bottles
+I00079,Pure Leaf Unsweetened Tea 18.5oz,Beverage - Iced Tea,17,China,"CHERRY GROUP CO.,LTD",bottles
+I00080,Snapple Variety Pack 20oz,Beverage - Iced Tea,22,Germany,Friedola 1888 GmbH,bottles
+I00081,Tejava Unsweetened Black Tea 16.9oz,Beverage - Iced Tea,29,China,"CHERRY GROUP CO.,LTD",bottles
+I00082,100% Juice Box Variety 6.75 oz ,Beverage - Juice,15,Lithuania,BIGSO AB,ct
+I00083,Ocean Spray Cranberry Juice Cocktail 15oz ,Beverage - Juice,14,Finland,HARDFORD AB,bottles
+I00084,Tropicana Apple Juice 10 oz 100% ,Beverage - Juice,18,Germany,Friedola 1888 GmbH,bottles
+I00085,Tropicana Orange Juice 10 oz 100% ,Beverage - Juice,18,Bangladesh,DENIMACH LTD,bottles
+I00086,V8 100% Vegetable Juice 11oz cans,Beverage - Juice,18,poland,CHROMADURLIN S.A.S,cans
+I00087,V-8 Splash Variety 20 oz,Beverage - Juice,15,China,"CHERRY GROUP CO.,LTD",bottles
+I00088,Welch's 100% Juice Variety10 oz,Beverage - Juice,17,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,bottles
+I00089,AquaFina Purified Drinking Water 16oz,Beverage Water,9,Germany,Friedola 1888 GmbH,bottles
+I00090,Dasani Bottled Water 16.9 oz,Beverage Water,9,Bangladesh,DENIMACH LTD,bottles
+I00091,Nestle Purelife 16oz ,Beverage Water,7.5,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,bottles
+I00092,Ozarka Spring Water 16.9 oz bottles,Beverage Water,10,Lithuania,BIGSO AB,bottles
+I00093,Ozarka Spring Water 20 oz,Beverage Water,13,Bangladesh,DENIMACH LTD,bottles
+I00094,Ozarka Spring Water Mini 8oz,Beverage Water,11,Netherlands,Bolsius Boxmeer,bottles
+I00095,Propel Zero Variety 20 oz,Beverage Water,16,Finland,HARDFORD AB,botlltes
+I00096,Sobe Zero Lifewater Variety 20 oz,Beverage Water,20,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,bottles
+I00097,Vita Coconut Water 10oz ,Beverage Water,19,India,Indo Count Industries Ltd,cartons
+I00098,Coffee-Mate French Vanilla Cold,Coffee Cream,10,Finland,HARDFORD AB,oz
+I00099,Coffee-Mate Original Flavor Cold,Coffee Cream,6,Bangladesh,DENIMACH LTD,oz
+I00100,Coffee-mate Original Powdered Creamer,Coffee Cream,10,Netherlands,Bolsius Boxmeer,oz.
+I00101,French Vanilla International Delight,Coffee Cream,15,Germany,Friedola 1888 GmbH,tubs
+I00102,Half & Half -Land o Lakes Mini Moo's,Coffee Cream,16,Lithuania,BIGSO AB,tubs
+I00103,Hazelnut International Delight,Coffee Cream,15,Finland,HARDFORD AB,tubs
+I00104,Njoy Creamer Canister 16 oz,Coffee Creamer,14,Netherlands,Bolsius Boxmeer,ct
+I00105,Njoy Creamer Packs,Coffee Creamer,16.5,poland,CHROMADURLIN S.A.S,ct
+I00106,Community Coffee Dark Roast,Coffee Ground,17,Bangladesh,DENIMACH LTD,oz
+I00107,Dunkin Donuts Original Blend,Coffee Ground,20,poland,CHROMADURLIN S.A.S,oz
+I00108,Folgers 100% Colombian Coffee,Coffee Ground,15,Lithuania,BIGSO AB,oz
+I00109,Folgers Classic Roast Coffee,Coffee Ground,17,Germany,Friedola 1888 GmbH,oz
+I00110,Starbuck's Pike Place,Coffee Ground,22.5,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,oz
+I00111,K Cups Hot Cocoa,Coffee Hot Cocoa,16,Netherlands,Bolsius Boxmeer,ct
+I00112,Swiss Miss Hot Cocoa Mix 1 oz,Coffee Hot Cocoa,14,India,Indo Count Industries Ltd,ct.
+I00113,K Cups - McCafe Premium Roast,Coffee K-Cups,42,India,Indo Count Industries Ltd,ct
+I00114,K Cups – Starbuck's Pike Place,Coffee K-Cups,44,Lithuania,BIGSO AB,ct
+I00115,K Cups Daily Chef Columbian Supremo,Coffee K-Cups,53,India,Indo Count Industries Ltd,ct
+I00116,K Cups Dunkin Donuts Medium Roast,Coffee K-Cups,48,United States,MAESA SAS,ct
+I00117,K Cups Folgers Lively Columbian,Coffee K-Cups,46,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,ct
+I00118,K Cups –Organic Breakfast Blend,Coffee K-Cups,42,Finland,HARDFORD AB,ct
+I00119,K Cups Original Donut Shop Med. Roast,Coffee K-Cups,53,India,Indo Count Industries Ltd,ct
+I00120,K Cups - Green Tea,Coffee K-Cups Tea,9,poland,CHROMADURLIN S.A.S,ct
+I00121,Stirrers Coffee Stirs 7inch,Coffee Stirrers,17,China,"CHERRY GROUP CO.,LTD",ct
+I00122,Equal Sweetener,Coffee Sweetener,15,poland,CHROMADURLIN S.A.S,ct
+I00123,Honey Packets  ,Coffee Sweetener,45,Netherlands,Bolsius Boxmeer,ct
+I00124,Njoy Sugar Canister 22 oz,Coffee Sweetener,15,Finland,HARDFORD AB,ct
+I00125,Pure White Sugar Packets,Coffee Sweetener,15,Bangladesh,DENIMACH LTD,ct
+I00126,Splenda Sweetener,Coffee Sweetener,25,poland,CHROMADURLIN S.A.S,ct
+I00127,Sugar in the Raw Packets,Coffee Sweetener,12.5,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,pk
+I00128,Sweet N Low Sweetener,Coffee Sweetener,16,Germany,Friedola 1888 GmbH,pk
+I00129,Truvia Natural Sweetener,Coffee Sweetener,18,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,pk
+I00130,Hefty Supreme Foam Bowls 12oz,Dishware - Bowls,14,Finland,HARDFORD AB,ct
+I00131,Paper Bowls 20 oz Ultra Strong,Dishware - Bowls,14,Bangladesh,DENIMACH LTD,ct
+I00132,Clear Plastic 12 oz Cups,Dishware - Cups Cold,14,Bangladesh,DENIMACH LTD,ct
+I00133,Clear Plastic Cups 9oz,Dishware - Cups Cold,15,United States,MAESA SAS,ct
+I00134,Red Plastic Cups 18oz,Dishware - Cups Cold,16,Bangladesh,DENIMACH LTD,ct
+I00135,Chinet Comfort Hot Cups with Lids 16oz,Dishware - Cups Hot,14,United States,MAESA SAS,ct.
+I00136,Dixie Perfecttouch Paper Cups 12oz,Dishware - Cups Hot,19.5,Lithuania,BIGSO AB,ct
+I00137,Foam Coffee Cups - 08 ounce,Dishware - Cups Hot,24,United States,MAESA SAS,ct
+I00138,Foam Coffee Cups - 12 ounce,Dishware - Cups Hot,32,Lithuania,BIGSO AB,ct
+I00139,Foam Coffee Cups - 16 ounce,Dishware - Cups Hot,24,Germany,Friedola 1888 GmbH,ct
+I00140,Foam Coffee Cups - 20 ounce,Dishware - Cups Hot,29,Netherlands,Bolsius Boxmeer,ct
+I00141,Hefty Cmprtmnt Plates Foam 10',Dishware - Plates,18,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,ct
+I00142,Hefty Supreme Foam Plates 6 inch,Dishware - Plates,12.5,India,Indo Count Industries Ltd,ct
+I00143,Hefty Supreme Foam Plates 9 inch,Dishware - Plates,16,India,Indo Count Industries Ltd,ct
+I00144,Paper Plate 10 inch Ultra Strong,Dishware - Plates,20,Finland,HARDFORD AB,ct
+I00145,Paper Plates 7 inch  Ultra Strong,Dishware - Plates,17,India,Indo Count Industries Ltd,ct
+I00146,Paper Plates 8.5 inch Ultra Strong,Dishware - Plates,21,poland,CHROMADURLIN S.A.S,ct
+I00147,Plastic Forks White Heavyweight,Dishware - Utensils,15,China,"CHERRY GROUP CO.,LTD",ct
+I00148,Plastic Knives White  Heavyweight,Dishware - Utensils,15,Germany,Friedola 1888 GmbH,ct
+I00149,Plastic Spoons White  Heavyweight,Dishware - Utensils,15,Finland,HARDFORD AB,ct
+I00150,Baked Chips Variety Mix Frito,Food - Chips,16,India,Indo Count Industries Ltd,bags
+I00151,Cheetos Flamin' Hot 1 oz,Food - Chips,17,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,bags
+I00152,Cheez It Original Crackers 1.5oz,Food - Chips,15,poland,CHROMADURLIN S.A.S,bags
+I00153,Cheez It White Cheddar 1.5 oz,Food - Chips,15,India,Indo Count Industries Ltd,bags
+I00154,Chex Mix Original,Food - Chips,15,Finland,HARDFORD AB,Bags
+I00155,Doritos Nacho Cheese 1 oz,Food - Chips,17,India,Indo Count Industries Ltd,bags
+I00156,Flamin Hot Chip Mix 1oz,Food - Chips,17,Bangladesh,DENIMACH LTD,bags
+I00157,Frito Big Grab Variety 1.5-2.0 oz,Food - Chips,17,Finland,HARDFORD AB,bags
+I00158,Frito Bold Flavors Variety,Food - Chips,17,Lithuania,BIGSO AB,
+I00159,Frito BOLD Flavors Variety Pack,Food - Chips,17,Bangladesh,DENIMACH LTD,bags
+I00160,Frito Classic Mix Variety,Food - Chips,17,India,Indo Count Industries Ltd,bags
+I00161,Frito Fiesta Flavors Variety,Food - Chips,17,Germany,Friedola 1888 GmbH,Bags
+I00162,Gardettos Snacks,Food - Chips,16,Bangladesh,DENIMACH LTD,Bags
+I00163,Goldfish Pepperidge Farm Cheddar 1.5oz ,Food - Chips,15,poland,CHROMADURLIN S.A.S,bags
+I00164,"Goldfish Variety Bags, cheddar, pretzels",Food - Chips,16,Germany,Friedola 1888 GmbH,ct
+I00165,Miss Vickies Chips,Food - Chips,16,Finland,HARDFORD AB,bags
+I00166,Pop Chips Variety bags,Food - Chips,17,United States,MAESA SAS,bags
+I00167,Pringles Snak Stacks Variety,Food - Chips,14,India,Indo Count Industries Ltd,ct
+I00168,Snyders Pretzels Minis,Food - Chips,18,Germany,Friedola 1888 GmbH,ct
+I00169,Sun Chips Variety Pack,Food - Chips,17,India,Indo Count Industries Ltd,ct
+I00170,Veggie Chips 1oz ,Food - Chips,15,Netherlands,Bolsius Boxmeer,ct.
+I00171,Dark Chocolate Mint Patties,Food - Chocolate,16,Finland,HARDFORD AB,ct
+I00172,Hershey Chocoalte Minatures Assort.,Food - Chocolate,19,Netherlands,Bolsius Boxmeer,oz
+I00173,Hershey Factory Favorites Mix,Food - Chocolate,19,Bangladesh,DENIMACH LTD,ct
+I00174,Hershey Kisses ,Food - Chocolate,18,Germany,Friedola 1888 GmbH,oz
+I00175,Hershey Nuggets,Food - Chocolate,19,Bangladesh,DENIMACH LTD,oz
+I00176,M&M Peanut Butter 1.6 oz,Food - Chocolate,19,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,ct
+I00177,M&M Peanut Candy 1.7 oz,Food - Chocolate,35,Netherlands,Bolsius Boxmeer,ct
+I00178,M&M Variety Full Size Bags,Food - Chocolate,26,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,ct
+I00179,Mars Chocolate Favorites,Food - Chocolate,19,Lithuania,BIGSO AB,ct
+I00180,Mars Mini Mix,Food - Chocolate,19,Finland,HARDFORD AB,ct
+I00181,Reese's Peanutbutter Cups 2/pk,Food - Chocolate,26,poland,CHROMADURLIN S.A.S,ct
+I00182,Reese's Pieces Peanutbutter Candy,Food - Chocolate,15,Netherlands,Bolsius Boxmeer,oz
+I00183,Snickers Bars 1.8oz,Food - Chocolate,35,poland,CHROMADURLIN S.A.S,ct
+I00184,Tootsie Roll Midgets,Food - Chocolate,12,Bangladesh,DENIMACH LTD,ct
+I00185,Apple Sauce Variety GoGO Squeeze 3.2oz,Food - Healthy,14,India,Indo Count Industries Ltd,ct
+I00186,Belvita Hard Biscuits Blueberry,Food - Healthy,13,India,Indo Count Industries Ltd,ct
+I00187,Belvita Hard Biscuits Cinnamon,Food - Healthy,13,Netherlands,Bolsius Boxmeer,ct.
+I00188,Belvita Protein Oats Soft Biscuit,Food - Healthy,14,poland,CHROMADURLIN S.A.S,ct
+I00189,Chewy Granola Variety Bars Quaker,Food - Healthy,13,poland,CHROMADURLIN S.A.S,ct.
+I00190,Chobani Greek Yogurt Variety Pack ,Food - Healthy,16,Germany,Friedola 1888 GmbH,ct
+I00191,Cliff Builders Protein Bar Variety Pack,Food - Healthy,24,India,Indo Count Industries Ltd,bars
+I00192,Cliff Energy Bars Variety Pack,Food - Healthy,24,Bangladesh,DENIMACH LTD,ct
+I00193,Crunchy Granola Bars Oats & Honey,Food - Healthy,18,India,Indo Count Industries Ltd,ct
+I00194,Detour Lower Sugar Protein Bar,Food - Healthy,23,Netherlands,Bolsius Boxmeer,bars
+I00195,Dole Fruit in Gel Cups 4.3 oz,Food - Healthy,12.5,poland,CHROMADURLIN S.A.S,ct
+I00196,Fiber One 90 Calorie Fudge Brownies,Food - Healthy,16,poland,CHROMADURLIN S.A.S,ct
+I00197,Fiber One Bars Oats and Chocolate,Food - Healthy,15,India,Indo Count Industries Ltd,bars
+I00198,"Go-Gurt Low Fat Yogurt, Strwbry & Berry ",Food - Healthy,12,Germany,Friedola 1888 GmbH,ct
+I00199,Kellogg's Fruity Snacks,Food - Healthy,15,Lithuania,BIGSO AB,ct
+I00200,Kind  Bars Mini Variety Pack 0.7 oz ,Food - Healthy,20,India,Indo Count Industries Ltd,bars
+I00201,Kind  Bars Variety Pack 1.4 oz ,Food - Healthy,23,Lithuania,BIGSO AB,bars
+I00202,Lunchables Variety Pack Oscar Meyer,Food - Healthy,12,Finland,HARDFORD AB,ct.
+I00203,Nat.Valley PeanutButter Protein Bars,Food - Healthy,18,Lithuania,BIGSO AB,ct
+I00204,Nature Valley Biscuit Sandwich Variety Pack ,Food - Healthy,17,Finland,HARDFORD AB,ct
+I00205,Nature Valley Chewy Trail Mix Bars,Food - Healthy,16,Germany,Friedola 1888 GmbH,ct
+I00206,Nature Valley Soft Oatmeal Squares   ,Food - Healthy,15,Germany,Friedola 1888 GmbH,ct
+I00207,Nature Valley Sweet/Salty Almond Bars      ,Food - Healthy,14,Bangladesh,DENIMACH LTD,ct
+I00208,Nature Valley Sweet/Salty Peanut Bars      ,Food - Healthy,14,Netherlands,Bolsius Boxmeer,ct
+I00209,Quaker Instant Oatmeal Maple Brn Sugar,Food - Healthy,13,India,Indo Count Industries Ltd,ct
+I00210,Quaker Instant Oatmeal Variety ,Food - Healthy,15,Lithuania,BIGSO AB,ct
+I00211,"Sargento Bal. Breaks (fruit, nut, cheese)",Food - Healthy,15,China,"CHERRY GROUP CO.,LTD",ct.
+I00212,Sargento String Cheese 0.75oz,Food - Healthy,12,Germany,Friedola 1888 GmbH,ct
+I00213,Yoplait Original Yogurt Variety Pack ,Food - Healthy,12,Finland,HARDFORD AB,ct
+I00214,Deluxe Mixed Nuts with Seasalt,Food - Nuts,19.5,India,Indo Count Industries Ltd,oz
+I00215,Planters Nut Variety Packs,Food - Nuts,14,poland,CHROMADURLIN S.A.S,ct.
+I00216,Planters Nut-trition 1.5 oz ,Food - Nuts,16.5,Bangladesh,DENIMACH LTD,ct
+I00217,Unsalted Premium Blend Nuts,Food - Nuts,20.5,Germany,Friedola 1888 GmbH,oz
+I00218,"Blue Diamond Almonds Rstd, Sltd",Food - Nuts,6,Netherlands,Bolsius Boxmeer,ct
+I00219,Wonderful Pistachios (in shell),Food - Nuts,22,China,"CHERRY GROUP CO.,LTD",ct
+I00220,Austin Cookie Cracker Variety,Food - Snacks,14,Germany,Friedola 1888 GmbH,ct
+I00221,Austin Toasty Crackers w/ PBtr,Food - Snacks,14,China,"CHERRY GROUP CO.,LTD",ct
+I00222,Cheese and Peanut Butter Crackers,Food - Snacks,12,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,ct
+I00223,Lance Variety Cracker Packs ,Food - Snacks,13.5,Bangladesh,DENIMACH LTD,ct
+I00224,Peanutbutter Filled Pretzels,Food - Snacks,11,Netherlands,Bolsius Boxmeer,oz
+I00225,Famous Amos Cookies ,Food - Sweets,17,Germany,Friedola 1888 GmbH,ct
+I00226,Jolly Ranchers Variety Hard Candy,Food - Sweets,15,Finland,HARDFORD AB,lb
+I00227,Keebler Cookie & Cracker Variety,Food - Sweets,15,Netherlands,Bolsius Boxmeer,pk
+I00228,"Kellogg Fun Mix Cheez it, Prngls, Fam Amos",Food - Sweets,14,Bangladesh,DENIMACH LTD,pk
+I00229,Kellogg's Cereals Assortment Pack ,Food - Sweets,13,Germany,Friedola 1888 GmbH,ct
+I00230,"Nabisco Classic Mix ccooki, cracker",Food - Sweets,15,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,pk
+I00231,Nabisco Cookie Variety Pk Oreo/ChocChip,Food - Sweets,16,Germany,Friedola 1888 GmbH,pk
+I00232,"Pop-Tarts, Brown Sugar Cinnamon ",Food - Sweets,12,poland,CHROMADURLIN S.A.S,ct
+I00233,"Pop-Tarts, Frosted Strawberry",Food - Sweets,12,India,Indo Count Industries Ltd,ct
+I00234,Spunkmeyer Muffin Variety,Food - Sweets,13,Bangladesh,DENIMACH LTD,ct
+I00235,Zoo Animal Cookies/Crackers,Food - Sweets,14,India,Indo Count Industries Ltd,ct
+I00236,Altoids Small Packs Variety,Gum - Mints,12,China,"CHERRY GROUP CO.,LTD",tins
+I00237,Breath Savers Peppermints 12/roll ,Gum - Mints,16,United States,MAESA SAS,ct
+I00238,Double Bubble Variety Tub,Gum - Mints,12,India,Indo Count Industries Ltd,ct
+I00239,Extra Variety Packs Sugar Free,Gum - Mints,14,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,pk
+I00240,Ice Breaker Mints Sugar Free ,Gum - Mints,14,United States,MAESA SAS,ct
+I00241,Peppermints Hard Candy,Gum - Mints,12,Lithuania,BIGSO AB,ct
+I00242,Trident Original Flavor 18/pk,Gum - Mints,12,Finland,HARDFORD AB,pk
+I00243,Wint O Green LifeSavers Sugar Free,Gum - Mints,16,United States,MAESA SAS,oz
+I00244,All Purpose Cleaner 409 Spray,Kitchen Supplies,18,poland,CHROMADURLIN S.A.S,oz
+I00245,Bounty Paper Towels Select a Size ,Kitchen Supplies,26,United States,MAESA SAS,rolls
+I00246,Cascade Gel Packs Dishwasher,Kitchen Supplies,20,Germany,Friedola 1888 GmbH,ct
+I00247,Cascade Gel w/ Dawn Dishwasher,Kitchen Supplies,15,United States,MAESA SAS,oz
+I00248,Charmin Ultra Bath Tissue,Kitchen Supplies,26,Bangladesh,DENIMACH LTD,rolls
+I00249,Clorox Bleach Large Jugs,Kitchen Supplies,16,China,"CHERRY GROUP CO.,LTD",pack
+I00250,Clorox Disinfecting Wipes ,Kitchen Supplies,19.5,United States,MAESA SAS,pack
+I00251,"Dawn Ultra Dish Detergent, Original Scent ",Kitchen Supplies,13,Lithuania,BIGSO AB,oz
+I00252,Dial Anti-bacterial  Foam 7.5oz,Kitchen Supplies,11,Bangladesh,DENIMACH LTD,ct
+I00253,ForceFlex Trash Bags 13 Gal ,Kitchen Supplies,21,Bangladesh,DENIMACH LTD,bags
+I00254,Hand Sanitizer Refill Pump,Kitchen Supplies,13,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,oz
+I00255,Kleenex Tissue Rectangle Boxes 160/box,Kitchen Supplies,20,Bangladesh,DENIMACH LTD,pack
+I00256,Kleenex Tissue Square Boxes 75/box,Kitchen Supplies,20,Finland,HARDFORD AB,pack
+I00257,Large Trash Bags Black 33 gal,Kitchen Supplies,21,Bangladesh,DENIMACH LTD,ct
+I00258,Lysol Disinfectant Spray 19 oz,Kitchen Supplies,21,United States,MAESA SAS,pk
+I00259,Lysol Wipes 100 ct,Kitchen Supplies,26,United States,MAESA SAS,pack
+I00260,Napkins Square Lunch,Kitchen Supplies,15,Cambodia,NINGBO SEDUNO IMP & EXP CO.LTD,ct
+I00261,POM 2 ply paper towels,Kitchen Supplies,33,Lithuania,BIGSO AB,ct
+I00262,Strong Everyday Napkins,Kitchen Supplies,14,Netherlands,Bolsius Boxmeer,ct
+I00263,Advil 2 pill packets,Medicine,14,Lithuania,BIGSO AB,Ct
+I00264,Tylenol Extra Strength 2 pill packets,Medicine,15,India,Indo Count Industries Ltd,Ct

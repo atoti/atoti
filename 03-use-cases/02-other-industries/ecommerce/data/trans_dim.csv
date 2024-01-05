@@ -1,0 +1,40 @@
+payment_key,trans_type,bank_name
+P001,cash,None
+P002,card,AB Bank Limited
+P003,card,Bangladesh Commerce Bank Limited
+P004,card,Bank Asia Limited
+P005,card,BRAC Bank Limited
+P006,card,Citizens Bank Limited
+P007,card,City Bank Limited
+P008,card,Community Bank Bangladesh Limited
+P009,card,Dhaka Bank Limited
+P010,card,Dutch-Bangla Bank Limited
+P011,card,Eastern Bank Limited
+P012,card,IFIC Bank Limited
+P013,card,Jamuna Bank Limited
+P014,card,Meghna Bank Limited
+P015,card,Mercantile Bank Limited
+P016,card,Midland Bank Limited
+P017,card,Modhumoti Bank Limited
+P018,card,Mutual Trust Bank Limited
+P019,card,National Bank Limited
+P020,card,National Credit & Commerce Bank Limited
+P021,card,NRB Bank Limited
+P022,card,NRB Commercial Bank Ltd
+P023,card,NRB Global Bank Ltd
+P024,card,One Bank Limited
+P025,card,Padma Bank Limited
+P026,card,Premier Bank Limited
+P027,card,Prime Bank Limited
+P028,card,Pubali Bank Limited
+P029,card,Standard Bank Limited
+P030,card,Shimanto Bank Ltd
+P031,card,Southeast Bank Limited
+P032,card,South Bangla Agriculture and Commerce Bank Limited
+P033,card,Trust Bank Limited
+P034,card,United Commercial Bank Ltd
+P035,card,Uttara Bank Limited
+P036,card,Bengal Commercial Bank Ltd
+P037,mobile,Bkash
+P038,mobile,Rocket
+P039,mobile,Nagad

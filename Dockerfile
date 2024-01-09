@@ -1,7 +1,7 @@
 # Set explicit platform for ARM-based Macbooks
 FROM --platform=linux/amd64 python:3.10.13-slim-bookworm
 
-# Install dependencies and copy over files to container
+# Install dependencies in container
 RUN apt-get update && \
     apt-get install -y nodejs graphviz && \
     pip install atoti \
@@ -15,6 +15,8 @@ RUN apt-get update && \
                 # atoti-directquery-redshift \
                 # atoti-directquery-snowflake \
                 # atoti-directquery-synapse
+
+# Copy files to container and set working dir
 COPY . /atoti
 WORKDIR /atoti
 

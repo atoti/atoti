@@ -45,12 +45,6 @@ Navigate to our Project Template repository to learn how to implement projects:
 
 ### 🧰 Installation
 
-Docker Container [(docs)](https://www.docker.com/resources/what-container/)
-
-```
-> docker run -p 8888:8888 -p 9092:9092 -it atoti-tutorial
-```
-
 Python package [(docs)](https://docs.atoti.io/latest/getting_started/installation.html#python-package):
 
 ```console

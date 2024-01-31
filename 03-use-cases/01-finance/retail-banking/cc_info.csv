@@ -1,0 +1,31 @@
+﻿Retailer ID,Retailer Name,Card Brand,Card Type,Industry
+1,Cathay Pacific Elite,Amex,Credit,Industrials
+2,Hilton Honors,Amex,Credit,Consumer Discretionary
+3,Delta SkyMiles Reserve,Amex,Credit,Industrials
+4,Marriot Bonvoy Brilliant,Amex,Credit,Consumer Discretionary
+5,Discover it Miles,Discover,Credit,Financials
+6,Discover it Secured,Discover,Credit,Financials
+7,Capital One VentureOne Rewards,Mastercard,Credit,Financials
+8,Citi / AAdvantage Executive World Elite,Mastercard,Credit,Industrials
+9,Capital One Quicksilver Cash Rewards,Mastercard,Credit,Financials
+10,IHG One Rewards Traveler,Mastercard,Credit,Consumer Discretionary
+11,TransferWise Debit,Mastercard,Debit,Financials
+12,Venmo,Mastercard,Debit,Financials
+13,Walmart Money,Mastercard,Debit,Consumer Discretionary
+14,Revolut,Mastercard,Debit,Financials
+15,Credit Sesame,Mastercard,Debit,Financials
+16,Branch Card,Mastercard,Debit,Financials
+17,PayPal Prepaid Mastercard,Mastercard,Debit (Prepaid),Financials
+18,H&R Block Emerald Prepaid,Mastercard,Debit (Prepaid),Financials
+19,Ready Credit Prepaid Mastercard,Mastercard,Debit (Prepaid),Financials
+20,Holland America LineRewards Visa Card,Visa,Credit,Consumer Discretionary
+21,Princess Rewards,Visa,Credit,Consumer Discretionary
+22,Wyndham Rewards Earner,Visa,Credit,Consumer Discretionary
+23,Costco Anywhere Visa,Visa,Credit,Consumer Staples
+24,Wells Fargo,Visa,Debit,Financials
+25,TD Bank,Visa,Debit,Financials
+26,Barclays,Visa,Debit,Financials
+27,Bank of America,Visa,Debit,Financials
+28,Chase,Visa,Debit,Financisls
+29,H&R Advantage Prepaid Visa Card ,Visa,Debit (Prepaid),Financials
+30,Digital Commerce Bank Reloadable Visa Prepaid Card ,Visa,Debit (Prepaid),Financials

@@ -4,5 +4,5 @@
         "dockerfile": "Dockerfile"
 
     },
-    "postStartCommand": "jupyter-lab --ip=0.0.0.0 --allow-root --no-browser"
+    "postCreateCommand": "jupyter-lab --ip=0.0.0.0 --allow-root --no-browser"
 }

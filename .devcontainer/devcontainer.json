@@ -6,11 +6,11 @@
     },
     "forwardPorts": [8888, 9092],
     "portsAttributes": {
-        "3333": {
-            "label": "app-standard-preview"
+        "8888": {
+            "label": "jupytyerlab"
         },
-        "4444": {
-            "label": "app-pro-preview"
+        "9092": {
+            "label": "atoti"
         }
     },
     "postCreateCommand": "jupyter-lab --ip=0.0.0.0 --allow-root --no-browser"

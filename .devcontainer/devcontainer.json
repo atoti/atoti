@@ -4,5 +4,14 @@
         "dockerfile": "Dockerfile"
 
     },
+    "forwardPorts": [8888, 9092],
+    "portsAttributes": {
+        "3333": {
+            "label": "app-standard-preview"
+        },
+        "4444": {
+            "label": "app-pro-preview"
+        }
+    },
     "postCreateCommand": "jupyter-lab --ip=0.0.0.0 --allow-root --no-browser"
 }

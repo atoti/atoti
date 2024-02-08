@@ -482,7 +482,7 @@ Check out the [Atoti repository](https://github.com/atoti/atoti) for more info o
 <td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./03-community-fun/pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.7-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./03-community-fun/pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -651,7 +651,7 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.youtube.com/watch?v=ammCGdzSoag?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;Building a Burrito Dashboard - Data Science Project from Scratch with atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./03-community-fun/pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.7-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./03-community-fun/pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1218,7 +1218,7 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./03-community-fun/pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.7-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./03-community-fun/pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -1386,7 +1386,7 @@ Double-click on tile to go to feature section.
 <td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./03-community-fun/pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.7-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./03-community-fun/pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1567,7 +1567,7 @@ Double-click on tile to go to feature section.
 <td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./03-community-fun/pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.7-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./03-community-fun/pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -1880,7 +1880,7 @@ Double-click on tile to go to feature section.
 <td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./03-community-fun/pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.7-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./03-community-fun/pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -2168,7 +2168,7 @@ Double-click on tile to go to feature section.
 <td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./03-community-fun/pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.7-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./03-community-fun/pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -2345,7 +2345,7 @@ Double-click on tile to go to feature section.
 <td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./03-community-fun/pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.7-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./03-community-fun/pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -2501,7 +2501,7 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./03-community-fun/pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.7-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./03-community-fun/pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 <tr>

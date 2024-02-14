@@ -12,12 +12,12 @@ __pycache__/
 *.zip
 
 # Data files
-notebooks/01-use-cases/finance/risk-management/operational-risk/credit-card-fraud-detection/output/*.csv
-notebooks/01-use-cases/finance/risk-management/credit-risk/ifrs9/lending-club-data/risk-engine/*.csv
-notebooks/01-use-cases/finance/risk-management/credit-risk/xva/data-prev/*.csv
-notebooks/01-use-cases/finance/risk-management/credit-risk/xva/data/*.csv
-notebooks/01-use-cases/finance/risk-management/credit-risk/xva/what-if/*.csv
-notebooks/01-use-cases/finance/risk-management/credit-risk/ifrs9/lending-club-data/*.csv
+03-use-cases/01-finance/risk-management/operational-risk/credit-card-fraud-detection/output/*.csv
+03-use-cases/01-finance/risk-management/credit-risk/ifrs9/lending-club-data/risk-engine/*.csv
+03-use-cases/01-finance/risk-management/credit-risk/xva/data-prev/*.csv
+03-use-cases/01-finance/risk-management/credit-risk/xva/data/*.csv
+03-use-cases/01-finance/risk-management/credit-risk/xva/what-if/*.csv
+03-use-cases/01-finance/risk-management/credit-risk/ifrs9/lending-club-data/*.csv
 03-use-cases/01-finance/retail-banking/data/
 
 # Misc

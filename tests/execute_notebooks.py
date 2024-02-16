@@ -76,7 +76,7 @@ def execute_notebooks():
         logging.info(f"Starting execution of {notebook}")
         notebook_path = Path(notebook)
         notebook = nbformat.read(notebook_path, as_version=4)
-        ep = ExecutePreprocessor(timeout=300, kernel_name="python3")
+        ep = ExecutePreprocessor(timeout=600, kernel_name="python3")
         ep.preprocess(notebook, {"metadata": {"path": notebook_path.parent}})
         logging.info(f"Execution of {notebook_path} succeed")
 

@@ -33,3 +33,4 @@ jobs:
 
       - name: Run notebooks
         run: poetry run python tests/execute_notebooks.py
+        timeout-minutes: 60

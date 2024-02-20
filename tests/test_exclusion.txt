@@ -2,7 +2,7 @@
 03-use-cases/01-finance/front-office/pnl-explained
 03-use-cases/01-finance/front-office/real-time-risk
 03-use-cases/01-finance/front-office/real-time-risk
-03-use-cases/01-finance/retail-banking/retail-banking
+03-use-cases/01-finance/retail-banking
 03-use-cases/01-finance/risk-management/credit-risk/ifrs9
 03-use-cases/01-finance/risk-management/credit-risk/ifrs9
 03-use-cases/01-finance/risk-management/credit-risk/sa-ccr

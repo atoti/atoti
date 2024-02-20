@@ -2,6 +2,7 @@
 03-use-cases/01-finance/front-office/pnl-explained
 03-use-cases/01-finance/front-office/real-time-risk
 03-use-cases/01-finance/front-office/real-time-risk
+03-use-cases/01-finance/retail-banking/retail-banking
 03-use-cases/01-finance/risk-management/credit-risk/ifrs9
 03-use-cases/01-finance/risk-management/credit-risk/ifrs9
 03-use-cases/01-finance/risk-management/credit-risk/sa-ccr
@@ -62,5 +63,6 @@
 03-use-cases/03-community-fun/burritos
 03-use-cases/03-community-fun/christmas-nyan
 03-use-cases/03-community-fun/monte-carlo-pi
+03-use-cases/03-community-fun/pizza-shop
 03-use-cases/03-community-fun/pokemon
 03-use-cases/03-community-fun/wine-analytics

@@ -28,7 +28,7 @@
 </tr>
 <tr>
 <td rowspan="1"><a href="./collateral-shortfall-monitoring/main.ipynb">collateral-shortfall-monitoring&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github">📰&nbsp;Rapid collateral modelling and simulation with atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/rapid-collateral-modelling-and-simulation-with-atoti/?utm_source=github">📰&nbsp;Rapid collateral modelling and simulation with atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>

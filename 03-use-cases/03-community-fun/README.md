@@ -43,10 +43,6 @@
 <td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
-</tr>
-<tr>
 <td rowspan="1"><a href="./pokemon/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;pokemon&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.atoti.io/articles/exploring-olap-with-atoti-and-pokemon/?utm_source=github">📰&nbsp;Exploring OLAP with atoti and Pokemon</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> custom widget</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
@@ -143,10 +139,6 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.youtube.com/watch?v=ammCGdzSoag?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;Building a Burrito Dashboard - Data Science Project from Scratch with atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
-</tr>
-<tr>
 <td rowspan="1"><a href="./wine-analytics/main.ipynb">wine-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.youtube.com/watch?v=Y49662c3EL4?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;How to Create a Data Visualization in Jupyter Notebook Using atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
 </tr>
@@ -232,30 +224,7 @@ Use case is currently not available for these industries. Reach out to <a href="
  <hr/> 
 🗃&nbsp;Data Bucket 
 
-
-<details>
-<summary><b>Community fun</b></summary><blockquote>
-<br/>
-
-<table>
-
-
-
-<tr>
-    <td><b>Notebooks</b></td>
-    <td><b>Version</b></td>
-    <td><b>Related media</b></td>
-    <td><b>Features</b></td>
-</tr>
-<tr>
-<td rowspan="1"><a href="./pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
-</tr>
-</table>
-<br/>
-</blockquote></details>
-
-
+Use case is currently not available for these industries. Reach out to <a href="mailto:support@atoti.io">Atoti team</a> if you have a use case to request or share.
  <hr/> 
 🗃&nbsp;Data Connector 
 
@@ -281,10 +250,6 @@ Use case is currently not available for these industries. Reach out to <a href="
 <tr>
 <td rowspan="1"><a href="./christmas-nyan/main.ipynb">christmas-nyan&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="./pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./pokemon/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;pokemon&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
@@ -324,10 +289,6 @@ Use case is currently not available for these industries. Reach out to <a href="
 <tr>
 <td rowspan="1"><a href="./monte-carlo-pi/nan">monte-carlo-pi&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="./pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 </table>
 <br/>
@@ -369,10 +330,6 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
-</tr>
-<tr>
 <td rowspan="1"><a href="./pokemon/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;pokemon&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.atoti.io/articles/exploring-olap-with-atoti-and-pokemon/?utm_source=github">📰&nbsp;Exploring OLAP with atoti and Pokemon</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> custom widget</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
@@ -410,10 +367,6 @@ Use case is currently not available for these industries. Reach out to <a href="
 <tr>
 <td rowspan="1"><a href="./christmas-nyan/main.ipynb">christmas-nyan&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
-</tr>
-<tr>
-<td rowspan="1"><a href="./pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./pokemon/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;pokemon&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
@@ -455,10 +408,6 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
-</tr>
-<tr>
 <td rowspan="1"><a href="./wine-analytics/main.ipynb">wine-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.youtube.com/watch?v=Y49662c3EL4?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;How to Create a Data Visualization in Jupyter Notebook Using atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
 </tr>
@@ -484,10 +433,6 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Version</b></td>
     <td><b>Related media</b></td>
     <td><b>Features</b></td>
-</tr>
-<tr>
-<td rowspan="1"><a href="./pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./pokemon/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;pokemon&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>

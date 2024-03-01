@@ -255,7 +255,7 @@
 <td>&nbsp</td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.atoti.io/articles/integrating-an-external-portfolio-optimizer-with-atoti?utm_source=github">📰&nbsp;Integrating an External Portfolio Optimizer with atoti</a></td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -483,7 +483,7 @@ Double-click on tile to go to feature section.
 <td>&nbsp</td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.atoti.io/articles/integrating-an-external-portfolio-optimizer-with-atoti?utm_source=github">📰&nbsp;Integrating an External Portfolio Optimizer with atoti</a></td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -546,7 +546,7 @@ Double-click on tile to go to feature section.
 <td>&nbsp</td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.atoti.io/articles/integrating-an-external-portfolio-optimizer-with-atoti?utm_source=github">📰&nbsp;Integrating an External Portfolio Optimizer with atoti</a></td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -670,7 +670,7 @@ Double-click on tile to go to feature section.
 <td>&nbsp</td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.atoti.io/articles/integrating-an-external-portfolio-optimizer-with-atoti?utm_source=github">📰&nbsp;Integrating an External Portfolio Optimizer with atoti</a></td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -728,7 +728,7 @@ Double-click on tile to go to feature section.
 <td>&nbsp</td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.atoti.io/articles/integrating-an-external-portfolio-optimizer-with-atoti?utm_source=github">📰&nbsp;Integrating an External Portfolio Optimizer with atoti</a></td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -828,7 +828,7 @@ Double-click on tile to go to feature section.
 <td>&nbsp</td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.atoti.io/articles/integrating-an-external-portfolio-optimizer-with-atoti?utm_source=github">📰&nbsp;Integrating an External Portfolio Optimizer with atoti</a></td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1014,7 +1014,7 @@ Double-click on tile to go to feature section.
 <td>&nbsp</td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.atoti.io/articles/integrating-an-external-portfolio-optimizer-with-atoti?utm_source=github">📰&nbsp;Integrating an External Portfolio Optimizer with atoti</a></td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1486,7 +1486,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td>&nbsp</td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.atoti.io/articles/integrating-an-external-portfolio-optimizer-with-atoti?utm_source=github">📰&nbsp;Integrating an External Portfolio Optimizer with atoti</a></td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>

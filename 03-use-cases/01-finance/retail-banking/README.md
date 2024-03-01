@@ -10,7 +10,7 @@
 </p>  
 
 
-## Financial use cases for Quantitative Strategy 
+## Financial use cases for Retail Banking 
 
 <table>
 
@@ -23,8 +23,8 @@
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/articles/bucket-analysis-with-atoti/?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
+<td rowspan="1"><a href="./credit-card-analytics/main.ipynb">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.9-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
 </tr>
 </table>
 

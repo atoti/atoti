@@ -62,5 +62,6 @@
 03-use-cases/03-community-fun/burritos
 03-use-cases/03-community-fun/christmas-nyan
 03-use-cases/03-community-fun/monte-carlo-pi
+03-use-cases/03-community-fun/pizza-shop
 03-use-cases/03-community-fun/pokemon
 03-use-cases/03-community-fun/wine-analytics

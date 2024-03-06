@@ -16,14 +16,14 @@ FROM --platform=linux/amd64 python:3.10.13-slim-bookworm
                 # atoti-directquery-snowflake \
                 # atoti-directquery-synapse
 
-# Copy files to container and set working dir
-COPY . /atoti
-WORKDIR /atoti
-
 # Install dependencies in container (poetry style)
 RUN pip install poetry && \
     poetry config virtualenvs.create false && \
     poetry install
+
+# Copy files to container and set working dir
+COPY . /atoti
+WORKDIR /atoti
 
 # Set container executable
 CMD [ "jupyter-lab", "--ip=0.0.0.0", "--allow-root", "--no-browser" ]

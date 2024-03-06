@@ -2,12 +2,12 @@
 FROM --platform=linux/amd64 python:3.10.13-slim-bookworm
 
 # Install dependencies in container (pip style)
-# RUN apt-get update && \
-#     apt-get install -y nodejs graphviz && \
-#     pip install atoti \
-#                 atoti-jupyterlab \
-#                 atoti-aws \
-#                 atoti-sql
+RUN apt-get update && \
+    apt-get install -y nodejs graphviz && \
+    pip install atoti \
+                atoti-jupyterlab \
+                atoti-aws \
+                atoti-sql
                 # atoti-directquery-bigquery \
                 # atoti-directquery-clickhouse \
                 # atoti-directquery-databricks \
@@ -21,9 +21,9 @@ COPY . /atoti
 WORKDIR /atoti
 
 # Install dependencies in container (poetry style)
-RUN pip install poetry && \
-    poetry config virtualenvs.create false && \
-    poetry install
+# RUN pip install poetry && \
+#     poetry config virtualenvs.create false && \
+#     poetry install
 
 # Set container executable
 CMD [ "jupyter-lab", "--ip=0.0.0.0", "--allow-root", "--no-browser" ]

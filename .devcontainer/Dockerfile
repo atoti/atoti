@@ -7,7 +7,8 @@ RUN apt-get update && \
     pip install atoti \
                 atoti-jupyterlab \
                 atoti-aws \
-                atoti-sql
+                atoti-sql \
+                jupyter-server-proxy
                 # atoti-directquery-bigquery \
                 # atoti-directquery-clickhouse \
                 # atoti-directquery-databricks \

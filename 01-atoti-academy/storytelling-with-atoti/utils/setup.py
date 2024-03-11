@@ -113,7 +113,8 @@ def create_measures(session):
     )
 
     m["Profit"] = tt.agg.sum(
-        m["ProfitPerUnit"] * m["QuantitySold.SUM"], scope=tt.OriginScope(levels={l["OrderId"]})
+        m["ProfitPerUnit"] * m["QuantitySold.SUM"],
+        scope=tt.OriginScope(levels={l["OrderId"]}),
     )
 
     m["Profit.MEAN"] = tt.agg.sum(

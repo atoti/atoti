@@ -113,11 +113,11 @@ def create_measures(session):
     )
 
     m["Profit"] = tt.agg.sum(
-        m["ProfitPerUnit"] * m["QuantitySold.SUM"], scope=tt.OriginScope(l["OrderId"])
+        m["ProfitPerUnit"] * m["QuantitySold.SUM"], scope=tt.OriginScope(levels={l["OrderId"]})
     )
 
     m["Profit.MEAN"] = tt.agg.sum(
-        m["Profit"] / m["QuantitySold.SUM"], scope=tt.OriginScope(l["OrderId"])
+        m["Profit"] / m["QuantitySold.SUM"], scope=tt.OriginScope(levels={l["OrderId"]})
     )
 
     # Compute transport rates
@@ -153,14 +153,14 @@ def create_measures(session):
 
     m["TransportOrdersCount"] = tt.agg.sum(
         tt.where((l["Interval"] == m["Interval"]), 1),
-        scope=tt.OriginScope(l["OrderId"]),
+        scope=tt.OriginScope(levels={l["OrderId"]}),
     )
     m["TransportRate"] = tt.where((l["Interval"] == m["Interval"]), m["ShipperRate"])
 
     m["TransportCost"] = tt.agg.sum_product(
         m["TransportRate"],
         m["QuantitySold.SUM"],
-        scope=tt.OriginScope(l["ShipperName"], l["OrderId"], l["Interval"]),
+        scope=tt.OriginScope(levels={l["ShipperName"], l["OrderId"], l["Interval"]}),
     )
 
     m["ShipperRate"].formatter = "DOUBLE[#,##0.000]"
@@ -178,7 +178,7 @@ def nb2_measures(cube):
     m["Sales"] = tt.agg.sum_product(
         m["QuantitySold.SUM"],
         m["SellingPricePerUnit"],
-        scope=tt.OriginScope(l["ProductId"], l["OrderId"]),
+        scope=tt.OriginScope(levels={l["ProductId"], l["OrderId"]}),
     )
 
     m["ProfitMargin"] = m["Profit"] / m["Sales"]

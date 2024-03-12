@@ -13,6 +13,7 @@ __pycache__/
 
 # Data files
 02-technical-guides/aggregate-provider/data/
+02-technical-guides/conditional-functions/data/
 03-use-cases/01-finance/risk-management/operational-risk/credit-card-fraud-detection/output/*.csv
 03-use-cases/01-finance/risk-management/credit-risk/ifrs9/lending-club-data/risk-engine/*.csv
 03-use-cases/01-finance/risk-management/credit-risk/xva/data-prev/*.csv

@@ -20,7 +20,6 @@
 03-use-cases/01-finance/insurance/customer360
 03-use-cases/01-finance/insurance/price-elasticity
 03-use-cases/01-finance/portfolio-management/alt-data
-03-use-cases/01-finance/portfolio-management/cvar-optimizer
 03-use-cases/01-finance/portfolio-management/optimize-with-constraints
 03-use-cases/02-other-industries/airline-industry
 03-use-cases/02-other-industries/airline-industry

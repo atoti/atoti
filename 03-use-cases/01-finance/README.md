@@ -65,7 +65,7 @@
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./retail-banking/credit-card-analytics/main.ipynb">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./retail-banking/credit-card-analytics/main.ipynb">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -278,7 +278,7 @@
 <td>&nbsp</td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/integrating-an-external-portfolio-optimizer-with-atoti?utm_source=github">📰&nbsp;Integrating an External Portfolio Optimizer with atoti</a></td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -305,7 +305,7 @@
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/bucket-analysis-with-atoti/?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -401,7 +401,7 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/articles/unravel-price-elasticity-of-demand-with-atoti/?utm_source=github">📰&nbsp;Unravel price elasticity of demand with atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./retail-banking/credit-card-analytics/main.ipynb">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./retail-banking/credit-card-analytics/main.ipynb">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -510,7 +510,7 @@ Double-click on tile to go to feature section.
 <td>&nbsp</td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/integrating-an-external-portfolio-optimizer-with-atoti?utm_source=github">📰&nbsp;Integrating an External Portfolio Optimizer with atoti</a></td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -573,7 +573,7 @@ Double-click on tile to go to feature section.
 <td>&nbsp</td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/integrating-an-external-portfolio-optimizer-with-atoti?utm_source=github">📰&nbsp;Integrating an External Portfolio Optimizer with atoti</a></td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -581,7 +581,7 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/articles/constraints-straining-your-portfolio-optimization/?utm_source=github">📰&nbsp;Constraints straining your portfolio optimization?</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/bucket-analysis-with-atoti/?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -644,7 +644,7 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/articles/customer-360-how-it-can-be-achieved-with-atoti/?utm_source=github">📰&nbsp;Customer 360: How it can be achieved with atoti</a></td><td rowspan="1"><kbd>switch</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> sql connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./retail-banking/credit-card-analytics/main.ipynb">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./retail-banking/credit-card-analytics/main.ipynb">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -701,7 +701,7 @@ Double-click on tile to go to feature section.
 <td>&nbsp</td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/integrating-an-external-portfolio-optimizer-with-atoti?utm_source=github">📰&nbsp;Integrating an External Portfolio Optimizer with atoti</a></td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -759,7 +759,7 @@ Double-click on tile to go to feature section.
 <td>&nbsp</td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/integrating-an-external-portfolio-optimizer-with-atoti?utm_source=github">📰&nbsp;Integrating an External Portfolio Optimizer with atoti</a></td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -767,11 +767,11 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/articles/constraints-straining-your-portfolio-optimization/?utm_source=github">📰&nbsp;Constraints straining your portfolio optimization?</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/bucket-analysis-with-atoti/?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./retail-banking/credit-card-analytics/main.ipynb">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./retail-banking/credit-card-analytics/main.ipynb">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -828,7 +828,7 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./retail-banking/credit-card-analytics/main.ipynb">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./retail-banking/credit-card-analytics/main.ipynb">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -867,7 +867,7 @@ Double-click on tile to go to feature section.
 <td>&nbsp</td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/integrating-an-external-portfolio-optimizer-with-atoti?utm_source=github">📰&nbsp;Integrating an External Portfolio Optimizer with atoti</a></td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -941,11 +941,11 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/articles/constraints-straining-your-portfolio-optimization/?utm_source=github">📰&nbsp;Constraints straining your portfolio optimization?</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/bucket-analysis-with-atoti/?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./retail-banking/credit-card-analytics/main.ipynb">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./retail-banking/credit-card-analytics/main.ipynb">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1014,11 +1014,11 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/articles/dynamic-performance-analytics-handling-of-non-linear-aggregation/?utm_source=github">📰&nbsp;Dynamic Performance Analytics: Handling of non-linear aggregation</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/bucket-analysis-with-atoti/?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./retail-banking/credit-card-analytics/main.ipynb">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./retail-banking/credit-card-analytics/main.ipynb">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1061,7 +1061,7 @@ Double-click on tile to go to feature section.
 <td>&nbsp</td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/integrating-an-external-portfolio-optimizer-with-atoti?utm_source=github">📰&nbsp;Integrating an External Portfolio Optimizer with atoti</a></td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1142,7 +1142,7 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/articles/unravel-price-elasticity-of-demand-with-atoti/?utm_source=github">📰&nbsp;Unravel price elasticity of demand with atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./retail-banking/credit-card-analytics/main.ipynb">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./retail-banking/credit-card-analytics/main.ipynb">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1197,7 +1197,7 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/articles/customer-360-how-it-can-be-achieved-with-atoti/?utm_source=github">📰&nbsp;Customer 360: How it can be achieved with atoti</a></td><td rowspan="1"><kbd>switch</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> sql connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/bucket-analysis-with-atoti/?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1270,7 +1270,7 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/articles/constraints-straining-your-portfolio-optimization/?utm_source=github">📰&nbsp;Constraints straining your portfolio optimization?</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/bucket-analysis-with-atoti/?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1340,7 +1340,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td><a href="https://www.atoti.io/articles/pnl-explained-with-atoti/?utm_source=github">📰&nbsp;PnL Explained with atoti</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/bucket-analysis-with-atoti/?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1389,7 +1389,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td><a href="https://www.atoti.io/articles/customer-360-how-it-can-be-achieved-with-atoti/?utm_source=github">📰&nbsp;Customer 360: How it can be achieved with atoti</a></td><td rowspan="1"><kbd>switch</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> sql connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./quantitative-strategy/bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/bucket-analysis-with-atoti/?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1537,7 +1537,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td>&nbsp</td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./portfolio-management/cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.10-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/integrating-an-external-portfolio-optimizer-with-atoti?utm_source=github">📰&nbsp;Integrating an External Portfolio Optimizer with atoti</a></td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>

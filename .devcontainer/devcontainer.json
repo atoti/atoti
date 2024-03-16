@@ -7,7 +7,7 @@
     "forwardPorts": [8888, 9092],
     "portsAttributes": {
         "8888": {
-            "label": "jupytyerlab"
+            "label": "jupyterlab"
         },
         "9092": {
             "label": "atoti"

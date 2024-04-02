@@ -1,4 +1,4 @@
-# Set explicit platform for ARM-based Macbooks
+# Set explicit platform (for ARM-based Macbooks)
 FROM --platform=linux/amd64 python:3.10.13-slim-bookworm
 
 # Copy files to container and set working dir

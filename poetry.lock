@@ -320,23 +320,23 @@ files = [
 
 [[package]]
 name = "atoti"
-version = "0.8.11.4879.20240326141843"
+version = "0.8.11"
 description = "Explore metrics across hundreds of dimensions, analyze live data at its most granular level and perform what-if simulations at unparalleled speed"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "atoti-0.8.11.4879.20240326141843-py3-none-any.whl", hash = "sha256:3c266d7363fbc97ef158af5e45af64b065ca573412818ba691b9b98da54ffe2c"},
+    {file = "atoti-0.8.11-py3-none-any.whl", hash = "sha256:7d0cf9217b321a0d4cb451c668885bbf198b0b11898b61efa3e9bcb27bfb9646"},
 ]
 
 [package.dependencies]
-atoti-aws = {version = "0.8.11.4879.20240326141843", optional = true, markers = "extra == \"aws\""}
-atoti-azure = {version = "0.8.11.4879.20240326141843", optional = true, markers = "extra == \"azure\""}
-atoti-core = "0.8.11.4879.20240326141843"
-atoti-gcp = {version = "0.8.11.4879.20240326141843", optional = true, markers = "extra == \"gcp\""}
-atoti-jupyterlab = {version = "0.8.11.4879.20240326141843", optional = true, markers = "extra == \"jupyterlab\""}
-atoti-kafka = {version = "0.8.11.4879.20240326141843", optional = true, markers = "extra == \"kafka\""}
-atoti-query = "0.8.11.4879.20240326141843"
-atoti-sql = {version = "0.8.11.4879.20240326141843", optional = true, markers = "extra == \"sql\""}
+atoti-aws = {version = "0.8.11", optional = true, markers = "extra == \"aws\""}
+atoti-azure = {version = "0.8.11", optional = true, markers = "extra == \"azure\""}
+atoti-core = "0.8.11"
+atoti-gcp = {version = "0.8.11", optional = true, markers = "extra == \"gcp\""}
+atoti-jupyterlab = {version = "0.8.11", optional = true, markers = "extra == \"jupyterlab\""}
+atoti-kafka = {version = "0.8.11", optional = true, markers = "extra == \"kafka\""}
+atoti-query = "0.8.11"
+atoti-sql = {version = "0.8.11", optional = true, markers = "extra == \"sql\""}
 jdk4py = ">=17.0.9.2,<18"
 numpy = ">=1.24.3"
 pandas = ">=1.5.3"
@@ -346,77 +346,62 @@ pydantic = ">=2.6.0"
 typing-extensions = ">=4.6.1"
 
 [package.extras]
-aws = ["atoti-aws (==0.8.11.4879.20240326141843)"]
-azure = ["atoti-azure (==0.8.11.4879.20240326141843)"]
-directquery-bigquery = ["atoti-directquery-bigquery (==0.8.11.4879.20240326141843)"]
-directquery-clickhouse = ["atoti-directquery-clickhouse (==0.8.11.4879.20240326141843)"]
-directquery-databricks = ["atoti-directquery-databricks (==0.8.11.4879.20240326141843)"]
-directquery-mssql = ["atoti-directquery-mssql (==0.8.11.4879.20240326141843)"]
-directquery-redshift = ["atoti-directquery-redshift (==0.8.11.4879.20240326141843)"]
-directquery-snowflake = ["atoti-directquery-snowflake (==0.8.11.4879.20240326141843)"]
-directquery-synapse = ["atoti-directquery-synapse (==0.8.11.4879.20240326141843)"]
-gcp = ["atoti-gcp (==0.8.11.4879.20240326141843)"]
-jupyterlab = ["atoti-jupyterlab (==0.8.11.4879.20240326141843)"]
+aws = ["atoti-aws (==0.8.11)"]
+azure = ["atoti-azure (==0.8.11)"]
+directquery-bigquery = ["atoti-directquery-bigquery (==0.8.11)"]
+directquery-clickhouse = ["atoti-directquery-clickhouse (==0.8.11)"]
+directquery-databricks = ["atoti-directquery-databricks (==0.8.11)"]
+directquery-mssql = ["atoti-directquery-mssql (==0.8.11)"]
+directquery-redshift = ["atoti-directquery-redshift (==0.8.11)"]
+directquery-snowflake = ["atoti-directquery-snowflake (==0.8.11)"]
+directquery-synapse = ["atoti-directquery-synapse (==0.8.11)"]
+gcp = ["atoti-gcp (==0.8.11)"]
+jupyterlab = ["atoti-jupyterlab (==0.8.11)"]
 jupyterlab3 = ["atoti-jupyterlab3 (>=0.8.3)"]
-kafka = ["atoti-kafka (==0.8.11.4879.20240326141843)"]
-observability = ["atoti-observability (==0.8.11.4879.20240326141843)"]
-sql = ["atoti-sql (==0.8.11.4879.20240326141843)"]
-
-[package.source]
-type = "legacy"
-url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple"
-reference = "atoti"
+kafka = ["atoti-kafka (==0.8.11)"]
+observability = ["atoti-observability (==0.8.11)"]
+sql = ["atoti-sql (==0.8.11)"]
 
 [[package]]
 name = "atoti-aws"
-version = "0.8.11.4879.20240326141843"
+version = "0.8.11"
 description = "Plugin to load CSV and Parquet files from AWS S3 into Atoti tables"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "atoti_aws-0.8.11.4879.20240326141843-py3-none-any.whl", hash = "sha256:2e949321d2df339779efcd665d4681327e4d8ba07fc4ce11bebf7d22435e41fa"},
+    {file = "atoti_aws-0.8.11-py3-none-any.whl", hash = "sha256:cac8ad0b1eb3916893cb472d6ac56a9393746db4c057a3ca1c81623763f25f0e"},
 ]
 
 [package.dependencies]
-atoti = "0.8.11.4879.20240326141843"
-atoti-core = "0.8.11.4879.20240326141843"
+atoti = "0.8.11"
+atoti-core = "0.8.11"
 pydantic = ">=2.6.0"
 typing-extensions = ">=4.6.1"
 
-[package.source]
-type = "legacy"
-url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple"
-reference = "atoti"
-
 [[package]]
 name = "atoti-azure"
-version = "0.8.11.4879.20240326141843"
+version = "0.8.11"
 description = "Plugin to load CSV and Parquet files from Azure Blob Storage into Atoti tables"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "atoti_azure-0.8.11.4879.20240326141843-py3-none-any.whl", hash = "sha256:d200369780138e7e9e5921a6aab072c5a3f9d68ce355eb0556b8d3b8bd0aafb5"},
+    {file = "atoti_azure-0.8.11-py3-none-any.whl", hash = "sha256:e869ba613f1bd4de5e18cfbd4065a3f5e2ba6273da1bddc780997131e57bb726"},
 ]
 
 [package.dependencies]
-atoti = "0.8.11.4879.20240326141843"
-atoti-core = "0.8.11.4879.20240326141843"
+atoti = "0.8.11"
+atoti-core = "0.8.11"
 pydantic = ">=2.6.0"
 typing-extensions = ">=4.6.1"
 
-[package.source]
-type = "legacy"
-url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple"
-reference = "atoti"
-
 [[package]]
 name = "atoti-core"
-version = "0.8.11.4879.20240326141843"
+version = "0.8.11"
 description = "Package containing private symbols shared by the other Atoti packages"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "atoti_core-0.8.11.4879.20240326141843-py3-none-any.whl", hash = "sha256:cd798c2cd97de0b9c1df68c951bbbe8e6f8c3c2830970c26f5b8614d7fc17f4b"},
+    {file = "atoti_core-0.8.11-py3-none-any.whl", hash = "sha256:4f6e9727ce770b40f23eec7fd90d0f4280315b23e2bf49c3a86479e009da63a2"},
 ]
 
 [package.dependencies]
@@ -426,112 +411,82 @@ pandas = ">=1.5.3"
 pydantic = ">=2.6.0"
 typing-extensions = ">=4.6.1"
 
-[package.source]
-type = "legacy"
-url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple"
-reference = "atoti"
-
 [[package]]
 name = "atoti-gcp"
-version = "0.8.11.4879.20240326141843"
+version = "0.8.11"
 description = "Plugin to load CSV and Parquet files from Google Cloud Storage into Atoti tables"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "atoti_gcp-0.8.11.4879.20240326141843-py3-none-any.whl", hash = "sha256:f6595cbec444b3dc2dfff8c3fbdab7fe7630355a9c631c523a9d3ba4af6b5f70"},
+    {file = "atoti_gcp-0.8.11-py3-none-any.whl", hash = "sha256:423ea503629f9a2a7f9f214416b87ca3fb8378fdfc8668fb2d45a83560b4b2f3"},
 ]
 
 [package.dependencies]
-atoti = "0.8.11.4879.20240326141843"
-atoti-core = "0.8.11.4879.20240326141843"
+atoti = "0.8.11"
+atoti-core = "0.8.11"
 typing-extensions = ">=4.6.1"
-
-[package.source]
-type = "legacy"
-url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple"
-reference = "atoti"
 
 [[package]]
 name = "atoti-jupyterlab"
-version = "0.8.11.4879.20240326141843"
+version = "0.8.11"
 description = "Plugin to create interactive Atoti widgets in JupyterLab"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "atoti_jupyterlab-0.8.11.4879.20240326141843-py3-none-any.whl", hash = "sha256:8b89b54e7a3f77e29b70265c535c09a1e616dce5f7a8887977716fae33342a91"},
+    {file = "atoti_jupyterlab-0.8.11-py3-none-any.whl", hash = "sha256:02f9076c2e47aa011fa74bc7cf6f0465e77b5d7a6c22ca976297f51cb8ab5467"},
 ]
 
 [package.dependencies]
-atoti-core = "0.8.11.4879.20240326141843"
+atoti-core = "0.8.11"
 jupyterlab = ">=4.1.0,<5"
 typing-extensions = ">=4.6.1"
 
-[package.source]
-type = "legacy"
-url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple"
-reference = "atoti"
-
 [[package]]
 name = "atoti-kafka"
-version = "0.8.11.4879.20240326141843"
+version = "0.8.11"
 description = "Plugin to load real time Kafka streams into Atoti tables"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "atoti_kafka-0.8.11.4879.20240326141843-py3-none-any.whl", hash = "sha256:4c1dae31258cfe0749bd0cd1b44c723cd07853353ba04eaeef41af8cf2d4fd7d"},
+    {file = "atoti_kafka-0.8.11-py3-none-any.whl", hash = "sha256:5485f975eb5f1c5ee4b71cba2e338f861cb9c1840c4e776e50db223dfc8c1b74"},
 ]
 
 [package.dependencies]
-atoti = "0.8.11.4879.20240326141843"
-atoti-core = "0.8.11.4879.20240326141843"
+atoti = "0.8.11"
+atoti-core = "0.8.11"
 typing-extensions = ">=4.6.1"
-
-[package.source]
-type = "legacy"
-url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple"
-reference = "atoti"
 
 [[package]]
 name = "atoti-query"
-version = "0.8.11.4879.20240326141843"
+version = "0.8.11"
 description = "Package to query Atoti sessions"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "atoti_query-0.8.11.4879.20240326141843-py3-none-any.whl", hash = "sha256:2a72efa98418061ef261a240067acec490f297b87b18321bdf49755d85a5ac7e"},
+    {file = "atoti_query-0.8.11-py3-none-any.whl", hash = "sha256:ab553a3219699523043d0c1fdd3e9ec0014e044332d0d3b57ee3dc55cb08ae65"},
 ]
 
 [package.dependencies]
-atoti-core = "0.8.11.4879.20240326141843"
+atoti-core = "0.8.11"
 pandas = ">=1.5.3"
 pyarrow = ">=14.0.1"
 pydantic = ">=2.6.0"
 typing-extensions = ">=4.6.1"
 
-[package.source]
-type = "legacy"
-url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple"
-reference = "atoti"
-
 [[package]]
 name = "atoti-sql"
-version = "0.8.11.4879.20240326141843"
+version = "0.8.11"
 description = "Plugin to load the results of SQL queries into Atoti tables"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "atoti_sql-0.8.11.4879.20240326141843-py3-none-any.whl", hash = "sha256:c948c7617f784a31f70ab790f528e4ce1c852a05f30c4267e36363410bd79bd5"},
+    {file = "atoti_sql-0.8.11-py3-none-any.whl", hash = "sha256:c37dd514d467f06a047df5a08a4f015dc5783e5833de45ca77f0bcb8b89ed723"},
 ]
 
 [package.dependencies]
-atoti = "0.8.11.4879.20240326141843"
-atoti-core = "0.8.11.4879.20240326141843"
+atoti = "0.8.11"
+atoti-core = "0.8.11"
 typing-extensions = ">=4.6.1"
-
-[package.source]
-type = "legacy"
-url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple"
-reference = "atoti"
 
 [[package]]
 name = "attrs"
@@ -1532,13 +1487,13 @@ lxml = ["lxml"]
 
 [[package]]
 name = "httpcore"
-version = "1.0.4"
+version = "1.0.5"
 description = "A minimal low-level HTTP client."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "httpcore-1.0.4-py3-none-any.whl", hash = "sha256:ac418c1db41bade2ad53ae2f3834a3a0f5ae76b56cf5aa497d2d033384fc7d73"},
-    {file = "httpcore-1.0.4.tar.gz", hash = "sha256:cb2839ccfcba0d2d3c1131d3c3e26dfc327326fbe7a5dc0dbfe9f6c9151bb022"},
+    {file = "httpcore-1.0.5-py3-none-any.whl", hash = "sha256:421f18bac248b25d310f3cacd198d55b8e6125c107797b609ff9b7a6ba7991b5"},
+    {file = "httpcore-1.0.5.tar.gz", hash = "sha256:34a38e2f9291467ee3b44e89dd52615370e152954ba21721378a87b2960f7a61"},
 ]
 
 [package.dependencies]
@@ -1549,7 +1504,7 @@ h11 = ">=0.13,<0.15"
 asyncio = ["anyio (>=4.0,<5.0)"]
 http2 = ["h2 (>=3,<5)"]
 socks = ["socksio (==1.*)"]
-trio = ["trio (>=0.22.0,<0.25.0)"]
+trio = ["trio (>=0.22.0,<0.26.0)"]
 
 [[package]]
 name = "httpx"
@@ -1663,13 +1618,13 @@ testing = ["jaraco.test (>=5.4)", "pytest (>=6)", "pytest-checkdocs (>=2.4)", "p
 
 [[package]]
 name = "ipykernel"
-version = "6.29.3"
+version = "6.29.4"
 description = "IPython Kernel for Jupyter"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "ipykernel-6.29.3-py3-none-any.whl", hash = "sha256:5aa086a4175b0229d4eca211e181fb473ea78ffd9869af36ba7694c947302a21"},
-    {file = "ipykernel-6.29.3.tar.gz", hash = "sha256:e14c250d1f9ea3989490225cc1a542781b095a18a19447fcf2b5eaf7d0ac5bd2"},
+    {file = "ipykernel-6.29.4-py3-none-any.whl", hash = "sha256:1181e653d95c6808039c509ef8e67c4126b3b3af7781496c7cbfb5ed938a27da"},
+    {file = "ipykernel-6.29.4.tar.gz", hash = "sha256:3d44070060f9475ac2092b760123fadf105d2e2493c24848b6691a7c4f42af5c"},
 ]
 
 [package.dependencies]
@@ -2730,19 +2685,19 @@ webpdf = ["playwright"]
 
 [[package]]
 name = "nbformat"
-version = "5.10.3"
+version = "5.10.4"
 description = "The Jupyter Notebook format"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "nbformat-5.10.3-py3-none-any.whl", hash = "sha256:d9476ca28676799af85385f409b49d95e199951477a159a576ef2a675151e5e8"},
-    {file = "nbformat-5.10.3.tar.gz", hash = "sha256:60ed5e910ef7c6264b87d644f276b1b49e24011930deef54605188ddeb211685"},
+    {file = "nbformat-5.10.4-py3-none-any.whl", hash = "sha256:3b48d6c8fbca4b299bf3982ea7db1af21580e4fec269ad087b9e81588891200b"},
+    {file = "nbformat-5.10.4.tar.gz", hash = "sha256:322168b14f937a5d11362988ecac2a4952d3d8e3a2cbeb2319584631226d5b3a"},
 ]
 
 [package.dependencies]
-fastjsonschema = "*"
+fastjsonschema = ">=2.15"
 jsonschema = ">=2.6"
-jupyter-core = "*"
+jupyter-core = ">=4.12,<5.0.dev0 || >=5.1.dev0"
 traitlets = ">=5.1"
 
 [package.extras]
@@ -3478,13 +3433,13 @@ global = ["pybind11-global (==2.11.1)"]
 
 [[package]]
 name = "pycparser"
-version = "2.21"
+version = "2.22"
 description = "C parser in Python"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+python-versions = ">=3.8"
 files = [
-    {file = "pycparser-2.21-py2.py3-none-any.whl", hash = "sha256:8ee45429555515e1f6b185e78100aea234072576aa43ab53aefcae078162fca9"},
-    {file = "pycparser-2.21.tar.gz", hash = "sha256:e644fdec12f7872f86c58ff790da456218b10f863970249516d60a5eaca77206"},
+    {file = "pycparser-2.22-py3-none-any.whl", hash = "sha256:c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc"},
+    {file = "pycparser-2.22.tar.gz", hash = "sha256:491c8be9c040f5390f5bf44a5b07752bd07f56edf992381b05c701439eec10f6"},
 ]
 
 [[package]]
@@ -5244,4 +5199,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9.0,<3.9.7 || >3.9.7,<3.11"
-content-hash = "aff1d2e093fb13593c73662719f0da03e8899efd64d8bf6181142fa4dd3abf1d"
+content-hash = "2be42f340cfa7b9ef160e656b5706cc920a326fcc4390b618ae40a633874a845"

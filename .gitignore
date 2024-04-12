@@ -12,12 +12,19 @@ __pycache__/
 *.zip
 
 # Data files
-notebooks/01-use-cases/finance/risk-management/operational-risk/credit-card-fraud-detection/output/*.csv
-notebooks/01-use-cases/finance/risk-management/credit-risk/ifrs9/lending-club-data/risk-engine/*.csv
-notebooks/01-use-cases/finance/risk-management/credit-risk/xva/data-prev/*.csv
-notebooks/01-use-cases/finance/risk-management/credit-risk/xva/data/*.csv
-notebooks/01-use-cases/finance/risk-management/credit-risk/xva/what-if/*.csv
-notebooks/01-use-cases/finance/risk-management/credit-risk/ifrs9/lending-club-data/*.csv
+02-technical-guides/aggregate-provider/data/
+02-technical-guides/conditional-functions/data/
+02-technical-guides/rollup-hierarchies/*.csv
+03-use-cases/01-finance/front-office/real-time-risk/dynamic-input-files/
+03-use-cases/01-finance/portfolio-management/cvar-optimizer/data/
+03-use-cases/01-finance/risk-management/operational-risk/credit-card-fraud-detection/output/*.csv
+03-use-cases/01-finance/risk-management/credit-risk/ifrs9/lending-club-data/risk-engine/*.csv
+03-use-cases/01-finance/risk-management/credit-risk/xva/data-prev/*.csv
+03-use-cases/01-finance/risk-management/credit-risk/xva/data/*.csv
+03-use-cases/01-finance/risk-management/credit-risk/xva/what-if/*.csv
+03-use-cases/01-finance/risk-management/credit-risk/ifrs9/lending-club-data/*.csv
+03-use-cases/01-finance/retail-banking/data/
+
 
 # Misc
 .DS_Store

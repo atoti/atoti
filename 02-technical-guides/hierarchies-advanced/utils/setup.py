@@ -1,6 +1,7 @@
 import atoti as tt
 import pandas
 
+
 def main():
 
     session = tt.Session(
@@ -9,7 +10,7 @@ def main():
         java_options=["-Xms1G", "-Xmx10G"],
     )
     session.link
-    
+
     orders = session.read_csv(
         "s3://data.atoti.io/notebooks/hierarchies/data/Orders.csv",
         types={
@@ -23,7 +24,7 @@ def main():
         keys=["OrderId"],
     )
     orders.head()
-    
+
     products = session.read_csv(
         "s3://data.atoti.io/notebooks/hierarchies/data/Products.csv",
         types={
@@ -36,7 +37,7 @@ def main():
         keys=["ProductId"],
     )
     products.head()
-    
+
     shippers = session.read_csv(
         "s3://data.atoti.io/notebooks/hierarchies/data/Shippers.csv",
         types={
@@ -45,7 +46,7 @@ def main():
         },
     )
     shippers.head()
-    
+
     customers = session.read_csv(
         "s3://data.atoti.io/notebooks/hierarchies/data/Customers.csv",
         types={
@@ -61,7 +62,7 @@ def main():
         keys=["CustomerId"],
     )
     customers.head()
-    
+
     employees = session.read_csv(
         "s3://data.atoti.io/notebooks/hierarchies/data/Employees.csv",
         types={
@@ -73,13 +74,13 @@ def main():
         keys=["EmployeeId"],
     )
     employees.head()
-    
+
     # Join tables
     orders.join(products, orders["ProductId"] == products["ProductId"])
     orders.join(employees, orders["EmployeeId"] == employees["EmployeeId"])
     orders.join(customers, orders["CustomerId"] == customers["CustomerId"])
     orders.join(shippers, orders["ShipperName"] == shippers["ShipperName"])
-    
+
     # Create Cube from Atoti Table object
     cube = session.create_cube(orders)
 

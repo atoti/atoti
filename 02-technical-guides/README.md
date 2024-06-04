@@ -113,7 +113,11 @@
 </tr>
 <tr>
 <td rowspan="1"><a href="./hierarchies/main.ipynb">hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.12-1C900C" alt="Latest version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/hierarchy-fundamentals-in-atoti/?utm_source=github">📰&nbsp;Hierarchy Fundamentals in Atoti</a></td><td rowspan="1"><kbd>data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="./hierarchies-advanced/main.ipynb">hierarchies-advanced&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.12-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 </table>
 <br/>
@@ -259,6 +263,10 @@ Double-click on tile to go to feature section.
 <tr>
 <td rowspan="1"><a href="./currency-conversion-with-lookup/main.ipynb">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.12-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/guides/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="./hierarchies-advanced/main.ipynb">hierarchies-advanced&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.12-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.12-1C900C" alt="Latest version" /></td>
@@ -517,7 +525,7 @@ Double-click on tile to go to feature section.
 </tr>
 <tr>
 <td rowspan="1"><a href="./hierarchies/main.ipynb">hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.12-1C900C" alt="Latest version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/hierarchy-fundamentals-in-atoti/?utm_source=github">📰&nbsp;Hierarchy Fundamentals in Atoti</a></td><td rowspan="1"><kbd>data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./internationalization/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.12-1C900C" alt="Latest version" /></td>
@@ -618,7 +626,11 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./hierarchies/main.ipynb">hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.12-1C900C" alt="Latest version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/hierarchy-fundamentals-in-atoti/?utm_source=github">📰&nbsp;Hierarchy Fundamentals in Atoti</a></td><td rowspan="1"><kbd>data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="./hierarchies-advanced/main.ipynb">hierarchies-advanced&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.12-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.12-1C900C" alt="Latest version" /></td>
@@ -785,7 +797,11 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./hierarchies/main.ipynb">hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.12-1C900C" alt="Latest version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/hierarchy-fundamentals-in-atoti/?utm_source=github">📰&nbsp;Hierarchy Fundamentals in Atoti</a></td><td rowspan="1"><kbd>data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="./hierarchies-advanced/main.ipynb">hierarchies-advanced&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.12-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./internationalization/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.12-1C900C" alt="Latest version" /></td>
@@ -824,7 +840,11 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./hierarchies/main.ipynb">hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.12-1C900C" alt="Latest version" /></td>
-<td>&nbsp</td><td rowspan="1"><kbd>data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/hierarchy-fundamentals-in-atoti/?utm_source=github">📰&nbsp;Hierarchy Fundamentals in Atoti</a></td><td rowspan="1"><kbd>data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="./hierarchies-advanced/main.ipynb">hierarchies-advanced&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.12-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.12-1C900C" alt="Latest version" /></td>

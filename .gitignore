@@ -25,7 +25,7 @@ __pycache__/
 03-use-cases/01-finance/risk-management/credit-risk/xva/data/*.csv
 03-use-cases/01-finance/risk-management/credit-risk/xva/what-if/*.csv
 03-use-cases/01-finance/risk-management/credit-risk/ifrs9/lending-club-data/*.csv
-03-use-cases/01-finance/retail-banking/data/
+03-use-cases/01-finance/retail-banking/credit-card-analytics/data/
 
 # Misc
 .DS_Store

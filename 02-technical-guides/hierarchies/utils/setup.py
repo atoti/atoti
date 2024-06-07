@@ -4,6 +4,7 @@ import pandas
 
 def main():
 
+    # Start Atoti server and link UI
     session = tt.Session(
         user_content_storage="./02-content",
         port=9092,
@@ -11,6 +12,7 @@ def main():
     )
     session.link
 
+    # Load data
     orders = session.read_csv(
         "s3://data.atoti.io/notebooks/hierarchies/data/Orders.csv",
         types={

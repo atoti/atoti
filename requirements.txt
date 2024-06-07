@@ -1,3 +1,0 @@
-atoti[jupyterlab,aws,kafka,azure,gcp]>=0.6.6
-jupyter-server-proxy
-pygraphviz

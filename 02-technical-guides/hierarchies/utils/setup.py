@@ -5,7 +5,7 @@ import pandas
 def main():
 
     session = tt.Session(
-        user_content_storage="./content",
+        user_content_storage="./02-content",
         port=9092,
         java_options=["-Xms1G", "-Xmx10G"],
     )

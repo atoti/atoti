@@ -96,7 +96,11 @@ def main():
     orders.join(employees, orders["EmployeeId"] == employees["EmployeeId"])
     orders.join(customers, orders["CustomerId"] == customers["CustomerId"])
     orders.join(shippers, orders["ShipperName"] == shippers["ShipperName"])
-    orders.join(inventory, (orders["InventoryId"] == inventory["InventoryId"]) & (orders["ProductId"] == inventory["ProductId"]))
+    orders.join(
+        inventory,
+        (orders["InventoryId"] == inventory["InventoryId"])
+        & (orders["ProductId"] == inventory["ProductId"]),
+    )
 
     # Create Cube from Atoti Table object
     cube = session.create_cube(orders)

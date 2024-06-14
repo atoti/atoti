@@ -78,12 +78,10 @@ def main():
     )
     employees.head()
 
-    # Load inventory data
     inventory = session.read_csv(
         "s3://data.atoti.io/notebooks/hierarchies/data/Inventory.csv",
         types={
             "InventoryId": tt.STRING,
-            "ProductId": tt.STRING,
             "AsOfDate": tt.LOCAL_DATE,
             "Inventory": tt.INT,
         },
@@ -96,11 +94,7 @@ def main():
     orders.join(employees, orders["EmployeeId"] == employees["EmployeeId"])
     orders.join(customers, orders["CustomerId"] == customers["CustomerId"])
     orders.join(shippers, orders["ShipperName"] == shippers["ShipperName"])
-    orders.join(
-        inventory,
-        (orders["InventoryId"] == inventory["InventoryId"])
-        & (orders["ProductId"] == inventory["ProductId"]),
-    )
+    orders.join(inventory, orders["InventoryId"] == inventory["InventoryId"])
 
     # Create Cube from Atoti Table object
     cube = session.create_cube(orders)

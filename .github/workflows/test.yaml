@@ -30,7 +30,7 @@ jobs:
         run: poetry install
 
       - name: Run Ruff
-        run: ruff format .
+        run: poetry run ruff format .
 
       - name: Run notebooks
         run: poetry run python tests/execute_notebooks.py

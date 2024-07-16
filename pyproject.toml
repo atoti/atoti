@@ -41,7 +41,6 @@ folium = {version = "^0.14.0", source = "PyPI"}
 atoti = {version = "0.8.13", extras = ["aws", "azure", "gcp", "jupyterlab", "kafka", "sql"], source = "PyPI"}
 pandas = {version = "2.0.3", source = "PyPI"}
 jupyterlab = "<4.2"
-ruff = "^0.5.2"
 
 [tool.poetry.dev-dependencies]
 ruff = "^0.5.2"

@@ -29,8 +29,8 @@ jobs:
       - name: Install Python dependencies
         run: poetry install
 
-      - name: Run Black
-        run: poetry run black . --check
+      - name: Run Ruff
+        run: ruff format .
 
       - name: Run notebooks
         run: poetry run python tests/execute_notebooks.py

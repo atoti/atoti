@@ -43,7 +43,7 @@ pandas = {version = "2.0.3", source = "PyPI"}
 jupyterlab = "<4.2"
 
 [tool.poetry.dev-dependencies]
-black = { extras = ["jupyter"], version = "*" }
+ruff = "^0.5.2"
 
 [[tool.poetry.source]]
 name = "PyPI"
@@ -52,3 +52,6 @@ priority = "primary"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+extend-include = ["*.ipynb"]

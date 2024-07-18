@@ -49,7 +49,7 @@ Please make sure your PR follows the rules below:
 ### Python code rules
 
 - variables should follow Google's [naming convention](http://google.github.io/styleguide/pyguide.html#316-naming)
-- python files should be formatted with [Black](https://black.readthedocs.io/en/stable/)
+- python files should be formatted with [Ruff](https://docs.astral.sh/ruff/)
 - python methods should be typed
 - documentation should follow Google's [docstring](http://google.github.io/styleguide/pyguide.html#381-docstrings)
 
@@ -59,10 +59,10 @@ This repository is tested with a [Github Action](.github/workflows/test.yaml).
 
 These commands can be used while developing:
 
-- Reformat python files using black :
+- Reformat python files using `ruff`:
 
   ```bash
-  poetry run black .
+  poetry run ruff format .
   ```
 
 - Execute all the notebooks:

@@ -3,7 +3,6 @@ import pandas
 
 
 def main():
-
     # Start Atoti server and link UI
     session = tt.Session(
         user_content_storage="./02-content",

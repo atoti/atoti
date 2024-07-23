@@ -2,7 +2,7 @@
 -- Database and Table creation
 -- ---------------------------------
 
-CREATE DATABASE IF NOT EXISTS ATOTI;
+CREATE DATABASE IF NOT EXISTS ATOTI_DQ;
 
 CREATE TABLE IF NOT EXISTS ATOTI.TRADE_PNLS (
   `BookId` Int64, 

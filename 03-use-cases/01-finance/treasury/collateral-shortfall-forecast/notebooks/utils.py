@@ -653,8 +653,9 @@ def _check_reg_targets(y_true, y_pred, multioutput, dtype="numeric"):
 
     if y_true.shape[1] != y_pred.shape[1]:
         raise ValueError(
-            "y_true and y_pred have different number of output "
-            "({0}!={1})".format(y_true.shape[1], y_pred.shape[1])
+            "y_true and y_pred have different number of output " "({0}!={1})".format(
+                y_true.shape[1], y_pred.shape[1]
+            )
         )
 
     n_outputs = y_true.shape[1]

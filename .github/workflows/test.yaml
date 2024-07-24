@@ -20,17 +20,14 @@ jobs:
           architecture: x64
           python-version: ${{ matrix.python }}
 
-      - name: Install Graphviz
-        run: sudo apt-get install graphviz
-
       - name: Install Poetry
         run: pip install poetry
 
       - name: Install Python dependencies
         run: poetry install
 
-      - name: Run Black
-        run: poetry run black . --check
+      - name: Run Ruff
+        run: poetry run ruff format --check .
 
       - name: Run notebooks
         run: poetry run python tests/execute_notebooks.py

@@ -10,11 +10,14 @@ cc_dict = {
     "Visa Debit (Prepaid)": [29, 30],
 }
 
+
 def assign_retailers(cc_df, cc_combinations_df):
     for user in cc_df["User"].unique():
-        df = cc_df.loc[cc_df["User"] == user].sort_values(by=["Card Brand", "Card Type"])
+        df = cc_df.loc[cc_df["User"] == user].sort_values(
+            by=["Card Brand", "Card Type"]
+        )
         prev_row = None
-    
+
         for index, row in df.iterrows():
             cc_input = row["Card Brand"] + " " + row["Card Type"]
             distinct_count = cc_combinations_df.loc[
@@ -22,7 +25,7 @@ def assign_retailers(cc_df, cc_combinations_df):
                 & (cc_combinations_df["Card Brand"] == row["Card Brand"])
                 & (cc_combinations_df["Card Type"] == row["Card Type"])
             ]["size"].values[0]
-    
+
             if prev_row is None:
                 # print("FIRST ROW AND NEW CARD FOR USER")
                 num_counter = 0
@@ -31,7 +34,7 @@ def assign_retailers(cc_df, cc_combinations_df):
                 # print(f"    Assigning to Retailer ID... {assignment}")
                 cc_df.loc[index, "Retailer ID"] = assignment
                 prev_row = row
-    
+
             else:
                 if str(prev_row["Card Brand"]) == str(row["Card Brand"]) and str(
                     prev_row["Card Type"]
@@ -43,7 +46,7 @@ def assign_retailers(cc_df, cc_combinations_df):
                     # print(f"    Assigning to Retailer ID... {assignment}")
                     cc_df.loc[index, "Retailer ID"] = assignment
                     prev_row = row
-    
+
                 else:
                     # print("NEW CARD FOR SAME USER")
                     num_counter = 0

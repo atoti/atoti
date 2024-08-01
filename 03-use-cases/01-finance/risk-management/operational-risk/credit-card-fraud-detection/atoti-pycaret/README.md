@@ -6,6 +6,8 @@ By creating a small [Flask application](https://flask.palletsprojects.com/en/2.2
 
 # Installation
 
+## Poetry
+
 If using Poetry in a Windows environment, it is recommended to use Python 3.8 due to llvmlite and numpy requirements for PyCaret:  
 `poetry env use $(py -3.8 -c 'import sys; print(sys.executable)')`
 
@@ -16,6 +18,14 @@ poetry install
 
 Refer to the [poetry documentation](https://python-poetry.org/docs/master/#installing-with-the-official-installer) for more information on the package manager.
 
+## Docker
+
+Execute the following commands to build a Docker container and run `PyCaret` from within a Docker container:
+
+```bash
+docker build -f Dockerfile -t atoti-pycaret .
+docker run -it -p 105:105 atoti-pycaret
+```
 
 # Runtime
 To launch the Flask application, run the following command:

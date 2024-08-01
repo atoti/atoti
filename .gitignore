@@ -27,6 +27,11 @@ __pycache__/
 03-use-cases/01-finance/risk-management/credit-risk/ifrs9/lending-club-data/*.csv
 03-use-cases/01-finance/retail-banking/credit-card-analytics/data/
 
+# Extensions
+!03-use-cases/01-finance/risk-management/operational-risk/credit-card-fraud-detection/atoti-pycaret/source.zip
+!03-use-cases/01-finance/portfolio-management/alt-data/ui/source.zip
+!03-use-cases/03-community-fun/pokemon/extensions/source.zip
+
 # Misc
 .DS_Store
 node_modules

@@ -6,7 +6,7 @@ By creating a small [Flask application](https://flask.palletsprojects.com/en/2.2
 
 # Installation
 
-Extract the contents from `source.zip`.
+Extract the contents from within `source.zip`.
 
 ## Poetry
 

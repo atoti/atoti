@@ -7,7 +7,7 @@ The app extension template linked [here](https://docs.atoti.io/latest/_downloads
 
 2. To build the project, follow the steps below:
 
-- Extract the contents from `source.zip`.
+- Extract the contents from within `source.zip`.
 
 - Download from this [link](https://data.atoti.io/notebooks/pokemon/images.zip) and unzip into the following folders:**  
     - for new build: `src/resources/images`

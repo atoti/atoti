@@ -6,6 +6,8 @@ By creating a small [Flask application](https://flask.palletsprojects.com/en/2.2
 
 # Installation
 
+Extract the contents from `source.zip`.
+
 ## Poetry
 
 If using Poetry in a Windows environment, it is recommended to use Python 3.8 due to llvmlite and numpy requirements for PyCaret:  

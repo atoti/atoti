@@ -30,6 +30,7 @@ __pycache__/
 # Extensions
 !03-use-cases/01-finance/risk-management/operational-risk/credit-card-fraud-detection/atoti-pycaret/source.zip
 !03-use-cases/01-finance/portfolio-management/alt-data/ui/source.zip
+!03-use-cases/01-finance/portfolio-management/cvar-optimizer/ui/source.zip
 !03-use-cases/03-community-fun/pokemon/extensions/source.zip
 
 # Misc

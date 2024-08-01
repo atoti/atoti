@@ -6,3 +6,5 @@ Extract the contents within `source.zip` and execute the following commands:
 yarn install
 yarn build
 ```
+
+Make sure to replace `./packages` with the new build `./source/packages`.

@@ -7,16 +7,18 @@ The app extension template linked [here](https://docs.atoti.io/latest/_downloads
 
 2. To build the project, follow the steps below:
 
+- Extract the contents from within `source.zip` and change directory to the extracted `source` folder.
+
 - Download from this [link](https://data.atoti.io/notebooks/pokemon/images.zip) and unzip into the following folders:**  
-    - for new build: src/resources/images
+    - for new build: `src/resources/images`
 
 - Build project:
 
-    yarn
+    - `yarn`
 
 - Generate `dist` folder:
 
-    npm run build
+     - `npm run build`
 
 
 The source code has been included for reference, but only the `dist` folder is needed for our notebook.

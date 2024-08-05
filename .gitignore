@@ -15,6 +15,7 @@ __pycache__/
 01-atoti-academy/introduction-to-atoti/*.csv
 02-technical-guides/aggregate-provider/data/
 02-technical-guides/conditional-functions/data/
+02-technical-guides/directquery-vector/data/
 02-technical-guides/rollup-hierarchies/*.csv
 02-technical-guides/var-benchmark/dataset.*
 03-use-cases/01-finance/front-office/real-time-risk/dynamic-input-files/

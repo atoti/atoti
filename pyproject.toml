@@ -28,7 +28,7 @@ tabulate = {version = "^0.9.0", source = "PyPI"}
 orjson = {version = "^3.8.14", source = "PyPI"}
 lxml = {version = "^4.9.2", source = "PyPI"}
 html5lib = {version = "^1.1", source = "PyPI"}
-yfinance = {version = "^0.2.18", source = "PyPI"}
+yfinance = {version = "^0.2.41", source = "PyPI"}
 pyopls = {version = "^20.3.post1", source = "PyPI"}
 nltk = {version = "^3.8.1", source = "PyPI"}
 textblob = {version = "^0.18.0", source = "PyPI"}

@@ -13,7 +13,7 @@ wget = {version = "^3.2", source = "PyPI"}
 treelib = {version = "^1.6.4", source = "PyPI"}
 matplotlib = {version = "^3.7.1", source = "PyPI"}
 praw = {version = "^7.7.0", source = "PyPI"}
-seaborn = {version = "^0.12.2", source = "PyPI"}
+seaborn = {version = "^0.13.2", source = "PyPI"}
 statsmodels = {version = "^0.14.0", source = "PyPI"}
 imblearn = {version = "^0.0", source = "PyPI"}
 ipywidgets = {version = "^8.0.6", source = "PyPI"}
@@ -25,8 +25,8 @@ kafka-python = {version = "^2.0.2", source = "PyPI"}
 xgboost = {version = "^1.7.5", source = "PyPI"}
 natsort = {version = "^8.3.1", source = "PyPI"}
 tabulate = {version = "^0.9.0", source = "PyPI"}
-orjson = {version = "^3.8.14", source = "PyPI"}
-lxml = {version = "^4.9.2", source = "PyPI"}
+orjson = {version = "^3.10.6", source = "PyPI"}
+lxml = {version = "^5.2.2", source = "PyPI"}
 html5lib = {version = "^1.1", source = "PyPI"}
 yfinance = {version = "^0.2.41", source = "PyPI"}
 pyopls = {version = "^20.3.post1", source = "PyPI"}
@@ -43,7 +43,7 @@ pandas = {version = "2.2.2", source = "PyPI"}
 jupyterlab = "<4.2"
 
 [tool.poetry.dev-dependencies]
-ruff = "^0.5.2"
+ruff = "^0.5.6"
 
 [[tool.poetry.source]]
 name = "PyPI"

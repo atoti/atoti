@@ -32,7 +32,7 @@ yfinance = {version = "^0.2.41", source = "PyPI"}
 pyopls = {version = "^20.3.post1", source = "PyPI"}
 nltk = {version = "^3.8.1", source = "PyPI"}
 textblob = {version = "^0.18.0", source = "PyPI"}
-llvmlite = {version = "^0.40.0", source = "PyPI"}
+llvmlite = {version = "^0.43.0", source = "PyPI"}
 protobuf = {version = "^4.23.2", source = "PyPI"}
 pyportfolioopt = {version = "^1.5.5", source = "PyPI"}
 tsfresh = {version = "^0.20.0", source = "PyPI"}

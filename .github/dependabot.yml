@@ -13,7 +13,7 @@ updates:
         update-types: 
           - "minor"
           - "patch"
-      major-updates:
+      all-major-updates:
         patterns:
           - "*"
         update-types: 

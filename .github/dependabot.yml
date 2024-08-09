@@ -22,3 +22,5 @@ updates:
       - dependency-name: "mxnet"
         # For mxnet, ignore all updates for version 1.7 and 1.8 since poetry failed to install those on windows
         versions: ["1.7.x", "1.8.x"]
+      - dependency-name: "jupyterlab"
+        versions: [">=4.2"]

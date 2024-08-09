@@ -40,7 +40,7 @@ scikit-learn = {version = "^1.5.1", source = "PyPI"}
 folium = {version = "^0.17.0", source = "PyPI"}
 atoti = {version = "0.8.14", extras = ["aws", "azure", "gcp", "jupyterlab", "kafka", "sql"], source = "PyPI"}
 pandas = {version = "2.2.2", source = "PyPI"}
-jupyterlab = "<4.3"
+jupyterlab = "<4.2"
 
 [tool.poetry.dev-dependencies]
 ruff = "^0.5.7"

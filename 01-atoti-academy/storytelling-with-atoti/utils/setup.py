@@ -242,13 +242,15 @@ def nb3_measures(cube):
 
 
 def create_app(ses_name="training1", port=9091):
-    session = tt.Session(
-        name=ses_name,
-        user_content_storage=f"./{ses_name}",
-        port=port,
-        java_options=["-Xms1G", "-Xmx8G"],
-        # requires Atoti license
-        # app_extensions=tt.ADVANCED_APP_EXTENSION,
+    session = tt.Session.start(
+        tt.SessionConfig(
+            # name=ses_name,
+            user_content_storage=f"./{ses_name}",
+            port=port,
+            java_options=["-Xms1G", "-Xmx8G"],
+            # requires Atoti license
+            # app_extensions=tt.ADVANCED_APP_EXTENSION,
+        )
     )
 
     base_table = setup_tables(session)

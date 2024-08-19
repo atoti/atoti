@@ -32,7 +32,7 @@
 </tr>
 <tr>
 <td rowspan="2"><a href="./real-time-risk/main.ipynb">real-time-risk&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.8.14-grey" alt="Last maintained version" /></td>
-<td><a href="https://www.atoti.io/articles/implementing-real-time-sources-with-atoti/?utm_source=github">📰&nbsp;Implementing real-time sources with atoti</a></td><td rowspan="2"><kbd>kafka connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> kafka connector</kbd>&nbsp;<kbd> local file</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/guides/implementing-real-time-sources-with-atoti/?utm_source=github">📰&nbsp;Implementing real-time sources with atoti</a></td><td rowspan="2"><kbd>kafka connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> kafka connector</kbd>&nbsp;<kbd> local file</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td valign="center"><a href="https://www.atoti.io/articles/real-time-risk-analytics-with-atoti/?utm_source=github">📰&nbsp;Real-time risk analytics with atoti</a></td>

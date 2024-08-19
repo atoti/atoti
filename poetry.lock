@@ -2,23 +2,24 @@
 
 [[package]]
 name = "aiobotocore"
-version = "2.0.1"
+version = "2.13.2"
 description = "Async client for aws services using botocore and aiohttp"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.8"
 files = [
-    {file = "aiobotocore-2.0.1.tar.gz", hash = "sha256:73b697da549d7f280c640ba3118cadcfc77312ce3ea493b55384bd3624ee5588"},
+    {file = "aiobotocore-2.13.2-py3-none-any.whl", hash = "sha256:18cbd934ed835a04020c2cffe5d1cfbeb9ff0a340a8c7f0a869c17cf3e43de6a"},
+    {file = "aiobotocore-2.13.2.tar.gz", hash = "sha256:8ae2ffe3fd227923c69e12271b7a723c7c93853d8dbbd214e774613bd444b32f"},
 ]
 
 [package.dependencies]
-aiohttp = ">=3.3.1"
-aioitertools = ">=0.5.1"
-botocore = ">=1.22.8,<1.22.9"
-wrapt = ">=1.10.10"
+aiohttp = ">=3.9.2,<4.0.0"
+aioitertools = ">=0.5.1,<1.0.0"
+botocore = ">=1.34.70,<1.34.132"
+wrapt = ">=1.10.10,<2.0.0"
 
 [package.extras]
-awscli = ["awscli (>=1.21.8,<1.21.9)"]
-boto3 = ["boto3 (>=1.19.8,<1.19.9)"]
+awscli = ["awscli (>=1.32.70,<1.33.14)"]
+boto3 = ["boto3 (>=1.34.70,<1.34.132)"]
 
 [[package]]
 name = "aiohappyeyeballs"
@@ -637,41 +638,41 @@ css = ["tinycss2 (>=1.1.0,<1.3)"]
 
 [[package]]
 name = "boto3"
-version = "1.19.8"
+version = "1.34.131"
 description = "The AWS SDK for Python"
 optional = false
-python-versions = ">= 3.6"
+python-versions = ">=3.8"
 files = [
-    {file = "boto3-1.19.8-py3-none-any.whl", hash = "sha256:620669f1b7a2c32d960d9820783da0235e20e16afac851fe3d39d2e8375a652d"},
-    {file = "boto3-1.19.8.tar.gz", hash = "sha256:568d5ee1bacb3127eac3e1d80119699711c1092e82e4b1d4541d1e2202eb95fc"},
+    {file = "boto3-1.34.131-py3-none-any.whl", hash = "sha256:05e388cb937e82be70bfd7eb0c84cf8011ff35cf582a593873ac21675268683b"},
+    {file = "boto3-1.34.131.tar.gz", hash = "sha256:dab8f72a6c4e62b4fd70da09e08a6b2a65ea2115b27dd63737142005776ef216"},
 ]
 
 [package.dependencies]
-botocore = ">=1.22.8,<1.23.0"
-jmespath = ">=0.7.1,<1.0.0"
-s3transfer = ">=0.5.0,<0.6.0"
+botocore = ">=1.34.131,<1.35.0"
+jmespath = ">=0.7.1,<2.0.0"
+s3transfer = ">=0.10.0,<0.11.0"
 
 [package.extras]
 crt = ["botocore[crt] (>=1.21.0,<2.0a0)"]
 
 [[package]]
 name = "botocore"
-version = "1.22.8"
+version = "1.34.131"
 description = "Low-level, data-driven core of boto 3."
 optional = false
-python-versions = ">= 3.6"
+python-versions = ">=3.8"
 files = [
-    {file = "botocore-1.22.8-py3-none-any.whl", hash = "sha256:842dc2b887ab9ce5e937bc5954116736a1f3d3b7f1948b0027a671509e0d81ca"},
-    {file = "botocore-1.22.8.tar.gz", hash = "sha256:89c48ac82cd3d814dd459428144a124e42acca80431c77813b7ac29f8fac3456"},
+    {file = "botocore-1.34.131-py3-none-any.whl", hash = "sha256:13b011d7b206ce00727dcee26548fa3b550db9046d5a0e90ac25a6e6c8fde6ef"},
+    {file = "botocore-1.34.131.tar.gz", hash = "sha256:502ddafe1d627fcf1e4c007c86454e5dd011dba7c58bd8e8a5368a79f3e387dc"},
 ]
 
 [package.dependencies]
-jmespath = ">=0.7.1,<1.0.0"
+jmespath = ">=0.7.1,<2.0.0"
 python-dateutil = ">=2.1,<3.0.0"
-urllib3 = ">=1.25.4,<1.27"
+urllib3 = {version = ">=1.25.4,<2.2.0 || >2.2.0,<3", markers = "python_version >= \"3.10\""}
 
 [package.extras]
-crt = ["awscrt (==0.12.5)"]
+crt = ["awscrt (==0.20.11)"]
 
 [[package]]
 name = "branca"
@@ -1323,13 +1324,13 @@ files = [
 
 [[package]]
 name = "fsspec"
-version = "2021.11.1"
+version = "2024.6.1"
 description = "File-system specification"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.8"
 files = [
-    {file = "fsspec-2021.11.1-py3-none-any.whl", hash = "sha256:bcb136caa37e1470dd8314a7d3917cb9b25dd9da44c10d36df556ab4ef038185"},
-    {file = "fsspec-2021.11.1.tar.gz", hash = "sha256:03683e606651d5e4bd9180525d57477bd5430e5dc68d2e459835dc14cecc3dd4"},
+    {file = "fsspec-2024.6.1-py3-none-any.whl", hash = "sha256:3cb443f8bcd2efb31295a5b9fdb02aee81d8452c80d28f97a6d0959e6cee101e"},
+    {file = "fsspec-2024.6.1.tar.gz", hash = "sha256:fad7d7e209dd4c1208e3bbfda706620e0da5142bebbd9c384afb95b07e798e49"},
 ]
 
 [package.extras]
@@ -1337,8 +1338,10 @@ abfs = ["adlfs"]
 adl = ["adlfs"]
 arrow = ["pyarrow (>=1)"]
 dask = ["dask", "distributed"]
+dev = ["pre-commit", "ruff"]
+doc = ["numpydoc", "sphinx", "sphinx-design", "sphinx-rtd-theme", "yarl"]
 dropbox = ["dropbox", "dropboxdrivefs", "requests"]
-entrypoints = ["importlib-metadata"]
+full = ["adlfs", "aiohttp (!=4.0.0a0,!=4.0.0a1)", "dask", "distributed", "dropbox", "dropboxdrivefs", "fusepy", "gcsfs", "libarchive-c", "ocifs", "panel", "paramiko", "pyarrow (>=1)", "pygit2", "requests", "s3fs", "smbprotocol", "tqdm"]
 fuse = ["fusepy"]
 gcs = ["gcsfs"]
 git = ["pygit2"]
@@ -1346,13 +1349,17 @@ github = ["requests"]
 gs = ["gcsfs"]
 gui = ["panel"]
 hdfs = ["pyarrow (>=1)"]
-http = ["aiohttp", "requests"]
+http = ["aiohttp (!=4.0.0a0,!=4.0.0a1)"]
 libarchive = ["libarchive-c"]
 oci = ["ocifs"]
 s3 = ["s3fs"]
 sftp = ["paramiko"]
 smb = ["smbprotocol"]
 ssh = ["paramiko"]
+test = ["aiohttp (!=4.0.0a0,!=4.0.0a1)", "numpy", "pytest", "pytest-asyncio (!=0.22.0)", "pytest-benchmark", "pytest-cov", "pytest-mock", "pytest-recording", "pytest-rerunfailures", "requests"]
+test-downstream = ["aiobotocore (>=2.5.4,<3.0.0)", "dask-expr", "dask[dataframe,test]", "moto[server] (>4,<5)", "pytest-timeout", "xarray"]
+test-full = ["adlfs", "aiohttp (!=4.0.0a0,!=4.0.0a1)", "cloudpickle", "dask", "distributed", "dropbox", "dropboxdrivefs", "fastparquet", "fusepy", "gcsfs", "jinja2", "kerchunk", "libarchive-c", "lz4", "notebook", "numpy", "ocifs", "pandas", "panel", "paramiko", "pyarrow", "pyarrow (>=1)", "pyftpdlib", "pygit2", "pytest", "pytest-asyncio (!=0.22.0)", "pytest-benchmark", "pytest-cov", "pytest-mock", "pytest-recording", "pytest-rerunfailures", "python-snappy", "requests", "smbprotocol", "tqdm", "urllib3", "zarr", "zstandard"]
+tqdm = ["tqdm"]
 
 [[package]]
 name = "h11"
@@ -4084,40 +4091,40 @@ files = [
 
 [[package]]
 name = "s3fs"
-version = "2021.11.1"
+version = "2024.6.1"
 description = "Convenient Filesystem interface over S3"
 optional = false
-python-versions = ">= 3.6"
+python-versions = ">=3.8"
 files = [
-    {file = "s3fs-2021.11.1-py3-none-any.whl", hash = "sha256:e807f8a6191e13008248df588b510a5643a587c888be0bd59ff8321b3a3c689d"},
-    {file = "s3fs-2021.11.1.tar.gz", hash = "sha256:1a9ea7596663cda3a5dc6802f11eb468b397de35a8793750e9a98c65abd1a114"},
+    {file = "s3fs-2024.6.1-py3-none-any.whl", hash = "sha256:ecd20863437409eec1cbfff0b7df5e9772cf7c1926008efab2e17e46f6d52c63"},
+    {file = "s3fs-2024.6.1.tar.gz", hash = "sha256:6c2106d6c34fbfbb88e3d20c6f3572896d5ee3d3512896696301c21a3c541bea"},
 ]
 
 [package.dependencies]
-aiobotocore = ">=2.0.1,<2.1.0"
-aiohttp = "<=4"
-fsspec = "2021.11.1"
+aiobotocore = ">=2.5.4,<3.0.0"
+aiohttp = "<4.0.0a0 || >4.0.0a0,<4.0.0a1 || >4.0.0a1"
+fsspec = "==2024.6.1.*"
 
 [package.extras]
-awscli = ["aiobotocore[awscli] (>=2.0.1,<2.1.0)"]
-boto3 = ["aiobotocore[boto3] (>=2.0.1,<2.1.0)"]
+awscli = ["aiobotocore[awscli] (>=2.5.4,<3.0.0)"]
+boto3 = ["aiobotocore[boto3] (>=2.5.4,<3.0.0)"]
 
 [[package]]
 name = "s3transfer"
-version = "0.5.2"
+version = "0.10.2"
 description = "An Amazon S3 Transfer Manager"
 optional = false
-python-versions = ">= 3.6"
+python-versions = ">=3.8"
 files = [
-    {file = "s3transfer-0.5.2-py3-none-any.whl", hash = "sha256:7a6f4c4d1fdb9a2b640244008e142cbc2cd3ae34b386584ef044dd0f27101971"},
-    {file = "s3transfer-0.5.2.tar.gz", hash = "sha256:95c58c194ce657a5f4fb0b9e60a84968c808888aed628cd98ab8771fe1db98ed"},
+    {file = "s3transfer-0.10.2-py3-none-any.whl", hash = "sha256:eca1c20de70a39daee580aef4986996620f365c4e0fda6a86100231d62f1bf69"},
+    {file = "s3transfer-0.10.2.tar.gz", hash = "sha256:0711534e9356d3cc692fdde846b4a1e4b0cb6519971860796e6bc4c7aea00ef6"},
 ]
 
 [package.dependencies]
-botocore = ">=1.12.36,<2.0a.0"
+botocore = ">=1.33.2,<2.0a.0"
 
 [package.extras]
-crt = ["botocore[crt] (>=1.20.29,<2.0a.0)"]
+crt = ["botocore[crt] (>=1.33.2,<2.0a.0)"]
 
 [[package]]
 name = "scikit-learn"
@@ -5008,4 +5015,4 @@ repair = ["scipy (>=1.6.3)"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10, <3.12"
-content-hash = "e9f18517a104d120002ccc0d65774c07e53bd57944c400b862d698b197cc9568"
+content-hash = "920cb3c9e5511d24c5ccf0753866fb5c614f2cf873ce413e991c6d2b48a6a0b2"

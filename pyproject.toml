@@ -7,8 +7,8 @@ authors = ["atoti <contact@atoti.io>"]
 [tool.poetry.dependencies]
 python = ">=3.10, <3.12"
 boto3 = {version = "^1.17.102", source = "PyPi"}
-s3fs = {version = "^2021.10.0", source = "PyPi"}
-fsspec = {version = "^2021.10.0", source = "PyPI"}
+s3fs = {version = "^2024.6.1", source = "PyPi"}
+fsspec = {version = "^2024.6.1", source = "PyPI"}
 wget = {version = "^3.2", source = "PyPI"}
 treelib = {version = "^1.6.4", source = "PyPI"}
 matplotlib = {version = "^3.9.2", source = "PyPI"}

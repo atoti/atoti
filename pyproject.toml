@@ -30,7 +30,7 @@ lxml = {version = "^5.3.0", source = "PyPI"}
 html5lib = {version = "^1.1", source = "PyPI"}
 yfinance = {version = "^0.2.41", source = "PyPI"}
 pyopls = {version = "^20.3.post1", source = "PyPI"}
-nltk = {version = "^3.8.2", source = "PyPI"}
+nltk = {version = "^3.9.1", source = "PyPI"}
 textblob = {version = "^0.18.0", source = "PyPI"}
 llvmlite = {version = "^0.43.0", source = "PyPI"}
 protobuf = {version = "^5.27.3", source = "PyPI"}
@@ -43,7 +43,7 @@ pandas = {version = "2.2.2", source = "PyPI"}
 jupyterlab = "<4.2"
 
 [tool.poetry.dev-dependencies]
-ruff = "^0.5.7"
+ruff = "^0.6.1"
 
 [[tool.poetry.source]]
 name = "PyPI"

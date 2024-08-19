@@ -24,7 +24,7 @@
 </tr>
 <tr>
 <td rowspan="1"><a href="./credit-card-analytics/main.ipynb">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-grey" alt="Last maintained version" /></td>
-<td><a href="https://www.atoti.io/type-of-content/finance/retail-banking/retail-banking-analytics-with-atoti/?utm_source=github">📰&nbsp;Retail Banking with Atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
+<td><a href="Loading...?utm_source=github">📰&nbsp;Retail Banking with Atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 </table>
 

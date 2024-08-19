@@ -24,10 +24,10 @@
 </tr>
 <tr>
 <td rowspan="2"><a href="./credit-card-fraud-detection/main.ipynb">credit-card-fraud-detection&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="https://www.atoti.io/articles/credit-card-fraud-detection-part1/?utm_source=github">📰&nbsp;Part 1: Investigating fraudulent transactions real-time with atoti</a></td><td rowspan="2"><kbd>date bucket</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> rolling windows</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill through</kbd>&nbsp;<kbd> cube</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
+<td><a href="Loading...?utm_source=github">📰&nbsp;Part 1: Investigating fraudulent transactions real-time with atoti</a></td><td rowspan="2"><kbd>date bucket</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> rolling windows</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill through</kbd>&nbsp;<kbd> cube</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td valign="center"><a href="https://www.atoti.io/articles/credit-card-fraud-detection-part2//?utm_source=github">📰&nbsp;Part 2: Fraud detection with Faker and PyCaret</a></td>
+<td valign="center"><a href="Loading...?utm_source=github">📰&nbsp;Part 2: Fraud detection with Faker and PyCaret</a></td>
 </tr>
 </table>
 

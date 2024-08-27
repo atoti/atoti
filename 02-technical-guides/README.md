@@ -72,7 +72,7 @@
 </tr>
 <tr>
 <td rowspan="1"><a href="./internationalization/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="nan?utm_source=github">📰&nbsp;internationalization</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
+<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -217,7 +217,7 @@ Double-click on tile to go to feature section.
 </tr>
 <tr>
 <td rowspan="1"><a href="./internationalization/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="nan?utm_source=github">📰&nbsp;internationalization</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
+<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -310,7 +310,7 @@ Double-click on tile to go to feature section.
 </tr>
 <tr>
 <td rowspan="1"><a href="./internationalization/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="nan?utm_source=github">📰&nbsp;internationalization</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
+<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -368,7 +368,7 @@ Double-click on tile to go to feature section.
 </tr>
 <tr>
 <td rowspan="1"><a href="./internationalization/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="nan?utm_source=github">📰&nbsp;internationalization</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
+<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -457,7 +457,7 @@ Double-click on tile to go to feature section.
 </tr>
 <tr>
 <td rowspan="1"><a href="./internationalization/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="nan?utm_source=github">📰&nbsp;internationalization</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
+<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -530,7 +530,7 @@ Double-click on tile to go to feature section.
 </tr>
 <tr>
 <td rowspan="1"><a href="./internationalization/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="nan?utm_source=github">📰&nbsp;internationalization</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
+<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -732,7 +732,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./internationalization/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="nan?utm_source=github">📰&nbsp;internationalization</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
+<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -798,7 +798,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./internationalization/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="nan?utm_source=github">📰&nbsp;internationalization</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
+<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -880,7 +880,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./internationalization/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="nan?utm_source=github">📰&nbsp;internationalization</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
+<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>

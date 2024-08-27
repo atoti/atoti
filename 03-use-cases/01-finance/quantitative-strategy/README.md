@@ -1,14 +1,23 @@
 <p align="center">
-  <img src="https://data.atoti.io/notebooks/banners/atoti-logo.png" alt="Atoti logo" style="width: 50%;">
-</p>  
-
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://data.atoti.io/notebooks/banners/Atoti_Logo_White-01.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://data.atoti.io/notebooks/banners/Atoti_Logo_Purple-01.svg">
+    <img alt="atoti-logo" width="50%">
+  </picture>
+</p>
 
 <p align="center">
+  <img src="https://img.shields.io/github/v/release/atoti/atoti" alt="github">
+  <img src="https://img.shields.io/pypi/dm/atoti" alt="github">
+  <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fatoti%2Fatoti&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=daily%2Ftotal+visits&edge_flat=false" alt="Hits"></a>
+  <img src="https://github.com/github/docs/actions/workflows/test.yml/badge.svg" alt="gha">
   <a href="https://github.com/atoti/atoti/discussions"><img src="https://img.shields.io/github/discussions/atoti/atoti" alt="GitHub Discussion"></a>
-  <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fatoti%2Fnotebooks&count_bg=%23FF7375&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false" alt="Hits"></a>
-  <a href="https://stackoverflow.com/questions/tagged/atoti"><img src="https://img.shields.io/badge/StackOverflow-atoti-f58024.svg" alt="stackoverflow"></a>
-</p>  
+</p> 
 
+<p align="center">
+  <a href="https://www.linkedin.com/showcase/atoti/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin"></a>
+  <a href="https://mobile.x.com/atoti_io"><img src="https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white" alt="linkedin"></a>
+</p>
 
 ## Financial use cases for Quantitative Strategy 
 
@@ -24,12 +33,12 @@
 </tr>
 <tr>
 <td rowspan="1"><a href="./bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-grey" alt="Last maintained version" /></td>
-<td><a href="https://www.atoti.io/articles/bucket-analysis-with-atoti/?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
+<td><a href="nan?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 </table>
 
 
 <br/>
 <p align="center">
-  Reach out to <a href="https://www.activeviam.com/contact-us/"><img src="https://data.atoti.io/notebooks/banners/ActiveViam-RVB-150dpi.png" alt="atoti logo" width="150px" /></a> for more information.
+  Reach out to <a href="https://activeviam.com/contact-us/?utm_source=github&utm_medium=atoti">ActiveViam</a> for more information.
 </p>

@@ -25,7 +25,7 @@ Atoti is a Data Analytics platform with a best-in-class calculation engine, a vi
 
 ![atoti_video](.github/assets/atoti_video.mp4)
 
-<video src=".github/assets/atoti_video.mp4" type="video/mp4">
+<video src=".github/assets/atoti_video.mp4"/>
 
 Check out [atoti.io](https://www.atoti.io/) for more info. For enterprise solutions, reach out to [ActiveViam](https://www.activeviam.com/).  
   

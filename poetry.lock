@@ -319,58 +319,57 @@ files = [
 
 [[package]]
 name = "atoti"
-version = "0.9.0a0"
+version = "0.9.0"
 description = "Explore metrics across hundreds of dimensions, analyze live data at its most granular level and perform what-if simulations at unparalleled speed"
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "atoti-0.9.0a0-py3-none-any.whl", hash = "sha256:fca1897a27f5e3eb6aa5cd2e8176ab334938bf97ba3f6fdc44b8fa2459435c82"},
+    {file = "atoti-0.9.0-py3-none-any.whl", hash = "sha256:7ef82459f755493f7a7731229230f8ac2686d81b142e47df0e264218a5350350"},
 ]
 
 [package.dependencies]
-atoti-client = "0.9.0a0"
-atoti-client-aws = {version = "0.9.0a0", optional = true, markers = "extra == \"aws\""}
-atoti-client-azure = {version = "0.9.0a0", optional = true, markers = "extra == \"azure\""}
-atoti-client-gcp = {version = "0.9.0a0", optional = true, markers = "extra == \"gcp\""}
-atoti-client-kafka = {version = "0.9.0a0", optional = true, markers = "extra == \"kafka\""}
-atoti-jupyterlab = {version = "0.9.0a0", optional = true, markers = "extra == \"jupyterlab\""}
-atoti-server = "0.9.0a0"
-atoti-server-aws = {version = "0.9.0a0", optional = true, markers = "extra == \"aws\""}
-atoti-server-azure = {version = "0.9.0a0", optional = true, markers = "extra == \"azure\""}
-atoti-server-gcp = {version = "0.9.0a0", optional = true, markers = "extra == \"gcp\""}
-atoti-server-kafka = {version = "0.9.0a0", optional = true, markers = "extra == \"kafka\""}
-jdk4py = ">=21.0.2.1"
+atoti-client = "0.9.0"
+atoti-client-aws = {version = "0.9.0", optional = true, markers = "extra == \"aws\""}
+atoti-client-azure = {version = "0.9.0", optional = true, markers = "extra == \"azure\""}
+atoti-client-gcp = {version = "0.9.0", optional = true, markers = "extra == \"gcp\""}
+atoti-client-kafka = {version = "0.9.0", optional = true, markers = "extra == \"kafka\""}
+atoti-jupyterlab = {version = "0.9.0", optional = true, markers = "extra == \"jupyterlab\""}
+atoti-server = "0.9.0"
+atoti-server-aws = {version = "0.9.0", optional = true, markers = "extra == \"aws\""}
+atoti-server-azure = {version = "0.9.0", optional = true, markers = "extra == \"azure\""}
+atoti-server-gcp = {version = "0.9.0", optional = true, markers = "extra == \"gcp\""}
+atoti-server-kafka = {version = "0.9.0", optional = true, markers = "extra == \"kafka\""}
+jdk4py = ">=21.0.4.0"
 
 [package.extras]
-aws = ["atoti-client-aws (==0.9.0a0)", "atoti-server-aws (==0.9.0a0)"]
-azure = ["atoti-client-azure (==0.9.0a0)", "atoti-server-azure (==0.9.0a0)"]
-directquery-bigquery = ["atoti-client-directquery-bigquery (==0.9.0a0)", "atoti-server-directquery-bigquery (==0.9.0a0)"]
-directquery-clickhouse = ["atoti-client-directquery-clickhouse (==0.9.0a0)", "atoti-server-directquery-clickhouse (==0.9.0a0)"]
-directquery-databricks = ["atoti-client-directquery-databricks (==0.9.0a0)", "atoti-server-directquery-databricks (==0.9.0a0)"]
-directquery-jdbc = ["atoti-client-directquery-jdbc (==0.9.0a0)", "atoti-server-directquery-jdbc (==0.9.0a0)"]
-directquery-mssql = ["atoti-client-directquery-mssql (==0.9.0a0)", "atoti-server-directquery-mssql (==0.9.0a0)"]
-directquery-redshift = ["atoti-client-directquery-redshift (==0.9.0a0)", "atoti-server-directquery-redshift (==0.9.0a0)"]
-directquery-snowflake = ["atoti-client-directquery-snowflake (==0.9.0a0)", "atoti-server-directquery-snowflake (==0.9.0a0)"]
-directquery-synapse = ["atoti-client-directquery-synapse (==0.9.0a0)", "atoti-server-directquery-synapse (==0.9.0a0)"]
-gcp = ["atoti-client-gcp (==0.9.0a0)", "atoti-server-gcp (==0.9.0a0)"]
-jdbc = ["atoti-client-jdbc (==0.9.0a0)", "atoti-server-jdbc (==0.9.0a0)"]
-jupyterlab = ["atoti-jupyterlab (==0.9.0a0)"]
-kafka = ["atoti-client-kafka (==0.9.0a0)", "atoti-server-kafka (==0.9.0a0)"]
-observability = ["atoti-server-observability (==0.9.0a0)"]
+aws = ["atoti-client-aws (==0.9.0)", "atoti-server-aws (==0.9.0)"]
+azure = ["atoti-client-azure (==0.9.0)", "atoti-server-azure (==0.9.0)"]
+directquery-bigquery = ["atoti-client-directquery-bigquery (==0.9.0)", "atoti-server-directquery-bigquery (==0.9.0)"]
+directquery-clickhouse = ["atoti-client-directquery-clickhouse (==0.9.0)", "atoti-server-directquery-clickhouse (==0.9.0)"]
+directquery-databricks = ["atoti-client-directquery-databricks (==0.9.0)", "atoti-server-directquery-databricks (==0.9.0)"]
+directquery-jdbc = ["atoti-client-directquery-jdbc (==0.9.0)", "atoti-server-directquery-jdbc (==0.9.0)"]
+directquery-mssql = ["atoti-client-directquery-mssql (==0.9.0)", "atoti-server-directquery-mssql (==0.9.0)"]
+directquery-redshift = ["atoti-client-directquery-redshift (==0.9.0)", "atoti-server-directquery-redshift (==0.9.0)"]
+directquery-snowflake = ["atoti-client-directquery-snowflake (==0.9.0)", "atoti-server-directquery-snowflake (==0.9.0)"]
+directquery-synapse = ["atoti-client-directquery-synapse (==0.9.0)", "atoti-server-directquery-synapse (==0.9.0)"]
+gcp = ["atoti-client-gcp (==0.9.0)", "atoti-server-gcp (==0.9.0)"]
+jdbc = ["atoti-client-jdbc (==0.9.0)", "atoti-server-jdbc (==0.9.0)"]
+jupyterlab = ["atoti-jupyterlab (==0.9.0)"]
+kafka = ["atoti-client-kafka (==0.9.0)", "atoti-server-kafka (==0.9.0)"]
+observability = ["atoti-server-observability (==0.9.0)"]
 
 [[package]]
 name = "atoti-client"
-version = "0.9.0a0"
+version = "0.9.0"
 description = "Code to interact with an Atoti session"
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "atoti_client-0.9.0a0-py3-none-any.whl", hash = "sha256:25cac34732629b6c696520a45a4ab2d3e3eb9c49847fa632276c02504343bd44"},
+    {file = "atoti_client-0.9.0-py3-none-any.whl", hash = "sha256:309b0c4ca2221f54967829356b087a42515f32de4e2de316eac13243dfd9f16b"},
 ]
 
 [package.dependencies]
-atoti-client-kafka = "0.9.0a0"
-atoti-core = "0.9.0a0"
+atoti-core = "0.9.0"
 httpx = ">=0.27.0"
 numpy = ">=2.0.1"
 pandas = ">=2.2.2"
@@ -380,188 +379,189 @@ pydantic = ">=2.6.0"
 typing-extensions = ">=4.6.1"
 
 [package.extras]
-aws = ["atoti-client-aws (==0.9.0a0)"]
-azure = ["atoti-client-azure (==0.9.0a0)"]
-directquery-bigquery = ["atoti-client-directquery-bigquery (==0.9.0a0)"]
-directquery-clickhouse = ["atoti-client-directquery-clickhouse (==0.9.0a0)"]
-directquery-databricks = ["atoti-client-directquery-databricks (==0.9.0a0)"]
-directquery-jdbc = ["atoti-client-directquery-jdbc (==0.9.0a0)"]
-directquery-mssql = ["atoti-client-directquery-mssql (==0.9.0a0)"]
-directquery-redshift = ["atoti-client-directquery-redshift (==0.9.0a0)"]
-directquery-snowflake = ["atoti-client-directquery-snowflake (==0.9.0a0)"]
-directquery-synapse = ["atoti-client-directquery-synapse (==0.9.0a0)"]
-gcp = ["atoti-client-gcp (==0.9.0a0)"]
-jdbc = ["atoti-client-jdbc (==0.9.0a0)"]
-jupyterlab = ["atoti-jupyterlab (==0.9.0a0)"]
+aws = ["atoti-client-aws (==0.9.0)"]
+azure = ["atoti-client-azure (==0.9.0)"]
+directquery-bigquery = ["atoti-client-directquery-bigquery (==0.9.0)"]
+directquery-clickhouse = ["atoti-client-directquery-clickhouse (==0.9.0)"]
+directquery-databricks = ["atoti-client-directquery-databricks (==0.9.0)"]
+directquery-jdbc = ["atoti-client-directquery-jdbc (==0.9.0)"]
+directquery-mssql = ["atoti-client-directquery-mssql (==0.9.0)"]
+directquery-redshift = ["atoti-client-directquery-redshift (==0.9.0)"]
+directquery-snowflake = ["atoti-client-directquery-snowflake (==0.9.0)"]
+directquery-synapse = ["atoti-client-directquery-synapse (==0.9.0)"]
+gcp = ["atoti-client-gcp (==0.9.0)"]
+jdbc = ["atoti-client-jdbc (==0.9.0)"]
+jupyterlab = ["atoti-jupyterlab (==0.9.0)"]
+kafka = ["atoti-client-kafka (==0.9.0)"]
 
 [[package]]
 name = "atoti-client-aws"
-version = "0.9.0a0"
+version = "0.9.0"
 description = "Code to interact with AWS"
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "atoti_client_aws-0.9.0a0-py3-none-any.whl", hash = "sha256:f7e59ddf077326342e372bf824a8e2dac33da4a16293a8a8c537312f5f842e63"},
+    {file = "atoti_client_aws-0.9.0-py3-none-any.whl", hash = "sha256:78d17400b36afdf8e006e84abbb6db1da8f2338e8ef7f1e6266279f7980f1427"},
 ]
 
 [package.dependencies]
-atoti-client = "0.9.0a0"
+atoti-client = "0.9.0"
 pydantic = ">=2.6.0"
 typing-extensions = ">=4.6.1"
 
 [[package]]
 name = "atoti-client-azure"
-version = "0.9.0a0"
+version = "0.9.0"
 description = "Code to interact with Microsoft Azure"
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "atoti_client_azure-0.9.0a0-py3-none-any.whl", hash = "sha256:389fde40eaf9c0280e3783ae0c3c31765e592b7028309418092f45f9671181a1"},
+    {file = "atoti_client_azure-0.9.0-py3-none-any.whl", hash = "sha256:1cd0425c7196d35601b9b7c3c79f15cc4f79b370a7d144f4ff977e9ea52cdbf5"},
 ]
 
 [package.dependencies]
-atoti-client = "0.9.0a0"
+atoti-client = "0.9.0"
 pydantic = ">=2.6.0"
 typing-extensions = ">=4.6.1"
 
 [[package]]
 name = "atoti-client-gcp"
-version = "0.9.0a0"
+version = "0.9.0"
 description = "Code to interact with Google Cloud Platform"
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "atoti_client_gcp-0.9.0a0-py3-none-any.whl", hash = "sha256:313e38512734f27645a34eb6556ff2c330605c2e69a4fb0daa45f3161831116c"},
+    {file = "atoti_client_gcp-0.9.0-py3-none-any.whl", hash = "sha256:486235971ac1c68bf10e0e87e16dda0e257475e9e2d61ec3ad07ebc689fa0e0d"},
 ]
 
 [package.dependencies]
-atoti-client = "0.9.0a0"
+atoti-client = "0.9.0"
 pydantic = ">=2.6.0"
 typing-extensions = ">=4.6.1"
 
 [[package]]
 name = "atoti-client-kafka"
-version = "0.9.0a0"
+version = "0.9.0"
 description = "Code to interact with Kafka streams"
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "atoti_client_kafka-0.9.0a0-py3-none-any.whl", hash = "sha256:c822b1934ecb212938506a2b17f8b0e3bf3e8c3619991656d8a9d09acaa21289"},
+    {file = "atoti_client_kafka-0.9.0-py3-none-any.whl", hash = "sha256:9dd676626aea5a9e1048e40538087348c8cee0e409f2462c82e8273c08678265"},
 ]
 
 [package.dependencies]
-atoti-client = "0.9.0a0"
+atoti-client = "0.9.0"
 pydantic = ">=2.6.0"
 typing-extensions = ">=4.6.1"
 
 [[package]]
 name = "atoti-core"
-version = "0.9.0a0"
+version = "0.9.0"
 description = "Code required by both client and server Atoti packages"
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "atoti_core-0.9.0a0-py3-none-any.whl", hash = "sha256:ceffc86386387aaaf8c2c1b7102d6f8422de0b9efda8b62a317639f0e64283fb"},
+    {file = "atoti_core-0.9.0-py3-none-any.whl", hash = "sha256:0ada04cac0b181d14e47d68a013ccd1d49c64d982fd8f04f29dfa6b21e7b584a"},
 ]
 
 [[package]]
 name = "atoti-jupyterlab"
-version = "0.9.0a0"
+version = "0.9.0"
 description = "Extension to create interactive Atoti widgets in JupyterLab"
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "atoti_jupyterlab-0.9.0a0-py3-none-any.whl", hash = "sha256:a254b047aa2e72a4d107e31da4070436705bec94358fc654d88af7e3ac95ac5d"},
+    {file = "atoti_jupyterlab-0.9.0-py3-none-any.whl", hash = "sha256:12323894b59e76fc46747a9f6b05ac6e0a69b7a879821baf33741b82fcc1d543"},
 ]
 
 [package.dependencies]
-atoti-core = "0.9.0a0"
+atoti-core = "0.9.0"
 jupyterlab = ">=4.1.0"
 
 [[package]]
 name = "atoti-server"
-version = "0.9.0a0"
+version = "0.9.0"
 description = "Resources to start a new Atoti session"
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "atoti_server-0.9.0a0-py3-none-any.whl", hash = "sha256:65665c34bb500c29f6de5c3ba8d3d3f6ace3af34dc1f8ad8831aa74a277119b0"},
+    {file = "atoti_server-0.9.0-py3-none-any.whl", hash = "sha256:c973d0cc1d014c59bde4abb04de2587c562a9007c76b16c85db120573673888f"},
 ]
 
 [package.dependencies]
-atoti-core = "0.9.0a0"
+atoti-core = "0.9.0"
 
 [package.extras]
-aws = ["atoti-server-aws (==0.9.0a0)"]
-azure = ["atoti-server-azure (==0.9.0a0)"]
-directquery-bigquery = ["atoti-server-directquery-bigquery (==0.9.0a0)"]
-directquery-clickhouse = ["atoti-server-directquery-clickhouse (==0.9.0a0)"]
-directquery-databricks = ["atoti-server-directquery-databricks (==0.9.0a0)"]
-directquery-jdbc = ["atoti-server-directquery-jdbc (==0.9.0a0)"]
-directquery-mssql = ["atoti-server-directquery-mssql (==0.9.0a0)"]
-directquery-redshift = ["atoti-server-directquery-redshift (==0.9.0a0)"]
-directquery-snowflake = ["atoti-server-directquery-snowflake (==0.9.0a0)"]
-directquery-synapse = ["atoti-server-directquery-synapse (==0.9.0a0)"]
-gcp = ["atoti-server-gcp (==0.9.0a0)"]
-jdbc = ["atoti-server-jdbc (==0.9.0a0)"]
-jupyterlab = ["atoti-jupyterlab (==0.9.0a0)"]
-kafka = ["atoti-server-kafka (==0.9.0a0)"]
-observability = ["atoti-server-observability (==0.9.0a0)"]
+aws = ["atoti-server-aws (==0.9.0)"]
+azure = ["atoti-server-azure (==0.9.0)"]
+directquery-bigquery = ["atoti-server-directquery-bigquery (==0.9.0)"]
+directquery-clickhouse = ["atoti-server-directquery-clickhouse (==0.9.0)"]
+directquery-databricks = ["atoti-server-directquery-databricks (==0.9.0)"]
+directquery-jdbc = ["atoti-server-directquery-jdbc (==0.9.0)"]
+directquery-mssql = ["atoti-server-directquery-mssql (==0.9.0)"]
+directquery-redshift = ["atoti-server-directquery-redshift (==0.9.0)"]
+directquery-snowflake = ["atoti-server-directquery-snowflake (==0.9.0)"]
+directquery-synapse = ["atoti-server-directquery-synapse (==0.9.0)"]
+gcp = ["atoti-server-gcp (==0.9.0)"]
+jdbc = ["atoti-server-jdbc (==0.9.0)"]
+jupyterlab = ["atoti-jupyterlab (==0.9.0)"]
+kafka = ["atoti-server-kafka (==0.9.0)"]
+observability = ["atoti-server-observability (==0.9.0)"]
 
 [[package]]
 name = "atoti-server-aws"
-version = "0.9.0a0"
+version = "0.9.0"
 description = "Resources to interact with AWS"
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "atoti_server_aws-0.9.0a0-py3-none-any.whl", hash = "sha256:57b9acd6ad5074bc1c88d4b6b8b925b94c8b017824eded0988dd75fef741d686"},
+    {file = "atoti_server_aws-0.9.0-py3-none-any.whl", hash = "sha256:aa9917405109e3e62abcd9e1c4774559e1bc1dd23996a1f8eb065a73c17bca99"},
 ]
 
 [package.dependencies]
-atoti-core = "0.9.0a0"
+atoti-core = "0.9.0"
 typing-extensions = ">=4.6.1"
 
 [[package]]
 name = "atoti-server-azure"
-version = "0.9.0a0"
+version = "0.9.0"
 description = "Resources to interact with Microsoft Azure"
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "atoti_server_azure-0.9.0a0-py3-none-any.whl", hash = "sha256:8d6d12c016df5c47abf0f6f61e745620fccd76c1d85578b4099d65580a7390e3"},
+    {file = "atoti_server_azure-0.9.0-py3-none-any.whl", hash = "sha256:aee1b9e12fc2f3d4b2848f26e34d5fd44a24787acbc9bc96ea4458aa2213a0a6"},
 ]
 
 [package.dependencies]
-atoti-core = "0.9.0a0"
+atoti-core = "0.9.0"
 typing-extensions = ">=4.6.1"
 
 [[package]]
 name = "atoti-server-gcp"
-version = "0.9.0a0"
+version = "0.9.0"
 description = "Resources to interact with Google Cloud Platform"
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "atoti_server_gcp-0.9.0a0-py3-none-any.whl", hash = "sha256:db6df5f349d2bdcbf93bc3998880bc39b2d4a5b6cf40cdbed03cec40533a136f"},
+    {file = "atoti_server_gcp-0.9.0-py3-none-any.whl", hash = "sha256:da5baf302a3a4cfc43ff6e1611f5ff120a17c9a4130d3592fc4385a41ef08e6c"},
 ]
 
 [package.dependencies]
-atoti-core = "0.9.0a0"
+atoti-core = "0.9.0"
 typing-extensions = ">=4.6.1"
 
 [[package]]
 name = "atoti-server-kafka"
-version = "0.9.0a0"
+version = "0.9.0"
 description = "Resources to interact with Kafka streams"
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "atoti_server_kafka-0.9.0a0-py3-none-any.whl", hash = "sha256:630c2185cb511b1f5828e8a5d80792234d72d2443637550f95440ddc86e50918"},
+    {file = "atoti_server_kafka-0.9.0-py3-none-any.whl", hash = "sha256:b1ea9e348413d9ff794284dd38585c9c500ffec297210afe34110a9fa4110cf8"},
 ]
 
 [package.dependencies]
-atoti-core = "0.9.0a0"
+atoti-core = "0.9.0"
 typing-extensions = ">=4.6.1"
 
 [[package]]
@@ -1606,15 +1606,16 @@ arrow = ">=0.15.0"
 
 [[package]]
 name = "jdk4py"
-version = "21.0.2.1"
-description = "Packaged JDK for Python"
+version = "21.0.4.1"
+description = "A JDK shipped in a Python package"
 optional = false
-python-versions = ">=3.9"
+python-versions = ">=3.10"
 files = [
-    {file = "jdk4py-21.0.2.1-0-py3-none-macosx_10_9_x86_64.whl", hash = "sha256:8409f2614c5b1d919397d43b810a17cb9704cac706918173b91f9381e31e3e4d"},
-    {file = "jdk4py-21.0.2.1-0-py3-none-macosx_11_0_arm64.whl", hash = "sha256:5f1ffaa5ac619c27af2371c0803affb7bd68a6c5941797c2be6641f7598ab634"},
-    {file = "jdk4py-21.0.2.1-0-py3-none-manylinux1_x86_64.whl", hash = "sha256:89319c56ec55d960991ef3f74c159cdcb6d7ccc56a19ef7a10824d7f35011596"},
-    {file = "jdk4py-21.0.2.1-0-py3-none-win_amd64.whl", hash = "sha256:6b789026f338ce87975cf903ef5d171aed550a7a85277a6fd71933960515bc3c"},
+    {file = "jdk4py-21.0.4.1-py3-none-macosx_10_9_x86_64.whl", hash = "sha256:786888fe44811ddf8788bf6e454119e4b5d820a167e3ec9fa2098f4e07d5420f"},
+    {file = "jdk4py-21.0.4.1-py3-none-macosx_11_0_arm64.whl", hash = "sha256:0efda61573596c05c53554dc7ca73748b3ba17f4817519f0a1e14e6c92e75be0"},
+    {file = "jdk4py-21.0.4.1-py3-none-manylinux_2_17_aarch64.whl", hash = "sha256:7d6dc78001a7a1852b2da2be4702468419675bf58122d55928ee000990a46b56"},
+    {file = "jdk4py-21.0.4.1-py3-none-manylinux_2_17_x86_64.whl", hash = "sha256:0604994e2baf94eeb4a788dafadaa1c8593aa474d3e4d7e7f1dd69c3524908f7"},
+    {file = "jdk4py-21.0.4.1-py3-none-win_amd64.whl", hash = "sha256:b81d689623f24a9241f50258d0994f7e9c8630c892ae0d5f5fe8b91ac8349845"},
 ]
 
 [[package]]
@@ -5015,4 +5016,4 @@ repair = ["scipy (>=1.6.3)"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10, <3.12"
-content-hash = "920cb3c9e5511d24c5ccf0753866fb5c614f2cf873ce413e991c6d2b48a6a0b2"
+content-hash = "26ed20791d559a8ab5ffb06ebf616d6576ce207539097a26f53b52c6b696420f"

@@ -34,7 +34,6 @@ nltk = {version = "^3.9.1", source = "PyPI"}
 textblob = {version = "^0.18.0", source = "PyPI"}
 llvmlite = {version = "^0.43.0", source = "PyPI"}
 protobuf = {version = "^5.28.2", source = "PyPI"}
-pyportfolioopt = {version = "^1.5.5", source = "PyPI"}
 tsfresh = {version = "^0.20.3", source = "PyPI"}
 scikit-learn = {version = "^1.5.2", source = "PyPI"}
 folium = {version = "^0.17.0", source = "PyPI"}

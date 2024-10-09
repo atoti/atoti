@@ -1,14 +1,23 @@
 <p align="center">
-  <img src="https://data.atoti.io/notebooks/banners/atoti-logo.png" alt="Atoti logo" style="width: 50%;">
-</p>  
-
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://data.atoti.io/notebooks/banners/Atoti_Logo_White-01.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://data.atoti.io/notebooks/banners/Atoti_Logo_Purple-01.svg">
+    <img alt="atoti-logo" width="50%">
+  </picture>
+</p>
 
 <p align="center">
+  <img src="https://img.shields.io/github/v/release/atoti/atoti" alt="github">
+  <img src="https://img.shields.io/pypi/dm/atoti" alt="github">
+  <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fatoti%2Fatoti&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=daily%2Ftotal+visits&edge_flat=false" alt="Hits"></a>
+  <img src="https://github.com/github/docs/actions/workflows/test.yml/badge.svg" alt="gha">
   <a href="https://github.com/atoti/atoti/discussions"><img src="https://img.shields.io/github/discussions/atoti/atoti" alt="GitHub Discussion"></a>
-  <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fatoti%2Fnotebooks&count_bg=%23FF7375&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false" alt="Hits"></a>
-  <a href="https://stackoverflow.com/questions/tagged/atoti"><img src="https://img.shields.io/badge/StackOverflow-atoti-f58024.svg" alt="stackoverflow"></a>
-</p>  
+</p> 
 
+<p align="center">
+  <a href="https://www.linkedin.com/showcase/atoti/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin"></a>
+  <a href="https://mobile.x.com/atoti_io"><img src="https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white" alt="linkedin"></a>
+</p>
 
 ## Technical guides
 
@@ -47,15 +56,15 @@
 </tr>
 <tr>
 <td rowspan="1"><a href="./currency-conversion/main.ipynb">currency-conversion&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/currency-conversion-with-atoti/?utm_source=github">📰&nbsp;Currency conversion with atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/currency-conversion-with-atoti/?utm_source=github">📰&nbsp;Currency conversion with atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./currency-conversion-with-lookup/main.ipynb">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./directquery-intro/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://atoti.io/articles/what-is-directquery/?utm_source=github">📰&nbsp;What is DirectQuery</a></td><td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> bigquery</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/what-is-directquery/?utm_source=github">📰&nbsp;What is DirectQuery</a></td><td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> bigquery</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -75,7 +84,7 @@
 </tr>
 <tr>
 <td rowspan="1"><a href="./rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./var-benchmark/main.ipynb">var-benchmark&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -87,14 +96,14 @@
 </tr>
 <tr>
 <td rowspan="1"><a href="./weighted-averages/main.ipynb">weighted-averages&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/weighted-averages-with-atoti/?utm_source=github">📰&nbsp;Weighted averages with atoti</a></td><td rowspan="1"><kbd>pandas</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/weighted-averages-with-atoti/?utm_source=github">📰&nbsp;Weighted averages with atoti</a></td><td rowspan="1"><kbd>pandas</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="2"><a href="./security-implementation/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td valign="center"><a href="https://www.atoti.io/guides/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
+<td valign="center"><a href="https://www.atoti.io/articles/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./topcount/atoti.ipynb">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -130,56 +139,56 @@ Double-click on tile to go to feature section.
         <tr>
             <td>Data loading</td>
             <td>
-                <a href="#cloud-storage"><img src="https://img.shields.io/badge/-Cloud%20Storage-291A40" /></a>
-                <a href="#data-connector"><img src="https://img.shields.io/badge/-Data%20Connector-291A40" /></a>
-                <a href="#data-load"><img src="https://img.shields.io/badge/-Data%20Load-291A40" /></a>
-                <a href="#data-model"><img src="https://img.shields.io/badge/-Data%20Model-291A40" /></a>
-                <a href="#data-preprocessing"><img src="https://img.shields.io/badge/-Data%20Preprocessing-291A40" /></a>
-                <a href="#etl"><img src="https://img.shields.io/badge/-Etl-291A40" /></a>
-                <a href="#real-time"><img src="https://img.shields.io/badge/-Real%20Time-291A40" /></a>
-                <a href="#excel"><img src="https://img.shields.io/badge/-Excel-291A40" /></a>
+                <a href="#cloud-storage"><img src="https://img.shields.io/badge/-Cloud%20Storage-9E4F8A" /></a>
+                <a href="#data-connector"><img src="https://img.shields.io/badge/-Data%20Connector-9E4F8A" /></a>
+                <a href="#data-load"><img src="https://img.shields.io/badge/-Data%20Load-9E4F8A" /></a>
+                <a href="#data-model"><img src="https://img.shields.io/badge/-Data%20Model-9E4F8A" /></a>
+                <a href="#data-preprocessing"><img src="https://img.shields.io/badge/-Data%20Preprocessing-9E4F8A" /></a>
+                <a href="#etl"><img src="https://img.shields.io/badge/-Etl-9E4F8A" /></a>
+                <a href="#real-time"><img src="https://img.shields.io/badge/-Real%20Time-9E4F8A" /></a>
+                <a href="#excel"><img src="https://img.shields.io/badge/-Excel-9E4F8A" /></a>
             </td>
         </tr>
         <tr>
             <td class="tg-nto1">Data preprocessing</td>
             <td class="tg-nto1">
-                <a href="#conditionality"><img src="https://img.shields.io/badge/-Conditionality-291A40" /></a>
-                <a href="#data-aggregation"><img src="https://img.shields.io/badge/-Data%20Aggregation-291A40" /></a>
-                <a href="#data-bucket"><img src="https://img.shields.io/badge/-Data%20Bucket-291A40" /></a>
-                <a href="#data-metric"><img src="https://img.shields.io/badge/-Data%20Metric-291A40" /></a>
-                <a href="#dates-data"><img src="https://img.shields.io/badge/-Dates%20Data-291A40" /></a>
-                <a href="#ordinality"><img src="https://img.shields.io/badge/-Ordinality-291A40" /></a>
-                <a href="#sort"><img src="https://img.shields.io/badge/-Sort-291A40" /></a>
+                <a href="#conditionality"><img src="https://img.shields.io/badge/-Conditionality-9E4F8A" /></a>
+                <a href="#data-aggregation"><img src="https://img.shields.io/badge/-Data%20Aggregation-9E4F8A" /></a>
+                <a href="#data-bucket"><img src="https://img.shields.io/badge/-Data%20Bucket-9E4F8A" /></a>
+                <a href="#data-metric"><img src="https://img.shields.io/badge/-Data%20Metric-9E4F8A" /></a>
+                <a href="#dates-data"><img src="https://img.shields.io/badge/-Dates%20Data-9E4F8A" /></a>
+                <a href="#ordinality"><img src="https://img.shields.io/badge/-Ordinality-9E4F8A" /></a>
+                <a href="#sort"><img src="https://img.shields.io/badge/-Sort-9E4F8A" /></a>
             </td>
         </tr>
         <tr>
             <td class="tg-nto1">Data querying</td>
             <td class="tg-nto1">
-                <a href="#data-query"><img src="https://img.shields.io/badge/-Data%20Query-291A40" /></a>
-                <a href="#data-visualization"><img src="https://img.shields.io/badge/-Data%20Visualization-291A40" /></a>
-                <a href="#directquery"><img src="https://img.shields.io/badge/🔒%20DirectQuery-291A40" /></a>
+                <a href="#data-query"><img src="https://img.shields.io/badge/-Data%20Query-9E4F8A" /></a>
+                <a href="#data-visualization"><img src="https://img.shields.io/badge/-Data%20Visualization-9E4F8A" /></a>
+                <a href="#directquery"><img src="https://img.shields.io/badge/🔒%20DirectQuery-9E4F8A" /></a>
             </td>
         </tr>
         <tr>
             <td class="tg-0pky">Data analytics</td>
             <td class="tg-0pky">
-                <a href="#multidimensional-analysis"><img src="https://img.shields.io/badge/-Multidimensional%20Analysis-291A40" /></a>
-                <a href="#trend-analysis"><img src="https://img.shields.io/badge/-Trend%20Analysis-291A40" /></a>
+                <a href="#multidimensional-analysis"><img src="https://img.shields.io/badge/-Multidimensional%20Analysis-9E4F8A" /></a>
+                <a href="#trend-analysis"><img src="https://img.shields.io/badge/-Trend%20Analysis-9E4F8A" /></a>
             </td>
         </tr>
         <tr>
             <td class="tg-0pky">What-if simulation</td>
             <td class="tg-0pky">
-                <a href="#simulation"><img src="https://img.shields.io/badge/-Simulation-291A40" /></a>
+                <a href="#simulation"><img src="https://img.shields.io/badge/-Simulation-9E4F8A" /></a>
             </td>
         </tr>
         <tr>
             <td class="tg-0pky">Configurables</td>
             <td class="tg-0pky">
-              <a href="#deployment"><img src="https://img.shields.io/badge/-Deployment-291A40" /></a>
-              <a href="#optimization"><img src="https://img.shields.io/badge/-Optimization-291A40" /></a>
-              <a href="#customization"><img src="https://img.shields.io/badge/🔒%20Customization-291A40" /></a>
-              <a href="#security"><img src="https://img.shields.io/badge/🔒%20Security-291A40" /></a>
+              <a href="#deployment"><img src="https://img.shields.io/badge/-Deployment-9E4F8A" /></a>
+              <a href="#optimization"><img src="https://img.shields.io/badge/-Optimization-9E4F8A" /></a>
+              <a href="#customization"><img src="https://img.shields.io/badge/🔒%20Customization-9E4F8A" /></a>
+              <a href="#security"><img src="https://img.shields.io/badge/🔒%20Security-9E4F8A" /></a>
             </td>
         </tr>
     </tbody>
@@ -212,14 +221,14 @@ Double-click on tile to go to feature section.
 </tr>
 <tr>
 <td rowspan="1"><a href="./rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="2"><a href="./security-implementation/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td valign="center"><a href="https://www.atoti.io/guides/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
+<td valign="center"><a href="https://www.atoti.io/articles/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
 </tr>
 </table>
 <br/>
@@ -254,11 +263,11 @@ Double-click on tile to go to feature section.
 </tr>
 <tr>
 <td rowspan="1"><a href="./currency-conversion/main.ipynb">currency-conversion&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/currency-conversion-with-atoti/?utm_source=github">📰&nbsp;Currency conversion with atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/currency-conversion-with-atoti/?utm_source=github">📰&nbsp;Currency conversion with atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./currency-conversion-with-lookup/main.ipynb">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -293,7 +302,7 @@ Double-click on tile to go to feature section.
 </tr>
 <tr>
 <td rowspan="1"><a href="./currency-conversion-with-lookup/main.ipynb">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -309,14 +318,14 @@ Double-click on tile to go to feature section.
 </tr>
 <tr>
 <td rowspan="1"><a href="./rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="2"><a href="./security-implementation/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td valign="center"><a href="https://www.atoti.io/guides/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
+<td valign="center"><a href="https://www.atoti.io/articles/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./topcount/atoti.ipynb">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -429,11 +438,11 @@ Double-click on tile to go to feature section.
 </tr>
 <tr>
 <td rowspan="1"><a href="./currency-conversion/main.ipynb">currency-conversion&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/currency-conversion-with-atoti/?utm_source=github">📰&nbsp;Currency conversion with atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/currency-conversion-with-atoti/?utm_source=github">📰&nbsp;Currency conversion with atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./directquery-intro/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://atoti.io/articles/what-is-directquery/?utm_source=github">📰&nbsp;What is DirectQuery</a></td><td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> bigquery</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/what-is-directquery/?utm_source=github">📰&nbsp;What is DirectQuery</a></td><td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> bigquery</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -456,14 +465,14 @@ Double-click on tile to go to feature section.
 </tr>
 <tr>
 <td rowspan="1"><a href="./rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="2"><a href="./security-implementation/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td valign="center"><a href="https://www.atoti.io/guides/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
+<td valign="center"><a href="https://www.atoti.io/articles/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./table-creation-and-data-loads/main.ipynb">table-creation-and-data-loads&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -479,7 +488,7 @@ Double-click on tile to go to feature section.
 </tr>
 <tr>
 <td rowspan="1"><a href="./weighted-averages/main.ipynb">weighted-averages&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/weighted-averages-with-atoti/?utm_source=github">📰&nbsp;Weighted averages with atoti</a></td><td rowspan="1"><kbd>pandas</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/weighted-averages-with-atoti/?utm_source=github">📰&nbsp;Weighted averages with atoti</a></td><td rowspan="1"><kbd>pandas</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 </table>
 <br/>
@@ -506,7 +515,7 @@ Double-click on tile to go to feature section.
 </tr>
 <tr>
 <td rowspan="1"><a href="./currency-conversion-with-lookup/main.ipynb">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="2"><a href="./excel-and-atoti/main.ipynb">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -607,7 +616,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./currency-conversion/main.ipynb">currency-conversion&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/currency-conversion-with-atoti/?utm_source=github">📰&nbsp;Currency conversion with atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/currency-conversion-with-atoti/?utm_source=github">📰&nbsp;Currency conversion with atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="2"><a href="./excel-and-atoti/main.ipynb">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -708,11 +717,11 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./currency-conversion/main.ipynb">currency-conversion&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/currency-conversion-with-atoti/?utm_source=github">📰&nbsp;Currency conversion with atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/currency-conversion-with-atoti/?utm_source=github">📰&nbsp;Currency conversion with atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./currency-conversion-with-lookup/main.ipynb">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="2"><a href="./excel-and-atoti/main.ipynb">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -735,7 +744,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./topcount/atoti.ipynb">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -747,7 +756,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./weighted-averages/main.ipynb">weighted-averages&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/weighted-averages-with-atoti/?utm_source=github">📰&nbsp;Weighted averages with atoti</a></td><td rowspan="1"><kbd>pandas</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/weighted-averages-with-atoti/?utm_source=github">📰&nbsp;Weighted averages with atoti</a></td><td rowspan="1"><kbd>pandas</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 </table>
 <br/>
@@ -774,7 +783,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./currency-conversion-with-lookup/main.ipynb">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="2"><a href="./excel-and-atoti/main.ipynb">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -863,7 +872,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./currency-conversion-with-lookup/main.ipynb">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -879,14 +888,14 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="2"><a href="./security-implementation/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td valign="center"><a href="https://www.atoti.io/guides/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
+<td valign="center"><a href="https://www.atoti.io/articles/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./topcount/atoti.ipynb">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -921,7 +930,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./directquery-intro/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://atoti.io/articles/what-is-directquery/?utm_source=github">📰&nbsp;What is DirectQuery</a></td><td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> bigquery</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/what-is-directquery/?utm_source=github">📰&nbsp;What is DirectQuery</a></td><td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> bigquery</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -994,7 +1003,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./topcount/atoti.ipynb">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -1029,7 +1038,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./directquery-intro/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://atoti.io/articles/what-is-directquery/?utm_source=github">📰&nbsp;What is DirectQuery</a></td><td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> bigquery</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/what-is-directquery/?utm_source=github">📰&nbsp;What is DirectQuery</a></td><td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> bigquery</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -1037,7 +1046,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./var-benchmark/main.ipynb">var-benchmark&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -1072,7 +1081,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./currency-conversion-with-lookup/main.ipynb">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
@@ -1140,10 +1149,10 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="2"><a href="./security-implementation/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.8.14-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/guides/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td valign="center"><a href="https://www.atoti.io/guides/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
+<td valign="center"><a href="https://www.atoti.io/articles/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
 </tr>
 </table>
 <br/>
@@ -1221,5 +1230,5 @@ Coming soon...
 
 <br/>
 <p align="center">
-  Reach out to <a href="https://www.activeviam.com/contact-us/"><img src="https://data.atoti.io/notebooks/banners/ActiveViam-RVB-150dpi.png" alt="atoti logo" width="150px" /></a> for more information.
+  Reach out to <a href="https://activeviam.com/contact-us/?utm_source=github&utm_medium=atoti">ActiveViam</a> for more information.
 </p>

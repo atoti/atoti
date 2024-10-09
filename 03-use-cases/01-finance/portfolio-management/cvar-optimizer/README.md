@@ -16,6 +16,18 @@ Using Atoti, we can evaluate the performance of the portfolio and compare the op
 
 <br/> 
 
+> **Note:** This notebook is locked to Atoti Python API version `0.8.14` and below due to the following incompatibility with `0.9.0`:
+>
+> Because pyportfolioopt (1.5.5) depends on numpy (>=1.22.4,<2.0.0) and atoti-client (0.9.0) depends on numpy (>=2.0.1), pyportfolioopt (1.5.5) is incompatible with atoti-client (0.9.0). And because atoti[aws,azure,gcp,jupyterlab,kafka,sql] (0.9.0) depends on atoti-client (0.9.0), pyportfolioopt (1.5.5) is incompatible with atoti[aws,azure,gcp,jupyterlab,kafka,sql] (0.9.0). So, because cvar-optimizer depends on both atoti[aws,azure,gcp,jupyterlab,kafka,sql] (0.9.0) and pyportfolioopt (1.5.5), version solving failed.
+>
+> Therefore, run the followin in this directory:
+> 
+> `poetry install`
+> `poetry run python -m ipykernel install --user --name=cvar-optimizer`
+> `poetry run jupyter-lab`
+>
+> Then, select the `cvar-optimizer` kernel in JupyterLab.
+
 ## Data preparation - Historical stock pricing 
 
 In the python script [tickers.py](./utils/tickers.py), we created functions to download 3 years of historical data from yahoo Finance using the Python library [yfinance](https://pypi.org/project/yfinance/).

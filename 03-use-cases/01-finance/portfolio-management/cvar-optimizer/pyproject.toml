@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "cvar-optimizer"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10, <3.12"
+atoti = {version = "0.8.14", extras = ["aws", "azure", "gcp", "jupyterlab", "kafka", "sql"]}
+jupyterlab = "<4.2"
+pyportfolioopt = {version = "^1.5.5", source = "PyPI"}
+pandas = {version = "2.2.2", source = "PyPI"}
+yfinance = {version = "^0.2.41", source = "PyPI"}
+ipywidgets = {version = "^8.0.6", source = "PyPI"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

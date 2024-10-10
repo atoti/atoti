@@ -4,10 +4,12 @@ import pandas
 
 def main():
     # Start Atoti server and link UI
-    session = tt.Session(
-        user_content_storage="./02-content",
-        port=9092,
-        java_options=["-Xms1G", "-Xmx10G"],
+    session = tt.Session.start(
+        tt.SessionConfig(
+            user_content_storage="./02-content",
+            port=9092,
+            java_options=["-Xms1G", "-Xmx10G"],
+        )
     )
     session.link
 

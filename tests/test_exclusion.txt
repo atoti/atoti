@@ -1,3 +1,5 @@
+01-atoti-academy/storytelling-with-atoti/01-Storytelling.ipynb
+01-atoti-academy/storytelling-with-atoti/03-Storytelling.ipynb
 03-use-cases/01-finance/front-office/cumulative-pnl
 03-use-cases/01-finance/front-office/pnl-explained
 03-use-cases/01-finance/front-office/real-time-risk

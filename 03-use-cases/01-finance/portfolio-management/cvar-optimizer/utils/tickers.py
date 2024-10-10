@@ -43,7 +43,7 @@ def get_historical_vector(data):
     )
 
     # compute daily Rate of Returns
-    df_daily_ror = df_close.resample("D").last().pct_change().iloc[1:]
+    df_daily_ror = df_close.resample("D").last().ffill().pct_change().iloc[1:]
     df_daily_ror = df_daily_ror[(df_daily_ror == 0).sum(1) < 2]
     df_daily_ror_t = df_daily_ror.T
     df_daily_ror_t["Daily_ROR_Vector"] = df_daily_ror_t.values.tolist()
@@ -52,7 +52,7 @@ def get_historical_vector(data):
     )
 
     # compute monthly Rate of Returns
-    df_mthly_ror = df_close.resample("M").last().pct_change().iloc[1:]
+    df_mthly_ror = df_close.resample("ME").last().pct_change().iloc[1:]
     df_mthly_ror = df_mthly_ror[(df_mthly_ror == 0).sum(1) < 2]
     df_mthly_ror_t = df_mthly_ror.T
     df_mthly_ror_t["Monthly_ROR_Vector"] = df_mthly_ror_t.values.tolist()
@@ -62,7 +62,7 @@ def get_historical_vector(data):
 
     # ensure the dateline between daily ROR and the price vectors are consistent
     left, right = df_close.align(df_daily_ror, join="outer", axis=0)
-    left = left.fillna(method="ffill").iloc[1:]
+    left = left.ffill().iloc[1:]
 
     # transform daily pricing
     df_price = left.T

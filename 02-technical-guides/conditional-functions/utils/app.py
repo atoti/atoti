@@ -117,7 +117,7 @@ def launch_cube(getData="N"):
         download_data()
 
     # Starting atoti session
-    session = tt.Session()
+    session = tt.Session.start()
     base_table = load_tables(session)
     cube = session.create_cube(base_table, "Monte Carlo Analytics")
     create_hierarchies(session)

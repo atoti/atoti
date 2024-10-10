@@ -37,7 +37,7 @@ protobuf = {version = "^5.28.2", source = "PyPI"}
 tsfresh = {version = "^0.20.3", source = "PyPI"}
 scikit-learn = {version = "^1.5.2", source = "PyPI"}
 folium = {version = "^0.17.0", source = "PyPI"}
-atoti = {version = "0.9.0", extras = ["aws", "azure", "gcp", "jupyterlab", "kafka", "sql"]}
+atoti = {version = "0.9.0", extras = ["aws", "azure", "gcp", "jupyterlab", "kafka", "sql"], source = "PyPI"}
 pandas = {version = "2.2.3", source = "PyPI"}
 jupyterlab = "<4.2"
 

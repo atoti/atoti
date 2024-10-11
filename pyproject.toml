@@ -7,8 +7,8 @@ authors = ["atoti <contact@atoti.io>"]
 [tool.poetry.dependencies]
 python = ">=3.10, <3.12"
 boto3 = {version = "^1.17.102", source = "PyPi"}
-s3fs = {version = "^2021.10.0", source = "PyPi"}
-fsspec = {version = "^2021.10.0", source = "PyPI"}
+s3fs = {version = "^2024.6.1", source = "PyPi"}
+fsspec = {version = "^2024.6.1", source = "PyPI"}
 wget = {version = "^3.2", source = "PyPI"}
 treelib = {version = "^1.6.4", source = "PyPI"}
 matplotlib = {version = "^3.9.2", source = "PyPI"}
@@ -34,11 +34,10 @@ nltk = {version = "^3.9.1", source = "PyPI"}
 textblob = {version = "^0.18.0", source = "PyPI"}
 llvmlite = {version = "^0.43.0", source = "PyPI"}
 protobuf = {version = "^5.28.2", source = "PyPI"}
-pyportfolioopt = {version = "^1.5.5", source = "PyPI"}
 tsfresh = {version = "^0.20.3", source = "PyPI"}
 scikit-learn = {version = "^1.5.2", source = "PyPI"}
 folium = {version = "^0.17.0", source = "PyPI"}
-atoti = {version = "0.8.14", extras = ["aws", "azure", "gcp", "jupyterlab", "kafka", "sql"], source = "PyPI"}
+atoti = {version = "0.9.0", extras = ["aws", "azure", "gcp", "jupyterlab", "kafka", "sql"], source = "PyPI"}
 pandas = {version = "2.2.3", source = "PyPI"}
 jupyterlab = "<4.2"
 

@@ -6,7 +6,7 @@ authors = ["atoti <contact@atoti.io>"]
 
 [tool.poetry.dependencies]
 python = ">=3.10, <3.12"
-boto3 = {version = "^1.17.102", source = "PyPi"}
+boto3 = {version = "^1.35.36", source = "PyPi"}
 s3fs = {version = "^2024.6.1", source = "PyPi"}
 fsspec = {version = "^2024.6.1", source = "PyPI"}
 wget = {version = "^3.2", source = "PyPI"}
@@ -20,7 +20,7 @@ ipywidgets = {version = "^8.1.5", source = "PyPI"}
 openpyxl = {version = "^3.1.5", source = "PyPI"}
 haversine = {version = "^2.8.0", source = "PyPI"}
 watchdog = {version = "^5.0.3", source = "PyPI"}
-quantlib = {version = "^1.35", source = "PyPI"}
+quantlib = {version = "^1.36", source = "PyPI"}
 kafka-python = {version = "^2.0.2", source = "PyPI"}
 xgboost = {version = "^2.1.1", source = "PyPI"}
 natsort = {version = "^8.3.1", source = "PyPI"}

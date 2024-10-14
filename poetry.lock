@@ -2,24 +2,24 @@
 
 [[package]]
 name = "aiobotocore"
-version = "2.13.2"
+version = "2.15.2"
 description = "Async client for aws services using botocore and aiohttp"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "aiobotocore-2.13.2-py3-none-any.whl", hash = "sha256:18cbd934ed835a04020c2cffe5d1cfbeb9ff0a340a8c7f0a869c17cf3e43de6a"},
-    {file = "aiobotocore-2.13.2.tar.gz", hash = "sha256:8ae2ffe3fd227923c69e12271b7a723c7c93853d8dbbd214e774613bd444b32f"},
+    {file = "aiobotocore-2.15.2-py3-none-any.whl", hash = "sha256:d4d3128b4b558e2b4c369bfa963b022d7e87303adb82eec623cec8aa77ae578a"},
+    {file = "aiobotocore-2.15.2.tar.gz", hash = "sha256:9ac1cfcaccccc80602968174aa032bf978abe36bd4e55e6781d6500909af1375"},
 ]
 
 [package.dependencies]
 aiohttp = ">=3.9.2,<4.0.0"
 aioitertools = ">=0.5.1,<1.0.0"
-botocore = ">=1.34.70,<1.34.132"
+botocore = ">=1.35.16,<1.35.37"
 wrapt = ">=1.10.10,<2.0.0"
 
 [package.extras]
-awscli = ["awscli (>=1.32.70,<1.33.14)"]
-boto3 = ["boto3 (>=1.34.70,<1.34.132)"]
+awscli = ["awscli (>=1.34.16,<1.35.3)"]
+boto3 = ["boto3 (>=1.35.16,<1.35.37)"]
 
 [[package]]
 name = "aiohappyeyeballs"
@@ -638,17 +638,17 @@ css = ["tinycss2 (>=1.1.0,<1.3)"]
 
 [[package]]
 name = "boto3"
-version = "1.34.131"
+version = "1.35.36"
 description = "The AWS SDK for Python"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "boto3-1.34.131-py3-none-any.whl", hash = "sha256:05e388cb937e82be70bfd7eb0c84cf8011ff35cf582a593873ac21675268683b"},
-    {file = "boto3-1.34.131.tar.gz", hash = "sha256:dab8f72a6c4e62b4fd70da09e08a6b2a65ea2115b27dd63737142005776ef216"},
+    {file = "boto3-1.35.36-py3-none-any.whl", hash = "sha256:33735b9449cd2ef176531ba2cb2265c904a91244440b0e161a17da9d24a1e6d1"},
+    {file = "boto3-1.35.36.tar.gz", hash = "sha256:586524b623e4fbbebe28b604c6205eb12f263cc4746bccb011562d07e217a4cb"},
 ]
 
 [package.dependencies]
-botocore = ">=1.34.131,<1.35.0"
+botocore = ">=1.35.36,<1.36.0"
 jmespath = ">=0.7.1,<2.0.0"
 s3transfer = ">=0.10.0,<0.11.0"
 
@@ -657,13 +657,13 @@ crt = ["botocore[crt] (>=1.21.0,<2.0a0)"]
 
 [[package]]
 name = "botocore"
-version = "1.34.131"
+version = "1.35.36"
 description = "Low-level, data-driven core of boto 3."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "botocore-1.34.131-py3-none-any.whl", hash = "sha256:13b011d7b206ce00727dcee26548fa3b550db9046d5a0e90ac25a6e6c8fde6ef"},
-    {file = "botocore-1.34.131.tar.gz", hash = "sha256:502ddafe1d627fcf1e4c007c86454e5dd011dba7c58bd8e8a5368a79f3e387dc"},
+    {file = "botocore-1.35.36-py3-none-any.whl", hash = "sha256:64241c778bf2dc863d93abab159e14024d97a926a5715056ef6411418cb9ead3"},
+    {file = "botocore-1.35.36.tar.gz", hash = "sha256:354ec1b766f0029b5d6ff0c45d1a0f9e5007b7d2f3ec89bcdd755b208c5bc797"},
 ]
 
 [package.dependencies]
@@ -672,7 +672,7 @@ python-dateutil = ">=2.1,<3.0.0"
 urllib3 = {version = ">=1.25.4,<2.2.0 || >2.2.0,<3", markers = "python_version >= \"3.10\""}
 
 [package.extras]
-crt = ["awscrt (==0.20.11)"]
+crt = ["awscrt (==0.22.0)"]
 
 [[package]]
 name = "branca"
@@ -1233,6 +1233,8 @@ files = [
     {file = "frozendict-2.4.4-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:d13b4310db337f4d2103867c5a05090b22bc4d50ca842093779ef541ea9c9eea"},
     {file = "frozendict-2.4.4-cp39-cp39-win_amd64.whl", hash = "sha256:b3b967d5065872e27b06f785a80c0ed0a45d1f7c9b85223da05358e734d858ca"},
     {file = "frozendict-2.4.4-cp39-cp39-win_arm64.whl", hash = "sha256:4ae8d05c8d0b6134bfb6bfb369d5fa0c4df21eabb5ca7f645af95fdc6689678e"},
+    {file = "frozendict-2.4.4-py311-none-any.whl", hash = "sha256:705efca8d74d3facbb6ace80ab3afdd28eb8a237bfb4063ed89996b024bc443d"},
+    {file = "frozendict-2.4.4-py312-none-any.whl", hash = "sha256:d9647563e76adb05b7cde2172403123380871360a114f546b4ae1704510801e5"},
     {file = "frozendict-2.4.4.tar.gz", hash = "sha256:3f7c031b26e4ee6a3f786ceb5e3abf1181c4ade92dce1f847da26ea2c96008c7"},
 ]
 
@@ -3629,6 +3631,7 @@ files = [
     {file = "PyYAML-6.0.1-cp311-cp311-win_amd64.whl", hash = "sha256:bf07ee2fef7014951eeb99f56f39c9bb4af143d8aa3c21b1677805985307da34"},
     {file = "PyYAML-6.0.1-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:855fb52b0dc35af121542a76b9a84f8d1cd886ea97c84703eaa6d88e37a2ad28"},
     {file = "PyYAML-6.0.1-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:40df9b996c2b73138957fe23a16a4f0ba614f4c0efce1e9406a184b6d07fa3a9"},
+    {file = "PyYAML-6.0.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:a08c6f0fe150303c1c6b71ebcd7213c2858041a7e01975da3a99aed1e7a378ef"},
     {file = "PyYAML-6.0.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:6c22bec3fbe2524cde73d7ada88f6566758a8f7227bfbf93a408a9d86bcc12a0"},
     {file = "PyYAML-6.0.1-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:8d4e9c88387b0f5c7d5f281e55304de64cf7f9c0021a3525bd3b1c542da3b0e4"},
     {file = "PyYAML-6.0.1-cp312-cp312-win32.whl", hash = "sha256:d483d2cdf104e7c9fa60c544d92981f12ad66a457afae824d146093b8c294c54"},
@@ -3786,33 +3789,25 @@ cffi = {version = "*", markers = "implementation_name == \"pypy\""}
 
 [[package]]
 name = "quantlib"
-version = "1.35"
+version = "1.36"
 description = "Python bindings for the QuantLib library"
 optional = false
 python-versions = "*"
 files = [
-    {file = "QuantLib-1.35-cp38-abi3-macosx_10_9_x86_64.whl", hash = "sha256:2a505830d516067c4d73b397a75f88cc16a580434bfaffd6e9fd6b1b99a8894b"},
-    {file = "QuantLib-1.35-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:dcea98d0bb288ae180810fff69b61ad364552ba185d12b1ca499f8ce8c74f907"},
-    {file = "QuantLib-1.35-cp38-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:c3ce401c8ff600b7d19d88caf74dfc0275d7703d6cb7bf3f553ffcdd6533358d"},
-    {file = "QuantLib-1.35-cp38-abi3-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:ddcdc2490d86869c9428023f4d1f79e5cfd8dabd29c7839cca11bf7019a923de"},
-    {file = "QuantLib-1.35-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:00229cb7594bb9fb85c257907db969d15c3816c5d549f698c19490beb897a7c9"},
-    {file = "QuantLib-1.35-cp38-abi3-musllinux_1_1_aarch64.whl", hash = "sha256:3db00a6a6d55a97ef0e43b76ac395d909a6e7f1299e345457cc5fc3ed7d1ecc1"},
-    {file = "QuantLib-1.35-cp38-abi3-musllinux_1_1_i686.whl", hash = "sha256:a8ab1608b5389632cb188087432143659cf1b8e747cf76338dd64abcfecc2ea9"},
-    {file = "QuantLib-1.35-cp38-abi3-musllinux_1_1_x86_64.whl", hash = "sha256:ec249dc01cba4ab13efe02aa62765aa2238f4be32fdd65119592235d9c4c1889"},
-    {file = "QuantLib-1.35-cp38-abi3-win32.whl", hash = "sha256:5f05409bf1c6b7412bcd8809b3f7c5bc663518a69c4148a1316e138af6851290"},
-    {file = "QuantLib-1.35-cp38-abi3-win_amd64.whl", hash = "sha256:b155c02820a6981aafba306cd2fe30ff267fb9c9ad0e6efa35ff0918ba7ecd1f"},
-    {file = "QuantLib-1.35-pp310-pypy310_pp73-macosx_10_9_x86_64.whl", hash = "sha256:2eaee3b052883b745c6e83600c553b34bdea0d4fdb50bd3ca89fb5386d5d57db"},
-    {file = "QuantLib-1.35-pp310-pypy310_pp73-macosx_11_0_arm64.whl", hash = "sha256:907d53409cdd9eaef5cfd2b3a5fa99d15ed711aeabbc3be476939df3037f7f72"},
-    {file = "QuantLib-1.35-pp310-pypy310_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:3a5c84a06d7c25d464e9c3079b46eaf697cdf80f203e6feea9d59c3d6ec2b91e"},
-    {file = "QuantLib-1.35-pp310-pypy310_pp73-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:196fd1f735f969c585aa78d7d0c391f36c4453002769dee96e92d87983d89417"},
-    {file = "QuantLib-1.35-pp310-pypy310_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:81d4f434e05591dba1918afbce0597fbfb94e2de75a4dc0a7fe434a67e43d00f"},
-    {file = "QuantLib-1.35-pp310-pypy310_pp73-win_amd64.whl", hash = "sha256:a9325fbedcab7fbacc384652005d41e7cd0db1272dd82520f750c48247aaf5d8"},
-    {file = "QuantLib-1.35-pp39-pypy39_pp73-macosx_10_9_x86_64.whl", hash = "sha256:2536c0bb3a3f891b08eaf12ff0e04680ee9703316af1478b7d636a00007f7d9b"},
-    {file = "QuantLib-1.35-pp39-pypy39_pp73-macosx_11_0_arm64.whl", hash = "sha256:e31077867d4ba4d0030e3b36966f6fbcf9b47272040acc4d3c6138f09c966332"},
-    {file = "QuantLib-1.35-pp39-pypy39_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:9c19d0e625f51d0d3afc8432946b25b519e439552cdb034a9f2de54bfad2a291"},
-    {file = "QuantLib-1.35-pp39-pypy39_pp73-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:c7accb9bcc82581ec054e93edc6d960cc5eb8d06af1e92736b4c2eeafd393874"},
-    {file = "QuantLib-1.35-pp39-pypy39_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:0d1dd5801dd054652d3f7852a744813e1db9dbafa6fbaedd8472bac33ed761dc"},
-    {file = "QuantLib-1.35-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:4f585d8e94da4504db74098796fd66e922dd31efebdf17ffe24b0c73418eaaca"},
+    {file = "QuantLib-1.36-cp38-abi3-macosx_10_9_x86_64.whl", hash = "sha256:b8555e3358a2856a14978f39cee43ce83c6c0e41e4976e5788ae9b1f47f8a575"},
+    {file = "QuantLib-1.36-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:6c4a65bed9a3409d798e7e6f27bf01109c41f7ce0f9790d370ff92c0526465b9"},
+    {file = "QuantLib-1.36-cp38-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:faa9ff3d6a22f9c4c76faf164609949460561229b52606bc010be286803dd750"},
+    {file = "QuantLib-1.36-cp38-abi3-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:1c779960042832c08ebb3808991abcf01eac30072ac19be7dde6819d1a061464"},
+    {file = "QuantLib-1.36-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7bbeb8d0676d2d57793a8f3b0f06bf5bcd989cb8e2d907dc3b74211861256c17"},
+    {file = "QuantLib-1.36-cp38-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:f3e193116699c38dbd6edd0c8371b0153960c9c00e65e63656f710824b7566e6"},
+    {file = "QuantLib-1.36-cp38-abi3-musllinux_1_2_i686.whl", hash = "sha256:650bf50fcf8deb70fe25e9077be22653986f08b966b843999431e213d3c27f15"},
+    {file = "QuantLib-1.36-cp38-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:ba028f24eeb1d9ca93c1150f92b83a988c79e760778fa7f0b447896876b15a20"},
+    {file = "QuantLib-1.36-cp38-abi3-win32.whl", hash = "sha256:acc47181e9d5aef17c4fcfc36b5a0849880213d37e635fcc60e330cd26e95922"},
+    {file = "QuantLib-1.36-cp38-abi3-win_amd64.whl", hash = "sha256:3486a4935c8a6673e12d6e944c48a2c6952acbef011307c31c3baf6c37235d75"},
+    {file = "QuantLib-1.36-pp310-pypy310_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:e5e712c8bbb7cf3c7cc57d71eb23abe574de73ad02d66bcecc6a2934df9407ad"},
+    {file = "QuantLib-1.36-pp310-pypy310_pp73-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:64a49487cc1689796d1a6d4579c32fe6b76e74a360be0c2a62f81193cd8fd89c"},
+    {file = "QuantLib-1.36-pp310-pypy310_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9cc84a475120d8fa4567f11e75a7ea299c07a377ab631c15913f87443ae8271d"},
+    {file = "QuantLib-1.36-pp310-pypy310_pp73-win_amd64.whl", hash = "sha256:921637613af7e4d171adad00eda54f448dd37b7629e69a9224251ce5affd9d34"},
 ]
 
 [[package]]
@@ -4162,6 +4157,11 @@ files = [
     {file = "scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:f60021ec1574e56632be2a36b946f8143bf4e5e6af4a06d85281adc22938e0dd"},
     {file = "scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:394397841449853c2290a32050382edaec3da89e35b3e03d6cc966aebc6a8ae6"},
     {file = "scikit_learn-1.5.2-cp312-cp312-win_amd64.whl", hash = "sha256:57cc1786cfd6bd118220a92ede80270132aa353647684efa385a74244a41e3b1"},
+    {file = "scikit_learn-1.5.2-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:e9a702e2de732bbb20d3bad29ebd77fc05a6b427dc49964300340e4c9328b3f5"},
+    {file = "scikit_learn-1.5.2-cp313-cp313-macosx_12_0_arm64.whl", hash = "sha256:b0768ad641981f5d3a198430a1d31c3e044ed2e8a6f22166b4d546a5116d7908"},
+    {file = "scikit_learn-1.5.2-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:178ddd0a5cb0044464fc1bfc4cca5b1833bfc7bb022d70b05db8530da4bb3dd3"},
+    {file = "scikit_learn-1.5.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f7284ade780084d94505632241bf78c44ab3b6f1e8ccab3d2af58e0e950f9c12"},
+    {file = "scikit_learn-1.5.2-cp313-cp313-win_amd64.whl", hash = "sha256:b7b0f9a0b1040830d38c39b91b3a44e1b643f4b36e36567b80b7c6bd2202a27f"},
     {file = "scikit_learn-1.5.2-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:757c7d514ddb00ae249832fe87100d9c73c6ea91423802872d9e74970a0e40b9"},
     {file = "scikit_learn-1.5.2-cp39-cp39-macosx_12_0_arm64.whl", hash = "sha256:52788f48b5d8bca5c0736c175fa6bdaab2ef00a8f536cda698db61bd89c551c1"},
     {file = "scikit_learn-1.5.2-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:643964678f4b5fbdc95cbf8aec638acc7aa70f5f79ee2cdad1eec3df4ba6ead8"},
@@ -5030,4 +5030,4 @@ repair = ["scipy (>=1.6.3)"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10, <3.12"
-content-hash = "5484c0e75da383eb04bb87f24824b22a5a7590f70d5d7523aaa7410d8a18667d"
+content-hash = "bd45783044f1d48c728f6542e88554530bf193d03822f95b424576e993675b25"

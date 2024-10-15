@@ -37,7 +37,7 @@ protobuf = {version = "^5.28.2", source = "PyPI"}
 tsfresh = {version = "^0.20.3", source = "PyPI"}
 scikit-learn = {version = "^1.5.2", source = "PyPI"}
 folium = {version = "^0.17.0", source = "PyPI"}
-atoti = {version = "0.9.0", extras = ["aws", "azure", "gcp", "jupyterlab", "kafka", "sql"], source = "PyPI"}
+atoti = {version = "0.9.1.20241011151405+ce5dbcc", extras = ["aws", "azure", "gcp", "jupyterlab", "kafka", "sql", "directquery-bigquery", "directquery-clickhouse", "directquery-snowflake"], source = "atoti"}
 pandas = {version = "2.2.3", source = "PyPI"}
 jupyterlab = "<4.2"
 
@@ -47,6 +47,12 @@ ruff = "^0.6.9"
 [[tool.poetry.source]]
 name = "PyPI"
 priority = "primary"
+
+
+[[tool.poetry.source]]
+name = "atoti"
+url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple/"
+priority = "supplemental"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

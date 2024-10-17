@@ -20,14 +20,14 @@ jobs:
           architecture: x64
           python-version: ${{ matrix.python }}
 
-      - name: Install Poetry
-        run: pip install poetry
+      - name: Install uv
+        run: pip install uv
 
       - name: Install Python dependencies
-        run: poetry install
+        run: uv pip install -r pyproject.toml
 
       - name: Run Ruff
-        run: poetry run ruff format --check .
+        run: uv run ruff format --check .
 
       - name: Run notebooks
-        run: poetry run python tests/execute_notebooks.py
+        run: uv run python tests/execute_notebooks.py

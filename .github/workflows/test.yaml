@@ -27,7 +27,7 @@ jobs:
         run: uv venv --seed
 
       - name: Install Python dependencies
-        run: UV_PYTHON=.venv/bin/python uv pip install -r pyproject.toml && uv pip list
+        run: uv pip install -r pyproject.toml && uv pip list
 
       - name: Run ruff
         run: uv run ruff format --check .

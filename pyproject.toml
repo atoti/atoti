@@ -38,11 +38,9 @@ dependencies = [
     "folium >=0.17.0, <1",
     "atoti[aws,azure,gcp,jupyterlab,kafka,jdbc]==0.9.0",
     "pandas == 2.2.3",
-    "jupyterlab <4.2"
+    "jupyterlab <4.2",
+    "ruff >=0.6.9, <1"
 ]
-
-[tool.dev-dependencies]
-ruff = "^0.6.9"
 
 [[tool.source]]
 name = "PyPI"

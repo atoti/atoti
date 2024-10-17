@@ -9,7 +9,6 @@
 <p align="center">
   <img src="https://img.shields.io/github/v/release/atoti/atoti" alt="github">
   <img src="https://img.shields.io/pypi/dm/atoti" alt="github">
-  <img src="https://img.shields.io/pypi/pyversions/atoti" alt="github">
   <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fatoti%2Fatoti&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=daily%2Ftotal+visits&edge_flat=false" alt="Hits"></a>
   <img src="https://github.com/github/docs/actions/workflows/test.yml/badge.svg" alt="gha">
   <a href="https://github.com/atoti/atoti/discussions"><img src="https://img.shields.io/github/discussions/atoti/atoti" alt="GitHub Discussion"></a>

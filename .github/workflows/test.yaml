@@ -24,7 +24,9 @@ jobs:
         run: pip install uv
 
       - name: Create virtual environment and install Python dependencies
-        run: uv venv && uv pip install -r pyproject.toml && uv pip list
+        run: uv venv --seed && \
+             UV_PYTHON=.venv/bin/python uv pip install -r pyproject.toml && \
+             uv pip list
 
       - name: Run ruff
         run: uv run ruff format --check .

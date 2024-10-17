@@ -23,10 +23,10 @@ jobs:
       - name: Install uv
         run: pip install uv
 
-      - name: Install Python dependencies
-        run: uv pip install -r pyproject.toml
+      - name: Create virtual environment and install Python dependencies
+        run: uv venv && uv pip install -r pyproject.toml
 
-      - name: Run Ruff
+      - name: Run ruff
         run: uv run ruff format --check .
 
       - name: Run notebooks

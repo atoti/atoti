@@ -9,6 +9,7 @@
 <p align="center">
   <img src="https://img.shields.io/github/v/release/atoti/atoti" alt="github">
   <img src="https://img.shields.io/pypi/dm/atoti" alt="github">
+  <img src="https://img.shields.io/pypi/pyversions/atoti" alt="github">
   <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fatoti%2Fatoti&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=daily%2Ftotal+visits&edge_flat=false" alt="Hits"></a>
   <img src="https://github.com/github/docs/actions/workflows/test.yml/badge.svg" alt="gha">
   <a href="https://github.com/atoti/atoti/discussions"><img src="https://img.shields.io/github/discussions/atoti/atoti" alt="GitHub Discussion"></a>
@@ -55,16 +56,19 @@ Moving to production? Navigate to our Project Template repository to learn how t
 
 ### 🧰 Installation
 
-We recommend using [poetry](https://github.com/python-poetry/poetry) for better virtual environment and dependency management. However, if desired, we also support alternative methods of installation.
+Atoti Python API requires (at minimum) Python 3.10 and Java 21.
+
+We recommend using [uv](https://github.com/astral-sh/uv) for better virtual environment and dependency management. However, if desired, we also support alternative methods of installation.
 
 > **Note:** Start `jupyter-lab` at the root of this repository.
 
-#### Poetry
+#### uv
 
 ```bash
-pip install poetry
-poetry install
-poetry run jupyter-lab
+pip install uv
+uv venv --python 3.10 --seed 
+uv pip install -r pyproject.toml
+uv run jupyter-lab
 ```
 
 #### Python

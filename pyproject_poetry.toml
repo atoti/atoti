@@ -1,0 +1,56 @@
+[tool.poetry]
+name = "notebooks"
+version = "0.1.0"
+description = "Gallery of atoti notebooks"
+authors = ["atoti <contact@atoti.io>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10, <3.12"
+boto3 = {version = "^1.35.36", source = "PyPi"}
+s3fs = {version = "^2024.6.1", source = "PyPi"}
+fsspec = {version = "^2024.6.1", source = "PyPI"}
+wget = {version = "^3.2", source = "PyPI"}
+treelib = {version = "^1.6.4", source = "PyPI"}
+matplotlib = {version = "^3.9.2", source = "PyPI"}
+praw = {version = "^7.7.0", source = "PyPI"}
+seaborn = {version = "^0.13.2", source = "PyPI"}
+statsmodels = {version = "^0.14.4", source = "PyPI"}
+imblearn = {version = "^0.0", source = "PyPI"}
+ipywidgets = {version = "^8.1.5", source = "PyPI"}
+openpyxl = {version = "^3.1.5", source = "PyPI"}
+haversine = {version = "^2.8.0", source = "PyPI"}
+watchdog = {version = "^5.0.3", source = "PyPI"}
+quantlib = {version = "^1.36", source = "PyPI"}
+kafka-python = {version = "^2.0.2", source = "PyPI"}
+xgboost = {version = "^2.1.1", source = "PyPI"}
+natsort = {version = "^8.3.1", source = "PyPI"}
+tabulate = {version = "^0.9.0", source = "PyPI"}
+orjson = {version = "^3.10.7", source = "PyPI"}
+lxml = {version = "^5.3.0", source = "PyPI"}
+html5lib = {version = "^1.1", source = "PyPI"}
+yfinance = {version = "^0.2.44", source = "PyPI"}
+pyopls = {version = "^20.3.post1", source = "PyPI"}
+nltk = {version = "^3.9.1", source = "PyPI"}
+textblob = {version = "^0.18.0", source = "PyPI"}
+llvmlite = {version = "^0.43.0", source = "PyPI"}
+protobuf = {version = "^5.28.2", source = "PyPI"}
+tsfresh = {version = "^0.20.3", source = "PyPI"}
+scikit-learn = {version = "^1.5.2", source = "PyPI"}
+folium = {version = "^0.17.0", source = "PyPI"}
+atoti = {version = "0.9.0", extras = ["aws", "azure", "gcp", "jupyterlab", "kafka", "sql"], source = "PyPI"}
+pandas = {version = "2.2.3", source = "PyPI"}
+jupyterlab = "<4.2"
+
+[tool.poetry.dev-dependencies]
+ruff = "^0.6.9"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+extend-include = ["*.ipynb"]

@@ -8,14 +8,22 @@ By creating a small [Flask application](https://flask.palletsprojects.com/en/2.2
 
 Extract the contents from within `source.zip` and change directory to the extracted `source` folder.
 
+We can use either `uv` or `Docker` to build and run our application.
+
 ## uv
 
-If using uv in a Windows environment, it is recommended to use Python 3.8 due to llvmlite and numpy requirements for PyCaret:  
-`uv venv --python 3.8 --seed`
+Set up the virtual environment and dependencies for the project using the below command:
 
-Set up the virtual environment for the project using the below command:
+💡 **Note:** If using uv in a Windows environment, it is recommended to use Python 3.8 due to llvmlite and numpy requirements for PyCaret.
+
 ```
-uv sync
+uv sync --python 3.8
+```
+
+To launch the Flask application, run the following command:
+
+```
+uv run python .\automl\prediction.py
 ```
 
 Refer to the [uv documentation](https://docs.astral.sh/uv/) for more information on the package manager.
@@ -29,11 +37,7 @@ docker build -f Dockerfile -t atoti-pycaret .
 docker run -it -p 105:105 atoti-pycaret
 ```
 
-# Runtime
-To launch the Flask application, run the following command:
-```
-uv run python .\automl\prediction.py
-```
+## Runtime
 
 You should able to see the following:
 
@@ -64,5 +68,4 @@ You can verify that the requests are received by the endpoint through the shell 
 
 <img src="../img/request_received.png"/>  
 
-
-The endpoint returns a Pandas Dataframe containing the features and their corresponding prediction.
+The endpoint returns a Pandas DataFrame containing the features and their corresponding prediction.

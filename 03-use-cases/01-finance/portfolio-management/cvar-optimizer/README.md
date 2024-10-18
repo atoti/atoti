@@ -6,7 +6,7 @@
 
 Therefore, run the following in this directory:
 
-1. `uv sync`
+1. `uv sync --python 3.10`
 2. `uv run jupyter-lab`
 
 In this use case, we look at how we could integrate the Python library, [PyPortfolioOpt](https://pyportfolioopt.readthedocs.io/en/latest/index.html) into [Atoti](https://www.atoti.io/) to perform portfolio optimization analysis within one single platform.

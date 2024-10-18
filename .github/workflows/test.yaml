@@ -23,10 +23,7 @@ jobs:
       - name: Install uv
         run: pip install uv
 
-      - name: Create virtual environment
-        run: uv venv --seed
-
-      - name: Install Python dependencies from uv.lock
+      - name: Create venv and install Python dependencies from uv.lock
         run: uv sync && uv pip list
 
       - name: Run ruff

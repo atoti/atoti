@@ -36,13 +36,13 @@ dependencies = [
     "tsfresh >=0.20.3, <1",
     "scikit-learn >=1.5.2, <2",
     "folium >=0.17.0, <1",
-    "atoti[aws,azure,gcp,jupyterlab,kafka,jdbc]==0.9.0",
+    "atoti[aws,azure,gcp,jupyterlab,kafka,jdbc]==0.9.1",
     "pandas == 2.2.3",
     "jupyterlab <4.2",
     "ruff >=0.6.9, <1"
 ]
 
-[[tool.source]]
+[tool.source]
 name = "PyPI"
 priority = "primary"
 

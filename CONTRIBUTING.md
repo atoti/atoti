@@ -6,7 +6,7 @@ To get started, please proceed to
 
 1. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the Atoti repository:
 
-    <img src=".github/assets/fork_atoti_repo_2.png">
+    <img src=".github/assets/fork_atoti_repo.png">
 
 2. Clone the forked repository and pull the latest from the `main` branch (`git checkout main` and `git pull`).
 

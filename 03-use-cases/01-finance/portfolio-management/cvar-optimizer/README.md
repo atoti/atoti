@@ -6,11 +6,8 @@
 
 Therefore, run the following in this directory:
 
-1. `poetry install`
-2. `poetry run python -m ipykernel install --user --name=cvar-optimizer`
-3. `poetry run jupyter-lab`
-
-Finally, select the `cvar-optimizer` kernel in JupyterLab to run this notebook.
+1. `uv sync --python 3.10`
+2. `uv run jupyter-lab`
 
 In this use case, we look at how we could integrate the Python library, [PyPortfolioOpt](https://pyportfolioopt.readthedocs.io/en/latest/index.html) into [Atoti](https://www.atoti.io/) to perform portfolio optimization analysis within one single platform.
 

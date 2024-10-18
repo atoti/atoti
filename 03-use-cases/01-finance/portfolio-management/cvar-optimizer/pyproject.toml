@@ -1,19 +1,15 @@
-[tool.poetry]
+[project]
 name = "cvar-optimizer"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+description = "Cvar Optimizer"
 readme = "README.md"
+requires-python = ">=3.10, <3.12"
 
-[tool.poetry.dependencies]
-python = ">=3.10, <3.12"
-atoti = {version = "0.8.14", extras = ["aws", "azure", "gcp", "jupyterlab", "kafka", "sql"]}
-jupyterlab = "<4.2"
-pyportfolioopt = {version = "^1.5.5", source = "PyPI"}
-pandas = {version = "2.2.2", source = "PyPI"}
-yfinance = {version = "^0.2.41", source = "PyPI"}
-ipywidgets = {version = "^8.0.6", source = "PyPI"}
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+dependencies = [
+    "atoti[aws,azure,gcp,jupyterlab,kafka,sql]==0.8.14",
+    "jupyterlab <4.2",
+    "pyportfolioopt >=1.5.5, <2",
+    "pandas == 2.2.2",
+    "yfinance >=0.2.41, <1",
+    "ipywidgets >=8.0.6, <9"
+]

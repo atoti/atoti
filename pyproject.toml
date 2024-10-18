@@ -42,7 +42,7 @@ pandas = {version = "2.2.3", source = "PyPI"}
 jupyterlab = "<4.2"
 
 [tool.poetry.dev-dependencies]
-ruff = "^0.6.9"
+ruff = "^0.7.0"
 
 [[tool.poetry.source]]
 name = "PyPI"

@@ -5,10 +5,9 @@ FROM --platform=linux/amd64 python:3.10.13-slim-bookworm
 COPY . /atoti
 WORKDIR /atoti
 
-# Install dependencies in container (poetry style)
-RUN pip install poetry && \
-    poetry config virtualenvs.create false && \
-    poetry install
+# Install dependencies in container (uv style)
+RUN pip install uv && \
+    uv sync
 
 # Set container executable
-CMD [ "jupyter-lab", "--ip=0.0.0.0", "--allow-root", "--no-browser" ]
+CMD [ "uv", "run", "jupyter-lab", "--ip=0.0.0.0", "--allow-root", "--no-browser" ]

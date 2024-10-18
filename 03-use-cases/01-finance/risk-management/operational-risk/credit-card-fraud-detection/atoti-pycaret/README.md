@@ -8,17 +8,17 @@ By creating a small [Flask application](https://flask.palletsprojects.com/en/2.2
 
 Extract the contents from within `source.zip` and change directory to the extracted `source` folder.
 
-## Poetry
+## uv
 
-If using Poetry in a Windows environment, it is recommended to use Python 3.8 due to llvmlite and numpy requirements for PyCaret:  
-`poetry env use $(py -3.8 -c 'import sys; print(sys.executable)')`
+If using uv in a Windows environment, it is recommended to use Python 3.8 due to llvmlite and numpy requirements for PyCaret:  
+`uv venv --python 3.8 --seed`
 
 Set up the virtual environment for the project using the below command:
 ```
-poetry install
+uv sync
 ```
 
-Refer to the [poetry documentation](https://python-poetry.org/docs/master/#installing-with-the-official-installer) for more information on the package manager.
+Refer to the [uv documentation](https://docs.astral.sh/uv/) for more information on the package manager.
 
 ## Docker
 
@@ -32,7 +32,7 @@ docker run -it -p 105:105 atoti-pycaret
 # Runtime
 To launch the Flask application, run the following command:
 ```
-poetry run python .\automl\prediction.py
+uv run python .\automl\prediction.py
 ```
 
 You should able to see the following:

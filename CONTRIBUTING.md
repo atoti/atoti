@@ -4,18 +4,21 @@ We welcome any contributions from the community.
 
 To get started, please proceed to 
 
-1. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the atoti repository:
+1. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the Atoti repository:
 
-<img src=".github/assets/fork_atoti_repo.png">
+    <img src=".github/assets/fork_atoti_repo_2.png">
 
-2. Pull the `main` branch (`git checkout main` and `git pull`) from the forked repository.
-3. Run `poetry install` to be sure to work with the expected dependencies.
-4. Create a working branch `git switch -c <PSEUDO>/<SUBJECT>`.
-5. Start JupyterLab: `poetry run jupyter lab`.
+2. Clone the forked repository and pull the latest from the `main` branch (`git checkout main` and `git pull`).
+
+    <!-- <img src=".github/assets/clone_forked_atoti_repo.png"> -->
+
+3. Run `uv run pip install -r pyproject.toml` to be sure to work with the expected dependencies.
+4. Create a working branch `git switch -c <BRANCH_NAME>`.
+5. Start JupyterLab: `uv run jupyter-lab`.
 6. Create the folder and notebooks.
-    Add notebooks responsible for data pre-processing to the [list of untested notebooks](tests/execute_notebooks.py).
-    The main notebook using atoti should be tested to ensure users can run it.
-7. If a dependency is missing run `poetry add <DEPENDENCY_NAME>`: **DEPENDENCIES MUST NOT BEEN ADDED WITH CONDA OR PIP** since the Github CI relies on the `poetry.lock` file to install dependencies.
+    * Add notebooks responsible for data pre-processing to the [list of untested notebooks](tests/execute_notebooks.py).
+    * The main notebook using atoti should be tested to ensure users can run it.
+7. If a dependency is missing run `uv add <DEPENDENCY_NAME>`: **DEPENDENCIES MUST NOT BEEN ADDED WITH CONDA OR PIP** since the Github CI relies on the `uv.lock` file to install dependencies.
 8. Commit and push changes to the forked repository using `git push`.
 9. Create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) from the forked repository. 
 
@@ -62,13 +65,13 @@ These commands can be used while developing:
 - Reformat python files using `ruff`:
 
   ```bash
-  poetry run ruff format .
+  uv run ruff format .
   ```
 
 - Execute all the notebooks:
 
   ```bash
-  poetry run python tests/execute_notebooks.py
+  uv run python tests/execute_notebooks.py
   ```
 
 

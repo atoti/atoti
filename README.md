@@ -55,7 +55,7 @@ Moving to production? Navigate to our Project Template repository to learn how t
 
 ### 🧰 Installation
 
-Atoti Python API requires Python 3.10, 3.11, or 3.12 in addition to Java 21 (when pointing to your own JDK, otherwise Atoti is already bundled with `jdk4py`).
+Atoti Python API requires Python 3.10, 3.11, or 3.12 in addition to Java 21 (when using your own JDK, otherwise Atoti is already bundled with [jdk4py](https://github.com/activeviam/jdk4py)).
 
 We recommend using [uv](https://github.com/astral-sh/uv) for better virtual environment and dependency management. However, if desired, we also support alternative methods of installation.
 

@@ -1496,6 +1496,18 @@ wheels = [
 ]
 
 [[package]]
+name = "memory-profiler"
+version = "0.61.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "psutil" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b2/88/e1907e1ca3488f2d9507ca8b0ae1add7b1cd5d3ca2bc8e5b329382ea2c7b/memory_profiler-0.61.0.tar.gz", hash = "sha256:4e5b73d7864a1d1292fb76a03e82a3e78ef934d06828a698d9dada76da2067b0", size = 35935 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/49/26/aaca612a0634ceede20682e692a6c55e35a94c21ba36b807cc40fe910ae1/memory_profiler-0.61.0-py3-none-any.whl", hash = "sha256:400348e61031e3942ad4d4109d18753b2fb08c2f6fb8290671c5513a34182d84", size = 31803 },
+]
+
+[[package]]
 name = "mistune"
 version = "3.0.2"
 source = { registry = "https://pypi.org/simple" }
@@ -1674,6 +1686,7 @@ dependencies = [
     { name = "llvmlite" },
     { name = "lxml" },
     { name = "matplotlib" },
+    { name = "memory-profiler" },
     { name = "natsort" },
     { name = "nltk" },
     { name = "openpyxl" },
@@ -1713,6 +1726,7 @@ requires-dist = [
     { name = "llvmlite", specifier = ">=0.43.0,<1" },
     { name = "lxml", specifier = ">=5.3.0,<6" },
     { name = "matplotlib", specifier = ">=3.9.2,<4" },
+    { name = "memory-profiler", specifier = ">=0.61.0" },
     { name = "natsort", specifier = ">=8.3.1,<9" },
     { name = "nltk", specifier = ">=3.9.1,<4" },
     { name = "openpyxl", specifier = ">=3.1.5,<4" },

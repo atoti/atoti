@@ -39,7 +39,8 @@ dependencies = [
     "atoti[aws,azure,gcp,jupyterlab,kafka,jdbc]==0.9.1",
     "pandas == 2.2.3",
     "jupyterlab <4.2",
-    "ruff >=0.6.9, <1"
+    "ruff >=0.6.9, <1",
+    "memory-profiler>=0.61.0",
 ]
 
 [tool.source]

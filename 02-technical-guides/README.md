@@ -124,6 +124,10 @@
 <td rowspan="1"><a href="./hierarchies/01-hierarchy-fundamentals.ipynb">hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.1-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/hierarchy-fundamentals-in-atoti/?utm_source=github">📰&nbsp;Hierarchy Fundamentals in Atoti</a></td><td rowspan="1"><kbd>data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;</td>
 </tr>
+<tr>
+<td rowspan="1"><a href="./atoti-pandas-comparison/main.ipynb">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.1-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
+</tr>
 </table>
 <br/>
 </blockquote></details>
@@ -210,6 +214,10 @@ Double-click on tile to go to feature section.
     <td><b>Version</b></td>
     <td><b>Related media</b></td>
     <td><b>Features</b></td>
+</tr>
+<tr>
+<td rowspan="1"><a href="./atoti-pandas-comparison/main.ipynb">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.1-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./auto-cube/main.ipynb">auto-cube&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.1-1C900C" alt="Latest version" /></td>
@@ -359,6 +367,10 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
+<td rowspan="1"><a href="./atoti-pandas-comparison/main.ipynb">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.1-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
+</tr>
+<tr>
 <td rowspan="1"><a href="./conditional-functions/main.ipynb">conditional-functions&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.1-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> switch</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
@@ -427,6 +439,10 @@ Double-click on tile to go to feature section.
     <td><b>Version</b></td>
     <td><b>Related media</b></td>
     <td><b>Features</b></td>
+</tr>
+<tr>
+<td rowspan="1"><a href="./atoti-pandas-comparison/main.ipynb">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.1-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./auto-cube/main.ipynb">auto-cube&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.1-1C900C" alt="Latest version" /></td>
@@ -514,6 +530,10 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
+<td rowspan="1"><a href="./atoti-pandas-comparison/main.ipynb">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.1-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
+</tr>
+<tr>
 <td rowspan="1"><a href="./currency-conversion-with-lookup/main.ipynb">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.1-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/atoti-guide-to-implementing-lookup-in-a-multidimensional-cube/?utm_source=github">📰&nbsp;atoti: Guide to implementing lookup in a multidimensional cube</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
@@ -574,6 +594,10 @@ Use case is currently not available for these industries. Reach out to <a href="
 <tr>
 <td rowspan="1"><a href="./aggregate-provider/main.ipynb">aggregate-provider&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.1-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="./atoti-pandas-comparison/main.ipynb">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.1-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.1-1C900C" alt="Latest version" /></td>
@@ -704,6 +728,10 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td>&nbsp</td><td rowspan="1"><kbd>quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
+<td rowspan="1"><a href="./atoti-pandas-comparison/main.ipynb">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.1-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
+</tr>
+<tr>
 <td rowspan="1"><a href="./auto-cube/main.ipynb">auto-cube&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.1-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/auto-cube-creation/?utm_source=github">📰&nbsp;Create a Python web application with a few clicks</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
 </tr>
@@ -780,6 +808,10 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Version</b></td>
     <td><b>Related media</b></td>
     <td><b>Features</b></td>
+</tr>
+<tr>
+<td rowspan="1"><a href="./atoti-pandas-comparison/main.ipynb">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.1-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./currency-conversion-with-lookup/main.ipynb">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.1-1C900C" alt="Latest version" /></td>
@@ -1176,6 +1208,10 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Version</b></td>
     <td><b>Related media</b></td>
     <td><b>Features</b></td>
+</tr>
+<tr>
+<td rowspan="1"><a href="./atoti-pandas-comparison/main.ipynb">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.1-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="2"><a href="./excel-and-atoti/main.ipynb">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.1-1C900C" alt="Latest version" /></td>

@@ -1,10 +1,5 @@
 01-atoti-academy/storytelling-with-atoti/01-Storytelling.ipynb
 01-atoti-academy/storytelling-with-atoti/03-Storytelling.ipynb
-03-use-cases/01-finance/front-office/cumulative-pnl
-03-use-cases/01-finance/front-office/pnl-explained
-03-use-cases/01-finance/front-office/real-time-risk
-03-use-cases/01-finance/front-office/real-time-risk
-03-use-cases/01-finance/retail-banking/credit-card-analytics
 03-use-cases/01-finance/risk-management/credit-risk/ifrs9
 03-use-cases/01-finance/risk-management/credit-risk/ifrs9
 03-use-cases/01-finance/risk-management/credit-risk/sa-ccr
@@ -21,11 +16,9 @@
 03-use-cases/01-finance/treasury/collateral-shortfall-monitoring
 03-use-cases/01-finance/treasury/intraday-liquidity
 03-use-cases/01-finance/insurance/customer360
-03-use-cases/01-finance/insurance/price-elasticity
 03-use-cases/01-finance/portfolio-management/alt-data
 03-use-cases/01-finance/portfolio-management/cvar-optimizer
 03-use-cases/01-finance/portfolio-management/optimize-with-constraints
-03-use-cases/01-finance/quantitative-strategy/bucket-analysis
 03-use-cases/02-other-industries/airline-industry
 03-use-cases/02-other-industries/airline-industry
 03-use-cases/02-other-industries/baseball

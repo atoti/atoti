@@ -41,6 +41,7 @@ dependencies = [
     "jupyterlab <4.2",
     "ruff >=0.6.9, <1",
     "memory-profiler>=0.61.0",
+    "jupyter-resource-usage>=1.1.0",
 ]
 
 [tool.source]

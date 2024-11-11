@@ -6,5 +6,5 @@ The following notebooks perform a side-by-side comparison of a VaR use case in w
 
 Response times and memory usage are compared.
 
-1. [`main.ipynb`](main.ipynb): Run the VaR use case in Atoti.
-2. [`main-pandas.ipynb`](main-pandas.ipynb): Run the VaR use case in pandas.
+1. [main.ipynb](main.ipynb): Run the VaR use case in Atoti.
+2. [pandas-main.ipynb](pandas-main.ipynb): Run the VaR use case in pandas.

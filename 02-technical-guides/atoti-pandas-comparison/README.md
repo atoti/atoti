@@ -1,4 +1,4 @@
-# Atoti Pandas Comparison
+# Atoti pandas Comparison
 
 Run a performance comparison between Atoti and pandas.
 

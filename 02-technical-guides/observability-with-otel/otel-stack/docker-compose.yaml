@@ -1,0 +1,100 @@
+networks:
+  otel-net:
+    name: otel-net
+
+services:
+
+  collector:
+    image: otel/opentelemetry-collector-contrib:$COLLECTOR_VERSION #important to get this one as it contains community contrib
+    hostname: collector
+    depends_on:
+      prometheus:
+        condition: service_healthy
+      tempo:
+        condition: service_healthy
+      loki:
+        condition: service_healthy
+    command: [ "--config=/etc/collector-config.yaml" ]
+    volumes:
+      - ./collector-config-local.yaml:/etc/collector-config.yaml
+    ports:
+      - "6666:6666" # Prometheus exporter metrics
+      - "4318:4318" # OTLP http / protobuf receiver
+    networks:
+      - otel-net
+
+  grafana:
+    image: grafana/grafana:$GRAFANA_VERSION
+    hostname: grafana
+    depends_on:
+      prometheus:
+        condition: service_healthy
+      tempo:
+        condition: service_healthy
+      loki:
+        condition: service_healthy
+    volumes:
+      - ./config/grafana-bootstrap.ini:/etc/grafana/grafana.ini
+      - ./config/grafana-datasources.yaml:/etc/grafana/provisioning/datasources/datasources.yaml
+      - ./config/grafana-dashboards:/etc/grafana/provisioning/dashboards
+    environment:
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_AUTH_DISABLE_LOGIN_FORM=true
+    ports:
+      - "3000:3000"
+    healthcheck:
+      interval: 5s
+      retries: 10
+      test: wget --no-verbose --tries=1 --spider http://localhost:3000 || exit 1
+    networks:
+      - otel-net
+
+  prometheus:
+    image: prom/prometheus:$PROMETHEUS_VERSION
+    hostname: prometheus
+    command:
+      - --config.file=/etc/prometheus.yaml
+      - --web.enable-remote-write-receiver
+      - --enable-feature=exemplar-storage
+    volumes:
+      - ./config/prometheus.yaml:/etc/prometheus.yaml
+    ports:
+      - "9092:9090"
+    healthcheck:
+      interval: 5s
+      retries: 10
+      test: wget --no-verbose --tries=1 --spider http://localhost:9090/status || exit 1
+    networks:
+      - otel-net
+
+  tempo:
+    image: grafana/tempo:$TEMPO_VERSION
+    hostname: tempo
+    command: [ "-config.file=/etc/tempo.yaml" ]
+    volumes:
+      - ./config/tempo-config.yaml:/etc/tempo.yaml
+      - ./config/tempo-overrides.yaml:/etc/overrides.yaml
+      - ./config/tempo-data:/tmp/tempo
+    ports:
+      - "3200:3200"   # tempo
+      - "7777:7777"   # the collector will use this port to push the traces with the OTLP protocol
+    healthcheck:
+      interval: 5s
+      retries: 10
+      test: wget --no-verbose --tries=1 --spider http://localhost:3200/status || exit 1
+    networks:
+      - otel-net
+
+  loki:
+    image: grafana/loki:$LOKI_VERSION
+    hostname: loki
+    command: [ "-config.file=/etc/loki/local-config.yaml" ]
+    ports:
+      - "3100:3100"
+    healthcheck:
+      interval: 5s
+      retries: 10
+      test: wget --no-verbose --tries=1 --spider http://localhost:3100/loki/api/v1/status/buildinfo || exit 1
+    networks:
+      - otel-net

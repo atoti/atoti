@@ -1,3 +1,10 @@
+03-use-cases/01-finance/quantitative-strategy/bucket-analysis/main.ipynb
+03-use-cases/01-finance/front-office/cumulative-pnl/main.ipynb
+03-use-cases/01-finance/front-office/cumulative-pnl/main.ipynb
+03-use-cases/01-finance/front-office/pnl-explained/main.ipynb
+03-use-cases/01-finance/insurance/price-elasticity/main.ipynb
+03-use-cases/01-finance/retail-banking/credit-card-analytics/cc_data_processing.ipynb
+03-use-cases/01-finance/retail-banking/credit-card-analytics/main.ipynb
 01-atoti-academy/storytelling-with-atoti/01-Storytelling.ipynb
 01-atoti-academy/storytelling-with-atoti/03-Storytelling.ipynb
 02-technical-guides/atoti-pandas-comparison

@@ -439,7 +439,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "atoti", extras = ["aws", "azure", "gcp", "jupyterlab", "kafka", "sql"], specifier = "==0.8.14" },
-    { name = "ipywidgets", specifier = ">=8.1.5,<9" },
+    { name = "ipywidgets", specifier = ">=8.0.6,<9" },
     { name = "jupyterlab", specifier = "<4.2" },
     { name = "pandas", specifier = "==2.2.2" },
     { name = "pyportfolioopt", specifier = ">=1.5.5,<2" },

@@ -16,7 +16,8 @@ def main():
     # Load data
     orders = session.read_csv(
         "s3://data.atoti.io/notebooks/hierarchies/data/Orders.csv",
-        types={
+        table_name="Orders",
+        data_types={
             "OrderId": tt.STRING,
             "OrderDate": tt.LOCAL_DATE,
             "ProductId": tt.STRING,
@@ -31,7 +32,8 @@ def main():
 
     products = session.read_csv(
         "s3://data.atoti.io/notebooks/hierarchies/data/Products.csv",
-        types={
+        table_name="Products",
+        data_types={
             "ProductId": tt.STRING,
             "ProductName": tt.STRING,
             "ProductCategory": tt.STRING,
@@ -44,7 +46,8 @@ def main():
 
     shippers = session.read_csv(
         "s3://data.atoti.io/notebooks/hierarchies/data/Shippers.csv",
-        types={
+        table_name="Shippers",
+        data_types={
             "ShipperName": tt.STRING,
             "Contact": tt.STRING,
         },
@@ -53,7 +56,8 @@ def main():
 
     customers = session.read_csv(
         "s3://data.atoti.io/notebooks/hierarchies/data/Customers.csv",
-        types={
+        table_name="Customers",
+        data_types={
             "CustomerId": tt.STRING,
             "CompanyName": tt.STRING,
             "Region": tt.STRING,
@@ -69,7 +73,8 @@ def main():
 
     employees = session.read_csv(
         "s3://data.atoti.io/notebooks/hierarchies/data/Employees.csv",
-        types={
+        table_name="Employees",
+        data_types={
             "EmployeeId": tt.STRING,
             "EmployeeName": tt.STRING,
             "EmployeeCountry": tt.STRING,
@@ -81,7 +86,8 @@ def main():
 
     inventory = session.read_csv(
         "s3://data.atoti.io/notebooks/hierarchies/data/Inventory.csv",
-        types={
+        table_name="Inventory",
+        data_types={
             "InventoryId": tt.STRING,
             "AsOfDate": tt.LOCAL_DATE,
             "Inventory": tt.INT,

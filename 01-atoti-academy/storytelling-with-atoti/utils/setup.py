@@ -5,7 +5,7 @@ def setup_tables(session):
     product_tbl = session.read_csv(
         "s3://data.atoti.io/atoti-academy/data/Products.csv",
         table_name="Products",
-        types={
+        data_types={
             "ProductId": tt.type.STRING,
         },
         keys=["ProductId"],
@@ -15,7 +15,7 @@ def setup_tables(session):
         "s3://data.atoti.io/atoti-academy/data/Orders.csv",
         table_name="Orders",
         keys=["OrderId", "ProductId"],
-        types={
+        data_types={
             "OrderId": tt.type.STRING,
             "ProductId": tt.type.STRING,
             "EmployeeId": tt.type.STRING,
@@ -35,7 +35,7 @@ def setup_tables(session):
         "s3://data.atoti.io/atoti-academy/data/Employees.csv",
         table_name="Employees",
         keys=["EmployeeId"],
-        types={
+        data_types={
             "EmployeeId": tt.type.STRING,
         },
     )
@@ -44,7 +44,7 @@ def setup_tables(session):
         "s3://data.atoti.io/atoti-academy/data/HistoricalPrices.csv",
         keys=["ProductId"],
         table_name="HistoricalPrices",
-        types={"HistoricalPrice": tt.type.DOUBLE_ARRAY, "ProductId": tt.type.STRING},
+        data_types={"HistoricalPrice": tt.type.DOUBLE_ARRAY, "ProductId": tt.type.STRING},
     )
 
     shipper_tbl = session.read_csv(

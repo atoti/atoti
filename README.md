@@ -55,9 +55,7 @@ Moving to production? Navigate to our Project Template repository to learn how t
 
 ### 🧰 Installation
 
-Atoti Python API requires Python 3.10, 3.11, or 3.12 in addition to Java 21 (when using your own JDK, otherwise Atoti is already bundled with [jdk4py](https://github.com/activeviam/jdk4py)).
-
-We recommend using [uv](https://github.com/astral-sh/uv) for better virtual environment and dependency management. However, if desired, we also support alternative methods of installation (do not mix `uv` and `conda`).
+Atoti Python API requires Python 3.10, 3.11, or 3.12 in addition to Java 21 (when using your own JDK, otherwise Atoti is already bundled with [jdk4py](https://github.com/activeviam/jdk4py)). We recommend using [uv](https://github.com/astral-sh/uv) for better virtual environment and dependency management (do not mix `uv` and `conda`).
 
 > **Note:** Start `jupyter-lab` at the root of this repository.
 
@@ -68,21 +66,6 @@ pip install uv
 uv sync --python 3.10.11
 uv run jupyter-lab
 ```
-
-#### Python
-
-```bash
-pip install "atoti[jupyterlab]"
-jupyter-lab
-```
-
-#### Conda
-
-```bash
-conda install atoti atoti-jupyterlab python -c conda-forge -c https://conda.atoti.io
-jupyter-lab
-```  
-
 
 ### 💬 Discussions and issues
 

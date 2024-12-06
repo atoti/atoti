@@ -44,7 +44,10 @@ def setup_tables(session):
         "s3://data.atoti.io/atoti-academy/data/HistoricalPrices.csv",
         keys=["ProductId"],
         table_name="HistoricalPrices",
-        data_types={"HistoricalPrice": tt.type.DOUBLE_ARRAY, "ProductId": tt.type.STRING},
+        data_types={
+            "HistoricalPrice": tt.type.DOUBLE_ARRAY,
+            "ProductId": tt.type.STRING,
+        },
     )
 
     shipper_tbl = session.read_csv(

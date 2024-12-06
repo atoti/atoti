@@ -38,7 +38,10 @@ def load_tables(session):
         "data/simulation-dates.csv",
         keys=["AsOfDate", "TimePoint"],
         table_name="Monte Carlo Date Labels",
-        data_types={"TimePointDate": tt.type.LOCAL_DATE, "AsOfDate": tt.type.LOCAL_DATE},
+        data_types={
+            "TimePointDate": tt.type.LOCAL_DATE,
+            "AsOfDate": tt.type.LOCAL_DATE,
+        },
     )
 
     # Reading trade attributes

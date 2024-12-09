@@ -7,7 +7,7 @@ def table_creation(session):
         "s3://data.atoti.io/notebooks/bucket-exploration/initial_transactions.csv",
         table_name="Transaction",
         keys=["TransactionId", "Ticker", "DateTime"],
-        types={
+        data_types={
             "DateTime": tt.type.STRING,
             "PurchaseDate": tt.type.STRING,
             "Timestamp": tt.type.STRING,
@@ -41,7 +41,7 @@ def enrich_cube(session):
         "s3://data.atoti.io/notebooks/bucket-exploration/bucketed_historical_pricing.csv",
         table_name="HistoricalPricing",
         keys=["Ticker", "DateTime"],
-        types={"DateTime": tt.type.STRING},
+        data_types={"DateTime": tt.type.STRING},
     )
 
     txn_tbl.join(sector_tbl, txn_tbl["Ticker"] == sector_tbl["Symbols"])
@@ -69,4 +69,4 @@ def create_measures(session):
 def load_transactions(session, df):
     txn_tbl = session.tables["Transaction"]
 
-    txn_tbl.load_pandas(df)
+    txn_tbl.load(df)

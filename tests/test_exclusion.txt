@@ -1,3 +1,5 @@
+03-use-cases/01-finance/retail-banking/credit-card-analytics/cc_data_processing.ipynb
+03-use-cases/01-finance/retail-banking/credit-card-analytics/main.ipynb
 01-atoti-academy/storytelling-with-atoti/01-Storytelling.ipynb
 01-atoti-academy/storytelling-with-atoti/03-Storytelling.ipynb
 02-technical-guides/atoti-pandas-comparison
@@ -9,10 +11,6 @@
 03-use-cases/01-finance/risk-management/credit-risk/xva
 03-use-cases/01-finance/risk-management/credit-risk/collateral-shortfall-forecast
 03-use-cases/01-finance/risk-management/liquidity-risk/irrbb
-03-use-cases/01-finance/risk-management/market-risk/sbm
-03-use-cases/01-finance/risk-management/market-risk/stressed-var-calibration
-03-use-cases/01-finance/risk-management/market-risk/pnl-explained
-03-use-cases/01-finance/risk-management/market-risk/value-at-risk
 03-use-cases/01-finance/risk-management/operational-risk/credit-card-fraud-detection
 03-use-cases/01-finance/risk-management/operational-risk/credit-card-fraud-detection
 03-use-cases/01-finance/treasury/collateral-shortfall-forecast

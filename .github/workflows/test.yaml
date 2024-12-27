@@ -72,6 +72,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-venv-
 
+      - name: Install uv
+        run: pip install uv
+
       - name: Run ruff
         run: uv run ruff format --check .
 
@@ -98,6 +101,9 @@ jobs:
           key: ${{ runner.os }}-venv-${{ hashFiles('**/uv.lock') }}
           restore-keys: |
             ${{ runner.os }}-venv-
+
+      - name: Install uv
+        run: pip install uv
 
       - name: Run notebooks
         run: uv run python tests/execute_notebooks.py

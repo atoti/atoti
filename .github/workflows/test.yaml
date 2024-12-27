@@ -50,10 +50,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python }}
-
       - name: Restore venv cache
         uses: actions/cache@v3
         with:
@@ -64,10 +60,6 @@ jobs:
 
       - name: Install uv
         run: pip install uv
-
-      - name: Recreate python symlink
-        if: ${{ matrix.os == 'macos-13' }}
-        run: rm .venv/bin/python3 && ln -s $(which python3) .venv/bin/python3
 
       - name: Run ruff
         run: uv run ruff format --check .

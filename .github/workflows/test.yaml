@@ -25,10 +25,6 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
 
-      - name: Install libomp
-        if: ${{ matrix.os == 'macos-latest' || matrix.os == 'macos-13' }}
-        run: brew install libomp
-
       - name: Install uv
         run: pip install uv
 
@@ -92,6 +88,10 @@ jobs:
         with:
           distribution: 'oracle'
           java-version: '21'
+
+      - name: Install libomp
+        if: ${{ matrix.os == 'macos-latest' || matrix.os == 'macos-13' }}
+        run: brew install libomp
 
       - name: Restore venv cache
         uses: actions/cache@v3

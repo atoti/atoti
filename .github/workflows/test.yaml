@@ -60,7 +60,7 @@ jobs:
         run: uv run ruff format --check .
 
   test:
-    needs: build
+    needs: lint
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:

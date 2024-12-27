@@ -41,7 +41,7 @@ jobs:
           key: ${{ runner.os }}-venv-${{ hashFiles('**/uv.lock') }}
  
   test:
-    needs: lint
+    needs: build
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:

@@ -8,7 +8,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
+  build:
     if: ${{ !contains(github.event.pull_request.labels.*.name, 'dnb') }}
     runs-on: ${{ matrix.os }}
     strategy:
@@ -17,7 +17,7 @@ jobs:
         python: ["3.10.11"]
         node-version: [16.x]
       fail-fast: false
-    name: Test on ${{ matrix.os }} with Python ${{ matrix.python }}
+    name: Build on ${{ matrix.os }} with Python ${{ matrix.python }}
     steps:
       - uses: actions/checkout@v4
 
@@ -40,8 +40,40 @@ jobs:
       - name: Create venv and install Python dependencies from uv.lock
         run: uv sync
 
+  lint:
+    needs: build
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest, macos-13]
+        python: ["3.10.11"]
+      fail-fast: false
+    name: Lint on ${{ matrix.os }} with Python ${{ matrix.python }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+
       - name: Run ruff
         run: uv run ruff format --check .
+
+  test:
+    needs: build
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest, macos-13]
+        python: ["3.10.11"]
+      fail-fast: false
+    name: Test on ${{ matrix.os }} with Python ${{ matrix.python }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
 
       - name: Run notebooks
         run: uv run python tests/execute_notebooks.py

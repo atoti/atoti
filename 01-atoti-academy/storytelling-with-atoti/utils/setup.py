@@ -244,7 +244,7 @@ def nb3_measures(cube):
             m[_m_name].folder = "Products"
 
 
-def create_app(ses_name="training1", port=9091):
+def create_app(ses_name="training1", port=9095):
     session = tt.Session.start(
         tt.SessionConfig(
             # name=ses_name,

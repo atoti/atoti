@@ -3,7 +3,7 @@ import logging
 import sys
 import time
 from pathlib import Path
-from concurrent.futures import ThreadPoolExecutor, as_completed
+import asyncio
 
 import nbformat
 import pandas as pd
@@ -11,8 +11,6 @@ from nbconvert.preprocessors import ExecutePreprocessor
 
 _MAIN = "main.ipynb"
 
-# Maintain exclusion list only for academy and tech tutorials
-# Add to exclude use cases which are upgraded to latest but cannot be tested
 NOTEBOOKS_DIRECTORY = Path("notebooks")
 DATA_PREPROCESSING_NOTEBOOKS = [
     "var-benchmark/data_generator.ipynb",  # Timeout
@@ -36,8 +34,6 @@ ATOTI_UNLOCKED_NOTEBOOKS = [
     f"internationalization/{_MAIN}",
 ]
 
-# some notebooks may have dependencies conflict with the latest Atoti version
-# to be listed here if it cannot be tested but is still upgraded
 NOTEBOOKS_WITH_ERRORS = []
 
 NOTEBOOKS_ACADEMY = ["introduction-to-atoti/main.ipynb"]  # error on purpose
@@ -54,12 +50,14 @@ NOTEBOOKS_TO_SKIP = sorted(
 )
 
 
-def execute_notebook(notebook_path):
+async def execute_notebook(notebook_path):
     logging.info(f"Starting execution of {notebook_path}")
     start_time = time.time()
     notebook = nbformat.read(notebook_path, as_version=4)
     ep = ExecutePreprocessor(startup_timeout=300, timeout=600, kernel_name="python3")
-    ep.preprocess(notebook, {"metadata": {"path": notebook_path.parent}})
+    await asyncio.to_thread(
+        ep.preprocess, notebook, {"metadata": {"path": notebook_path.parent}}
+    )
     end_time = time.time()
     elapsed_time = end_time - start_time
     logging.info(
@@ -67,17 +65,13 @@ def execute_notebook(notebook_path):
     )
 
 
-def execute_notebooks():
-    # Gather the list of notebooks under the project directory
+async def execute_notebooks():
     nb_list = [
         nb_path.replace("\\", "/")
         for nb_path in glob.glob(f"./*/**/*.ipynb", recursive=True)
         if not "ipynb_checkpoints" in nb_path
     ]
 
-    # 1. Exclude the list of notebooks added in this script
-    # 2. Exclude the list of non-maintained notebooks generated from the README program
-    #    https://github.com/activeviam/bd-atoti-gallery/tree/main/readme-generator
     exclusion_list = pd.read_csv("./tests/test_exclusion.txt", header=None)[0].to_list()
     notebooks = [
         nb_path
@@ -86,26 +80,14 @@ def execute_notebooks():
         and not any(exclude_nb in str(nb_path) for exclude_nb in exclusion_list)
     ]
 
-    # Execute notebooks in parallel in batches of 5
-    batch_size = 5
-    for i in range(0, len(notebooks), batch_size):
-        batch = notebooks[i : i + batch_size]
-        with ThreadPoolExecutor() as executor:
-            futures = {
-                executor.submit(execute_notebook, Path(notebook)): notebook
-                for notebook in batch
-            }
-            for future in as_completed(futures):
-                notebook = futures[future]
-                try:
-                    future.result()
-                except Exception as exc:
-                    logging.error(
-                        f"Execution of {notebook} failed with exception: {exc}"
-                    )
-                    sys.exit(1)
+    tasks = [execute_notebook(Path(notebook)) for notebook in notebooks]
+    results = await asyncio.gather(*tasks, return_exceptions=True)
+    for notebook, result in zip(notebooks, results):
+        if isinstance(result, Exception):
+            logging.error(f"Execution of {notebook} failed with exception: {result}")
+            sys.exit(1)
 
 
 if __name__ == "__main__":
     logging.basicConfig(format="%(asctime)s %(message)s", level=logging.INFO)
-    execute_notebooks()
+    asyncio.run(execute_notebooks())

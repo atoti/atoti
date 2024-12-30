@@ -128,6 +128,10 @@
 <td rowspan="1"><a href="./atoti-pandas-comparison/main.ipynb">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.2-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/atoti-pandas-performance/?utm_source=github">📰&nbsp;Atoti and pandas: Enabling High Performance of Advanced Analytics</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
+<tr>
+<td rowspan="1"><a href="./observability-with-otel/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.2-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
+</tr>
 </table>
 <br/>
 </blockquote></details>
@@ -323,6 +327,10 @@ Double-click on tile to go to feature section.
 <tr>
 <td rowspan="1"><a href="./introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.2-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="./observability-with-otel/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.2-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.2-1C900C" alt="Latest version" /></td>
@@ -608,6 +616,10 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td>&nbsp</td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
+<td rowspan="1"><a href="./observability-with-otel/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.2-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
+</tr>
+<tr>
 <td rowspan="1"><a href="./var-benchmark/main.ipynb">var-benchmark&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.2-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> table partition</kbd>&nbsp;</td>
 </tr>
@@ -626,7 +638,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 
 <table>
 
-
+<img src="https://img.shields.io/badge/🔒-Atoti-291A40" /><b> indicates the licensed version of Atoti is required.</b>
 
 <tr>
     <td><b>Notebooks</b></td>
@@ -660,6 +672,10 @@ Use case is currently not available for these industries. Reach out to <a href="
 <tr>
 <td rowspan="1"><a href="./multidimensional-analysis/main.ipynb">multidimensional-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.2-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/why-do-we-need-multidimensional-analysis/?utm_source=github">📰&nbsp;Why do we need multidimensional analysis?</a></td><td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> drill through</kbd>&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="./observability-with-otel/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.2-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./table-creation-and-data-loads/main.ipynb">table-creation-and-data-loads&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.2-1C900C" alt="Latest version" /></td>
@@ -769,6 +785,10 @@ Use case is currently not available for these industries. Reach out to <a href="
 <tr>
 <td rowspan="1"><a href="./multidimensional-analysis/main.ipynb">multidimensional-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.2-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/why-do-we-need-multidimensional-analysis/?utm_source=github">📰&nbsp;Why do we need multidimensional analysis?</a></td><td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> drill through</kbd>&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="./observability-with-otel/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.2-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.2-1C900C" alt="Latest version" /></td>
@@ -917,6 +937,10 @@ Use case is currently not available for these industries. Reach out to <a href="
 <tr>
 <td rowspan="1"><a href="./introductory-tutorial/main.ipynb">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.2-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="./observability-with-otel/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.2-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.2-1C900C" alt="Latest version" /></td>
@@ -1075,6 +1099,10 @@ Use case is currently not available for these industries. Reach out to <a href="
 <tr>
 <td rowspan="1"><a href="./directquery-vector/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.2-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> direct query</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> snowflake</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="1"><a href="./observability-with-otel/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.2-1C900C" alt="Latest version" /></td>
+<td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.2-1C900C" alt="Latest version" /></td>

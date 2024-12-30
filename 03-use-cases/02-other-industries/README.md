@@ -123,7 +123,7 @@
 <td><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-1-data-scraping-with-praw/?utm_source=github">📰&nbsp;Data scraping with PRAW</a></td><td rowspan="3"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> local file</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td valign="center"><a href="#ERROR!?utm_source=github">📰&nbsp;NLP with spaCy</a></td>
+<td valign="center"><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-2-nlp-with-spacy/?utm_source=github">📰&nbsp;NLP with spaCy</a></td>
 </tr>
 <tr>
 <td valign="center"><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-3-data-analytics-with-atoti/?utm_source=github">📰&nbsp;Data analytics with atoti</a></td>
@@ -455,7 +455,7 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-1-data-scraping-with-praw/?utm_source=github">📰&nbsp;Data scraping with PRAW</a></td><td rowspan="3"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> local file</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td valign="center"><a href="#ERROR!?utm_source=github">📰&nbsp;NLP with spaCy</a></td>
+<td valign="center"><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-2-nlp-with-spacy/?utm_source=github">📰&nbsp;NLP with spaCy</a></td>
 </tr>
 <tr>
 <td valign="center"><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-3-data-analytics-with-atoti/?utm_source=github">📰&nbsp;Data analytics with atoti</a></td>
@@ -652,7 +652,7 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-1-data-scraping-with-praw/?utm_source=github">📰&nbsp;Data scraping with PRAW</a></td><td rowspan="3"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> local file</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td valign="center"><a href="#ERROR!?utm_source=github">📰&nbsp;NLP with spaCy</a></td>
+<td valign="center"><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-2-nlp-with-spacy/?utm_source=github">📰&nbsp;NLP with spaCy</a></td>
 </tr>
 <tr>
 <td valign="center"><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-3-data-analytics-with-atoti/?utm_source=github">📰&nbsp;Data analytics with atoti</a></td>
@@ -758,7 +758,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-1-data-scraping-with-praw/?utm_source=github">📰&nbsp;Data scraping with PRAW</a></td><td rowspan="3"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> local file</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td valign="center"><a href="#ERROR!?utm_source=github">📰&nbsp;NLP with spaCy</a></td>
+<td valign="center"><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-2-nlp-with-spacy/?utm_source=github">📰&nbsp;NLP with spaCy</a></td>
 </tr>
 <tr>
 <td valign="center"><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-3-data-analytics-with-atoti/?utm_source=github">📰&nbsp;Data analytics with atoti</a></td>
@@ -996,7 +996,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-1-data-scraping-with-praw/?utm_source=github">📰&nbsp;Data scraping with PRAW</a></td><td rowspan="3"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> local file</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td valign="center"><a href="#ERROR!?utm_source=github">📰&nbsp;NLP with spaCy</a></td>
+<td valign="center"><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-2-nlp-with-spacy/?utm_source=github">📰&nbsp;NLP with spaCy</a></td>
 </tr>
 <tr>
 <td valign="center"><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-3-data-analytics-with-atoti/?utm_source=github">📰&nbsp;Data analytics with atoti</a></td>
@@ -1073,7 +1073,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-1-data-scraping-with-praw/?utm_source=github">📰&nbsp;Data scraping with PRAW</a></td><td rowspan="3"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> local file</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td valign="center"><a href="#ERROR!?utm_source=github">📰&nbsp;NLP with spaCy</a></td>
+<td valign="center"><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-2-nlp-with-spacy/?utm_source=github">📰&nbsp;NLP with spaCy</a></td>
 </tr>
 <tr>
 <td valign="center"><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-3-data-analytics-with-atoti/?utm_source=github">📰&nbsp;Data analytics with atoti</a></td>
@@ -1236,7 +1236,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-1-data-scraping-with-praw/?utm_source=github">📰&nbsp;Data scraping with PRAW</a></td><td rowspan="3"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> local file</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td valign="center"><a href="#ERROR!?utm_source=github">📰&nbsp;NLP with spaCy</a></td>
+<td valign="center"><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-2-nlp-with-spacy/?utm_source=github">📰&nbsp;NLP with spaCy</a></td>
 </tr>
 <tr>
 <td valign="center"><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-3-data-analytics-with-atoti/?utm_source=github">📰&nbsp;Data analytics with atoti</a></td>
@@ -1396,7 +1396,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-1-data-scraping-with-praw/?utm_source=github">📰&nbsp;Data scraping with PRAW</a></td><td rowspan="3"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> local file</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td valign="center"><a href="#ERROR!?utm_source=github">📰&nbsp;NLP with spaCy</a></td>
+<td valign="center"><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-2-nlp-with-spacy/?utm_source=github">📰&nbsp;NLP with spaCy</a></td>
 </tr>
 <tr>
 <td valign="center"><a href="https://www.atoti.io/articles/reddit-data-analytics-trilogy-3-data-analytics-with-atoti/?utm_source=github">📰&nbsp;Data analytics with atoti</a></td>

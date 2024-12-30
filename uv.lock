@@ -244,9 +244,6 @@ kafka = [
     { name = "atoti-client-kafka" },
     { name = "atoti-server-kafka" },
 ]
-observability = [
-    { name = "atoti-server-observability" },
-]
 
 [[package]]
 name = "atoti-client"
@@ -420,18 +417,6 @@ dependencies = [
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/50/b6/5afa6cf619bd9277461c6ff1553862faeab0b7c576ff86a7a03c6a362274/atoti_server_kafka-0.9.2-py3-none-any.whl", hash = "sha256:4204f138541a48116ea27e5dc15634e98e12a8bf97aefec71b4c6bc4993f4edd", size = 7910005 },
-]
-
-[[package]]
-name = "atoti-server-observability"
-version = "0.9.2"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "atoti-core" },
-    { name = "typing-extensions" },
-]
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/6b/29/3a99a7d98aadb6b4fd8fc627cfa70339d5a1e49ab5204d3757b745a3784b/atoti_server_observability-0.9.2-py3-none-any.whl", hash = "sha256:e8d61be156dc30b284f01c65e32d260ddc06e4753f200a68d1f8c72e20d25e4d", size = 11003512 },
 ]
 
 [[package]]
@@ -1703,7 +1688,7 @@ name = "notebooks"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
-    { name = "atoti", extra = ["aws", "azure", "gcp", "jdbc", "jupyterlab", "kafka", "observability"] },
+    { name = "atoti", extra = ["aws", "azure", "gcp", "jdbc", "jupyterlab", "kafka"] },
     { name = "boto3" },
     { name = "folium" },
     { name = "fsspec" },
@@ -1744,7 +1729,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "atoti", extras = ["aws", "azure", "gcp", "jupyterlab", "kafka", "jdbc", "observability"], specifier = "==0.9.2" },
+    { name = "atoti", extras = ["aws", "azure", "gcp", "jupyterlab", "kafka", "jdbc"], specifier = "==0.9.2" },
     { name = "boto3", specifier = ">=1.35.36,<2" },
     { name = "folium", specifier = ">=0.17.0,<1" },
     { name = "fsspec", specifier = ">=2024.6.1,<2025" },

@@ -1,7 +1,9 @@
 import glob
 import logging
-import os
+import sys
+import time
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import nbformat
 import pandas as pd
@@ -52,6 +54,19 @@ NOTEBOOKS_TO_SKIP = sorted(
 )
 
 
+def execute_notebook(notebook_path):
+    logging.info(f"Starting execution of {notebook_path}")
+    start_time = time.time()
+    notebook = nbformat.read(notebook_path, as_version=4)
+    ep = ExecutePreprocessor(startup_timeout=300, timeout=600, kernel_name="python3")
+    ep.preprocess(notebook, {"metadata": {"path": notebook_path.parent}})
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    logging.info(
+        f"Execution of {notebook_path} succeeded in {elapsed_time:.2f} seconds"
+    )
+
+
 def execute_notebooks():
     # Gather the list of notebooks under the project directory
     nb_list = [
@@ -71,16 +86,24 @@ def execute_notebooks():
         and not any(exclude_nb in str(nb_path) for exclude_nb in exclusion_list)
     ]
 
-    # Iterate notebooks for testing
-    for notebook in notebooks:
-        logging.info(f"Starting execution of {notebook}")
-        notebook_path = Path(notebook)
-        notebook = nbformat.read(notebook_path, as_version=4)
-        ep = ExecutePreprocessor(
-            startup_timeout=300, timeout=600, kernel_name="python3"
-        )
-        ep.preprocess(notebook, {"metadata": {"path": notebook_path.parent}})
-        logging.info(f"Execution of {notebook_path} succeed")
+    # Execute notebooks in parallel in batches of 5
+    batch_size = 5
+    for i in range(0, len(notebooks), batch_size):
+        batch = notebooks[i : i + batch_size]
+        with ThreadPoolExecutor() as executor:
+            futures = {
+                executor.submit(execute_notebook, Path(notebook)): notebook
+                for notebook in batch
+            }
+            for future in as_completed(futures):
+                notebook = futures[future]
+                try:
+                    future.result()
+                except Exception as exc:
+                    logging.error(
+                        f"Execution of {notebook} failed with exception: {exc}"
+                    )
+                    sys.exit(1)
 
 
 if __name__ == "__main__":

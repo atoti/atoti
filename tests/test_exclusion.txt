@@ -3,6 +3,7 @@
 01-atoti-academy/storytelling-with-atoti/01-Storytelling.ipynb
 01-atoti-academy/storytelling-with-atoti/03-Storytelling.ipynb
 02-technical-guides/atoti-pandas-comparison
+02-technical-guides/observability-with-otel
 03-use-cases/01-finance/front-office/real-time-risk
 03-use-cases/01-finance/front-office/real-time-risk
 03-use-cases/01-finance/risk-management/credit-risk/ifrs9

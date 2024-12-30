@@ -11,6 +11,8 @@ from nbconvert.preprocessors import ExecutePreprocessor
 
 _MAIN = "main.ipynb"
 
+# Maintain exclusion list only for academy and tech tutorials
+# Add to exclude use cases which are upgraded to latest but cannot be tested
 NOTEBOOKS_DIRECTORY = Path("notebooks")
 DATA_PREPROCESSING_NOTEBOOKS = [
     "var-benchmark/data_generator.ipynb",  # Timeout
@@ -34,6 +36,8 @@ ATOTI_UNLOCKED_NOTEBOOKS = [
     f"internationalization/{_MAIN}",
 ]
 
+# some notebooks may have dependencies conflict with the latest Atoti version
+# to be listed here if it cannot be tested but is still upgraded
 NOTEBOOKS_WITH_ERRORS = []
 
 NOTEBOOKS_ACADEMY = ["introduction-to-atoti/main.ipynb"]  # error on purpose
@@ -66,12 +70,16 @@ async def execute_notebook(notebook_path):
 
 
 async def execute_notebooks():
+    # Gather the list of notebooks under the project directory
     nb_list = [
         nb_path.replace("\\", "/")
         for nb_path in glob.glob(f"./*/**/*.ipynb", recursive=True)
         if not "ipynb_checkpoints" in nb_path
     ]
 
+    # 1. Exclude the list of notebooks added in this script
+    # 2. Exclude the list of non-maintained notebooks generated from the README program
+    #    https://github.com/activeviam/bd-atoti-gallery/tree/main/readme-generator
     exclusion_list = pd.read_csv("./tests/test_exclusion.txt", header=None)[0].to_list()
     notebooks = [
         nb_path
@@ -80,6 +88,7 @@ async def execute_notebooks():
         and not any(exclude_nb in str(nb_path) for exclude_nb in exclusion_list)
     ]
 
+    # Create asyncio tasks to execute the notebooks
     tasks = [execute_notebook(Path(notebook)) for notebook in notebooks]
     results = await asyncio.gather(*tasks, return_exceptions=True)
     for notebook, result in zip(notebooks, results):

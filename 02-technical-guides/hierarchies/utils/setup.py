@@ -7,7 +7,7 @@ def main():
     session = tt.Session.start(
         tt.SessionConfig(
             user_content_storage="./02-content",
-            port=9092,
+            port=9096,
             java_options=["-Xms1G", "-Xmx10G"],
         )
     )

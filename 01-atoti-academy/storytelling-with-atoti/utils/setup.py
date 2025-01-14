@@ -240,7 +240,7 @@ def nb3_measures(cube):
 
     # put products level measures into the product folder
     for _m_name in m:
-        if "(Product)" in _m_name:
+        if "(Product)" in _m_name and m[_m_name].visible == True:
             m[_m_name].folder = "Products"
 
 

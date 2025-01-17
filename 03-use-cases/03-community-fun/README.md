@@ -7,9 +7,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/v/release/atoti/atoti" alt="github">
+  <img src="https://img.shields.io/github/v/release/atoti/atoti?color=#4cc71f" alt="github">
   <img src="https://img.shields.io/pypi/dm/atoti" alt="github">
-  <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fatoti%2Fatoti&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=daily%2Ftotal+visits&edge_flat=false" alt="Hits"></a>
+  <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fatoti%2Fatoti&count_bg=%234CC71F&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=daily%2Ftotal+visits&edge_flat=false" alt="Hits"></a>
   <img src="https://github.com/atoti/atoti/actions/workflows/test.yaml/badge.svg" alt="gha">
   <a href="https://github.com/atoti/atoti/discussions"><img src="https://img.shields.io/github/discussions/atoti/atoti" alt="GitHub Discussion"></a>
 </p> 
@@ -41,7 +41,7 @@
 </tr>
 <tr>
 <td rowspan="1"><a href="./burritos/main.ipynb">burritos&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;Building a Burrito Dashboard - Data Science Project from Scratch with atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
+<td><a href="https://www.youtube.com/watch?v=ammCGdzSoag?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;Building a Burrito Dashboard - Data Science Project from Scratch with atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./christmas-nyan/main.ipynb">christmas-nyan&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
@@ -57,11 +57,11 @@
 </tr>
 <tr>
 <td rowspan="1"><a href="./pokemon/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;pokemon&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github">📰&nbsp;Exploring OLAP with atoti and Pokemon</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> custom widget</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/exploring-olap-with-atoti-and-pokemon/?utm_source=github">📰&nbsp;Exploring OLAP with atoti and Pokemon</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> custom widget</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./wine-analytics/main.ipynb">wine-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;How to Create a Data Visualization in Jupyter Notebook Using atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
+<td><a href="https://www.youtube.com/watch?v=Y49662c3EL4?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;How to Create a Data Visualization in Jupyter Notebook Using atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
 </tr>
 </table>
 </details><hr />
@@ -149,7 +149,7 @@ Double-click on tile to go to feature section.
 </tr>
 <tr>
 <td rowspan="1"><a href="./burritos/main.ipynb">burritos&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;Building a Burrito Dashboard - Data Science Project from Scratch with atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
+<td><a href="https://www.youtube.com/watch?v=ammCGdzSoag?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;Building a Burrito Dashboard - Data Science Project from Scratch with atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./pizza-shop/main.ipynb">pizza-shop&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.11-grey" alt="Last maintained version" /></td>
@@ -157,7 +157,7 @@ Double-click on tile to go to feature section.
 </tr>
 <tr>
 <td rowspan="1"><a href="./wine-analytics/main.ipynb">wine-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;How to Create a Data Visualization in Jupyter Notebook Using atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
+<td><a href="https://www.youtube.com/watch?v=Y49662c3EL4?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;How to Create a Data Visualization in Jupyter Notebook Using atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
 </tr>
 </table>
 <br/>
@@ -184,7 +184,7 @@ Double-click on tile to go to feature section.
 </tr>
 <tr>
 <td rowspan="1"><a href="./pokemon/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;pokemon&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github">📰&nbsp;Exploring OLAP with atoti and Pokemon</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> custom widget</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/exploring-olap-with-atoti-and-pokemon/?utm_source=github">📰&nbsp;Exploring OLAP with atoti and Pokemon</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> custom widget</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 </table>
 <br/>
@@ -211,7 +211,7 @@ Double-click on tile to go to feature section.
 </tr>
 <tr>
 <td rowspan="1"><a href="./burritos/main.ipynb">burritos&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;Building a Burrito Dashboard - Data Science Project from Scratch with atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
+<td><a href="https://www.youtube.com/watch?v=ammCGdzSoag?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;Building a Burrito Dashboard - Data Science Project from Scratch with atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./christmas-nyan/main.ipynb">christmas-nyan&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
@@ -223,11 +223,11 @@ Double-click on tile to go to feature section.
 </tr>
 <tr>
 <td rowspan="1"><a href="./pokemon/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;pokemon&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github">📰&nbsp;Exploring OLAP with atoti and Pokemon</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> custom widget</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/exploring-olap-with-atoti-and-pokemon/?utm_source=github">📰&nbsp;Exploring OLAP with atoti and Pokemon</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> custom widget</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./wine-analytics/main.ipynb">wine-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;How to Create a Data Visualization in Jupyter Notebook Using atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
+<td><a href="https://www.youtube.com/watch?v=Y49662c3EL4?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;How to Create a Data Visualization in Jupyter Notebook Using atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
 </tr>
 </table>
 <br/>
@@ -285,7 +285,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./burritos/main.ipynb">burritos&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;Building a Burrito Dashboard - Data Science Project from Scratch with atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
+<td><a href="https://www.youtube.com/watch?v=ammCGdzSoag?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;Building a Burrito Dashboard - Data Science Project from Scratch with atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./christmas-nyan/main.ipynb">christmas-nyan&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
@@ -297,11 +297,11 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./pokemon/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;pokemon&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github">📰&nbsp;Exploring OLAP with atoti and Pokemon</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> custom widget</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/exploring-olap-with-atoti-and-pokemon/?utm_source=github">📰&nbsp;Exploring OLAP with atoti and Pokemon</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> custom widget</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./wine-analytics/main.ipynb">wine-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;How to Create a Data Visualization in Jupyter Notebook Using atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
+<td><a href="https://www.youtube.com/watch?v=Y49662c3EL4?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;How to Create a Data Visualization in Jupyter Notebook Using atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
 </tr>
 </table>
 <br/>
@@ -371,7 +371,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./burritos/main.ipynb">burritos&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;Building a Burrito Dashboard - Data Science Project from Scratch with atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
+<td><a href="https://www.youtube.com/watch?v=ammCGdzSoag?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;Building a Burrito Dashboard - Data Science Project from Scratch with atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./christmas-nyan/main.ipynb">christmas-nyan&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
@@ -383,11 +383,11 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./pokemon/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;pokemon&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github">📰&nbsp;Exploring OLAP with atoti and Pokemon</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> custom widget</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/exploring-olap-with-atoti-and-pokemon/?utm_source=github">📰&nbsp;Exploring OLAP with atoti and Pokemon</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> custom widget</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./wine-analytics/main.ipynb">wine-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;How to Create a Data Visualization in Jupyter Notebook Using atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
+<td><a href="https://www.youtube.com/watch?v=Y49662c3EL4?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;How to Create a Data Visualization in Jupyter Notebook Using atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
 </tr>
 </table>
 <br/>
@@ -426,7 +426,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./pokemon/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;pokemon&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github">📰&nbsp;Exploring OLAP with atoti and Pokemon</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> custom widget</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/exploring-olap-with-atoti-and-pokemon/?utm_source=github">📰&nbsp;Exploring OLAP with atoti and Pokemon</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> custom widget</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 </table>
 <br/>
@@ -453,7 +453,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./burritos/main.ipynb">burritos&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;Building a Burrito Dashboard - Data Science Project from Scratch with atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
+<td><a href="https://www.youtube.com/watch?v=ammCGdzSoag?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;Building a Burrito Dashboard - Data Science Project from Scratch with atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./christmas-nyan/main.ipynb">christmas-nyan&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
@@ -469,7 +469,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./wine-analytics/main.ipynb">wine-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;How to Create a Data Visualization in Jupyter Notebook Using atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
+<td><a href="https://www.youtube.com/watch?v=Y49662c3EL4?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;How to Create a Data Visualization in Jupyter Notebook Using atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;</td>
 </tr>
 </table>
 <br/>
@@ -500,7 +500,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./pokemon/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;pokemon&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github">📰&nbsp;Exploring OLAP with atoti and Pokemon</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> custom widget</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/exploring-olap-with-atoti-and-pokemon/?utm_source=github">📰&nbsp;Exploring OLAP with atoti and Pokemon</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> custom widget</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 </table>
 <br/>
@@ -527,7 +527,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./burritos/main.ipynb">burritos&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;Building a Burrito Dashboard - Data Science Project from Scratch with atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
+<td><a href="https://www.youtube.com/watch?v=ammCGdzSoag?utm_source=github"><img src="https://data.atoti.io/notebooks/banners/yt.png" width="20px" align="center"/>&nbsp;Building a Burrito Dashboard - Data Science Project from Scratch with atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./christmas-nyan/main.ipynb">christmas-nyan&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
@@ -539,7 +539,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./pokemon/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;pokemon&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github">📰&nbsp;Exploring OLAP with atoti and Pokemon</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> custom widget</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/exploring-olap-with-atoti-and-pokemon/?utm_source=github">📰&nbsp;Exploring OLAP with atoti and Pokemon</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> custom widget</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 </table>
 <br/>
@@ -598,7 +598,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./pokemon/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;pokemon&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github">📰&nbsp;Exploring OLAP with atoti and Pokemon</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> custom widget</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/exploring-olap-with-atoti-and-pokemon/?utm_source=github">📰&nbsp;Exploring OLAP with atoti and Pokemon</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> custom widget</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 </table>
 <br/>
@@ -625,7 +625,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./pokemon/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;pokemon&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Loading...?utm_source=github">📰&nbsp;Exploring OLAP with atoti and Pokemon</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> custom widget</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/exploring-olap-with-atoti-and-pokemon/?utm_source=github">📰&nbsp;Exploring OLAP with atoti and Pokemon</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> custom widget</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 </table>
 <br/>

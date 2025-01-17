@@ -32,7 +32,7 @@
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./credit-card-analytics/main.ipynb">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.2-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./credit-card-analytics/main.ipynb">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.3-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/retail-banking-analytics-with-atoti/?utm_source=github">📰&nbsp;Retail Banking with Atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 </table>

@@ -32,7 +32,7 @@
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.2-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./bucket-analysis/main.ipynb">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.3-1C900C" alt="Latest version" /></td>
 <td><a href="nan?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 </table>

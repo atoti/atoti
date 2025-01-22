@@ -240,11 +240,11 @@ def nb3_measures(cube):
 
     # put products level measures into the product folder
     for _m_name in m:
-        if "(Product)" in _m_name:
+        if "(Product)" in _m_name and m[_m_name].visible == True:
             m[_m_name].folder = "Products"
 
 
-def create_app(ses_name="training1", port=9091):
+def create_app(ses_name="training1", port=9095):
     session = tt.Session.start(
         tt.SessionConfig(
             # name=ses_name,

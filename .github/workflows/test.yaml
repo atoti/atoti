@@ -3,6 +3,9 @@ on:
   workflow_dispatch:
   pull_request:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:
@@ -24,7 +27,7 @@ jobs:
 
       - uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
+          distribution: 'oracle'
           java-version: '21'
 
       - name: Install libomp

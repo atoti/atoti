@@ -254,7 +254,7 @@ Check out the [Atoti repository](https://github.com/atoti/atoti) for more info o
 <td><a href="https://www.atoti.io/articles/rapid-collateral-modelling-and-simulation-with-atoti/?utm_source=github">📰&nbsp;Rapid collateral modelling and simulation with atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.3-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ranking</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -759,7 +759,7 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/articles/rapid-collateral-modelling-and-simulation-with-atoti/?utm_source=github">📰&nbsp;Rapid collateral modelling and simulation with atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.3-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ranking</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -1075,7 +1075,7 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/articles/interactive-xva-analytics-with-python-and-atoti/?utm_source=github">📰&nbsp;Interactive xVA analytics with Python and atoti</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> switch</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.3-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ranking</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -1196,7 +1196,7 @@ Double-click on tile to go to feature section.
 <td valign="center"><a href="https://www.atoti.io/articles/credit-card-fraud-detection-part2//?utm_source=github">📰&nbsp;Part 2: Fraud detection with Faker and PyCaret</a></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.3-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ranking</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -1318,7 +1318,7 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/articles/rapid-collateral-modelling-and-simulation-with-atoti/?utm_source=github">📰&nbsp;Rapid collateral modelling and simulation with atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.3-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ranking</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -1973,7 +1973,7 @@ Double-click on tile to go to feature section.
 <td><a href="nan?utm_source=github">📰&nbsp;Bucket Analysis with Atoti</a></td><td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.3-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ranking</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -2461,7 +2461,7 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/articles/market-risk-analytics-in-python-interactive-rolling-var/?utm_source=github">📰&nbsp;Market risk analytics in python: Interactive rolling VaR</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> rolling windows</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.3-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ranking</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -2648,7 +2648,7 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/articles/rapid-collateral-modelling-and-simulation-with-atoti/?utm_source=github">📰&nbsp;Rapid collateral modelling and simulation with atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.3-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ranking</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -2930,7 +2930,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td><a href="https://www.atoti.io/articles/faster-algorithm-for-frtb-sbm-risk-aggregation/?utm_source=github">📰&nbsp;Faster Algorithm for FRTB SBM Risk Aggregation</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.3-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ranking</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -3012,7 +3012,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td><a href="https://www.atoti.io/articles/interactive-xva-analytics-with-python-and-atoti/?utm_source=github">📰&nbsp;Interactive xVA analytics with Python and atoti</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> switch</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.3-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ranking</kbd>&nbsp;</td>
 </tr>
 </table>

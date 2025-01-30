@@ -55,7 +55,14 @@ Moving to production? Navigate to our Project Template repository to learn how t
 
 ### 🧰 Installation
 
-Atoti Python API requires Python 3.10, 3.11, or 3.12 in addition to Java 21 (when using your own JDK, otherwise Atoti is already bundled with [jdk4py](https://github.com/activeviam/jdk4py)). We recommend using [uv](https://github.com/astral-sh/uv) for better virtual environment and dependency management (do not mix `uv` and `conda`).
+Atoti Python API requires one of the following Python versions:
+
+* 3.10
+* 3.11
+* 3.12
+* 3.13
+
+In addition, Atoti Python API requires Java 21 if you want to use your own JDK. If you do not have a JDK, Atoti is bundled with [jdk4py](https://github.com/activeviam/jdk4py). We use [uv](https://github.com/astral-sh/uv) for better virtual environment and dependency management. We strongly recommend against mixing `uv` and `conda`.
 
 > **Note:** Start `jupyter-lab` at the root of this repository.
 

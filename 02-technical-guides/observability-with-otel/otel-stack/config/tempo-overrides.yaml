@@ -1,0 +1,14 @@
+overrides:
+  defaults:
+    ingestion:
+      rate_strategy: "local"
+      rate_limit_bytes: 15000000
+      burst_size_bytes: 20000000
+      max_traces_per_user: 10000
+      max_global_traces_per_user: 0
+    read:
+      max_bytes_per_tag_values_query: 5000000
+    compaction:
+      block_retention: 0s
+    global:
+      max_bytes_per_trace: 50000

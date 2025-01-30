@@ -1,7 +1,9 @@
 import glob
 import logging
-import os
+import sys
+import time
 from pathlib import Path
+import asyncio
 
 import nbformat
 import pandas as pd
@@ -52,7 +54,22 @@ NOTEBOOKS_TO_SKIP = sorted(
 )
 
 
-def execute_notebooks():
+async def execute_notebook(notebook_path):
+    logging.info(f"Starting execution of {notebook_path}")
+    start_time = time.time()
+    notebook = nbformat.read(notebook_path, as_version=4)
+    ep = ExecutePreprocessor(startup_timeout=300, timeout=600, kernel_name="python3")
+    await asyncio.to_thread(
+        ep.preprocess, notebook, {"metadata": {"path": notebook_path.parent}}
+    )
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    logging.info(
+        f"Execution of {notebook_path} succeeded in {elapsed_time:.2f} seconds"
+    )
+
+
+async def execute_notebooks():
     # Gather the list of notebooks under the project directory
     nb_list = [
         nb_path.replace("\\", "/")
@@ -71,18 +88,15 @@ def execute_notebooks():
         and not any(exclude_nb in str(nb_path) for exclude_nb in exclusion_list)
     ]
 
-    # Iterate notebooks for testing
-    for notebook in notebooks:
-        logging.info(f"Starting execution of {notebook}")
-        notebook_path = Path(notebook)
-        notebook = nbformat.read(notebook_path, as_version=4)
-        ep = ExecutePreprocessor(
-            startup_timeout=300, timeout=600, kernel_name="python3"
-        )
-        ep.preprocess(notebook, {"metadata": {"path": notebook_path.parent}})
-        logging.info(f"Execution of {notebook_path} succeed")
+    # Create asyncio tasks to execute the notebooks
+    tasks = [execute_notebook(Path(notebook)) for notebook in notebooks]
+    results = await asyncio.gather(*tasks, return_exceptions=True)
+    for notebook, result in zip(notebooks, results):
+        if isinstance(result, Exception):
+            logging.error(f"Execution of {notebook} failed with exception: {result}")
+            sys.exit(1)
 
 
 if __name__ == "__main__":
     logging.basicConfig(format="%(asctime)s %(message)s", level=logging.INFO)
-    execute_notebooks()
+    asyncio.run(execute_notebooks())

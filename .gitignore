@@ -17,6 +17,10 @@ __pycache__/
 02-technical-guides/conditional-functions/data/
 02-technical-guides/directquery-vector/data/
 02-technical-guides/rollup-hierarchies/*.csv
+02-technical-guides/observability-with-otel/data*/
+02-technical-guides/observability-with-otel/logs/
+02-technical-guides/observability-with-otel/otel-stack/config/tempo-data*/
+02-technical-guides/observability-with-otel/opentelemetry-javaagent*
 02-technical-guides/var-benchmark/dataset.*
 03-use-cases/01-finance/front-office/real-time-risk/dynamic-input-files/
 03-use-cases/01-finance/portfolio-management/cvar-optimizer/data/

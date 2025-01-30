@@ -1,0 +1,44 @@
+apiVersion: 1
+
+datasources:
+- name: Prometheus
+  type: prometheus
+  access: proxy
+  orgId: 1
+  url: http://prometheus:9090
+  basicAuth: false
+  isDefault: false
+  version: 1
+  editable: false
+- name: Tempo
+  type: tempo
+  access: proxy
+  orgId: 1
+  url: http://tempo:3200
+  basicAuth: false
+  isDefault: true
+  version: 1
+  editable: false
+  apiVersion: 1
+  uid: tempo
+- name: Loki
+  type: loki
+  uid: loki
+  access: proxy
+  orgId: 1
+  url: http://loki:3100
+  basicAuth: false
+  isDefault: false
+  version: 1
+  editable: false
+  jsonData:
+    maxLines: 1000
+    derivedFields: # see https://grafana.com/docs/grafana/latest/datasources/loki/configure-loki-data-source/
+      # Field with internal link pointing to data source in Grafana: Tempo
+      # traceid is extracted and used to query Tempo
+      - datasourceUid: tempo
+        matcherRegex: '"traceid":"([a-f0-9]+)"'
+        name: TraceID
+        # Sets the full link URL if the link is external, or a query for the target data source if the link is internal. You can interpolate the value from the field with the ${__value.raw} macro.
+        url: '$${__value.raw}'
+        urlDisplayLabel: 'View trace in Tempo'

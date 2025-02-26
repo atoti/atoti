@@ -107,17 +107,17 @@ def load_capitalCharge_data(tbls):
     Args:
         tbls: Table object instantiated for session
     """
-    tbls.optionalityChargeTbl.load_csv(
-        "s3://data.atoti.io/notebooks/irrbb/OptionalityCharge.csv"
+    tbls.optionalityChargeTbl.load(
+        tt.CsvLoad("s3://data.atoti.io/notebooks/irrbb/OptionalityCharge.csv")
     )
-    tbls.otherAPRAAmtTbl.load_csv(
-        "s3://data.atoti.io/notebooks/irrbb/OtherAPRAAmount.csv"
+    tbls.otherAPRAAmtTbl.load(
+        tt.CsvLoad("s3://data.atoti.io/notebooks/irrbb/OtherAPRAAmount.csv")
     )
 
     hist_icc_df = process_historical_icc(
         "https://data.atoti.io/notebooks/irrbb/HistoricalICC.csv"
     )
-    tbls.historcialICCTbl.load_pandas(hist_icc_df[tbls.historcialICCTbl.columns])
+    tbls.historcialICCTbl.load(hist_icc_df[list(tbls.historcialICCTbl)])
 
 
 def loadSensitivity(tradeTbl, sensiTbl, filepath, vectorField):

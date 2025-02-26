@@ -1,5 +1,6 @@
 import uuid
 import pandas as pd
+import atoti as tt
 
 
 def getArrayValue(arrValue):
@@ -40,8 +41,8 @@ def load_data(session, tbls):
     # Data loading
     ############
     # trade base and trade attributes
-    tbls.tradeAttributeTbl.load_csv(
-        "s3://data.atoti.io/notebooks/irrbb/TradeAttributes.csv"
+    tbls.tradeAttributeTbl.load(
+        tt.CsvLoad("s3://data.atoti.io/notebooks/irrbb/TradeAttributes.csv")
     )
 
     # Sensitivities - IRDelta, SIDelta, IRVega, Cashflow
@@ -71,19 +72,23 @@ def load_data(session, tbls):
         "CashFlowValues",
     )
 
-    tbls.portfolioTbl.load_csv("s3://data.atoti.io/notebooks/irrbb/BookParentChild.csv")
+    tbls.portfolioTbl.load(
+        tt.CsvLoad("s3://data.atoti.io/notebooks/irrbb/BookParentChild.csv")
+    )
 
     # historical risk factors
     histRFDF = process_historical_rf(
         "https://data.atoti.io/notebooks/irrbb/HistoricalRiskFactor.csv"
     )
-    tbls.historicalRFTbl.load_pandas(histRFDF[tbls.historicalRFTbl.columns])
-    tbls.historicalDateTbl.load_csv(
-        "s3://data.atoti.io/notebooks/irrbb/HistoricalDates.csv"
+    tbls.historicalRFTbl.load(histRFDF[list(tbls.historicalRFTbl)])
+    tbls.historicalDateTbl.load(
+        tt.CsvLoad("s3://data.atoti.io/notebooks/irrbb/HistoricalDates.csv")
     )
 
     # analysis hierarchy
-    tbls.tenorsTbl.load_csv("s3://data.atoti.io/notebooks/irrbb/Tenors.csv")
+    tbls.tenorsTbl.load(
+        tt.CsvLoad("s3://data.atoti.io/notebooks/irrbb/Tenors.csv")
+    )
 
 
 def load_capitalCharge_data(tbls):
@@ -135,8 +140,8 @@ def loadSensitivity(tradeTbl, sensiTbl, filepath, vectorField):
     if "CashflowKey" not in df.columns:
         df["CashflowKey"] = "-"
 
-    tradeTbl.load_pandas(df[tradeTbl.columns])
-    sensiTbl.load_pandas(df[sensiTbl.columns])
+    tradeTbl.load(df[list(tradeTbl)])
+    sensiTbl.load(df[list(sensiTbl)])
 
 
 def process_historical_rf(filepath):

@@ -209,15 +209,15 @@ wheels = [
 
 [[package]]
 name = "atoti"
-version = "0.9.4.20250225152650+6d263bc"
-source = { registry = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple/" }
+version = "0.9.4"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "atoti-client" },
     { name = "atoti-server" },
     { name = "jdk4py" },
 ]
 wheels = [
-    { url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/atoti/0.9.4.20250225152650+6d263bc/atoti-0.9.4.20250225152650+6d263bc-py3-none-any.whl", hash = "sha256:cb6a9247b51ddb547d928e4375edff5bfd3aea7b5a8a492f3592ad93d636efcd" },
+    { url = "https://files.pythonhosted.org/packages/12/84/d7e2b68ebf3c8b2d78976722a6da45359b39462d036f6756ed52cbc9cfd8/atoti-0.9.4-py3-none-any.whl", hash = "sha256:4c803ed3afa706ac65cd931d4503bb4512e7c6f5ac1322c716f7af3b5d2b9151", size = 1902 },
 ]
 
 [package.optional-dependencies]
@@ -247,8 +247,8 @@ kafka = [
 
 [[package]]
 name = "atoti-client"
-version = "0.9.4.20250225152650+6d263bc"
-source = { registry = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple/" }
+version = "0.9.4"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "atoti-core" },
     { name = "httpx" },
@@ -260,163 +260,163 @@ dependencies = [
     { name = "typing-extensions" },
 ]
 wheels = [
-    { url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/atoti-client/0.9.4.20250225152650+6d263bc/atoti_client-0.9.4.20250225152650+6d263bc-py3-none-any.whl", hash = "sha256:37f4d2257ee51ac059267569e98f5f9929ceace1f5c776c23008ed411526c63e" },
+    { url = "https://files.pythonhosted.org/packages/88/0d/f3afb1cfc20d887a1dd43b4d6e802596ee40467389d7738fd303b51fe70d/atoti_client-0.9.4-py3-none-any.whl", hash = "sha256:37b2296b0b22ab5c1246f7dc0c75cd0df3d61d32bf6744bdcd1620a7b8b7856e", size = 3153687 },
 ]
 
 [[package]]
 name = "atoti-client-aws"
-version = "0.9.4.20250225152650+6d263bc"
-source = { registry = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple/" }
+version = "0.9.4"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "atoti-client" },
     { name = "pydantic" },
     { name = "typing-extensions" },
 ]
 wheels = [
-    { url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/atoti-client-aws/0.9.4.20250225152650+6d263bc/atoti_client_aws-0.9.4.20250225152650+6d263bc-py3-none-any.whl", hash = "sha256:570b5ab1bf62416b729bc6e898470b0a65ff63b291bf71d29fb6c7272d69df9e" },
+    { url = "https://files.pythonhosted.org/packages/54/01/d1c33ca62044bb9d0ec004bfe355d881d951d949e87f833b184500b73ee4/atoti_client_aws-0.9.4-py3-none-any.whl", hash = "sha256:b2ddd59ff858e57d058d066691f80ff2577bc53bab6798b8d6acd9c26bdce30e", size = 4462 },
 ]
 
 [[package]]
 name = "atoti-client-azure"
-version = "0.9.4.20250225152650+6d263bc"
-source = { registry = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple/" }
+version = "0.9.4"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "atoti-client" },
     { name = "pydantic" },
     { name = "typing-extensions" },
 ]
 wheels = [
-    { url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/atoti-client-azure/0.9.4.20250225152650+6d263bc/atoti_client_azure-0.9.4.20250225152650+6d263bc-py3-none-any.whl", hash = "sha256:af98e578b1684446e6dacec7b7c83642458828d28989fb8cd8532037961565f4" },
+    { url = "https://files.pythonhosted.org/packages/3a/47/7be15ece3d4d85e4f115589f45e4a02e7e2f8b6519fe256890b46af4ea07/atoti_client_azure-0.9.4-py3-none-any.whl", hash = "sha256:93a24fbbaa4cbb1f621cb46a27b6cd0aca50c1d0be64698c665d312c8539fc13", size = 2997 },
 ]
 
 [[package]]
 name = "atoti-client-gcp"
-version = "0.9.4.20250225152650+6d263bc"
-source = { registry = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple/" }
+version = "0.9.4"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "atoti-client" },
     { name = "pydantic" },
     { name = "typing-extensions" },
 ]
 wheels = [
-    { url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/atoti-client-gcp/0.9.4.20250225152650+6d263bc/atoti_client_gcp-0.9.4.20250225152650+6d263bc-py3-none-any.whl", hash = "sha256:69eb1f67e0b2c93d41f4a8a2824955f8b2f9dcbddefa4777868df81edf233a99" },
+    { url = "https://files.pythonhosted.org/packages/1b/ee/fa2a3fca6c24f41c99c090aa43261ee4a11eb8ab467bad11b1862a07bd70/atoti_client_gcp-0.9.4-py3-none-any.whl", hash = "sha256:5bfe18fb6337f6d6c65265aa699e13d4892affd1beccb920fe3ac553553578d5", size = 1870 },
 ]
 
 [[package]]
 name = "atoti-client-jdbc"
-version = "0.9.4.20250225152650+6d263bc"
-source = { registry = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple/" }
+version = "0.9.4"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "atoti-client" },
     { name = "pydantic" },
     { name = "typing-extensions" },
 ]
 wheels = [
-    { url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/atoti-client-jdbc/0.9.4.20250225152650+6d263bc/atoti_client_jdbc-0.9.4.20250225152650+6d263bc-py3-none-any.whl", hash = "sha256:305a459c71e030ae66c10627ce7fa7aa7fd181f8ca2f0e8291b84ee154430705" },
+    { url = "https://files.pythonhosted.org/packages/87/d7/ab48176a3ed703c2368d4b1a39d83a484d5dffc0d30f1d7c0c02e2c85b61/atoti_client_jdbc-0.9.4-py3-none-any.whl", hash = "sha256:a76a08839513e6010256af21a6543c8fe693d995d81f19d3554ab439ce54df7c", size = 7280 },
 ]
 
 [[package]]
 name = "atoti-client-kafka"
-version = "0.9.4.20250225152650+6d263bc"
-source = { registry = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple/" }
+version = "0.9.4"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "atoti-client" },
     { name = "pydantic" },
     { name = "typing-extensions" },
 ]
 wheels = [
-    { url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/atoti-client-kafka/0.9.4.20250225152650+6d263bc/atoti_client_kafka-0.9.4.20250225152650+6d263bc-py3-none-any.whl", hash = "sha256:c18707fd1bfe5cce40d6a21f7356207a57403928977747ac6260eff899046830" },
+    { url = "https://files.pythonhosted.org/packages/f1/98/bcaf9eea1e66835c9a5ae5d2fe60f4c9b2eaf45933a7806ac2737044d090/atoti_client_kafka-0.9.4-py3-none-any.whl", hash = "sha256:b1474dd5c1d23c6556356112d70b8ec1e01cd4bf04a4fd4a434d476fb5fec585", size = 2806 },
 ]
 
 [[package]]
 name = "atoti-core"
-version = "0.9.4.20250225152650+6d263bc"
-source = { registry = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple/" }
+version = "0.9.4"
+source = { registry = "https://pypi.org/simple" }
 wheels = [
-    { url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/atoti-core/0.9.4.20250225152650+6d263bc/atoti_core-0.9.4.20250225152650+6d263bc-py3-none-any.whl", hash = "sha256:f966c19d1a6cd8254918ffc0a0003b11c43e072c7e4a8a2a0e3f605643a0ca0a" },
+    { url = "https://files.pythonhosted.org/packages/41/48/569309d7a835cd2af86cd29bcc98bc316307d1fb040eeaeb272a7f97d041/atoti_core-0.9.4-py3-none-any.whl", hash = "sha256:2ef1cede5e733fe990405bf0644ab20d6eabf18472e3bfd50e91fa15e0e37af2", size = 3930 },
 ]
 
 [[package]]
 name = "atoti-jupyterlab"
-version = "0.9.4.20250225152650+6d263bc"
-source = { registry = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple/" }
+version = "0.9.4"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "atoti-core" },
     { name = "jupyterlab" },
 ]
 wheels = [
-    { url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/atoti-jupyterlab/0.9.4.20250225152650+6d263bc/atoti_jupyterlab-0.9.4.20250225152650+6d263bc-py3-none-any.whl", hash = "sha256:600a7d2b16c0229cf0cc414b864cf0a7a8b955e3596c829d9c8566e2ec198074" },
+    { url = "https://files.pythonhosted.org/packages/d0/25/bb3ac89331cd0ffa7c90d14514d17a125b26c7aba7d06246095d5f0cfa59/atoti_jupyterlab-0.9.4-py3-none-any.whl", hash = "sha256:712408bb139bfd6a0c71585fb4deca104efab3491ef57fec2744fa88774b6874", size = 3733290 },
 ]
 
 [[package]]
 name = "atoti-server"
-version = "0.9.4.20250225152650+6d263bc"
-source = { registry = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple/" }
+version = "0.9.4"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "atoti-core" },
 ]
 wheels = [
-    { url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/atoti-server/0.9.4.20250225152650+6d263bc/atoti_server-0.9.4.20250225152650+6d263bc-py3-none-any.whl", hash = "sha256:f1b89f317884a6be95cba51adf80b6e2b0cd800e747be3433fb17ff36e9a9cf8" },
+    { url = "https://files.pythonhosted.org/packages/17/86/2f7705adc0de261efbdeb3628e64db4d11c426fa89debcde17012d100b7e/atoti_server-0.9.4-py3-none-any.whl", hash = "sha256:ac598e6a271cf88646b06f27037c1ccc6012ed5da6c8d1c0a9147acc9a373694", size = 135586735 },
 ]
 
 [[package]]
 name = "atoti-server-aws"
-version = "0.9.4.20250225152650+6d263bc"
-source = { registry = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple/" }
+version = "0.9.4"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "atoti-core" },
     { name = "typing-extensions" },
 ]
 wheels = [
-    { url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/atoti-server-aws/0.9.4.20250225152650+6d263bc/atoti_server_aws-0.9.4.20250225152650+6d263bc-py3-none-any.whl", hash = "sha256:a70762490d6db1182478124b9b93f93a0a999c29822ec334222aa9decf5954d7" },
+    { url = "https://files.pythonhosted.org/packages/92/1d/9bea003ce72f2c35015130cc099a8a55cff6ed537b6bcf0e1abbd481e0e0/atoti_server_aws-0.9.4-py3-none-any.whl", hash = "sha256:d48e6d0c9300bca106eea9780414cbc4fefc1728994d47519a55efb32cb80501", size = 18786465 },
 ]
 
 [[package]]
 name = "atoti-server-azure"
-version = "0.9.4.20250225152650+6d263bc"
-source = { registry = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple/" }
+version = "0.9.4"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "atoti-core" },
     { name = "typing-extensions" },
 ]
 wheels = [
-    { url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/atoti-server-azure/0.9.4.20250225152650+6d263bc/atoti_server_azure-0.9.4.20250225152650+6d263bc-py3-none-any.whl", hash = "sha256:d129f50cd8b6cfc9d9b10a71a7cb2fb9305fabd437deabe31bfe68c89a106c51" },
+    { url = "https://files.pythonhosted.org/packages/d3/0c/5cfabfc6b2731d3f95edfb6b29e87074ce020f4750388d53a985abdfa710/atoti_server_azure-0.9.4-py3-none-any.whl", hash = "sha256:c7c0c2de667e6fbd914a9cb05a9481985a03fa609882019e98dfe1f1c7c154e9", size = 22081862 },
 ]
 
 [[package]]
 name = "atoti-server-gcp"
-version = "0.9.4.20250225152650+6d263bc"
-source = { registry = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple/" }
+version = "0.9.4"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "atoti-core" },
     { name = "typing-extensions" },
 ]
 wheels = [
-    { url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/atoti-server-gcp/0.9.4.20250225152650+6d263bc/atoti_server_gcp-0.9.4.20250225152650+6d263bc-py3-none-any.whl", hash = "sha256:b1f85036fb7ff071d6c4611965d2636b1c25a374661ad59abe8859059e45f642" },
+    { url = "https://files.pythonhosted.org/packages/a5/83/cc9817ad45a37e16a592249e6cdb6477678a4e89180bf26ea9581583eb91/atoti_server_gcp-0.9.4-py3-none-any.whl", hash = "sha256:c1b4b0da949f90a90ef298fdbff469794a0a903c59403c3d0f9c7da5b512ba56", size = 46433604 },
 ]
 
 [[package]]
 name = "atoti-server-jdbc"
-version = "0.9.4.20250225152650+6d263bc"
-source = { registry = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple/" }
+version = "0.9.4"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "atoti-core" },
     { name = "typing-extensions" },
 ]
 wheels = [
-    { url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/atoti-server-jdbc/0.9.4.20250225152650+6d263bc/atoti_server_jdbc-0.9.4.20250225152650+6d263bc-py3-none-any.whl", hash = "sha256:4ff783d4aaf4831113a47ba963d830402052668dbe88ecf09631c71f0f7e1a44" },
+    { url = "https://files.pythonhosted.org/packages/b8/65/31ffcfb2bb8229bf6ade08ac3f87d833ee63cc705f1ca412312166bbf0e3/atoti_server_jdbc-0.9.4-py3-none-any.whl", hash = "sha256:ce22d2f68d0f2654c2f5a61dc196990150d336756998f6343095f2f67ef7db44", size = 41892401 },
 ]
 
 [[package]]
 name = "atoti-server-kafka"
-version = "0.9.4.20250225152650+6d263bc"
-source = { registry = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple/" }
+version = "0.9.4"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "atoti-core" },
     { name = "typing-extensions" },
 ]
 wheels = [
-    { url = "https://activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/atoti-server-kafka/0.9.4.20250225152650+6d263bc/atoti_server_kafka-0.9.4.20250225152650+6d263bc-py3-none-any.whl", hash = "sha256:23ce614a881a139eb7d91494ab4d5be6ba616eba5619e4068723ef22e493f468" },
+    { url = "https://files.pythonhosted.org/packages/50/d7/53f7c8cb4674cb1a4cfb1bf67c1a33dbd65a0cdec83e40c19277c0921ee9/atoti_server_kafka-0.9.4-py3-none-any.whl", hash = "sha256:c73e062f673cfdea4bd85f6bff3886d3d726d4eef8986c66c9c29d6825d1855c", size = 7909923 },
 ]
 
 [[package]]
@@ -1729,7 +1729,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "atoti", extras = ["aws", "azure", "gcp", "jupyterlab", "kafka", "jdbc"], specifier = "==0.9.4.20250225152650+6d263bc" },
+    { name = "atoti", extras = ["aws", "azure", "gcp", "jupyterlab", "kafka", "jdbc"], specifier = "==0.9.4" },
     { name = "boto3", specifier = ">=1.35.36,<2" },
     { name = "folium", specifier = ">=0.17.0,<1" },
     { name = "fsspec", specifier = ">=2024.6.1,<2026" },

@@ -36,7 +36,7 @@ dependencies = [
     "tsfresh >=0.20.3, <1",
     "scikit-learn >=1.5.2, <2",
     "folium >=0.17.0, <1",
-    "atoti[aws,azure,gcp,jupyterlab,kafka,jdbc]==0.9.4.20250225152650+6d263bc",
+    "atoti[aws,azure,gcp,jupyterlab,kafka,jdbc]==0.9.4",
     "pandas == 2.2.3",
     "jupyterlab == 4.3.2",
     "ruff >=0.6.9, <1",
@@ -50,6 +50,3 @@ priority = "primary"
 
 [tool.ruff]
 extend-include = ["*.ipynb"]
-
-[tool.uv]
-extra-index-url = ["https://aya:AKCpBrwZCUw3JA99CQjbHnCFyM7yM1gE8nTkxMe13PVZy8DZC3nTcNxkgg8nvbEdL8daoiPxF@activeviam.jfrog.io/artifactory/api/pypi/atoti-python-api-pypi-internal/simple/"]

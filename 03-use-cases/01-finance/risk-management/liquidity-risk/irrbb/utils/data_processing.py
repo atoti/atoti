@@ -86,9 +86,7 @@ def load_data(session, tbls):
     )
 
     # analysis hierarchy
-    tbls.tenorsTbl.load(
-        tt.CsvLoad("s3://data.atoti.io/notebooks/irrbb/Tenors.csv")
-    )
+    tbls.tenorsTbl.load(tt.CsvLoad("s3://data.atoti.io/notebooks/irrbb/Tenors.csv"))
 
 
 def load_capitalCharge_data(tbls):

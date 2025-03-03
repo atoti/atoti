@@ -1,5 +1,6 @@
 03-use-cases/01-finance/risk-management/credit-risk/ifrs9
 03-use-cases/01-finance/risk-management/credit-risk/ifrs9
+03-use-cases/01-finance/treasury/intraday-liquidity/main.ipynb
 03-use-cases/01-finance/risk-management/credit-risk/collateral-shortfall-forecast
 03-use-cases/01-finance/risk-management/operational-risk/credit-card-fraud-detection
 03-use-cases/01-finance/risk-management/operational-risk/credit-card-fraud-detection

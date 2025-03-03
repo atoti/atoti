@@ -67,6 +67,7 @@ async def execute_notebook(notebook_path):
     logging.info(
         f"Execution of {notebook_path} succeeded in {elapsed_time:.2f} seconds"
     )
+    # return notebook
 
 
 async def execute_notebooks():
@@ -95,6 +96,9 @@ async def execute_notebooks():
         if isinstance(result, Exception):
             logging.error(f"Execution of {notebook} failed with exception: {result}")
             sys.exit(1)
+        # else:
+        #     with open(notebook, "w", encoding="utf-8") as f:
+        #         nbformat.write(result, f)
 
 
 if __name__ == "__main__":

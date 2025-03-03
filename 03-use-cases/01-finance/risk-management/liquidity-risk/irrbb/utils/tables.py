@@ -42,7 +42,7 @@ class Tables:
         """
         self.tradeBaseTbl = self.session.create_table(
             name="TradeBase",
-            types={
+            data_types={
                 "InternalKey": tt.type.STRING,
                 "CashflowKey": tt.type.STRING,
                 "AsOfDate": tt.type.LOCAL_DATE,
@@ -57,7 +57,7 @@ class Tables:
 
         self.tradeAttributeTbl = self.session.create_table(
             name="TradeAttributes",
-            types={
+            data_types={
                 "InternalKey": tt.type.STRING,
                 "AsOfDate": tt.type.LOCAL_DATE,
                 "ItemType": tt.type.STRING,
@@ -84,7 +84,7 @@ class Tables:
 
         self.irDeltaTbl = self.session.create_table(
             name="IRDelta",
-            types={
+            data_types={
                 "InternalKey": tt.type.STRING,
                 "DeltaCcy": tt.type.STRING,
                 "DeltaSensitivities": tt.type.DOUBLE_ARRAY,
@@ -94,7 +94,7 @@ class Tables:
 
         self.irVegaTbl = self.session.create_table(
             name="IRVega",
-            types={
+            data_types={
                 "InternalKey": tt.type.STRING,
                 "VegaCcy": tt.type.STRING,
                 "VegaSensitivities": tt.type.DOUBLE_ARRAY,
@@ -104,7 +104,7 @@ class Tables:
 
         self.siDeltaTbl = self.session.create_table(
             name="SIDelta",
-            types={
+            data_types={
                 "InternalKey": tt.type.STRING,
                 "SIDeltaCcy": tt.type.STRING,
                 "SIDeltaSensitivities": tt.type.DOUBLE_ARRAY,
@@ -114,7 +114,7 @@ class Tables:
 
         self.nmrCashFlowTbl = self.session.create_table(
             name="NMR Cashflow",
-            types={
+            data_types={
                 "InternalKey": tt.type.STRING,
                 "CashflowKey": tt.type.STRING,
                 "CashFlowCcy": tt.type.STRING,
@@ -129,7 +129,7 @@ class Tables:
 
         self.historicalRFTbl = self.session.create_table(
             name="Historical Risk Factor",
-            types={
+            data_types={
                 "AsOfDate": tt.type.LOCAL_DATE,
                 "RiskFactor": tt.type.STRING,
                 "Tenor": tt.type.INT,
@@ -141,7 +141,7 @@ class Tables:
 
         self.historicalDateTbl = self.session.create_table(
             name="Historical Dates",
-            types={
+            data_types={
                 "AsOfDate": tt.type.LOCAL_DATE,
                 "HistoricalDate": tt.type.LOCAL_DATE,
                 "HistoricalDateIndex": tt.type.INT,
@@ -151,7 +151,7 @@ class Tables:
 
         self.portfolioTbl = self.session.create_table(
             name="Portfolio",
-            types={
+            data_types={
                 "AsOfDate": tt.type.LOCAL_DATE,
                 "GroupLevel": tt.type.STRING,
                 "ParentBook": tt.type.STRING,
@@ -170,7 +170,7 @@ class Tables:
 
         self.tenorsTbl = self.session.create_table(
             name="Tenors",
-            types={
+            data_types={
                 "AsOfDate": tt.type.LOCAL_DATE,
                 "RiskFactor": tt.type.STRING,
                 "Tenor": tt.type.INT,
@@ -212,7 +212,7 @@ class Tables:
 
         self.optionalityChargeTbl = self.session.create_table(
             name="Optionality Charge",
-            types={
+            data_types={
                 "AsOfDate": tt.type.LOCAL_DATE,
                 "OCCcalculationDate": tt.type.LOCAL_DATE,
                 "OCCValue": tt.type.DOUBLE,
@@ -222,7 +222,7 @@ class Tables:
 
         self.historcialICCTbl = self.session.create_table(
             name="Historical ICC",
-            types={
+            data_types={
                 "AsOfDate": tt.type.LOCAL_DATE,
                 "ICCcalculationDate": tt.type.LOCAL_DATE,
                 "ICCValue": tt.type.DOUBLE,
@@ -236,7 +236,7 @@ class Tables:
 
         self.otherAPRAAmtTbl = self.session.create_table(
             name="OtherAPRAAmount",
-            types={
+            data_types={
                 "AsOfDate": tt.type.LOCAL_DATE,
                 "OAAcalculationDate": tt.type.LOCAL_DATE,
                 "OAAValue": tt.type.DOUBLE,

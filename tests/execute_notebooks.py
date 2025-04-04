@@ -94,10 +94,16 @@ async def execute_notebooks():
 
     # Execute notebooks in batches of 5
     batch_size = 5
+    timeout = 600  # Timeout in seconds (10 minutes)
     for i in range(0, len(notebooks), batch_size):
         batch = notebooks[i : i + batch_size]
         tasks = [execute_notebook(Path(notebook)) for notebook in batch]
-        results = await asyncio.gather(*tasks, return_exceptions=True)
+        try:
+            results = await asyncio.wait_for(asyncio.gather(*tasks, return_exceptions=True), timeout=timeout)
+        except asyncio.TimeoutError:
+            logging.error("Execution of the batch timed out.")
+            sys.exit(1)
+
         for notebook, result in zip(batch, results):
             if isinstance(result, Exception):
                 logging.error(

@@ -4,15 +4,12 @@ import sys
 import time
 from pathlib import Path
 import asyncio
-import random  # Added to shuffle notebooks randomly
-
+import nest_asyncio  # Added to make asyncio notebook-safe
 import nbformat
 import pandas as pd
 from nbconvert.preprocessors import ExecutePreprocessor
-import nest_asyncio  # Added to make asyncio notebook-safe
 
 nest_asyncio.apply()  # Apply the patch to allow nested event loops
-
 _MAIN = "main.ipynb"
 
 # Maintain exclusion list only for academy and tech tutorials
@@ -59,25 +56,19 @@ NOTEBOOKS_TO_SKIP = sorted(
 
 
 async def execute_notebook(notebook_path):
-    try:
-        logging.info(f"Starting execution of {notebook_path}")
-        start_time = time.time()
-        notebook = nbformat.read(notebook_path, as_version=4)
-        ep = ExecutePreprocessor(
-            startup_timeout=300, timeout=600, kernel_name="python3"
-        )
-        await asyncio.to_thread(
-            ep.preprocess, notebook, {"metadata": {"path": notebook_path.parent}}
-        )
-        end_time = time.time()
-        elapsed_time = end_time - start_time
-        logging.info(
-            f"Execution of {notebook_path} succeeded in {elapsed_time:.2f} seconds"
-        )
-        # return notebook
-    except Exception as e:
-        logging.error(f"Execution of {notebook_path} failed with exception: {e}")
-        raise
+    logging.info(f"Starting execution of {notebook_path}")
+    start_time = time.time()
+    notebook = nbformat.read(notebook_path, as_version=4)
+    ep = ExecutePreprocessor(startup_timeout=300, timeout=600, kernel_name="python3")
+    await asyncio.to_thread(
+        ep.preprocess, notebook, {"metadata": {"path": notebook_path.parent}}
+    )
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    logging.info(
+        f"Execution of {notebook_path} succeeded in {elapsed_time:.2f} seconds"
+    )
+    # return notebook
 
 
 async def execute_notebooks():
@@ -99,23 +90,12 @@ async def execute_notebooks():
         and not any(exclude_nb in str(nb_path) for exclude_nb in exclusion_list)
     ]
 
-    # Shuffle the notebooks list to create random batches
-    random.shuffle(notebooks)
-
-    # Execute notebooks in random batches of 3
-    batch_size = 3
-    timeout = 600  # Timeout in seconds (10 minutes)
+    # Execute notebooks in batches of 10
+    batch_size = 10
     for i in range(0, len(notebooks), batch_size):
         batch = notebooks[i : i + batch_size]
         tasks = [execute_notebook(Path(notebook)) for notebook in batch]
-        try:
-            results = await asyncio.wait_for(
-                asyncio.gather(*tasks, return_exceptions=True), timeout=timeout
-            )
-        except asyncio.TimeoutError:
-            logging.error("Execution of the batch timed out.")
-            sys.exit(1)
-
+        results = await asyncio.gather(*tasks, return_exceptions=True)
         for notebook, result in zip(batch, results):
             if isinstance(result, Exception):
                 logging.error(

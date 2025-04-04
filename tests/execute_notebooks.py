@@ -59,19 +59,25 @@ NOTEBOOKS_TO_SKIP = sorted(
 
 
 async def execute_notebook(notebook_path):
-    logging.info(f"Starting execution of {notebook_path}")
-    start_time = time.time()
-    notebook = nbformat.read(notebook_path, as_version=4)
-    ep = ExecutePreprocessor(startup_timeout=300, timeout=600, kernel_name="python3")
-    await asyncio.to_thread(
-        ep.preprocess, notebook, {"metadata": {"path": notebook_path.parent}}
-    )
-    end_time = time.time()
-    elapsed_time = end_time - start_time
-    logging.info(
-        f"Execution of {notebook_path} succeeded in {elapsed_time:.2f} seconds"
-    )
-    # return notebook
+    try:
+        logging.info(f"Starting execution of {notebook_path}")
+        start_time = time.time()
+        notebook = nbformat.read(notebook_path, as_version=4)
+        ep = ExecutePreprocessor(
+            startup_timeout=300, timeout=600, kernel_name="python3"
+        )
+        await asyncio.to_thread(
+            ep.preprocess, notebook, {"metadata": {"path": notebook_path.parent}}
+        )
+        end_time = time.time()
+        elapsed_time = end_time - start_time
+        logging.info(
+            f"Execution of {notebook_path} succeeded in {elapsed_time:.2f} seconds"
+        )
+        # return notebook
+    except Exception as e:
+        logging.error(f"Execution of {notebook_path} failed with exception: {e}")
+        raise
 
 
 async def execute_notebooks():

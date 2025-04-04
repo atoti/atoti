@@ -89,8 +89,8 @@ async def execute_notebooks():
         and not any(exclude_nb in str(nb_path) for exclude_nb in exclusion_list)
     ]
 
-    # Execute notebooks in batches of 10
-    batch_size = 10
+    # Execute notebooks in batches of 5
+    batch_size = 5
     for i in range(0, len(notebooks), batch_size):
         batch = notebooks[i : i + batch_size]
         tasks = [execute_notebook(Path(notebook)) for notebook in batch]

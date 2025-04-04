@@ -8,6 +8,9 @@ import asyncio
 import nbformat
 import pandas as pd
 from nbconvert.preprocessors import ExecutePreprocessor
+import nest_asyncio  # Added to make asyncio notebook-safe
+
+nest_asyncio.apply()  # Apply the patch to allow nested event loops
 
 _MAIN = "main.ipynb"
 

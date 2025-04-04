@@ -4,6 +4,7 @@ import sys
 import time
 from pathlib import Path
 import asyncio
+import random  # Added to shuffle notebooks randomly
 
 import nbformat
 import pandas as pd
@@ -92,8 +93,11 @@ async def execute_notebooks():
         and not any(exclude_nb in str(nb_path) for exclude_nb in exclusion_list)
     ]
 
-    # Execute notebooks in batches of 5
-    batch_size = 5
+    # Shuffle the notebooks list to create random batches
+    random.shuffle(notebooks)
+
+    # Execute notebooks in random batches of 3
+    batch_size = 3
     timeout = 600  # Timeout in seconds (10 minutes)
     for i in range(0, len(notebooks), batch_size):
         batch = notebooks[i : i + batch_size]

@@ -130,7 +130,7 @@
 </tr>
 <tr>
 <td rowspan="1"><a href="./observability-with-otel/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.4-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/articles/atoti-python-api-enabling-observability-with-opentelemetry/?utm_source=github">📰&nbsp;Atoti Python API: Enabling observability with OpenTelemetry</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/atoti-python-sdk-enabling-observability-with-opentelemetry/?utm_source=github">📰&nbsp;Atoti Python SDK: Enabling observability with OpenTelemetry</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
 </tr>
 </table>
 <br/>
@@ -330,7 +330,7 @@ Double-click on tile to go to feature section.
 </tr>
 <tr>
 <td rowspan="1"><a href="./observability-with-otel/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.4-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/articles/atoti-python-api-enabling-observability-with-opentelemetry/?utm_source=github">📰&nbsp;Atoti Python API: Enabling observability with OpenTelemetry</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/atoti-python-sdk-enabling-observability-with-opentelemetry/?utm_source=github">📰&nbsp;Atoti Python SDK: Enabling observability with OpenTelemetry</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.4-1C900C" alt="Latest version" /></td>
@@ -617,7 +617,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./observability-with-otel/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.4-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/articles/atoti-python-api-enabling-observability-with-opentelemetry/?utm_source=github">📰&nbsp;Atoti Python API: Enabling observability with OpenTelemetry</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/atoti-python-sdk-enabling-observability-with-opentelemetry/?utm_source=github">📰&nbsp;Atoti Python SDK: Enabling observability with OpenTelemetry</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./var-benchmark/main.ipynb">var-benchmark&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.4-1C900C" alt="Latest version" /></td>
@@ -675,7 +675,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./observability-with-otel/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.4-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/articles/atoti-python-api-enabling-observability-with-opentelemetry/?utm_source=github">📰&nbsp;Atoti Python API: Enabling observability with OpenTelemetry</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/atoti-python-sdk-enabling-observability-with-opentelemetry/?utm_source=github">📰&nbsp;Atoti Python SDK: Enabling observability with OpenTelemetry</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./table-creation-and-data-loads/main.ipynb">table-creation-and-data-loads&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.4-1C900C" alt="Latest version" /></td>
@@ -788,7 +788,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./observability-with-otel/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.4-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/articles/atoti-python-api-enabling-observability-with-opentelemetry/?utm_source=github">📰&nbsp;Atoti Python API: Enabling observability with OpenTelemetry</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/atoti-python-sdk-enabling-observability-with-opentelemetry/?utm_source=github">📰&nbsp;Atoti Python SDK: Enabling observability with OpenTelemetry</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.4-1C900C" alt="Latest version" /></td>
@@ -940,7 +940,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./observability-with-otel/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.4-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/articles/atoti-python-api-enabling-observability-with-opentelemetry/?utm_source=github">📰&nbsp;Atoti Python API: Enabling observability with OpenTelemetry</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/atoti-python-sdk-enabling-observability-with-opentelemetry/?utm_source=github">📰&nbsp;Atoti Python SDK: Enabling observability with OpenTelemetry</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.4-1C900C" alt="Latest version" /></td>
@@ -1102,7 +1102,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 </tr>
 <tr>
 <td rowspan="1"><a href="./observability-with-otel/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.4-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/articles/atoti-python-api-enabling-observability-with-opentelemetry/?utm_source=github">📰&nbsp;Atoti Python API: Enabling observability with OpenTelemetry</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/atoti-python-sdk-enabling-observability-with-opentelemetry/?utm_source=github">📰&nbsp;Atoti Python SDK: Enabling observability with OpenTelemetry</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./rollup-hierarchies/main.ipynb">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.4-1C900C" alt="Latest version" /></td>

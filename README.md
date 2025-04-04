@@ -7,10 +7,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/v/release/atoti/atoti?color=#4cc71f" alt="github">
-  <img src="https://img.shields.io/pypi/dm/atoti" alt="github">
-  <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fatoti%2Fatoti&count_bg=%234CC71F&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=daily%2Ftotal+visits&edge_flat=false" alt="Hits"></a>
-  <img src="https://github.com/atoti/atoti/actions/workflows/test.yaml/badge.svg" alt="gha">
+  <a href="https://github.com/atoti/atoti/releases/latest"><img src="https://img.shields.io/github/v/release/atoti/atoti?color=#4cc71f" alt="github"></a>
+  <a href="https://pypistats.org/packages/atoti"><img src="https://img.shields.io/pypi/dm/atoti" alt="github"></a>
+  <a href="https://github.com/atoti/atoti/actions/workflows/test.yaml"><img src="https://github.com/atoti/atoti/actions/workflows/test.yaml/badge.svg" alt="gha"></a>
   <a href="https://github.com/atoti/atoti/discussions"><img src="https://img.shields.io/github/discussions/atoti/atoti" alt="GitHub Discussion"></a>
 </p>
 
@@ -55,14 +54,14 @@ Moving to production? Navigate to our Project Template repository to learn how t
 
 ### 🧰 Installation
 
-Atoti Python API requires one of the following Python versions:
+Atoti Python SDK requires one of the following Python versions:
 
 * 3.10
 * 3.11
 * 3.12
 * 3.13
 
-In addition, Atoti Python API requires Java 21 if you want to use your own JDK. If you do not have a JDK, Atoti is bundled with [jdk4py](https://github.com/activeviam/jdk4py). We use [uv](https://github.com/astral-sh/uv) for better virtual environment and dependency management. We strongly recommend against mixing `uv` and `conda`.
+In addition, Atoti Python SDK requires Java 21 if you want to use your own JDK. If you do not have a JDK, Atoti is bundled with [jdk4py](https://github.com/activeviam/jdk4py). We use [uv](https://github.com/astral-sh/uv) for better virtual environment and dependency management. We strongly recommend against mixing `uv` and `conda`.
 
 > **Note:** Start `jupyter-lab` at the root of this repository.
 

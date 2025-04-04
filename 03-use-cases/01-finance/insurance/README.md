@@ -7,10 +7,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/v/release/atoti/atoti?color=#4cc71f" alt="github">
-  <img src="https://img.shields.io/pypi/dm/atoti" alt="github">
-  <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fatoti%2Fatoti&count_bg=%234CC71F&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=daily%2Ftotal+visits&edge_flat=false" alt="Hits"></a>
-  <img src="https://github.com/atoti/atoti/actions/workflows/test.yaml/badge.svg" alt="gha">
+  <a href="https://github.com/atoti/atoti/releases/latest"><img src="https://img.shields.io/github/v/release/atoti/atoti?color=#4cc71f" alt="github"></a>
+  <a href="https://pypistats.org/packages/atoti"><img src="https://img.shields.io/pypi/dm/atoti" alt="github"></a>
+  <a href="https://github.com/atoti/atoti/actions/workflows/test.yaml"><img src="https://github.com/atoti/atoti/actions/workflows/test.yaml/badge.svg" alt="gha"></a>
   <a href="https://github.com/atoti/atoti/discussions"><img src="https://img.shields.io/github/discussions/atoti/atoti" alt="GitHub Discussion"></a>
 </p> 
 
@@ -36,7 +35,7 @@
 <td><a href="https://www.atoti.io/articles/customer-360-how-it-can-be-achieved-with-atoti/?utm_source=github">📰&nbsp;Customer 360: How it can be achieved with atoti</a></td><td rowspan="1"><kbd>switch</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> sql connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./price-elasticity/main.ipynb">price-elasticity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.4-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./price-elasticity/main.ipynb">price-elasticity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.5-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/unravel-price-elasticity-of-demand-with-atoti/?utm_source=github">📰&nbsp;Unravel price elasticity of demand with atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 </table>

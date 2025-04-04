@@ -8,9 +8,9 @@ This project is a collaboration between [Atoti Community](https://www.atoti.io) 
 
 It's no secret that access to the right data along with the right aggregation engine allows Quants and portfolio managers to achieve their goals. The problem? How do you find good data, and what is the right aggregation tool?  
 
-Discover how seamless it can be to incorporate alternative data into your rebalancing act. With CloudQuant’s datasets and Atoti Python API, we show you how to keep alternative data in mind when working through monthly portfolio rebalancing.
+Discover how seamless it can be to incorporate alternative data into your rebalancing act. With CloudQuant’s datasets and Atoti Python SDK, we show you how to keep alternative data in mind when working through monthly portfolio rebalancing.
 
-We demonstrate how, using [Atoti Python API](https://docs.atoti.io/) and [CloudQuant's Liberator API](https://www.cloudquant.com/data-liberator/), we can incorporate alternative data in our portfolio rebalancing. Specifically, we demonstrate how to:
+We demonstrate how, using [Atoti Python SDK](https://docs.atoti.io/) and [CloudQuant's Liberator API](https://www.cloudquant.com/data-liberator/), we can incorporate alternative data in our portfolio rebalancing. Specifically, we demonstrate how to:
 
 1. Create a portfolio using Alphaflow
 2. Compute returns using DailyBars in Atoti

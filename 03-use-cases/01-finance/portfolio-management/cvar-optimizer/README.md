@@ -1,6 +1,6 @@
 # Running portfolio optimization in Atoti
 
-❗ **Important:** This notebook is locked to Atoti Python API version `0.8.14` moving forward due to the following incompatibility with `0.9.0`:
+❗ **Important:** This notebook is locked to Atoti Python SDK version `0.8.14` moving forward due to the following incompatibility with `0.9.0`:
 
 > Because pyportfolioopt (1.5.5) depends on numpy (>=1.22.4,<2.0.0) and atoti-client (0.9.0) depends on numpy (>=2.0.1), pyportfolioopt (1.5.5) is incompatible with atoti-client (0.9.0). And because atoti[aws,azure,gcp,jupyterlab,kafka,sql] (0.9.0) depends on atoti-client (0.9.0), pyportfolioopt (1.5.5) is incompatible with atoti[aws,azure,gcp,jupyterlab,kafka,sql] (0.9.0).
 

@@ -1750,7 +1750,7 @@ requires-dist = [
     { name = "orjson", specifier = ">=3.10.7,<4" },
     { name = "pandas", specifier = "==2.2.3" },
     { name = "praw", specifier = ">=7.7.0,<8" },
-    { name = "protobuf", specifier = ">=5.28.2,<6" },
+    { name = "protobuf", specifier = ">=5.28.2,<7" },
     { name = "pyopls", specifier = ">=20.3.post1,<21" },
     { name = "quantlib", specifier = ">=1.36,<2" },
     { name = "ruff", specifier = ">=0.6.9,<1" },

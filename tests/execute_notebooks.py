@@ -1,13 +1,8 @@
 import glob
-import logging
-import sys
-import time
 from pathlib import Path
-import asyncio
-
-import nbformat
+import pytest
+import sys
 import pandas as pd
-from nbconvert.preprocessors import ExecutePreprocessor
 
 _MAIN = "main.ipynb"
 
@@ -53,54 +48,36 @@ NOTEBOOKS_TO_SKIP = sorted(
     + INVALID_NAMED_NOTEBOOKS
 )
 
+# Gather the list of notebooks under the project directory
+nb_list = [
+    nb_path.replace("\\", "/")
+    for nb_path in glob.glob(f"./*/**/*.ipynb", recursive=True)
+    if not "ipynb_checkpoints" in nb_path
+]
 
-async def execute_notebook(notebook_path):
-    logging.info(f"Starting execution of {notebook_path}")
-    start_time = time.time()
-    notebook = nbformat.read(notebook_path, as_version=4)
-    ep = ExecutePreprocessor(startup_timeout=300, timeout=600, kernel_name="python3")
-    await asyncio.to_thread(
-        ep.preprocess, notebook, {"metadata": {"path": notebook_path.parent}}
-    )
-    end_time = time.time()
-    elapsed_time = end_time - start_time
-    logging.info(
-        f"Execution of {notebook_path} succeeded in {elapsed_time:.2f} seconds"
-    )
-    # return notebook
+# 1. Exclude the list of notebooks added in this script
+# 2. Exclude the list of non-maintained notebooks generated from the README program
+#    https://github.com/activeviam/bd-atoti-gallery/tree/main/readme-generator
+exclusion_list = pd.read_csv("./tests/test_exclusion.txt", header=None)[0].to_list()
+notebooks = [
+    nb_path
+    for nb_path in nb_list
+    if not any(exclude_nb in str(nb_path) for exclude_nb in NOTEBOOKS_TO_SKIP)
+    and not any(exclude_nb in str(nb_path) for exclude_nb in exclusion_list)
+]
 
-
-async def execute_notebooks():
-    # Gather the list of notebooks under the project directory
-    nb_list = [
-        nb_path.replace("\\", "/")
-        for nb_path in glob.glob(f"./*/**/*.ipynb", recursive=True)
-        if not "ipynb_checkpoints" in nb_path
-    ]
-
-    # 1. Exclude the list of notebooks added in this script
-    # 2. Exclude the list of non-maintained notebooks generated from the README program
-    #    https://github.com/activeviam/bd-atoti-gallery/tree/main/readme-generator
-    exclusion_list = pd.read_csv("./tests/test_exclusion.txt", header=None)[0].to_list()
-    notebooks = [
-        nb_path
-        for nb_path in nb_list
-        if not any(exclude_nb in str(nb_path) for exclude_nb in NOTEBOOKS_TO_SKIP)
-        and not any(exclude_nb in str(nb_path) for exclude_nb in exclusion_list)
-    ]
-
-    # Create asyncio tasks to execute the notebooks
-    tasks = [execute_notebook(Path(notebook)) for notebook in notebooks]
-    results = await asyncio.gather(*tasks, return_exceptions=True)
-    for notebook, result in zip(notebooks, results):
-        if isinstance(result, Exception):
-            logging.error(f"Execution of {notebook} failed with exception: {result}")
-            sys.exit(1)
-        # else:
-        #     with open(notebook, "w", encoding="utf-8") as f:
-        #         nbformat.write(result, f)
-
+for notebook in notebooks:
+    print(notebook)
 
 if __name__ == "__main__":
-    logging.basicConfig(format="%(asctime)s %(message)s", level=logging.INFO)
-    asyncio.run(execute_notebooks())
+    pytest_args = [
+        "--nbmake",
+        "--nbmake-timeout=600",
+        "-n",
+        "auto",
+        "-v",
+        f"--html=reports/report-{sys.platform}.html",
+        "--self-contained-html",
+        f"--junitxml=reports/junit-{sys.platform}.xml",
+    ] + notebooks
+    sys.exit(pytest.main(pytest_args))

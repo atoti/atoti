@@ -45,7 +45,8 @@ dependencies = [
     "pytest == 8.3.5",
     "pytest-html == 4.1.1",
     "pytest-xdist == 3.6.1",
-    "nbdime == 4.0.2"
+    "nbdime == 4.0.2",
+    "nbmake == 1.5.5"
 ]
 
 [tool.source]

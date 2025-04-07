@@ -1,4 +1,3 @@
-02-technical-guides/virtual-hierarchies/main.ipynb
 03-use-cases/01-finance/treasury/intraday-liquidity/main.ipynb
 03-use-cases/01-finance/insurance/price-elasticity/main.ipynb
 03-use-cases/01-finance/retail-banking/credit-card-analytics/cc_data_processing.ipynb

@@ -47,7 +47,7 @@ class Helper:
         """
         df["portfolio"] = _name  # title of simulation
         df["iteration"] = (
-            f'{_opt_mtd}_{time.strftime("%Y%m%d_%X")}'  # timestamp of simulation
+            f"{_opt_mtd}_{time.strftime('%Y%m%d_%X')}"  # timestamp of simulation
         )
         df["method"] = "esg_min_vol"
         # df["method"] = f'{_name}' # concat of both as a title

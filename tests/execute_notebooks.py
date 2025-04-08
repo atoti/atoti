@@ -4,6 +4,7 @@ import pytest
 import sys
 import pandas as pd
 
+nest_asyncio.apply()  # Apply the patch to allow nested event loops
 _MAIN = "main.ipynb"
 
 # Maintain exclusion list only for academy and tech tutorials

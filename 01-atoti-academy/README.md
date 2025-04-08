@@ -21,7 +21,7 @@
 
 ## Data Analytics in Python Notebooks
 
-This course has been designed for new users to get started with Atoti Python API.  
+This course has been designed for new users to get started with Atoti Python SDK.  
 It will show you how to build a cube with custom measures and start analyzing data to explore and draw meaningful insights.
 
 You can follow and complete at your own speed using the downloadable Atoti software which you’ll install on your own machines. 

@@ -7,10 +7,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/v/release/atoti/atoti?color=#4cc71f" alt="github">
-  <img src="https://img.shields.io/pypi/dm/atoti" alt="github">
-  <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fatoti%2Fatoti&count_bg=%234CC71F&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=daily%2Ftotal+visits&edge_flat=false" alt="Hits"></a>
-  <img src="https://github.com/atoti/atoti/actions/workflows/test.yaml/badge.svg" alt="gha">
+  <a href="https://github.com/atoti/atoti/releases/latest"><img src="https://img.shields.io/github/v/release/atoti/atoti?color=#4cc71f" alt="github"></a>
+  <a href="https://pypistats.org/packages/atoti"><img src="https://img.shields.io/pypi/dm/atoti" alt="github"></a>
+  <a href="https://github.com/atoti/atoti/actions/workflows/test.yaml"><img src="https://github.com/atoti/atoti/actions/workflows/test.yaml/badge.svg" alt="gha"></a>
   <a href="https://github.com/atoti/atoti/discussions"><img src="https://img.shields.io/github/discussions/atoti/atoti" alt="GitHub Discussion"></a>
 </p> 
 
@@ -39,11 +38,11 @@
 <td valign="center"><a href="https://www.atoti.io/articles/tutorial-how-to-build-an-ifrs-9-solution-with-python-and-atoti/?utm_source=github">📰&nbsp;Tutorial: How to build an IFRS 9 solution with Python and atoti</a></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./sa-ccr/main.ipynb">sa-ccr&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./sa-ccr/main.ipynb">sa-ccr&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.5-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/sa-ccr-with-python-and-atoti/?utm_source=github">📰&nbsp;SA-CCR with python and atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> statistical computation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./xva/main.ipynb">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./xva/main.ipynb">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.5-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/interactive-xva-analytics-with-python-and-atoti/?utm_source=github">📰&nbsp;Interactive xVA analytics with Python and atoti</a></td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> switch</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>

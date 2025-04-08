@@ -4,11 +4,12 @@ import sys
 import time
 from pathlib import Path
 import asyncio
-
+import nest_asyncio  # Added to make asyncio notebook-safe
 import nbformat
 import pandas as pd
 from nbconvert.preprocessors import ExecutePreprocessor
 
+nest_asyncio.apply()  # Apply the patch to allow nested event loops
 _MAIN = "main.ipynb"
 
 # Maintain exclusion list only for academy and tech tutorials
@@ -67,6 +68,7 @@ async def execute_notebook(notebook_path):
     logging.info(
         f"Execution of {notebook_path} succeeded in {elapsed_time:.2f} seconds"
     )
+    # return notebook
 
 
 async def execute_notebooks():
@@ -88,13 +90,21 @@ async def execute_notebooks():
         and not any(exclude_nb in str(nb_path) for exclude_nb in exclusion_list)
     ]
 
-    # Create asyncio tasks to execute the notebooks
-    tasks = [execute_notebook(Path(notebook)) for notebook in notebooks]
-    results = await asyncio.gather(*tasks, return_exceptions=True)
-    for notebook, result in zip(notebooks, results):
-        if isinstance(result, Exception):
-            logging.error(f"Execution of {notebook} failed with exception: {result}")
-            sys.exit(1)
+    # Execute notebooks in batches of 5
+    batch_size = 5
+    for i in range(0, len(notebooks), batch_size):
+        batch = notebooks[i : i + batch_size]
+        tasks = [execute_notebook(Path(notebook)) for notebook in batch]
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+        for notebook, result in zip(batch, results):
+            if isinstance(result, Exception):
+                logging.error(
+                    f"Execution of {notebook} failed with exception: {result}"
+                )
+                sys.exit(1)
+            # else:
+            #     with open(notebook, "w", encoding="utf-8") as f:
+            #         nbformat.write(result, f)
 
 
 if __name__ == "__main__":

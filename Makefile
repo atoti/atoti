@@ -11,8 +11,6 @@ check: setup
 lint: setup
 	uv run ruff format .
 
-
-
 test: lint
 	uv run python tests/execute_notebooks.py
 

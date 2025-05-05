@@ -1,4 +1,4 @@
-.PHONY: check setup lint test review restore-content-db
+.PHONY: setup check lint test review restore-content-db
 
 setup:
 	uv sync

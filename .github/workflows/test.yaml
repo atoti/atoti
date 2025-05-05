@@ -40,8 +40,8 @@ jobs:
       - name: Create venv and install Python dependencies from uv.lock
         run: uv sync
 
-      - name: Run ruff
-        run: uv run ruff format --check .
+      - name: Check formatting via ruff
+        run: make check
 
       - name: Run notebook tests and generate reports
         run: make test

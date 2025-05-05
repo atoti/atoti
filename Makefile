@@ -1,21 +1,22 @@
-.PHONY: setup check lint test review restore-content-db
+.PHONY: env check format test review restore
 
-setup:
+env:
+	pip install --quiet --disable-pip-version-check uv
 	uv sync
-	uv pip install pre-commit
 	uv run pre-commit install
 
-check: setup
+check: env
 	uv run ruff format --check .
 
-lint: setup
+format: env
 	uv run ruff format .
 
-test: lint
+test: check format
 	uv run python tests/execute_notebooks.py
 
 review:
 	uv run jupyter-lab
 
-restore-content-db:
+restore:
+	git restore --staged '**/content.mv.db'
 	git restore '**/content.mv.db'

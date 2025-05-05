@@ -1,15 +1,17 @@
-.PHONY: check build lint test review restore-content-db
+.PHONY: check setup lint test review restore-content-db
 
-build:
+setup:
 	uv sync
 	uv pip install pre-commit
 	uv run pre-commit install
 
-check: build
+check: setup
 	uv run ruff format --check .
 
-lint: build
+lint: setup
 	uv run ruff format .
+
+
 
 test: lint
 	uv run python tests/execute_notebooks.py

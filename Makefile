@@ -1,12 +1,12 @@
 .PHONY: check build lint test review restore-content-db
 
-check:
-	uv run ruff format --check .
-
 build:
 	uv sync
 	uv pip install pre-commit
 	uv run pre-commit install
+
+check: build
+	uv run ruff format --check .
 
 lint: build
 	uv run ruff format .

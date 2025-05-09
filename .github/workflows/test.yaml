@@ -40,8 +40,23 @@ jobs:
       - name: Create venv and install Python dependencies from uv.lock
         run: uv sync
 
-      - name: Run ruff
-        run: uv run ruff format --check .
+      - name: Check formatting via ruff
+        run: make check
 
-      - name: Run notebooks
-        run: uv run python tests/execute_notebooks.py
+      - name: Run notebook tests and generate reports
+        run: make test
+
+      - name: Publish test results to GitHub
+        uses: dorny/test-reporter@v2
+        if: always()
+        with:
+          name: Notebook Tests
+          path: reports/junit*.xml
+          reporter: jest-junit
+
+      - name: Upload HTML test report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: notebook-test-report-${{ matrix.os }}
+          path: reports/report*.html

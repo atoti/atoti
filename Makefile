@@ -1,14 +1,22 @@
-.PHONY: test lint build review
+.PHONY: env check format test review restore
 
-build:
+env:
+	pip install --quiet --disable-pip-version-check uv
 	uv sync
+	uv run pre-commit install
 
-lint: build
+check: env
 	uv run ruff format --check .
 
-test: lint
+format: env
+	uv run ruff format .
+
+test: check format
 	uv run python tests/execute_notebooks.py
 
 review:
-	uv pip install nbdime
 	uv run jupyter-lab
+
+restore:
+	git restore --staged '**/content.mv.db'
+	git restore '**/content.mv.db'

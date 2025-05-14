@@ -3,6 +3,7 @@ from pathlib import Path
 import pytest
 import sys
 import pandas as pd
+import sys
 
 _MAIN = "main.ipynb"
 
@@ -69,15 +70,71 @@ notebooks = [
 for notebook in notebooks:
     print(notebook)
 
+from playwright.sync_api import sync_playwright, TimeoutError
+import pathlib, sys, time
+
+BASE = "http://localhost:8888/lab/tree/"
+
+IDLE_TIMEOUT = 10 * 60 * 1000  # 10 min
+
+
+def run(nb, page):
+    print(f"→ {nb}")
+    page.goto(BASE + nb)
+    # restart the kernel and run everything
+    page.click('button[aria-label="Restart the kernel and run all cells"]')
+    page.click('button:has-text("Restart")')
+
+    # 1. wait until it goes BUSY (so you know execution started)
+    page.wait_for_selector(
+        "div.jp-Notebook-ExecutionIndicator[data-status='busy']",
+        timeout=60_000,  # e.g. 1 min to start executing
+    )
+
+    # 2. wait for the indicator’s data-status to flip to "idle"
+    page.wait_for_selector(
+        "div.jp-Notebook-ExecutionIndicator[data-status='idle']",
+        timeout=10 * 60 * 1000,  # 10 minutes
+    )
+    print(f"✔ {nb}")
+
+
+def main():
+    failures = []
+    with sync_playwright() as pw:
+        browser = pw.chromium.launch(headless=False, slow_mo=100)
+        page = browser.new_page()
+        for nb in notebooks:
+            try:
+                run(nb, page)
+            except TimeoutError:
+                print(f"✖ Timeout on {nb}", file=sys.stderr)
+                failures.append(nb)
+            except Exception as e:
+                print(f"✖ Error on {nb}: {e}", file=sys.stderr)
+                failures.append(nb)
+        browser.close()
+
+    if failures:
+        print("Failed:", failures, file=sys.stderr)
+        sys.exit(1)
+    print("All notebooks ran successfully!")
+    sys.exit(0)
+
+
 if __name__ == "__main__":
-    pytest_args = [
-        "--nbmake",
-        "--nbmake-timeout=600",
-        "-n",
-        "auto",
-        "-v",
-        f"--html=reports/report-{sys.platform}.html",
-        "--self-contained-html",
-        f"--junitxml=reports/junit-{sys.platform}.xml",
-    ] + notebooks
-    sys.exit(pytest.main(pytest_args))
+    main()
+
+
+# if __name__ == "__main__":
+#     pytest_args = [
+#         "--nbmake",
+#         "--nbmake-timeout=600",
+#         "-n",
+#         "auto",
+#         "-v",
+#         f"--html=reports/report-{sys.platform}.html",
+#         "--self-contained-html",
+#         f"--junitxml=reports/junit-{sys.platform}.xml",
+#     ] + notebooks
+#     sys.exit(pytest.main(pytest_args))

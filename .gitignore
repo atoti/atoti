@@ -1,3 +1,7 @@
+# JupyterLab
+jupyter.log
+jupyter.pid
+
 # Reports
 reports/
 

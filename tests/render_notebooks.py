@@ -71,11 +71,6 @@ notebooks = [
     and not any(exclude_nb in str(nb_path) for exclude_nb in exclusion_list)
 ]
 
-notebooks = [
-    "02-technical-guides/introductory-tutorial/main.ipynb",
-    "02-technical-guides/table-creation-and-data-loads/main.ipynb",
-]
-
 notebooks.sort()
 for notebook in notebooks:
     print(notebook)

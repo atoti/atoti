@@ -16,7 +16,7 @@ test: check format
 
 web-render: check format
 	nohup uv run jupyter-lab --no-browser --port=8888 --NotebookApp.token='' --NotebookApp.password='' > jupyter.log 2>&1 &
-	uv run python tests/execute_notebooks.py
+	uv run python tests/render_notebooks.py
 
 review:
 	uv run jupyter-lab --port=8888

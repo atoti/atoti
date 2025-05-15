@@ -44,4 +44,4 @@ jobs:
         run: make check
 
       - name: Rebder notebooks
-        run: make render
+        run: make web-render

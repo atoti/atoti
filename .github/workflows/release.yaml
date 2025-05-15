@@ -53,7 +53,7 @@ jobs:
         env:
           PLAYWRIGHT_HEADLESS: "1"
         run: |
-          make web-render
+          uv run python tests/render_notebooks.py
 
       # 6) Always tear down JupyterLab when we're done
       - name: Stop JupyterLab

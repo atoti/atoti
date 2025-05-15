@@ -3,8 +3,12 @@ name: Release
 on:
   pull_request:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  test-notebooks:
+  render-notebooks:
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -23,40 +27,10 @@ jobs:
         run: |
           pip install uv
           uv sync     
-          uv run playwright install-deps
-          uv run playwright install
 
-      # 4) Launch JupyterLab in the background
-      - name: Start JupyterLab
-        run: |
-          nohup uv run jupyter-lab \
-            --no-browser \
-            --ip=0.0.0.0 \
-            --port=8888 \
-            --NotebookApp.token='' \
-            --NotebookApp.password='' \
-          > jupyter.log 2>&1 &
-          echo $! > jupyter.pid
-
-          # wait until JupyterLab is listening
-          echo "⏳ Waiting for JupyterLab…"
-          for i in {1..60}; do
-            if curl --silent --fail http://localhost:8888/lab ; then
-              echo "✅ JupyterLab is up!"
-              break
-            fi
-            sleep 1
-          done
-
-      # 5) Run your notebook‐testing script (Playwright, pytest+nbmake, etc.)
+      # 4) Run your notebook‐testing script (Playwright, pytest+nbmake, etc.)
       - name: Run web render tests
         env:
           PLAYWRIGHT_HEADLESS: "1"
         run: |
-          uv run python tests/render_notebooks.py
-
-      # 6) Always tear down JupyterLab when we're done
-      - name: Stop JupyterLab
-        if: always()
-        run: |
-          kill $(cat jupyter.pid) || true
+          make web-render

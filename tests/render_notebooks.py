@@ -7,6 +7,7 @@ import pandas as pd
 import sys
 from playwright.sync_api import sync_playwright, TimeoutError
 import pathlib, sys, time
+import socket
 
 
 _MAIN = "main.ipynb"
@@ -79,7 +80,15 @@ for notebook in notebooks:
 JUPYTER_LAB_URL = "http://localhost:8888/lab/tree/"
 
 
-from playwright.sync_api import TimeoutError
+def wait_for_jupyter(host="127.0.0.1", port=8888, timeout=60):
+    start = time.time()
+    while time.time() - start < timeout:
+        try:
+            with socket.create_connection((host, port), timeout=1):
+                return
+        except OSError:
+            time.sleep(0.5)
+    raise RuntimeError("Timed out waiting for JupyterLab")
 
 
 def shutdown_and_restart_kernel(
@@ -223,6 +232,7 @@ def run(nb, page):
 def main():
     failures = []
     with sync_playwright() as pw:
+        wait_for_jupyter()
         browser = pw.chromium.launch(headless=True, slow_mo=1000)
         page = browser.new_page()
         for nb in notebooks:

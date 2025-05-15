@@ -43,5 +43,5 @@ jobs:
       - name: Check formatting via ruff
         run: make check
 
-      - name: Rebder notebooks
+      - name: Render notebooks
         run: make web-render

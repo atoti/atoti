@@ -1,5 +1,8 @@
 SHELL := /usr/bin/env bash
 
+PLAYWRIGHT_HEADLESS ?= 1
+export PLAYWRIGHT_HEADLESS
+
 .PHONY: env check format test review restore
 
 env:

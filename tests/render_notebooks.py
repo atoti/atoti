@@ -231,7 +231,7 @@ def run(nb, page):
 
 
 def main():
-    headless = os.getenv("PLAYWRIGHT_HEADLESS", "true")
+    headless = os.getenv("PLAYWRIGHT_HEADLESS", "0") != "0"
     failures = []
     with sync_playwright() as pw:
         try:
@@ -240,9 +240,7 @@ def main():
         except Exception:
             print("JupyterLab is not running")
             exit
-        browser = pw.chromium.launch(
-            headless=(headless.lower() == "true"), slow_mo=1000
-        )
+        browser = pw.chromium.launch(headless=headless, slow_mo=1000)
         page = browser.new_page()
         for nb in notebooks:
             try:

@@ -21,6 +21,7 @@ jobs:
       # 3) Install your Python deps + Playwright browsers + system libs
       - name: Install dependencies
         run: |
+          pip install uv
           uv sync     
           uv run playwright install-deps
           uv run playwright install

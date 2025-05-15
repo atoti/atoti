@@ -17,6 +17,7 @@ test: check format
 	uv run python tests/execute_notebooks.py
 
 web-render: check format
+	uv run playwright install
 	nohup uv run jupyter-lab --no-browser --port=8888 --NotebookApp.token='' --NotebookApp.password='' > jupyter.log 2>&1 & \
 	echo $$! > jupyter.pid
 	uv run python tests/render_notebooks.py

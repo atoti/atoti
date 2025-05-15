@@ -79,30 +79,120 @@ for notebook in notebooks:
 JUPYTER_LAB_URL = "http://localhost:8888/lab/tree/"
 
 
-def shutdown_all_kernels(page):
-    # 1) Click the "Kernel" menubar entry
+from playwright.sync_api import TimeoutError
+
+
+def shutdown_and_restart_kernel(
+    page,
+    idle_timeout: int = 5000,
+    dialog_timeout: int = 3000,
+):
+    # 1) Open Kernel → wait for the shutdown entry
     page.click('li.lm-MenuBar-item:has-text("Kernel")')
+    shutdown_sel = (
+        'li.lm-Menu-item[data-command="kernelmenu:shutdownAll"]:not(.lm-mod-disabled)'
+    )
+    try:
+        page.wait_for_selector(shutdown_sel, timeout=dialog_timeout)
+        page.click(shutdown_sel)
+        print("  ▶️  Clicked “Shut Down All Kernels…”")
 
-    # 2) Locate the "Shut Down All Kernels…" item
-    item = page.get_by_role("menuitem", name="Shut Down All Kernels…")
+        # confirm dialog if it appears
+        try:
+            dlg = page.get_by_role("dialog")
+            dlg.wait_for(state="visible", timeout=dialog_timeout)
+            dlg.get_by_role("button", name="Shut Down All").click()
+            print("  ✅ Confirmed shutdown")
+        except TimeoutError:
+            print("  ⚠️ No shutdown dialog appeared")
 
-    # If it’s visible AND enabled, click; otherwise skip
-    if item.is_visible() and item.is_enabled():
-        item.click()
-        # 3) Confirm the dialog
-        confirm = page.get_by_role("button", name="Shut Down All")
-        if confirm.is_visible() and confirm.is_enabled():
-            confirm.click()
-        # allow time for kernels to shut down
-        page.wait_for_timeout(5000)
-        print("  ✅ Shut down all kernels")
-    else:
-        print("  ⚠️ Shut down all kernels is disabled, skipping")
+        page.wait_for_timeout(2_000)
+    except TimeoutError:
+        print("⚠️ ‘Shut Down All Kernels…’ not present, skipping shutdown")
+
+    # 2) Open Kernel → wait for the restart entry
+    page.click('li.lm-MenuBar-item:has-text("Kernel")')
+    restart_sel = (
+        'li.lm-Menu-item[data-command="kernelmenu:restart"]:not(.lm-mod-disabled)'
+    )
+    try:
+        page.wait_for_selector(restart_sel, timeout=dialog_timeout)
+        page.click(restart_sel)
+        print("  ▶️  Clicked “Restart Kernel…”")
+
+        page.wait_for_selector(
+            'div.jp-Notebook-ExecutionIndicator[data-status="idle"]',
+            state="attached",
+            timeout=idle_timeout,
+        )
+        print("  🟢 Kernel is idle")
+
+    except TimeoutError:
+        print("  ⚠️ ‘Restart Kernel…’ not present, skipping restart")
+        return
 
 
 def click_restart_run_all(page):
     page.click('li.lm-MenuBar-item:has-text("Kernel")')
     page.get_by_role("menuitem", name="Restart Kernel and Run All Cells").click()
+
+
+def run_all_code_cells_robust(
+    page,
+    start_timeout: int = 3000,  # how long to wait for a busy→idle transition to start
+    idle_timeout: int = 600_000,  # how long to wait for the notebook to finish
+):
+    # 0) Focus the visible notebook panel
+    page.wait_for_selector(
+        "div.jp-NotebookPanel:not(.lm-mod-hidden)",
+        state="visible",
+    )
+    page.click("div.jp-NotebookPanel:not(.lm-mod-hidden)")
+
+    # 1) Collect only the visible code cells
+    cells = page.locator(
+        "div.jp-NotebookPanel:not(.lm-mod-hidden) .jp-Cell.jp-CodeCell"
+    )
+    total = sum(1 for i in range(cells.count()) if cells.nth(i).is_visible())
+    print(f"  ▶️  Running {total} visible code cells…")
+
+    run_index = 0
+    for i in range(cells.count()):
+        cell = cells.nth(i)
+        if not cell.is_visible():
+            continue
+        run_index += 1
+        print(f"     → Code cell {run_index}/{total}")
+
+        # bring it into view & focus
+        cell.scroll_into_view_if_needed()
+        cell.evaluate("el => el.focus()")
+
+        # run & advance
+        page.keyboard.press("Shift+Enter")
+
+        # 2) Short wait for busy (in case it actually fires)
+        try:
+            page.wait_for_selector(
+                "div.jp-Notebook-ExecutionIndicator[data-status='busy']",
+                state="attached",
+                timeout=start_timeout,
+            )
+        except TimeoutError:
+            # cell was too fast to ever go busy
+            pass
+
+        # 3) Always wait for idle before moving on
+        try:
+            page.wait_for_selector(
+                "div.jp-Notebook-ExecutionIndicator[data-status='idle']",
+                state="attached",
+                timeout=idle_timeout,
+            )
+        except TimeoutError:
+            print(f"⚠️  Code cell {run_index} did not return to idle in time")
+
+    print("  💯 Run all cells completed")
 
 
 def click_close_tab(page):
@@ -118,26 +208,8 @@ def click_close_tab(page):
 def run(nb, page):
     print(f"→ {nb}")
     page.goto(JUPYTER_LAB_URL + nb)
-    shutdown_all_kernels(page)
-    click_restart_run_all(page)
-
-    print("  🏃 Running all cells")
-
-    # wait for kernel to start executing
-    page.wait_for_selector(
-        "div.jp-Notebook-ExecutionIndicator[data-status='busy']",
-        state="attached",
-        timeout=60000,  # 1 min to start executing
-    )
-    print("  🔧 Kernel is executing")
-
-    # wait for kernel to finish executing
-    page.wait_for_selector(
-        "div.jp-Notebook-ExecutionIndicator[data-status='idle']",
-        state="attached",
-        timeout=600000,  # 10 minutes of execution time per notebook
-    )
-    print("  💯 Run all cells completed")
+    shutdown_and_restart_kernel(page)
+    run_all_code_cells_robust(page)
 
     # wait for notebook to be saved
     page.get_by_role("button", name=re.compile(r"Save and create checkpoint")).click()
@@ -151,7 +223,7 @@ def run(nb, page):
 def main():
     failures = []
     with sync_playwright() as pw:
-        browser = pw.chromium.launch(headless=False, slow_mo=1000)
+        browser = pw.chromium.launch(headless=True, slow_mo=1000)
         page = browser.new_page()
         for nb in notebooks:
             try:

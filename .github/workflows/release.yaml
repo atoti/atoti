@@ -1,0 +1,46 @@
+name: Release
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    if: ${{ !contains(github.event.pull_request.labels.*.name, 'dnb') }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest, macos-13]
+        python: ["3.10.11"]
+        node-version: [16.x]
+      fail-fast: false
+    name: Test on ${{ matrix.os }} with Python ${{ matrix.python }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'oracle'
+          java-version: '21'
+
+      - name: Install libomp
+        if: ${{ matrix.os == 'macos-latest' || matrix.os == 'macos-13' }}
+        run: brew install libomp
+
+      - name: Install uv
+        run: pip install uv
+
+      - name: Create venv and install Python dependencies from uv.lock
+        run: uv sync
+
+      - name: Check formatting via ruff
+        run: make check
+
+      - name: Rebder notebooks
+        run: make render

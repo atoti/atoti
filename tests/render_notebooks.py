@@ -233,7 +233,7 @@ def main():
     failures = []
     with sync_playwright() as pw:
         # wait_for_jupyter()
-        browser = pw.chromium.launch(headless=False, slow_mo=1000)
+        browser = pw.chromium.launch(headless=True, slow_mo=1000)
         page = browser.new_page()
         for nb in notebooks:
             try:

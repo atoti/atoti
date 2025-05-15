@@ -8,6 +8,7 @@ import sys
 from playwright.sync_api import sync_playwright, TimeoutError
 import pathlib, sys, time
 import socket
+import os
 
 
 _MAIN = "main.ipynb"
@@ -117,7 +118,7 @@ def shutdown_and_restart_kernel(
 
         page.wait_for_timeout(2_000)
     except TimeoutError:
-        print("⚠️ ‘Shut Down All Kernels…’ not present, skipping shutdown")
+        print("  ⚠️ ‘Shut Down All Kernels…’ not present, skipping shutdown")
 
     # 2) Open Kernel → wait for the restart entry
     page.click('li.lm-MenuBar-item:has-text("Kernel")')
@@ -230,11 +231,18 @@ def run(nb, page):
 
 
 def main():
+    headless = os.getenv("PLAYWRIGHT_HEADLESS", "true")
     failures = []
     with sync_playwright() as pw:
-        if wait_for_jupyter():
+        try:
+            wait_for_jupyter()
             print("JupyterLab is running")
-        browser = pw.chromium.launch(headless=True, slow_mo=1000)
+        except Exception:
+            print("JupyterLab is not running")
+            exit
+        browser = pw.chromium.launch(
+            headless=(headless.lower() == "true"), slow_mo=1000
+        )
         page = browser.new_page()
         for nb in notebooks:
             try:

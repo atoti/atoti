@@ -21,16 +21,14 @@ jobs:
       # 3) Install your Python deps + Playwright browsers + system libs
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install playwright     # or however you install Playwright
-          playwright install-deps    # brings in libgtk, GStreamer, etc.
-          playwright install         # download Chromium, Firefox, WebKit
+          uv sync     
+          uv run playwright install-deps
+          uv run playwright install
 
       # 4) Launch JupyterLab in the background
       - name: Start JupyterLab
         run: |
-          nohup jupyter-lab \
+          nohup uv run jupyter-lab \
             --no-browser \
             --ip=0.0.0.0 \
             --port=8888 \

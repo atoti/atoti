@@ -15,7 +15,6 @@
 
 <p align="center">
   <a href="https://www.linkedin.com/showcase/atoti/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin"></a>
-  <a href="https://mobile.x.com/atoti_io"><img src="https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white" alt="linkedin"></a>
 </p>
 
 ## Financial use cases for Treasury 
@@ -39,7 +38,7 @@
 <td><a href="https://www.atoti.io/articles/rapid-collateral-modelling-and-simulation-with-atoti/?utm_source=github">📰&nbsp;Rapid collateral modelling and simulation with atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.5-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./intraday-liquidity/main.ipynb">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ranking</kbd>&nbsp;</td>
 </tr>
 </table>

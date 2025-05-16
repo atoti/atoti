@@ -89,7 +89,7 @@
 <td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> table partition</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./virtual-hierarchies/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;virtual-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.4-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./virtual-hierarchies/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;virtual-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> clickhouse</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -505,7 +505,7 @@ Double-click on tile to go to feature section.
 <td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> table partition</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./virtual-hierarchies/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;virtual-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.4-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./virtual-hierarchies/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;virtual-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> clickhouse</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -991,7 +991,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> direct query</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> snowflake</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./virtual-hierarchies/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;virtual-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.4-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./virtual-hierarchies/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;virtual-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> clickhouse</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -1111,7 +1111,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td>&nbsp</td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> table partition</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./virtual-hierarchies/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;virtual-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.4-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./virtual-hierarchies/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;virtual-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
 <td>&nbsp</td><td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> clickhouse</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 </table>

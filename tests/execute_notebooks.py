@@ -2,7 +2,9 @@ import glob
 from pathlib import Path
 import pytest
 import sys
+import re
 import pandas as pd
+import sys
 
 _MAIN = "main.ipynb"
 
@@ -66,8 +68,10 @@ notebooks = [
     and not any(exclude_nb in str(nb_path) for exclude_nb in exclusion_list)
 ]
 
+notebooks.sort()
 for notebook in notebooks:
     print(notebook)
+
 
 if __name__ == "__main__":
     pytest_args = [

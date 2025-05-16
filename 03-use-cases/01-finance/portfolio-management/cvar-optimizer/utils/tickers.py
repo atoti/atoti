@@ -24,7 +24,9 @@ def download_tickers(symbols, duration):
     start_date = datetime.datetime.now() - datetime.timedelta(days=duration * 365)
     start_date.strftime("%Y-%m-%d")
 
-    data = yf.download(symbols, start=start_date, end=dt.datetime.now())
+    data = yf.download(
+        symbols, start=start_date, end=dt.datetime.now(), auto_adjust=False
+    )
     return get_historical_vector(data)
 
 

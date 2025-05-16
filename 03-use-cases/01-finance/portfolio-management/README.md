@@ -15,7 +15,6 @@
 
 <p align="center">
   <a href="https://www.linkedin.com/showcase/atoti/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin"></a>
-  <a href="https://mobile.x.com/atoti_io"><img src="https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white" alt="linkedin"></a>
 </p>
 
 ## Financial use cases for Portfolio Management 
@@ -35,7 +34,7 @@
 <td>&nbsp</td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.14-grey" alt="Last maintained version" /></td>
+<td rowspan="1"><a href="./cvar-optimizer/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/integrating-an-external-portfolio-optimizer-with-atoti?utm_source=github">📰&nbsp;Integrating an External Portfolio Optimizer with atoti</a></td><td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>

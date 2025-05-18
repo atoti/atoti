@@ -128,7 +128,7 @@ Check out the [Atoti repository](https://github.com/atoti/atoti) for more info o
 <td valign="center"><a href="https://www.atoti.io/articles/tutorial-how-to-build-an-ifrs-9-solution-with-python-and-atoti/?utm_source=github">📰&nbsp;Tutorial: How to build an IFRS 9 solution with Python and atoti</a></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/sa-ccr/main.ipynb">sa-ccr&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/sa-ccr/main.ipynb">sa-ccr&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.5-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.atoti.io/articles/sa-ccr-with-python-and-atoti/?utm_source=github">📰&nbsp;SA-CCR with python and atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> statistical computation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -737,7 +737,7 @@ Double-click on tile to go to feature section.
 <td valign="center"><a href="https://www.atoti.io/articles/tutorial-how-to-build-an-ifrs-9-solution-with-python-and-atoti/?utm_source=github">📰&nbsp;Tutorial: How to build an IFRS 9 solution with Python and atoti</a></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/sa-ccr/main.ipynb">sa-ccr&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/sa-ccr/main.ipynb">sa-ccr&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.5-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.atoti.io/articles/sa-ccr-with-python-and-atoti/?utm_source=github">📰&nbsp;SA-CCR with python and atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> statistical computation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1053,7 +1053,7 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/articles/irrbb-with-atoti/?utm_source=github">📰&nbsp;Measuring Interest Rate Risk in the Banking Book (IRRBB) with Atoti</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> cube</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/sa-ccr/main.ipynb">sa-ccr&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/sa-ccr/main.ipynb">sa-ccr&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.5-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.atoti.io/articles/sa-ccr-with-python-and-atoti/?utm_source=github">📰&nbsp;SA-CCR with python and atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> statistical computation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1510,7 +1510,7 @@ Double-click on tile to go to feature section.
 <td valign="center"><a href="https://www.atoti.io/articles/tutorial-how-to-build-an-ifrs-9-solution-with-python-and-atoti/?utm_source=github">📰&nbsp;Tutorial: How to build an IFRS 9 solution with Python and atoti</a></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/sa-ccr/main.ipynb">sa-ccr&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/sa-ccr/main.ipynb">sa-ccr&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.5-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.atoti.io/articles/sa-ccr-with-python-and-atoti/?utm_source=github">📰&nbsp;SA-CCR with python and atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> statistical computation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1685,7 +1685,7 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/articles/irrbb-with-atoti/?utm_source=github">📰&nbsp;Measuring Interest Rate Risk in the Banking Book (IRRBB) with Atoti</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> cube</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/sa-ccr/main.ipynb">sa-ccr&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/sa-ccr/main.ipynb">sa-ccr&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.5-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.atoti.io/articles/sa-ccr-with-python-and-atoti/?utm_source=github">📰&nbsp;SA-CCR with python and atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> statistical computation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1769,7 +1769,7 @@ Double-click on tile to go to feature section.
 <td valign="center"><a href="https://www.atoti.io/articles/tutorial-how-to-build-an-ifrs-9-solution-with-python-and-atoti/?utm_source=github">📰&nbsp;Tutorial: How to build an IFRS 9 solution with Python and atoti</a></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/sa-ccr/main.ipynb">sa-ccr&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/sa-ccr/main.ipynb">sa-ccr&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.5-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.atoti.io/articles/sa-ccr-with-python-and-atoti/?utm_source=github">📰&nbsp;SA-CCR with python and atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> statistical computation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -2073,7 +2073,7 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/articles/irrbb-with-atoti/?utm_source=github">📰&nbsp;Measuring Interest Rate Risk in the Banking Book (IRRBB) with Atoti</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> cube</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/sa-ccr/main.ipynb">sa-ccr&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/sa-ccr/main.ipynb">sa-ccr&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.5-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.atoti.io/articles/sa-ccr-with-python-and-atoti/?utm_source=github">📰&nbsp;SA-CCR with python and atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> statistical computation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -2451,7 +2451,7 @@ Double-click on tile to go to feature section.
 <td valign="center"><a href="https://www.atoti.io/articles/credit-card-fraud-detection-part2//?utm_source=github">📰&nbsp;Part 2: Fraud detection with Faker and PyCaret</a></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/sa-ccr/main.ipynb">sa-ccr&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/sa-ccr/main.ipynb">sa-ccr&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.5-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.atoti.io/articles/sa-ccr-with-python-and-atoti/?utm_source=github">📰&nbsp;SA-CCR with python and atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> statistical computation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -3213,7 +3213,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td valign="center"><a href="https://www.atoti.io/articles/tutorial-how-to-build-an-ifrs-9-solution-with-python-and-atoti/?utm_source=github">📰&nbsp;Tutorial: How to build an IFRS 9 solution with Python and atoti</a></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/sa-ccr/main.ipynb">sa-ccr&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/sa-ccr/main.ipynb">sa-ccr&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.5-grey" alt="Last maintained version" /></td>
 <td><a href="https://www.atoti.io/articles/sa-ccr-with-python-and-atoti/?utm_source=github">📰&nbsp;SA-CCR with python and atoti</a></td><td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> statistical computation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>

@@ -21,7 +21,7 @@ dependencies = [
     "watchdog >=5.0.3, <7",
     "quantlib >=1.36, <2",
     "kafka-python >=2.0.2, <3",
-    "xgboost >=2.1.1, <3",
+    "xgboost >=2.1.1, <4",
     "natsort >=8.3.1, <9",
     "tabulate >=0.9.0, <1",
     "orjson >=3.10.7, <4",
@@ -35,7 +35,7 @@ dependencies = [
     "protobuf >=5.28.2, <7",
     "scikit-learn >=1.5.2, <2",
     "folium >=0.17.0, <1",
-    "atoti[aws,azure,gcp,jupyterlab,kafka,jdbc]==0.9.5",
+    "atoti[aws,azure,gcp,jupyterlab,kafka,jdbc]==0.9.6",
     "pandas == 2.2.3",
     "jupyterlab == 4.3.4",
     "ruff >=0.6.9, <1",
@@ -43,11 +43,12 @@ dependencies = [
     "jupyter-resource-usage>=1.1.0",
     "pytest == 8.3.5",
     "pytest-html == 4.1.1",
-    "pytest-xdist == 3.6.1",
+    "pytest-xdist == 3.7.0",
     "nbdime == 4.0.2",
     "nbmake == 1.5.5",
     "pre-commit == 4.2.0",
-    "playwright == 1.52.0"
+    "playwright == 1.52.0",
+    "pyportfolioopt == 1.5.6"
 ]
 
 [tool.source]

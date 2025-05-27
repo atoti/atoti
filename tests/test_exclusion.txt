@@ -8,6 +8,7 @@
 03-use-cases/01-finance/front-office/real-time-risk
 03-use-cases/01-finance/risk-management/credit-risk/ifrs9
 03-use-cases/01-finance/risk-management/credit-risk/ifrs9
+03-use-cases/01-finance/risk-management/credit-risk/sa-ccr
 03-use-cases/01-finance/risk-management/credit-risk/collateral-shortfall-forecast
 03-use-cases/01-finance/risk-management/operational-risk/credit-card-fraud-detection
 03-use-cases/01-finance/risk-management/operational-risk/credit-card-fraud-detection

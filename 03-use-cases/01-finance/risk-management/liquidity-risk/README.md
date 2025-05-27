@@ -15,7 +15,6 @@
 
 <p align="center">
   <a href="https://www.linkedin.com/showcase/atoti/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin"></a>
-  <a href="https://mobile.x.com/atoti_io"><img src="https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white" alt="linkedin"></a>
 </p>
 
 ## Financial use cases for Liquidity Risk 
@@ -31,7 +30,7 @@
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./irrbb/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.5-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./irrbb/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
 <td><a href="https://www.atoti.io/articles/irrbb-with-atoti/?utm_source=github">📰&nbsp;Measuring Interest Rate Risk in the Banking Book (IRRBB) with Atoti</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> cube</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 </table>

@@ -15,5 +15,4 @@
 
 <p align="center">
   <a href="https://www.linkedin.com/showcase/atoti/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin"></a>
-  <a href="https://mobile.x.com/atoti_io"><img src="https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white" alt="linkedin"></a>
 </p>

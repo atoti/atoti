@@ -19,7 +19,7 @@ format: env
 test: check format
 	uv run python tests/execute_notebooks.py
 
-web-render: check format
+render: check format
 	uv run playwright install
 	uv run playwright install-deps
 	nohup uv run jupyter-lab --no-browser --ip=0.0.0.0 --port=8888 --NotebookApp.token='' --NotebookApp.password='' > jupyter.log 2>&1 & \

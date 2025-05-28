@@ -17,7 +17,7 @@ We welcome any contributions from the community!
 4. Create a working branch `git switch -c <BRANCH_NAME>`.
 5. Start JupyterLab: `uv run jupyter-lab`.
 6. Create the folder and notebooks.
-    * Add notebooks responsible for data pre-processing to the [list of untested notebooks](tests/execute_notebooks.py).
+    * Add notebooks responsible for data pre-processing to the [list of untested notebooks](tests/test_notebooks.py).
     * The main notebook using atoti should be tested to ensure users can run it.
 7. If a dependency is missing run `uv add <DEPENDENCY_NAME>`. 
     * **DEPENDENCIES MUST NOT BEEN ADDED WITH CONDA OR PIP** since the Github CI relies on the `uv.lock` file to install dependencies.
@@ -73,7 +73,7 @@ These commands can be used while developing:
 - Execute all the notebooks:
 
   ```bash
-  uv run python tests/execute_notebooks.py
+  uv run python tests/test_notebooks.py
   ```
 
 

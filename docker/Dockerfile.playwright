@@ -1,5 +1,4 @@
-# Set explicit platform (for ARM-based Macbooks)
-FROM --platform=linux/amd64 python:3.10.13-slim-bookworm
+FROM mcr.microsoft.com/playwright/python:v1.51.0-noble
 
 # Copy files to container and set working dir
 COPY . /atoti
@@ -8,6 +7,7 @@ WORKDIR /atoti
 # Install system dependencies
 RUN apt-get update \
  && apt-get install -y \
+      xvfb \
       git \
       git-lfs \
       debian-archive-keyring \
@@ -21,4 +21,3 @@ RUN pip install uv && \
 
 # Set container executable
 CMD [ "make", "render" ]
-# CMD [ "uv", "run", "jupyter-lab", "--ip=0.0.0.0", "--allow-root", "--no-browser" ]

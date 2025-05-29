@@ -1,151 +1,62 @@
 name: Test
 on:
-  pull_request:
   workflow_dispatch:
+  pull_request:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
-  # ──────────────────────────────────────────────────────────────────────────────
-  # 1) Build environment (matrix)
-  # ──────────────────────────────────────────────────────────────────────────────
-  build:
+  test:
+    if: ${{ !contains(github.event.pull_request.labels.*.name, 'dnb') }}
     runs-on: ${{ matrix.os }}
-    name: Build on ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest, macos-13]
         python: ["3.10.11"]
         node-version: [16.x]
       fail-fast: false
+    name: Test on ${{ matrix.os }} with Python ${{ matrix.python }}
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
+
       - uses: actions/setup-java@v4
         with:
           distribution: 'oracle'
           java-version: '21'
-      - name: Install libomp on macOS
-        if: ${{ startsWith(matrix.os, 'macos') }}
+
+      - name: Install libomp
+        if: ${{ matrix.os == 'macos-latest' || matrix.os == 'macos-13' }}
         run: brew install libomp
-      - name: Create venv & install uv
-        run: |
-          python -m venv .venv
-          source .venv/bin/activate
-          pip install uv
-          uv sync
-      - name: Upload venv
-        uses: actions/upload-artifact@v4
-        with:
-          name: venv-${{ matrix.os }}
-          path: .venv
 
-  # ──────────────────────────────────────────────────────────────────────────────
-  # 2) Code formatting (matrix)
-  # ──────────────────────────────────────────────────────────────────────────────
-  format:
-    needs: build
-    runs-on: ${{ matrix.os }}
-    name: Ruff format on ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest, macos-13]
-        python: ["3.10.11"]
-        node-version: [16.x]
-      fail-fast: false
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python }}
-      - uses: actions/setup-java@v4
-        with:
-          distribution: 'oracle'
-          java-version: '21'
-      - name: Install libomp on macOS
-        if: ${{ startsWith(matrix.os, 'macos') }}
-        run: brew install libomp
-      - name: Download venv
-        uses: actions/download-artifact@v4
-        with:
-          name: venv-${{ matrix.os }}
-          path: .venv
-      - name: Activate venv and check formatting (Unix)
-        if: runner.os != 'Windows'
-        run: |
-          source .venv/bin/activate
-          make check
+      - name: Install uv
+        run: pip install uv
 
-      - name: Activate venv and check formatting (Windows)
-        if: runner.os == 'Windows'
-        run: |
-          .venv\bin\activate.bat
-          make check
+      - name: Create venv and install Python dependencies from uv.lock
+        run: uv sync
 
-  # ──────────────────────────────────────────────────────────────────────────────
-  # 3) Notebook tests (matrix)
-  # ──────────────────────────────────────────────────────────────────────────────
-  notebooks:
-    needs: format
-    runs-on: ${{ matrix.os }}
-    name: Notebook tests on ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest, macos-13]
-        python: ["3.10.11"]
-        node-version: [16.x]
-      fail-fast: false
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python }}
-      - uses: actions/setup-java@v4
-        with:
-          distribution: 'oracle'
-          java-version: '21'
-      - name: Install libomp on macOS
-        if: ${{ startsWith(matrix.os, 'macos') }}
-        run: brew install libomp
-      - name: Download venv
-        uses: actions/download-artifact@v4
-        with:
-          name: venv-${{ matrix.os }}
-          path: .venv
-      - name: Activate venv and run notebook tests (Unix)
-        if: runner.os != 'Windows'
-        run: |
-          source .venv/bin/activate
-          make test
+      - name: Check formatting via ruff
+        run: make check
 
-      - name: Activate venv and run notebook tests (Windows)
-        if: runner.os == 'Windows'
-        run: |
-          .venv\bin\activate.bat
-          make test
+      - name: Run notebook tests and generate reports
+        run: make test
 
-  # ──────────────────────────────────────────────────────────────────────────────
-  # 4) Publish JUnit & HTML reports
-  # ──────────────────────────────────────────────────────────────────────────────
-  publish:
-    needs: [notebooks]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/download-artifact@v4
-        with:
-          path: reports
-      - name: Publish JUnit results
+      - name: Publish test results to GitHub
         uses: dorny/test-reporter@v2
+        if: always()
         with:
           name: Notebook Tests
           path: reports/junit*.xml
           reporter: jest-junit
-      - name: Upload HTML report
+
+      - name: Upload HTML test report
         uses: actions/upload-artifact@v4
+        if: always()
         with:
-          name: notebook-test-report
+          name: notebook-test-report-${{ matrix.os }}
           path: reports/report*.html

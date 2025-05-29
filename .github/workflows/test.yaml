@@ -9,9 +9,39 @@ concurrency:
 
 jobs:
   # ──────────────────────────────────────────────────────────────────────────────
-  # 1) Code formatting (matrix)
+  # 1) Build environment (matrix)
+  # ──────────────────────────────────────────────────────────────────────────────
+  build:
+    runs-on: ${{ matrix.os }}
+    name: Build on ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest, macos-13]
+        python: ["3.10.11"]
+        node-version: [16.x]
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'oracle'
+          java-version: '21'
+      - name: Install libomp on macOS
+        if: ${{ startsWith(matrix.os, 'macos') }}
+        run: brew install libomp
+      - name: Create venv & install uv
+        run: |
+          pip install uv
+          uv sync
+
+  # ──────────────────────────────────────────────────────────────────────────────
+  # 2) Code formatting (matrix)
   # ──────────────────────────────────────────────────────────────────────────────
   format:
+    needs: build
     runs-on: ${{ matrix.os }}
     name: Ruff format on ${{ matrix.os }}
     strategy:
@@ -40,7 +70,7 @@ jobs:
         run: make check
 
   # ──────────────────────────────────────────────────────────────────────────────
-  # 2) Notebook tests (matrix)
+  # 3) Notebook tests (matrix)
   # ──────────────────────────────────────────────────────────────────────────────
   notebooks:
     needs: format
@@ -72,7 +102,7 @@ jobs:
         run: make test
 
   # ──────────────────────────────────────────────────────────────────────────────
-  # 3) Publish JUnit & HTML reports
+  # 4) Publish JUnit & HTML reports
   # ──────────────────────────────────────────────────────────────────────────────
   publish:
     needs: [notebooks]

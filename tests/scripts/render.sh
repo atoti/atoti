@@ -3,12 +3,30 @@ set -euo pipefail
 
 trap 'pkill -f jupyter-lab' INT TERM EXIT
 
-uv run playwright install
-uv run playwright install-deps
+wait_for_jupyter() {
+  local host="${1:-127.0.0.1}"
+  local port="${2:-8888}"
+  local timeout="${3:-30}"
+  local start_time=$(date +%s)
+  while true; do
+    if nc -z "$host" "$port"; then
+      return 0
+    fi
+    sleep 0.5
+    local now=$(date +%s)
+    if (( now - start_time > timeout )); then
+      echo "Timed out waiting for JupyterLab on $host:$port" >&2
+      return 1
+    fi
+  done
+}
 
+echo "Starting Jupyter Lab..."
 nohup uv run jupyter-lab \
   --allow-root --no-browser --ip=0.0.0.0 --port=8888 \
   --NotebookApp.token='' --NotebookApp.password='' \
   > jupyter.log 2>&1 &
+wait_for_jupyter 127.0.0.1 8888 5
+echo "JupyterLab is running"
 
 uv run python tests/render_notebooks.py

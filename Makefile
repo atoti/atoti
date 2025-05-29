@@ -20,6 +20,8 @@ test: check format
 	uv run python tests/test_notebooks.py
 
 render: check format
+	uv run playwright install
+	uv run playwright install-deps
 	./tests/scripts/render.sh
 
 review:

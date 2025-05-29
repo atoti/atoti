@@ -1,13 +1,8 @@
-import glob
 import os
-from pathlib import Path
 from exclusion_utils import get_included_notebooks
-import pytest
 import re
-import pandas as pd
 from playwright.sync_api import sync_playwright, TimeoutError
-import pathlib, sys, time
-import socket
+import sys
 
 # Gather the list of notebooks under the project directory
 notebooks = get_included_notebooks()
@@ -15,19 +10,7 @@ notebooks = get_included_notebooks()
 for notebook in notebooks:
     print(notebook)
 
-
 JUPYTER_LAB_URL = "http://localhost:8888/lab/tree/"
-
-
-def wait_for_jupyter(host="127.0.0.1", port=8888, timeout=60):
-    start = time.time()
-    while time.time() - start < timeout:
-        try:
-            with socket.create_connection((host, port), timeout=1):
-                return
-        except OSError:
-            time.sleep(0.5)
-    raise RuntimeError("Timed out waiting for JupyterLab")
 
 
 def shutdown_and_restart_kernel(
@@ -172,12 +155,6 @@ def main():
     headless = os.getenv("PLAYWRIGHT_HEADLESS", "0") != "0"
     failures = []
     with sync_playwright() as pw:
-        try:
-            wait_for_jupyter()
-            print("JupyterLab is running")
-        except Exception:
-            print("JupyterLab is not running")
-            exit
         browser = pw.chromium.launch(headless=headless, slow_mo=1000)
         page = browser.new_page()
         for nb in notebooks:

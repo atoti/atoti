@@ -1,62 +1,98 @@
 name: Test
 on:
-  workflow_dispatch:
   pull_request:
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
-  test:
-    if: ${{ !contains(github.event.pull_request.labels.*.name, 'dnb') }}
-    runs-on: ${{ matrix.os }}
+
+  # ──────────────────────────────────────────────────────────────────────────────
+  # 1) Checkout + setup matrix
+  # ──────────────────────────────────────────────────────────────────────────────
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ toJson(matrix) }}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest, macos-13]
         python: ["3.10.11"]
         node-version: [16.x]
-      fail-fast: false
-    name: Test on ${{ matrix.os }} with Python ${{ matrix.python }}
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python }}
-
+        with: python-version: ${{ matrix.python }}
       - uses: actions/setup-java@v4
         with:
           distribution: 'oracle'
           java-version: '21'
-
-      - name: Install libomp
-        if: ${{ matrix.os == 'macos-latest' || matrix.os == 'macos-13' }}
+      - name: Install libomp on macOS
+        if: ${{ matrix.os.startsWith('macos') }}
         run: brew install libomp
+      - name: Persist matrix
+        run: echo "::set-output name=matrix::${{ toJson(matrix) }}"
+        # (you could also read back from github.strategy here,
+        #  or skip this “setup” job entirely and duplicate the strategy)
 
-      - name: Install uv
-        run: pip install uv
-
-      - name: Create venv and install Python dependencies from uv.lock
-        run: uv sync
-
-      - name: Check formatting via ruff
+  # ──────────────────────────────────────────────────────────────────────────────
+  # 2) Code formatting
+  # ──────────────────────────────────────────────────────────────────────────────
+  format:
+    needs: setup
+    runs-on: ${{ fromJson(needs.setup.outputs.matrix).os }}
+    name: Ruff format on ${{ matrix.os }}
+    strategy:
+      matrix: ${{ fromJson(needs.setup.outputs.matrix) }}
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create venv & install uv
+        run: |
+          pip install uv
+          uv sync
+      - name: Check formatting
         run: make check
 
-      - name: Run notebook tests and generate reports
+  # ──────────────────────────────────────────────────────────────────────────────
+  # 3) Notebook tests
+  # ──────────────────────────────────────────────────────────────────────────────
+  notebooks:
+    needs: format
+    runs-on: ${{ fromJson(needs.setup.outputs.matrix).os }}
+    name: Notebook tests on ${{ matrix.os }}
+    strategy:
+      matrix: ${{ fromJson(needs.setup.outputs.matrix) }}
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create venv & install uv
+        run: |
+          pip install uv
+          uv sync
+      - name: Run notebook tests
         run: make test
 
-      - name: Publish test results to GitHub
+  # ──────────────────────────────────────────────────────────────────────────────
+  # 4) Publish JUnit & HTML reports
+  # ──────────────────────────────────────────────────────────────────────────────
+  publish:
+    needs: [notebooks]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: reports
+      - name: Publish JUnit results
         uses: dorny/test-reporter@v2
-        if: always()
         with:
           name: Notebook Tests
           path: reports/junit*.xml
           reporter: jest-junit
-
-      - name: Upload HTML test report
+      - name: Upload HTML report
         uses: actions/upload-artifact@v4
-        if: always()
         with:
-          name: notebook-test-report-${{ matrix.os }}
+          name: notebook-test-report
           path: reports/report*.html

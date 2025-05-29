@@ -8,47 +8,30 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-
   # ──────────────────────────────────────────────────────────────────────────────
-  # 1) Checkout + setup matrix
+  # 1) Code formatting (matrix)
   # ──────────────────────────────────────────────────────────────────────────────
-  setup:
-    runs-on: ubuntu-latest
-    outputs:
-      matrix: ${{ toJson(matrix) }}
+  format:
+    runs-on: ${{ matrix.os }}
+    name: Ruff format on ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest, macos-13]
         python: ["3.10.11"]
         node-version: [16.x]
+      fail-fast: false
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: python-version: ${{ matrix.python }}
+        with:
+          python-version: ${{ matrix.python }}
       - uses: actions/setup-java@v4
         with:
           distribution: 'oracle'
           java-version: '21'
       - name: Install libomp on macOS
-        if: ${{ matrix.os.startsWith('macos') }}
+        if: ${{ startsWith(matrix.os, 'macos') }}
         run: brew install libomp
-      - name: Persist matrix
-        run: echo "::set-output name=matrix::${{ toJson(matrix) }}"
-        # (you could also read back from github.strategy here,
-        #  or skip this “setup” job entirely and duplicate the strategy)
-
-  # ──────────────────────────────────────────────────────────────────────────────
-  # 2) Code formatting
-  # ──────────────────────────────────────────────────────────────────────────────
-  format:
-    needs: setup
-    runs-on: ${{ fromJson(needs.setup.outputs.matrix).os }}
-    name: Ruff format on ${{ matrix.os }}
-    strategy:
-      matrix: ${{ fromJson(needs.setup.outputs.matrix) }}
-      fail-fast: false
-    steps:
-      - uses: actions/checkout@v4
       - name: Create venv & install uv
         run: |
           pip install uv
@@ -57,17 +40,30 @@ jobs:
         run: make check
 
   # ──────────────────────────────────────────────────────────────────────────────
-  # 3) Notebook tests
+  # 2) Notebook tests (matrix)
   # ──────────────────────────────────────────────────────────────────────────────
   notebooks:
     needs: format
-    runs-on: ${{ fromJson(needs.setup.outputs.matrix).os }}
+    runs-on: ${{ matrix.os }}
     name: Notebook tests on ${{ matrix.os }}
     strategy:
-      matrix: ${{ fromJson(needs.setup.outputs.matrix) }}
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest, macos-13]
+        python: ["3.10.11"]
+        node-version: [16.x]
       fail-fast: false
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'oracle'
+          java-version: '21'
+      - name: Install libomp on macOS
+        if: ${{ startsWith(matrix.os, 'macos') }}
+        run: brew install libomp
       - name: Create venv & install uv
         run: |
           pip install uv
@@ -76,7 +72,7 @@ jobs:
         run: make test
 
   # ──────────────────────────────────────────────────────────────────────────────
-  # 4) Publish JUnit & HTML reports
+  # 3) Publish JUnit & HTML reports
   # ──────────────────────────────────────────────────────────────────────────────
   publish:
     needs: [notebooks]

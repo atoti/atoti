@@ -74,9 +74,16 @@ jobs:
         with:
           name: venv-${{ matrix.os }}
           path: .venv
-      - name: Activate venv and check formatting
+      - name: Activate venv and check formatting (Unix)
+        if: runner.os != 'Windows'
         run: |
           source .venv/bin/activate
+          make check
+
+      - name: Activate venv and check formatting (Windows)
+        if: runner.os == 'Windows'
+        run: |
+          .venv\bin\activate.bat
           make check
 
   # ──────────────────────────────────────────────────────────────────────────────
@@ -109,9 +116,16 @@ jobs:
         with:
           name: venv-${{ matrix.os }}
           path: .venv
-      - name: Activate venv and run notebook tests
+      - name: Activate venv and run notebook tests (Unix)
+        if: runner.os != 'Windows'
         run: |
           source .venv/bin/activate
+          make test
+
+      - name: Activate venv and run notebook tests (Windows)
+        if: runner.os == 'Windows'
+        run: |
+          .venv\bin\activate.bat
           make test
 
   # ──────────────────────────────────────────────────────────────────────────────

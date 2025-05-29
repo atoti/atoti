@@ -23,8 +23,11 @@ __pycache__/
 02-technical-guides/aggregate-provider/data/
 02-technical-guides/aggregate-provider/small_data*
 02-technical-guides/conditional-functions/data/
+02-technical-guides/conditional-functions/data.zip*
 02-technical-guides/directquery-vector/data/
+02-technical-guides/directquery-vector/data.zip*
 02-technical-guides/rollup-hierarchies/*.csv
+02-technical-guides/rollup-hierarchies/rollup-hierarchies2.zip*
 02-technical-guides/observability-with-otel/data*/
 02-technical-guides/observability-with-otel/logs/
 02-technical-guides/observability-with-otel/otel-stack/config/tempo-data*/
@@ -37,6 +40,7 @@ __pycache__/
 03-use-cases/01-finance/risk-management/credit-risk/xva/data-prev/*.csv
 03-use-cases/01-finance/risk-management/credit-risk/xva/data/*.csv
 03-use-cases/01-finance/risk-management/credit-risk/xva/what-if/*.csv
+03-use-cases/01-finance/risk-management/credit-risk/xva/what-if.zip*
 03-use-cases/01-finance/risk-management/credit-risk/ifrs9/lending-club-data/*.csv
 03-use-cases/01-finance/retail-banking/credit-card-analytics/data/
 03-use-cases/01-finance/treasury/intraday-liquidity/

@@ -1,15 +1,14 @@
 #!/bin/bash
 set -euo pipefail
 
-trap 'pkill -f jupyter-lab' INT TERM EXIT
-
 wait_for_jupyter() {
   local host="${1:-127.0.0.1}"
   local port="${2:-8888}"
   local timeout="${3:-30}"
+  local url="http://${host}:${port}"
   local start_time=$(date +%s)
   while true; do
-    if nc -z "$host" "$port"; then
+    if curl -s --max-time 1 "$url" > /dev/null; then
       return 0
     fi
     sleep 0.5
@@ -22,10 +21,11 @@ wait_for_jupyter() {
 }
 
 echo "Starting Jupyter Lab..."
+trap 'pkill -f jupyter-lab' INT TERM EXIT
 nohup uv run jupyter-lab \
   --allow-root --no-browser --ip=0.0.0.0 --port=8888 \
   --NotebookApp.token='' --NotebookApp.password='' \
-  > jupyter.log 2>&1 &
+  > /dev/null 2>&1 &
 wait_for_jupyter 127.0.0.1 8888 5
 echo "JupyterLab is running"
 

@@ -1,13 +1,9 @@
 FROM mcr.microsoft.com/playwright/python:v1.51.0-noble
 
-# Copy files to container and set working dir
-COPY . /atoti
-WORKDIR /atoti
-
 # Install system dependencies
 RUN apt-get update \
  && apt-get install -y \
-      xvfb \
+      tini \
       git \
       git-lfs \
       debian-archive-keyring \
@@ -15,9 +11,16 @@ RUN apt-get update \
       ca-certificates \
  && rm -rf /var/lib/apt/lists/*
 
+# Copy files to container and set working dir
+COPY . /atoti
+WORKDIR /atoti
+
 # Install dependencies in container (uv style)
 RUN pip install uv && \
     uv sync
+
+# Use tini as the entrypoint
+ENTRYPOINT ["/usr/bin/tini", "--"]
 
 # Set container executable
 CMD [ "make", "render" ]

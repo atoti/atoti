@@ -34,8 +34,15 @@ jobs:
         run: brew install libomp
       - name: Create venv & install uv
         run: |
+          python -m venv .venv
+          source .venv/bin/activate
           pip install uv
           uv sync
+      - name: Upload venv
+        uses: actions/upload-artifact@v4
+        with:
+          name: venv-${{ matrix.os }}
+          path: .venv
 
   # ──────────────────────────────────────────────────────────────────────────────
   # 2) Code formatting (matrix)
@@ -62,12 +69,15 @@ jobs:
       - name: Install libomp on macOS
         if: ${{ startsWith(matrix.os, 'macos') }}
         run: brew install libomp
-      - name: Create venv & install uv
+      - name: Download venv
+        uses: actions/download-artifact@v4
+        with:
+          name: venv-${{ matrix.os }}
+          path: .venv
+      - name: Activate venv and check formatting
         run: |
-          pip install uv
-          uv sync
-      - name: Check formatting
-        run: make check
+          source .venv/bin/activate
+          make check
 
   # ──────────────────────────────────────────────────────────────────────────────
   # 3) Notebook tests (matrix)
@@ -94,12 +104,15 @@ jobs:
       - name: Install libomp on macOS
         if: ${{ startsWith(matrix.os, 'macos') }}
         run: brew install libomp
-      - name: Create venv & install uv
+      - name: Download venv
+        uses: actions/download-artifact@v4
+        with:
+          name: venv-${{ matrix.os }}
+          path: .venv
+      - name: Activate venv and run notebook tests
         run: |
-          pip install uv
-          uv sync
-      - name: Run notebook tests
-        run: make test
+          source .venv/bin/activate
+          make test
 
   # ──────────────────────────────────────────────────────────────────────────────
   # 4) Publish JUnit & HTML reports

@@ -19,6 +19,11 @@ jobs:
       fail-fast: false
     name: Test on ${{ matrix.os }} with Python ${{ matrix.python }}
     steps:
+      - name: Enable workflow telemetry
+        uses: catchpoint/workflow-telemetry-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+              
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5

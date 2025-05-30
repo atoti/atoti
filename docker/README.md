@@ -17,7 +17,7 @@
   <a href="https://www.linkedin.com/showcase/atoti/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin"></a>
 </p>
 
-Run the following commands at the root of the repository:
+Run the following commands at the root of the repository for the given Dockerfile:
 
 `Dockerfile`
 

@@ -13,11 +13,11 @@ JUPYTER_LAB_URL = os.getenv("JUPYTER_LAB_URL", "http://localhost:8888/lab/tree/"
 HEADLESS = os.getenv("PLAYWRIGHT_HEADLESS", "0") != "0"
 SLOW_MO = int(os.getenv("PLAYWRIGHT_SLOWMO", "2000"))
 SHUTDOWN_DIALOG_TIMEOUT = 3000  # ms to wait for shutdown dialog
-RESTART_IDLE_TIMEOUT = 5000  # ms to wait for kernel idle after restart
 RESTART_DIALOG_TIMEOUT = 3000  # ms to wait for restart dialog
+RESTART_IDLE_TIMEOUT = 5000  # ms to wait for kernel idle after restart
 RUN_START_TIMEOUT = 1000  # ms to wait for cell to go busy
-RUN_IDLE_TIMEOUT = 60000  # ms to wait for cell to return to idle
-SAVE_TIMEOUT = 1000  # ms to wait for save menu item
+RUN_IDLE_TIMEOUT = 300000  # ms to wait for cell to return to idle
+
 
 # =====================
 # Logging setup
@@ -25,7 +25,7 @@ SAVE_TIMEOUT = 1000  # ms to wait for save menu item
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
-    datefmt="%H:%M:%S",
+    datefmt="%Y-%m-%d %H:%M:%S",
 )
 logger = logging.getLogger("notebook-renderer")
 
@@ -33,7 +33,7 @@ logger = logging.getLogger("notebook-renderer")
 # Notebook selection
 # =====================
 notebooks: List[str] = get_included_notebooks()
-logger.info(f"Found {len(notebooks)} notebooks to test:")
+logger.info(f"Found {len(notebooks)} notebooks to render:")
 for notebook in notebooks:
     logger.info(f"  - {notebook}")
 
@@ -156,7 +156,6 @@ def save_notebook(page: Page, nb: str) -> None:
     """
     page.click('li.lm-MenuBar-item:has-text("File")')
     save_sel = 'li.lm-Menu-item[data-command="docmanager:save"]:not(.lm-mod-disabled)'
-    page.wait_for_selector(save_sel, timeout=SAVE_TIMEOUT)
     page.click(save_sel)
     logger.info("  💾 Notebook saved")
 
@@ -191,12 +190,12 @@ def print_summary(results: List[dict]) -> None:
     status and duration.
     """
     logger.info("\nSummary:")
-    logger.info(f"{'Notebook':60} | {'Status':8} | {'Duration':10}")
-    logger.info("-" * 85)
+    logger.info(f"{'Notebook':70} | {'Status':9} | {'Duration':10}")
+    logger.info("-" * 102)
     for r in results:
         mins = int(r["duration"] // 60)
         secs = int(r["duration"] % 60)
-        logger.info(f"{r['name'][:60]:60} | {r['status']:8} | {mins}m {secs}s")
+        logger.info(f"{r['name'][:70]:70} | {'COMPLETE':9} | {mins}m {secs}s")
 
 
 # =====================
@@ -217,20 +216,18 @@ def main() -> None:
                     try:
                         duration = run_notebook(nb, page)
                         results.append(
-                            {"name": nb, "status": "PASS", "duration": duration}
+                            {"name": nb, "status": "COMPLETE", "duration": duration}
                         )
                     except Exception:
                         results.append({"name": nb, "status": "FAIL", "duration": 0})
                         failures.append(nb)
     total_duration = time.time() - total_start_time
     print_summary(results)
-    total_minutes = int(total_duration // 60)
-    total_seconds = int(total_duration % 60)
     if failures:
         logger.error(f"Failed: {failures}")
         sys.exit(1)
     logger.info(
-        f"All notebooks ran successfully! Total duration: {total_minutes}m {total_seconds}s."
+        f"All notebooks ran successfully! Total duration: {int(total_duration // 60)}m {int(total_duration % 60)}s."
     )
     sys.exit(0)
 

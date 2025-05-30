@@ -23,6 +23,7 @@ jobs:
         uses: catchpoint/workflow-telemetry-action@v2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          comment_on_pr: false
 
       - uses: actions/checkout@v4
 

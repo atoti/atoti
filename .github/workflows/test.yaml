@@ -24,7 +24,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           comment_on_pr: false
-          theme: 'dark'
+          theme: dark
 
       - uses: actions/checkout@v4
 

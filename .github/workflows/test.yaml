@@ -20,11 +20,10 @@ jobs:
     name: Test on ${{ matrix.os }} with Python ${{ matrix.python }}
     steps:
       - name: Enable workflow telemetry
-        uses: catchpoint/workflow-telemetry-action@master
+        uses: catchpoint/workflow-telemetry-action@v2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           comment_on_pr: false
-          theme: 'dark'
 
       - uses: actions/checkout@v4
 
@@ -54,7 +53,7 @@ jobs:
         run: make test
 
       - name: Publish test results to GitHub
-        uses: dorny/test-reporter@v2
+        uses: dorny/test-reporter@v2.1.0
         if: always()
         with:
           name: Notebook Tests

@@ -13,6 +13,8 @@ if __name__ == "__main__":
         "--nbmake-timeout=600",
         "-n",
         "auto",
+        "--dist",
+        "worksteal",
         "-v",
         f"--html=reports/report-{sys.platform}.html",
         "--self-contained-html",

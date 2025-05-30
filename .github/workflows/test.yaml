@@ -20,11 +20,11 @@ jobs:
     name: Test on ${{ matrix.os }} with Python ${{ matrix.python }}
     steps:
       - name: Enable workflow telemetry
-        uses: catchpoint/workflow-telemetry-action@v2
+        uses: catchpoint/workflow-telemetry-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           comment_on_pr: false
-          theme: dark
+          theme: 'dark'
 
       - uses: actions/checkout@v4
 

@@ -1,21 +1,49 @@
 import os
 import sys
 import time
+import logging
+from typing import List
 from exclusion_utils import get_included_notebooks
-from playwright.sync_api import sync_playwright, TimeoutError
+from playwright.sync_api import sync_playwright, TimeoutError, Page
 
-# List of notebooks to render, after applying exclusions
-notebooks = get_included_notebooks()
+# =====================
+# Configuration
+# =====================
+JUPYTER_LAB_URL = os.getenv("JUPYTER_LAB_URL", "http://localhost:8888/lab/tree/")
+HEADLESS = os.getenv("PLAYWRIGHT_HEADLESS", "0") != "0"
+SLOW_MO = int(os.getenv("PLAYWRIGHT_SLOWMO", "2000"))
+SHUTDOWN_DIALOG_TIMEOUT = 3000  # ms to wait for shutdown dialog
+RESTART_IDLE_TIMEOUT = 5000  # ms to wait for kernel idle after restart
+RESTART_DIALOG_TIMEOUT = 3000  # ms to wait for restart dialog
+RUN_START_TIMEOUT = 1000  # ms to wait for cell to go busy
+RUN_IDLE_TIMEOUT = 60000  # ms to wait for cell to return to idle
+SAVE_TIMEOUT = 1000  # ms to wait for save menu item
 
+# =====================
+# Logging setup
+# =====================
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    datefmt="%H:%M:%S",
+)
+logger = logging.getLogger("notebook-renderer")
+
+# =====================
+# Notebook selection
+# =====================
+notebooks: List[str] = get_included_notebooks()
+logger.info(f"Found {len(notebooks)} notebooks to test:")
 for notebook in notebooks:
-    print(notebook)
-
-JUPYTER_LAB_URL = "http://localhost:8888/lab/tree/"
+    logger.info(f"  - {notebook}")
 
 
-def shutdown_kernel(page, dialog_timeout: int = 3000):
+# =====================
+# Helper functions
+# =====================
+def shutdown_kernel(page: Page, dialog_timeout: int = SHUTDOWN_DIALOG_TIMEOUT) -> None:
     """
-    Shut down all kernels in the current JupyterLab page.
+    Attempt to shut down all running kernels in the current JupyterLab session.
     """
     page.click('li.lm-MenuBar-item:has-text("Kernel")')
     shutdown_sel = (
@@ -24,23 +52,26 @@ def shutdown_kernel(page, dialog_timeout: int = 3000):
     try:
         page.wait_for_selector(shutdown_sel, timeout=dialog_timeout)
         page.click(shutdown_sel)
-        print("  ▶️  Clicked “Shut Down All Kernels…”")
-        # Confirm dialog if it appears
+        logger.info("  ▶️  Clicked 'Shut Down All Kernels…'")
         try:
             dlg = page.get_by_role("dialog")
             dlg.wait_for(state="visible", timeout=dialog_timeout)
             dlg.get_by_role("button", name="Shut Down All").click()
-            print("  ✅ Confirmed shutdown")
+            logger.info("  ✅ Confirmed shutdown")
         except TimeoutError:
-            print("  ⚠️ No shutdown dialog appeared")
-        page.wait_for_timeout(2_000)
+            logger.warning("  ⚠️ No shutdown dialog appeared")
+        page.wait_for_timeout(2000)
     except TimeoutError:
-        print("  ⚠️ ‘Shut Down All Kernels…’ not present, skipping shutdown")
+        logger.warning("  ⚠️ 'Shut Down All Kernels…' not present, skipping shutdown")
 
 
-def restart_kernel(page, idle_timeout: int = 5000, dialog_timeout: int = 3000):
+def restart_kernel(
+    page: Page,
+    idle_timeout: int = RESTART_IDLE_TIMEOUT,
+    dialog_timeout: int = RESTART_DIALOG_TIMEOUT,
+) -> None:
     """
-    Restart the kernel in the current JupyterLab page and wait for idle.
+    Restart the notebook kernel and wait for it to become idle.
     """
     page.click('li.lm-MenuBar-item:has-text("Kernel")')
     restart_sel = (
@@ -49,142 +80,156 @@ def restart_kernel(page, idle_timeout: int = 5000, dialog_timeout: int = 3000):
     try:
         page.wait_for_selector(restart_sel, timeout=dialog_timeout)
         page.click(restart_sel)
-        print("  ▶️  Clicked “Restart Kernel…”")
+        logger.info("  ▶️  Clicked 'Restart Kernel…'")
         page.wait_for_selector(
             'div.jp-Notebook-ExecutionIndicator[data-status="idle"]',
             state="attached",
             timeout=idle_timeout,
         )
-        print("  🟢 Kernel is idle")
+        logger.info("  🟢 Kernel is idle")
     except TimeoutError:
-        print("  ⚠️ ‘Restart Kernel…’ not present, skipping restart")
+        logger.warning("  ⚠️ 'Restart Kernel…' not present, skipping restart")
         return
 
 
-def run_all_code_cells_robust(
-    page, start_timeout: int = 1000, idle_timeout: int = 60000
-):
+def run_all_code_cells(
+    page: Page,
+    start_timeout: int = RUN_START_TIMEOUT,
+    idle_timeout: int = RUN_IDLE_TIMEOUT,
+) -> None:
     """
-    Run all visible code cells in the current notebook robustly, waiting for idle after each.
+    Execute all visible code cells in the notebook, ensuring each cell completes
+    before moving to the next.
     """
-    # Focus the visible notebook panel
     page.wait_for_selector("div.jp-NotebookPanel:not(.lm-mod-hidden)", state="visible")
     page.click("div.jp-NotebookPanel:not(.lm-mod-hidden)")
-
-    # Collect only the visible code cells
     cells = page.locator(
         "div.jp-NotebookPanel:not(.lm-mod-hidden) .jp-Cell.jp-CodeCell"
     )
     total = sum(1 for i in range(cells.count()) if cells.nth(i).is_visible())
-    print(f"  ▶️  Running {total} visible code cells…")
-
+    logger.info(f"  ▶️  Running {total} visible code cells…")
     run_index = 0
     for i in range(cells.count()):
         cell = cells.nth(i)
         if not cell.is_visible():
             continue
         run_index += 1
-        print(f"     → Code cell {run_index}/{total}")
-
-        # Bring it into view & focus
+        logger.info(f"     → Code cell {run_index}/{total}")
         cell.scroll_into_view_if_needed()
         cell.evaluate("el => el.focus()")
-
-        # Run & advance
         page.keyboard.press("Shift+Enter")
-
-        # Short wait for busy (in case it actually fires)
         try:
             page.wait_for_selector(
                 "div.jp-Notebook-ExecutionIndicator[data-status='busy']",
                 state="attached",
                 timeout=start_timeout,
             )
-            # print("       Kernel is busy, waiting for idle…")
         except TimeoutError:
-            # print("       Kernel did not go busy, cell executed too quick")
             pass
-
-        # Always wait for idle before moving on
         try:
             page.wait_for_selector(
                 "div.jp-Notebook-ExecutionIndicator[data-status='idle']",
                 state="attached",
                 timeout=idle_timeout,
             )
-            # print("       Kernel is now idle")
         except TimeoutError:
-            print(f"⚠️  Code cell {run_index} did not return to idle in time")
-    print("  💯 Run all cells completed")
+            logger.warning(f"⚠️  Code cell {run_index} did not return to idle in time")
+    logger.info("  💯 Run all cells completed")
 
 
-def click_close_tab(page):
+def close_tab(page: Page) -> None:
     """
-    Click the close tab menu item to close the current notebook tab.
+    Close the currently active notebook tab in JupyterLab.
     """
     page.click('li.lm-MenuBar-item:has-text("File")')
     item = page.get_by_role("menuitem", name="Close Tab")
     if item.is_visible() and item.is_enabled():
         item.click()
-        print("  🙅 Close tab")
+        logger.info("  🙅 Close tab")
     else:
-        print("  ⚠️ 'Close Tab' is disabled—nothing to do")
+        logger.warning("  ⚠️ 'Close Tab' is disabled, nothing to do")
 
 
-def save_notebook(page, nb):
+def save_notebook(page: Page, nb: str) -> None:
     """
-    Save the current notebook using File > Save Notebook.
+    Save the current notebook using the JupyterLab File menu.
     """
     page.click('li.lm-MenuBar-item:has-text("File")')
     save_sel = 'li.lm-Menu-item[data-command="docmanager:save"]:not(.lm-mod-disabled)'
-    page.wait_for_selector(save_sel, timeout=1000)
+    page.wait_for_selector(save_sel, timeout=SAVE_TIMEOUT)
     page.click(save_sel)
-    print("  💾 Notebook saved")
+    logger.info("  💾 Notebook saved")
 
 
-def run_notebook(nb, page):
+def run_notebook(nb: str, page: Page) -> float:
     """
-    Open, restart, run all cells, save, and close a notebook.
+    Open a notebook, restart its kernel, run all code cells, save, and close the
+    notebook. Returns execution duration in minutes, seconds.
     """
-    print(f"→ {nb}")
+    logger.info(f"→ {nb}")
     nb_start_time = time.time()
-    page.goto(JUPYTER_LAB_URL + nb)
-    shutdown_kernel(page)
-    restart_kernel(page)
-    run_all_code_cells_robust(page)
-    save_notebook(page, nb)
-    click_close_tab(page)
-    nb_duration = time.time() - nb_start_time
-    nb_minutes = int(nb_duration // 60)
-    nb_seconds = int(nb_duration % 60)
-    print(f"✔ {nb} (Duration: {nb_minutes}m {nb_seconds}s)")
+    try:
+        page.goto(JUPYTER_LAB_URL + nb)
+        shutdown_kernel(page)
+        restart_kernel(page)
+        run_all_code_cells(page)
+        save_notebook(page, nb)
+        close_tab(page)
+        nb_duration = time.time() - nb_start_time
+        logger.info(
+            f"✔ {nb} (Duration: {int(nb_duration // 60)}m {int(nb_duration % 60)}s)"
+        )
+        return nb_duration
+    except Exception as e:
+        logger.error(f"✖ Error on {nb}: {e}")
+        raise
 
 
-def main():
+def print_summary(results: List[dict]) -> None:
     """
-    Main entry point: open browser, run all notebooks, handle failures.
+    Print a formatted summary table of all notebook test results, including
+    status and duration.
+    """
+    logger.info("\nSummary:")
+    logger.info(f"{'Notebook':60} | {'Status':8} | {'Duration':10}")
+    logger.info("-" * 85)
+    for r in results:
+        mins = int(r["duration"] // 60)
+        secs = int(r["duration"] % 60)
+        logger.info(f"{r['name'][:60]:60} | {r['status']:8} | {mins}m {secs}s")
+
+
+# =====================
+# Main execution
+# =====================
+def main() -> None:
+    """
+    Launch browser, run all notebook tests, collect results, and print a summary.
+    Exit with error if any failures.
     """
     total_start_time = time.time()
-    headless = os.getenv("PLAYWRIGHT_HEADLESS", "0") != "0"
+    results = []
     failures = []
     with sync_playwright() as pw:
-        browser = pw.chromium.launch(headless=headless, slow_mo=2000)
-        page = browser.new_page()
-        for nb in notebooks:
-            try:
-                run_notebook(nb, page)
-            except Exception as e:
-                print(f"✖ Error on {nb}: {e}", file=sys.stderr)
-                failures.append(nb)
-        browser.close()
-
+        with pw.chromium.launch(headless=HEADLESS, slow_mo=SLOW_MO) as browser:
+            with browser.new_page() as page:
+                for nb in notebooks:
+                    try:
+                        duration = run_notebook(nb, page)
+                        results.append(
+                            {"name": nb, "status": "PASS", "duration": duration}
+                        )
+                    except Exception:
+                        results.append({"name": nb, "status": "FAIL", "duration": 0})
+                        failures.append(nb)
     total_duration = time.time() - total_start_time
+    print_summary(results)
     total_minutes = int(total_duration // 60)
     total_seconds = int(total_duration % 60)
     if failures:
-        print("Failed:", failures, file=sys.stderr)
+        logger.error(f"Failed: {failures}")
         sys.exit(1)
-    print(
+    logger.info(
         f"All notebooks ran successfully! Total duration: {total_minutes}m {total_seconds}s."
     )
     sys.exit(0)

@@ -59,7 +59,7 @@ jobs:
         with:
           name: Notebook Tests
           path: reports/junit*.xml
-          reporter: jest-junit
+          reporter: java-junit
 
       - name: Upload HTML test report
         uses: actions/upload-artifact@v4

@@ -1,11 +1,11 @@
 from exclusion_utils import get_included_notebooks
 import pytest
-import platform
+import platform as pf
 import os
 import sys
 
-platform = platform.system()
-release = platform.release()
+platform = pf.system()
+release = pf.release()
 
 # Reduce number of workers on macos-13 GitHub Action runner to avoid CPU overload
 if platform == "Darwin" and release == "22.6.0":

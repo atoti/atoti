@@ -1,5 +1,6 @@
 import os
 import sys
+import time
 from exclusion_utils import get_included_notebooks
 from playwright.sync_api import sync_playwright, TimeoutError
 
@@ -146,19 +147,24 @@ def run_notebook(nb, page):
     Open, restart, run all cells, save, and close a notebook.
     """
     print(f"→ {nb}")
+    nb_start_time = time.time()
     page.goto(JUPYTER_LAB_URL + nb)
     shutdown_kernel(page)
     restart_kernel(page)
     run_all_code_cells_robust(page)
     save_notebook(page, nb)
     click_close_tab(page)
-    print(f"✔ {nb}")
+    nb_duration = time.time() - nb_start_time
+    nb_minutes = int(nb_duration // 60)
+    nb_seconds = int(nb_duration % 60)
+    print(f"✔ {nb} (Duration: {nb_minutes}m {nb_seconds}s)")
 
 
 def main():
     """
     Main entry point: open browser, run all notebooks, handle failures.
     """
+    total_start_time = time.time()
     headless = os.getenv("PLAYWRIGHT_HEADLESS", "0") != "0"
     failures = []
     with sync_playwright() as pw:
@@ -172,10 +178,15 @@ def main():
                 failures.append(nb)
         browser.close()
 
+    total_duration = time.time() - total_start_time
+    total_minutes = int(total_duration // 60)
+    total_seconds = int(total_duration % 60)
     if failures:
         print("Failed:", failures, file=sys.stderr)
         sys.exit(1)
-    print("All notebooks ran successfully!")
+    print(
+        f"All notebooks ran successfully! Total duration: {total_minutes}m {total_seconds}s."
+    )
     sys.exit(0)
 
 

@@ -37,6 +37,7 @@ __pycache__/
 03-use-cases/01-finance/portfolio-management/cvar-optimizer/data/
 03-use-cases/01-finance/risk-management/operational-risk/credit-card-fraud-detection/output/*.csv
 03-use-cases/01-finance/risk-management/credit-risk/ifrs9/lending-club-data/risk-engine/*.csv
+03-use-cases/01-finance/risk-management/credit-risk/xva/data*.tmp
 03-use-cases/01-finance/risk-management/credit-risk/xva/data-prev/*.csv
 03-use-cases/01-finance/risk-management/credit-risk/xva/data/*.csv
 03-use-cases/01-finance/risk-management/credit-risk/xva/what-if/*.csv

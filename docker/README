@@ -25,7 +25,7 @@ Run the following commands at the root of the repository:
 
 ```bash
 docker build -f docker/Dockerfile -t atoti/notebooks .
-docker run -it --rm "$PWD":/atoti --net=host atoti/notebooks
+docker run -it --rm -v "$PWD":/atoti --net=host atoti/notebooks
 ```
 
 `Dockerfile.playwright`

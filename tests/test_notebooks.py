@@ -1,11 +1,14 @@
 from exclusion_utils import get_included_notebooks
 import pytest
-import sys
 import platform
 import os
+import sys
+
+platform = platform.system()
+release = platform.release()
 
 # Reduce number of workers on macos-13 GitHub Action runner to avoid CPU overload
-if platform.system() == "Darwin" and platform.release() == "22.6.0":
+if platform == "Darwin" and release == "22.6.0":
     num_workers = os.cpu_count() - 1
 else:
     num_workers = "auto"
@@ -23,8 +26,8 @@ if __name__ == "__main__":
         "--dist",
         "worksteal",
         "-v",
-        f"--html=reports/report-{sys.platform}.html",
+        f"--html=reports/report-{platform}-{release}.html",
         "--self-contained-html",
-        f"--junitxml=reports/junit-{sys.platform}.xml",
+        f"--junitxml=reports/junit-{platform}-{release}.xml",
     ] + notebooks
     sys.exit(pytest.main(pytest_args))

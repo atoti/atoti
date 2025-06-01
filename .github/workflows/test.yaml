@@ -19,6 +19,12 @@ jobs:
       fail-fast: false
     name: Test on ${{ matrix.os }} with Python ${{ matrix.python }}
     steps:
+      - name: Enable workflow telemetry
+        uses: catchpoint/workflow-telemetry-action@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          comment_on_pr: false
+
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
@@ -47,12 +53,12 @@ jobs:
         run: make test
 
       - name: Publish test results to GitHub
-        uses: dorny/test-reporter@v2
+        uses: dorny/test-reporter@v2.1.0
         if: always()
         with:
           name: Notebook Tests
           path: reports/junit*.xml
-          reporter: jest-junit
+          reporter: java-junit
 
       - name: Upload HTML test report
         uses: actions/upload-artifact@v4

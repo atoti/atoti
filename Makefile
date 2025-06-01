@@ -3,7 +3,7 @@ SHELL := /bin/bash
 PLAYWRIGHT_HEADLESS ?= 1
 export PLAYWRIGHT_HEADLESS
 
-.PHONY: env check format test review restore
+.PHONY: env check format test review restore upgrade
 
 env:
 	pip install --quiet --disable-pip-version-check uv
@@ -30,3 +30,6 @@ review:
 restore:
 	git restore --staged '**/content.mv.db'
 	git restore '**/content.mv.db'
+
+upgrade:
+	make test && make render

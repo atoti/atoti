@@ -106,14 +106,12 @@ def run_all_code_cells(
     cells = page.locator(
         "div.jp-NotebookPanel:not(.lm-mod-hidden) .jp-Cell.jp-CodeCell"
     )
-    total = sum(1 for i in range(cells.count()) if cells.nth(i).is_visible())
+    visible_cells = [
+        cells.nth(i) for i in range(cells.count()) if cells.nth(i).is_visible()
+    ]
+    total = len(visible_cells)
     logger.info(f"  ▶️  Running {total} visible code cells…")
-    run_index = 0
-    for i in range(cells.count()):
-        cell = cells.nth(i)
-        if not cell.is_visible():
-            continue
-        run_index += 1
+    for run_index, cell in enumerate(visible_cells, 1):
         logger.info(f"     → Code cell {run_index}/{total}")
         cell.scroll_into_view_if_needed()
         cell.evaluate("el => el.focus()")
@@ -187,7 +185,7 @@ def run_notebook(nb: str, page: Page) -> float:
 def print_summary(results: List[dict]) -> None:
     """
     Print a formatted summary table of all notebook test results, including
-    status and duration.
+    status and duration. Shows 'FAIL' for failed notebooks.
     """
     logger.info("\nSummary:")
     logger.info(f"{'Notebook':70} | {'Status':9} | {'Duration':10}")
@@ -195,7 +193,8 @@ def print_summary(results: List[dict]) -> None:
     for r in results:
         mins = int(r["duration"] // 60)
         secs = int(r["duration"] % 60)
-        logger.info(f"{r['name'][:70]:70} | {'COMPLETE':9} | {mins}m {secs}s")
+        status = r["status"]
+        logger.info(f"{r['name'][:70]:70} | {status:9} | {mins}m {secs}s")
 
 
 # =====================
@@ -204,11 +203,11 @@ def print_summary(results: List[dict]) -> None:
 def main() -> None:
     """
     Launch browser, run all notebook tests, collect results, and print a summary.
-    Exit with error if any failures.
+    Exit with error if any failures. Shows 'FAIL' in summary for failed notebooks.
     """
     total_start_time = time.time()
-    results = []
-    failures = []
+    results: List[dict] = []
+    failures: List[str] = []
     with sync_playwright() as pw:
         with pw.chromium.launch(headless=HEADLESS, slow_mo=SLOW_MO) as browser:
             with browser.new_page() as page:

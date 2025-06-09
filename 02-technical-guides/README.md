@@ -97,20 +97,11 @@
 <td><a href="https://www.atoti.io/articles/weighted-averages-with-atoti/?utm_source=github">📰&nbsp;Weighted averages with atoti</a></td><td rowspan="1"><kbd>pandas</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="5"><a href="./security-implementation/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="5"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/articles/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td><td rowspan="5"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
+<td rowspan="2"><a href="./security-implementation/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
+<td><a href="https://www.atoti.io/articles/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td valign="center"><a href="https://www.atoti.io/articles/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td>
-</tr>
-<tr>
-<td valign="center">&nbsp</td>
-</tr>
-<tr>
-<td valign="center">&nbsp</td>
-</tr>
-<tr>
-<td valign="center">&nbsp</td>
+<td valign="center"><a href="https://www.atoti.io/articles/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./topcount/atoti.ipynb">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
@@ -243,20 +234,11 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/articles/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="5"><a href="./security-implementation/02-OIDC-Auth0.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="5"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/articles/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="5"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
+<td rowspan="2"><a href="./security-implementation/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
+<td><a href="https://www.atoti.io/articles/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td valign="center"><a href="https://www.atoti.io/articles/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
-</tr>
-<tr>
-<td valign="center">&nbsp</td>
-</tr>
-<tr>
-<td valign="center">&nbsp</td>
-</tr>
-<tr>
-<td valign="center">&nbsp</td>
 </tr>
 </table>
 <br/>
@@ -353,20 +335,11 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/articles/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="5"><a href="./security-implementation/02-OIDC-Auth0.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="5"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/articles/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="5"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
+<td rowspan="2"><a href="./security-implementation/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
+<td><a href="https://www.atoti.io/articles/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td valign="center"><a href="https://www.atoti.io/articles/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
-</tr>
-<tr>
-<td valign="center">&nbsp</td>
-</tr>
-<tr>
-<td valign="center">&nbsp</td>
-</tr>
-<tr>
-<td valign="center">&nbsp</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./topcount/atoti.ipynb">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
@@ -517,20 +490,11 @@ Double-click on tile to go to feature section.
 <td><a href="https://www.atoti.io/articles/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="5"><a href="./security-implementation/02-OIDC-Auth0.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="5"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/articles/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="5"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
+<td rowspan="2"><a href="./security-implementation/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
+<td><a href="https://www.atoti.io/articles/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td valign="center"><a href="https://www.atoti.io/articles/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
-</tr>
-<tr>
-<td valign="center">&nbsp</td>
-</tr>
-<tr>
-<td valign="center">&nbsp</td>
-</tr>
-<tr>
-<td valign="center">&nbsp</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./table-creation-and-data-loads/main.ipynb">table-creation-and-data-loads&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
@@ -981,20 +945,11 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td><a href="https://www.atoti.io/articles/building-rollup-hierarchies-in-python-with-treelib-and-atoti/?utm_source=github">📰&nbsp;Building Rollup Hierarchies in Python with Treelib and atoti</a></td><td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="5"><a href="./security-implementation/02-OIDC-Auth0.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="5"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/articles/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="5"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
+<td rowspan="2"><a href="./security-implementation/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
+<td><a href="https://www.atoti.io/articles/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td valign="center"><a href="https://www.atoti.io/articles/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
-</tr>
-<tr>
-<td valign="center">&nbsp</td>
-</tr>
-<tr>
-<td valign="center">&nbsp</td>
-</tr>
-<tr>
-<td valign="center">&nbsp</td>
 </tr>
 <tr>
 <td rowspan="1"><a href="./topcount/atoti.ipynb">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
@@ -1251,20 +1206,11 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="5"><a href="./security-implementation/02-OIDC-Auth0.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="5"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/articles/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="5"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
+<td rowspan="2"><a href="./security-implementation/main.ipynb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.6-1C900C" alt="Latest version" /></td>
+<td><a href="https://www.atoti.io/articles/auth0-setup/?utm_source=github">📰&nbsp;Guide to Auth0 setup for Security implementation with Atoti+</a></td><td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
 </tr>
 <tr>
 <td valign="center"><a href="https://www.atoti.io/articles/authentication-mechanisms/?utm_source=github">📰&nbsp;Different authentication mechanisms to secure your atoti session</a></td>
-</tr>
-<tr>
-<td valign="center">&nbsp</td>
-</tr>
-<tr>
-<td valign="center">&nbsp</td>
-</tr>
-<tr>
-<td valign="center">&nbsp</td>
 </tr>
 </table>
 <br/>

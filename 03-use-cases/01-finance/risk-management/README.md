@@ -51,7 +51,7 @@
 </tr>
 <tr>
 <td rowspan="1"><a href="./../../../03-use-cases/01-finance/treasury/collateral-shortfall-forecast/notebooks/main.ipynb">collateral-shortfall-forecast&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.8.4-grey" alt="Last maintained version" /></td>
-<td><a href="Collateral Modelling and Simulation Using atoti and Machine Learning?utm_source=github">📰&nbsp;Collateral Modelling and Simulation Using atoti and Machine Learning</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
+<td><a href="https://www.atoti.io/articles/collateral-modelling-and-simulation-using-atoti-and-machine-learning/?utm_source=github">📰&nbsp;Collateral Modelling and Simulation Using atoti and Machine Learning</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 </table>
 <br/>

@@ -37,24 +37,24 @@ Please make sure your PR follows the rules below:
 
 ### General notebook rules
 
-* Folders and files name should be lowercase with hyphen.
+* Folders and file names should be lowercase with hyphens.
 
   * E.g. `name-of-my-folder-or-file`
 
-* Notebook example should be put inside a folder which name is the notebook's title. This folder should be located under a specific "domain" folder.
+* Notebook examples should reside within folders whose names represent the notebook's title or idea. Each notebook folder should reside within a "domain" folder, such as `01-atoti-academy`, `02-technical-guides`, or `03-use-cases`.
 
-  * E.g. `/relevant-domain/title-of-my-notebook-folder/`
+  * E.g. `/domain/notebook-folder/`
 
-* Entrypoint should be named `main.ipynb`
-* README TOC should be updated to link to the new notebook
-* Notebook should have an H1 title, matching folder name and README TOC
-* Create a README at notebook level to briefly introduce yourself and the use case.
+* Individual `.ipynb` files within a notebook folder should be named `main.ipynb`.
+* README table of contents should be updated to link to the new notebook.
+* Notebook should have an H1 title, matching folder name and README table of contents.
+* Create a README within notebook folders to briefly introduce the use case.
 
 ### Data rules
 
-* Data files name should use snake_case
-* Data files should be of reasonable size, not exceeding 50MB, unless programmatically generated
-* All data files should be uploaded on data.atoti.io If you don't have access to it, data should be hosted on a public host and an owner will transfer them to data.atoti.io upon review
+* Data files name should use snake_case.
+* Data files should be of reasonable size, not exceeding 50MB, unless programmatically generated.
+* All data files should be uploaded on `data.atoti.io`. If you don't have access to it, data should be hosted on a public host and an owner will transfer them to `data.atoti.io` upon review.
 
 ### Python code rules
 

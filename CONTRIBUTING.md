@@ -46,13 +46,16 @@ Please make sure your PR follows the rules below:
   * E.g. `/domain/notebook-folder/`
 
 * Individual `.ipynb` files within a notebook folder should be named `main.ipynb`.
+
+  * E.g. `/domain/notebook-folder/main.ipynb`
+
 * README table of contents should be updated to link to the new notebook.
-* Notebook should have an H1 title, matching folder name and README table of contents.
+* Notebook should have an `H1` title, matching folder name and README table of contents.
 * Create a README within notebook folders to briefly introduce the use case.
 
 ### Data rules
 
-* Data files name should use snake_case.
+* Data file names should use `snake_case`.
 * Data files should be of reasonable size, not exceeding 50MB, unless programmatically generated.
 * All data files should be uploaded on `data.atoti.io`. If you don't have access to it, data should be hosted on a public host and an owner will transfer them to `data.atoti.io` upon review.
 
@@ -61,13 +64,11 @@ Please make sure your PR follows the rules below:
 * Variables should follow Google's [naming convention](http://google.github.io/styleguide/pyguide.html#316-naming).
 * Python files should be formatted with [Ruff](https://docs.astral.sh/ruff/).
 * Python methods should be typed.
-* Documentation should follow Google's [docstring](http://google.github.io/styleguide/pyguide.html#381-docstrings).
+* Documentation should follow Google's style guide for [docstrings](http://google.github.io/styleguide/pyguide.html#381-docstrings).
 
 ### Formatting, testing, and upgrading
 
-
-
-These commands can be used while developing:
+This repository uses a [Makefile](Makefile) for automating common development actions:
 
 * Reformat python files using `ruff`:
 

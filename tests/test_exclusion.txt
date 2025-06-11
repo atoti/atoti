@@ -20,6 +20,14 @@
 # --- Academy Notebooks ---
 01-atoti-academy/introduction-to-atoti/main.ipynb
 
+# --- Long Running Notebooks ---
+02-technical-guides/atoti-pandas-comparison/main.ipynb
+02-technical-guides/atoti-pandas-comparison/pandas-main.ipynb
+02-technical-guides/var-benchmark/data_generator.ipynb
+02-technical-guides/var-benchmark/main.ipynb
+03-use-cases/01-finance/retail-banking/credit-card-analytics/cc_data_processing.ipynb
+03-use-cases/01-finance/retail-banking/credit-card-analytics/main.ipynb
+
 # --- Invalid Named Notebooks ---
 Untitled
 

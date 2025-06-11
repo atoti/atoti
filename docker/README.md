@@ -27,7 +27,7 @@ The following Dockerfiles each build a Docker image containing all Atoti noteboo
 
 [Dockerfile](Dockerfile)
 
-When built and run, `jupyterlab` will automatically start from within the container, supplying the necessary environment for a user to execute all notebooks in the repository.
+When built and run, `jupyterlab` will automatically start from within the container, supplying the necessary environment for a user to explore and execute notebooks in the repository.
 
 > **Note:** You must enable [host network mode](https://docs.docker.com/engine/network/drivers/host/#docker-desktop).
 

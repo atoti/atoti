@@ -33,13 +33,12 @@ We welcome any contributions from the community!
 
     * **DEPENDENCIES MUST NOT BEEN ADDED WITH CONDA OR PIP** since the Github CI relies on the `uv.lock` file to install dependencies.
 
-8. Commit and push changes to the forked repository using `git push`.
+8. Add, commit, and push changes to the forked repository using `git add`, `git commit`, and `git push`.
 9. Create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) from the forked repository.
 
 Please monitor the pull request as each pull request is subject to automatic code testing. The Atoti team will review and comment on any pull requests to ensure each submission is aligned with the API's usage.
 
-
-## Pull Request Rules
+## Pull request rules
 
 Please make sure your PR follows the rules below:
 
@@ -74,7 +73,7 @@ Please make sure your PR follows the rules below:
 * Python methods should be typed.
 * Documentation should follow Google's style guide for [docstrings](http://google.github.io/styleguide/pyguide.html#381-docstrings).
 
-### Formatting, testing, and upgrading
+## Formatting, testing, and upgrading notebooks
 
 A Makefile is a type of script used to by the [make](https://www.gnu.org/software/make/) utility to automate repetitive tasks. This repository uses the following [Makefile](Makefile) to automate common tasks:
 
@@ -104,7 +103,7 @@ A Makefile is a type of script used to by the [make](https://www.gnu.org/softwar
 
 ## CI/CD
 
-[GitHub Actions](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions) is GitHub’s built-in continuous integration and continuous deployment (CI/CD) platform that allows for defining workflows as YAML files. This repository uses the following [Github Action workflow](.github/workflows/test.yaml) to test the notebooks. Test reports are generated and uploaded to the summary view of every workflow run.
+[GitHub Actions](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions) is GitHub’s built-in continuous integration and continuous deployment (CI/CD) platform that allows for defining workflows as YAML files. This repository uses the following [Github Action workflow](.github/workflows/test.yaml) to test the notebooks. Test reports are generated from `pytest` and uploaded to the summary view of every workflow run.
 
 ### About
 

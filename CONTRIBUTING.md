@@ -78,7 +78,7 @@ Please make sure your PR follows the rules below:
 
 ## Formatting, testing, rendering, and upgrading notebooks
 
-A Makefile is a type of script used by the [make](https://www.gnu.org/software/make/) utility to automate repetitive tasks. This repository uses the following [Makefile](Makefile) to automate common tasks when working with notebooks:
+A Makefile is a type of script used by the [make](https://www.gnu.org/software/make/) utility to automate repetitive tasks. This repository uses the following [Makefile](Makefile) to automate common tasks when working with the Atoti notebooks:
 
 * Format code in notebooks using the [ruff formatter](https://docs.astral.sh/ruff/formatter/).
 

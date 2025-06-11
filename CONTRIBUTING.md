@@ -10,7 +10,7 @@ We welcome any contributions from the community!
 
 2. Clone the forked repository and ensure latest changes from the `main` branch.
 
-    * `git checkout main` and `git pull`.
+    * `git checkout main` and `git pull`
 
 3. Install dependencies from the `uv.lock` file.
 
@@ -18,7 +18,7 @@ We welcome any contributions from the community!
 
 4. Create a working branch.
 
-    * `git checkout -b <BRANCH_NAME>` or `git switch -c <BRANCH_NAME>`.
+    * `git checkout -b <BRANCH_NAME>` or `git switch -c <BRANCH_NAME>`
 
 5. Start JupyterLab using `uv`.
 
@@ -33,7 +33,10 @@ We welcome any contributions from the community!
 
     * **DEPENDENCIES MUST NOT BEEN ADDED WITH CONDA OR PIP** since the Github CI relies on the `uv.lock` file to install dependencies.
 
-8. Add, commit, and push changes to the forked repository using `git add`, `git commit`, and `git push`.
+8. Add, commit, and push changes to the forked repository.
+
+    * `git add`, `git commit`, and `git push`
+
 9. Create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) from the forked repository.
 
 Please monitor the pull request as each pull request is subject to automatic code testing. The Atoti team will review and comment on any pull requests to ensure each submission is aligned with the API's usage.
@@ -73,7 +76,7 @@ Please make sure your PR follows the rules below:
 * Python methods should be typed.
 * Documentation should follow Google's style guide for [docstrings](http://google.github.io/styleguide/pyguide.html#381-docstrings).
 
-## Formatting, testing, and upgrading notebooks
+## Formatting, testing, rendering, and upgrading notebooks
 
 A Makefile is a type of script used to by the [make](https://www.gnu.org/software/make/) utility to automate repetitive tasks. This repository uses the following [Makefile](Makefile) to automate common tasks:
 

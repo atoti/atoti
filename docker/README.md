@@ -38,7 +38,7 @@ docker run -it --rm -v "$PWD":/atoti --net=host atoti/notebooks
 
 [Dockerfile.playwright](Dockerfile.playwright)
 
-When built and run, `jupyterlab` starts up along with `playwright` to automate execution of targeted notebooks from with JupyterLab and render web-based JupyterLab widgets.
+When built and run, `jupyterlab` starts up along with `playwright` to automate the execution of targeted notebooks from within JupyterLab and render web-based JupyterLab widgets.
 
 ```bash
 docker build -f docker/Dockerfile.playwright -t atoti/playwright .

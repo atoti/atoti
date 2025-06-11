@@ -17,9 +17,17 @@
   <a href="https://www.linkedin.com/company/activeviam/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin"></a>
 </p>
 
-Run the following commands at the root of the repository for the given Dockerfile:
+## Building and running with Docker
 
-`Dockerfile`
+[Docker](https://www.docker.com/) is a platform for packaging and running applications in lightweight, portable execution environments known as containers. Containers bundle application code together with its dependencies so that an application runs identically on any machine that has Docker installed. A [Dockerfile](https://docs.docker.com/reference/dockerfile/) is text-based “recipe” that tells Docker how to build an image. Docker images are the static, read-only snapshot of a filesystem/environment, while a container is a running instance of a particular image.
+
+## Atoti Docker images
+
+The following Dockerfiles each build a Docker image containing all Atoti notebooks and their dependencies for various use cases.
+
+[Dockerfile](Dockerfile)
+
+When built and run, `jupyterlab` will automatically start from within the container, supplying the necessary environment for a user to execute all notebooks in the repository.
 
 > **Note:** You must enable [host network mode](https://docs.docker.com/engine/network/drivers/host/#docker-desktop).
 
@@ -28,7 +36,9 @@ docker build -f docker/Dockerfile -t atoti/notebooks .
 docker run -it --rm -v "$PWD":/atoti --net=host atoti/notebooks
 ```
 
-`Dockerfile.playwright`
+[Dockerfile.playwright](Dockerfile.playwright)
+
+When built and run, `jupyterlab` starts up along with `playwright` to automatically execute and render web-based JupyterLab widgets within targeted notebooks.  
 
 ```bash
 docker build -f docker/Dockerfile.playwright -t atoti/playwright .

@@ -10,16 +10,24 @@ We welcome any contributions from the community!
 
 2. Clone the forked repository and ensure latest changes from the `main` branch.
 
-    * `git checkout main`
-    * `git pull`
+    * `git checkout main` and `git pull`.
 
-3. Run `uv sync --python 3.10` to install dependencies from the `uv.lock` file.
-4. Create a working branch `git switch -c <BRANCH_NAME>`.
-5. Start JupyterLab: `uv run jupyter-lab`.
+3. Install dependencies from the `uv.lock` file.
+
+    * `uv sync --python 3.10`
+
+4. Create a working branch.
+
+    * `git checkout -b <BRANCH_NAME>` or `git switch -c <BRANCH_NAME>`.
+
+5. Start JupyterLab using `uv`.
+
+    * `uv run jupyter-lab`
+
 6. Create the folder and notebooks.
 
-    * Add notebooks responsible for data pre-processing to the [list of untested notebooks](tests/test_notebooks.py).
-    * The main notebook using atoti should be tested to ensure users can run it.
+    * Make sure to add any notebooks responsible for data pre-processing to the [list of untested notebooks](tests/test_exclusion.txt).
+    * Notebooks using Atoti should be tested to ensure users can run it.
 
 7. If a dependency is missing run `uv add <DEPENDENCY_NAME>`. 
 
@@ -68,27 +76,27 @@ Please make sure your PR follows the rules below:
 
 ### Formatting, testing, and upgrading
 
-This repository uses a [Makefile](Makefile) for automating common development actions:
+A Makefile is a type of script used to by the [make](https://www.gnu.org/software/make/) utility to automate repetitive tasks. This repository uses the following [Makefile](Makefile) to automate common tasks:
 
-* Reformat python files using `ruff`:
+* Format code in notebooks using the [ruff formatter](https://docs.astral.sh/ruff/formatter/).
 
   ```text
   make format
   ```
 
-* Test all notebooks:
+* Test code in notebooks with [pytest](https://docs.pytest.org/en/stable/) using the [nbmake](https://github.com/treebeardtech/nbmake) Pytest plugin.
 
   ```text
   make test
   ```
 
-* Render all notebook cells:
+* Execute code in notebooks and render web-based JupyterLab widgets using [jupyterlab](https://jupyterlab.readthedocs.io/en/latest/) and the browser automation tool [playwright](https://playwright.dev/python/).
 
   ```text
   make render
   ```
 
-* Upgrade all notebooks (test and render):
+* Upgrade all notebooks using a combination of `make test` and `make render`.
 
   ```text
   make upgrade
@@ -96,7 +104,7 @@ This repository uses a [Makefile](Makefile) for automating common development ac
 
 ## CI/CD
 
-This repository uses a [Github Action workflow](.github/workflows/test.yaml) to test notebooks. Test reports are generated and uploaded to the summary view of every workflow run.
+[GitHub Actions](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions) is GitHub’s built-in continuous integration and continuous deployment (CI/CD) platform that allows for defining workflows as YAML files. This repository uses the following [Github Action workflow](.github/workflows/test.yaml) to test the notebooks. Test reports are generated and uploaded to the summary view of every workflow run.
 
 ### About
 

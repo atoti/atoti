@@ -49,14 +49,12 @@ def get_all_notebook_paths() -> List[str]:
 
 def get_target_notebooks(
     include: Optional[Union[str, List[str]]] = None,
-    include_default: bool = True,
 ) -> List[str]:
     """
     Determine which notebooks should be included for testing.
 
     Args:
-        include: Group name or list of group names to include (from the exclusion file).
-        include_default: If True, include notebooks not excluded by any group.
+        include: Group name or list of group names to include (from the exclusion file). If None, returns all notebooks not excluded by any group (the default set).
 
     Returns:
         Sorted list of notebook paths to include.
@@ -64,7 +62,26 @@ def get_target_notebooks(
     notebook_paths = get_all_notebook_paths()
     exclusion_groups = get_excluded_notebook_groups()
 
-    # Normalize include_groups to a set
+    # If include is None, return all notebooks minus any exclusions (default set)
+    if include is None:
+        # Collect all exclusions from all groups
+        all_exclusions = set()
+        for group_paths in exclusion_groups.values():
+            all_exclusions.update(group_paths)
+        # Separate exclusions into files and directories
+        excluded_files = {p for p in all_exclusions if p.endswith(".ipynb")}
+        excluded_dirs = {
+            p.rstrip("/") for p in all_exclusions if not p.endswith(".ipynb")
+        }
+
+        def is_excluded(nb_path: str) -> bool:
+            return nb_path in excluded_files or any(
+                nb_path.startswith(d + "/") for d in excluded_dirs
+            )
+
+        return sorted([nb for nb in notebook_paths if not is_excluded(nb)])
+
+    # Otherwise, return notebooks explicitly included from specified groups
     if isinstance(include, (list, tuple, set)):
         include_groups = set(include)
     elif include:
@@ -72,38 +89,9 @@ def get_target_notebooks(
     else:
         include_groups = set()
 
-    # Collect all exclusions except those in include_groups
-    all_exclusions = set()
-    for group, group_paths in exclusion_groups.items():
-        if group in include_groups:
-            continue  # Don't exclude notebooks from included groups
-        all_exclusions.update(group_paths)
-
-    # Separate exclusions into files and directories
-    excluded_files = {p for p in all_exclusions if p.endswith(".ipynb")}
-    excluded_dirs = {p.rstrip("/") for p in all_exclusions if not p.endswith(".ipynb")}
-
-    def is_excluded(nb_path: str) -> bool:
-        # Exclude if path matches a file or is under an excluded directory
-        return nb_path in excluded_files or any(
-            nb_path.startswith(d + "/") for d in excluded_dirs
-        )
-
-    # Notebooks not excluded by any group (default set)
-    default_notebooks = (
-        [nb for nb in notebook_paths if not is_excluded(nb)] if include_default else []
-    )
-
-    # Notebooks explicitly included from specified groups
     group_notebooks = []
     for group in include_groups:
         for nb in exclusion_groups.get(group, []):
-            if (
-                nb in notebook_paths
-                and nb not in default_notebooks
-                and nb not in group_notebooks
-            ):
+            if nb in notebook_paths and nb not in group_notebooks:
                 group_notebooks.append(nb)
-
-    # Combine and sort
-    return sorted(default_notebooks + group_notebooks)
+    return sorted(group_notebooks)

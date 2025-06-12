@@ -19,6 +19,8 @@ def get_num_workers() -> int | str:
 def map_target_args(target_args):
     """
     Map user-friendly --target args to group names. Handles 'ce', 'licensed', 'long-running'.
+    If 'ce' is present with other groups, combine default notebooks with those groups.
+    If only 'ce' is present, return None to indicate the default set (all notebooks minus excluded groups).
     """
     group_map = {
         "licensed": "Atoti Locked Notebooks",
@@ -30,7 +32,7 @@ def map_target_args(target_args):
         for part in arg.split(",")
     ]
     if normalized == ["ce"]:
-        return "DEFAULT_ONLY"
+        return None  # Default set: all notebooks minus excluded groups
     if normalized == ["licensed"]:
         return [group_map["licensed"]]
     if normalized == ["long-running"]:
@@ -38,36 +40,32 @@ def map_target_args(target_args):
     has_ce = "ce" in normalized
     filtered = [key for key in normalized if key != "ce"]
     groups = set(group_map.get(key, key) for key in filtered)
-    if has_ce:
-        return ["DEFAULT_PLUS"] + list(groups)
+    if has_ce and groups:
+        return {"combine_default_with": list(groups)}
     return list(groups)
 
 
 def collect_notebooks(target_groups):
     """
     Return the list of notebooks to test based on the target groups.
-    - If target_groups is None, return all default notebooks (with all groups included).
-    - If target_groups is 'DEFAULT_ONLY', return only default notebooks (with all groups excluded).
+    - If target_groups is None, return all default notebooks (with all groups excluded).
     - If only one group is present, return only that group's notebooks.
-    - If 'DEFAULT_PLUS' is present, return default notebooks plus the specified groups using get_target_notebooks.
+    - If target_groups is a dict with 'combine_default_with', combine default notebooks with those groups.
     - Otherwise, return all default notebooks plus the specified groups.
     """
     if target_groups is None:
-        return get_target_notebooks()
-    if target_groups == "DEFAULT_ONLY":
         return get_target_notebooks(include=None)
-    if (
-        isinstance(target_groups, list)
-        and target_groups
-        and target_groups[0] == "DEFAULT_PLUS"
-    ):
-        groups = target_groups[1:]
-        return get_target_notebooks(include=groups, include_default=True)
+    if isinstance(target_groups, dict) and "combine_default_with" in target_groups:
+        groups = target_groups["combine_default_with"]
+        default = get_target_notebooks(include=None)
+        group_notebooks = get_target_notebooks(include=groups)
+        # Combine and deduplicate
+        return sorted(set(default + group_notebooks))
     if isinstance(target_groups, list) and len(target_groups) == 1:
         group = target_groups[0]
         exclusion_groups = get_excluded_notebook_groups()
         return exclusion_groups.get(group, [])
-    return get_target_notebooks(include=target_groups, include_default=False)
+    return get_target_notebooks(include=target_groups)
 
 
 def set_licensed_env_vars():
@@ -96,6 +94,12 @@ def main():
         help="Comma-separated list of group names to target (e.g. --target=ce,licensed,long-running)",
     )
     args = parser.parse_args()
+    if not args.target or all(not t.strip() for t in args.target):
+        print(
+            "Error: You must provide at least one group name to --target.",
+            file=sys.stderr,
+        )
+        sys.exit(2)
     target_groups = map_target_args(args.target)
     if target_groups and any(
         g == "Atoti Locked Notebooks"

@@ -20,7 +20,6 @@ def get_excluded_notebook_groups(exclusion_file="tests/test_exclusion.txt"):
                 if not line:
                     continue
                 if line.startswith("# ---") and line.endswith("---"):
-                    # Extract group name from header
                     current_group = line.strip("# -").strip()
                     groups[current_group] = []
                 elif line.startswith("#"):
@@ -29,7 +28,6 @@ def get_excluded_notebook_groups(exclusion_file="tests/test_exclusion.txt"):
                     if current_group is None:
                         current_group = "Ungrouped"
                         groups.setdefault(current_group, [])
-                    # Normalize path
                     groups[current_group].append(line.replace("\\", "/"))
     return groups
 
@@ -47,27 +45,27 @@ def get_all_notebook_paths():
     ]
 
 
-def get_included_notebooks(keep=None):
+def get_target_notebooks(include=None):
     """
     Return a sorted list of all notebook paths, with exclusions applied.
-    - If 'keep' is provided (string or list), those group(s) are included in the result.
+    - If 'include' is provided (string or list), those group(s) are included in the result.
     - Exclusions are read from the test_exclusion.txt file and can be either files or directories.
     """
     notebook_paths = get_all_notebook_paths()
     exclusion_groups = get_excluded_notebook_groups()
 
-    # Support multiple groups to keep
-    keep_groups = set()
-    if keep is not None:
-        if isinstance(keep, (list, tuple, set)):
-            keep_groups = set(keep)
+    # Normalize include argument to a set of group names
+    include_groups = set()
+    if include is not None:
+        if isinstance(include, (list, tuple, set)):
+            include_groups = set(include)
         else:
-            keep_groups = {keep}
+            include_groups = {include}
 
-    # Collect all exclusions except those in keep_groups
+    # Collect all exclusions except those in include_groups
     all_exclusions = set()
     for group, group_paths in exclusion_groups.items():
-        if group in keep_groups:
+        if group in include_groups:
             continue
         all_exclusions.update(group_paths)
 
@@ -83,8 +81,8 @@ def get_included_notebooks(keep=None):
     # Filter out excluded notebooks
     included = [nb for nb in notebook_paths if not should_exclude(nb)]
 
-    # Add back any notebooks from keep_groups (if they exist and aren't already included)
-    for group in keep_groups:
+    # Add back any notebooks from include_groups (if they exist and aren't already included)
+    for group in include_groups:
         for nb in exclusion_groups.get(group, []):
             if nb in notebook_paths and nb not in included:
                 included.append(nb)

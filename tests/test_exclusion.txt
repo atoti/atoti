@@ -9,7 +9,7 @@
 02-technical-guides/directquery-intro/main.ipynb
 02-technical-guides/virtual-hierarchies/main.ipynb
 
-# --- Atoti Unlocked Notebooks ---
+# --- Atoti Locked Notebooks ---
 02-technical-guides/security-implementation/01-Basic-authentication.ipynb
 02-technical-guides/security-implementation/02-OIDC-Auth0.ipynb
 02-technical-guides/security-implementation/03-OIDC-Google.ipynb

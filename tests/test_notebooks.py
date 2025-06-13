@@ -6,6 +6,25 @@ import pytest
 from exclusion_utils import get_target_notebooks, get_excluded_notebook_groups
 
 
+def set_licensed_env_vars():
+    """
+    Ensure required environment variables for licensed notebooks are set in the OS environment.
+    Raise an error if any are missing.
+    """
+    required_vars = [
+        "GOOGLE_CLIENT_ID",
+        "GOOGLE_CLIENT_SECRET",
+        "AUTH0_CLIENT_ID",
+        "AUTH0_CLIENT_SECRET",
+        "AUTH0_DOMAIN",
+    ]
+    missing = [var for var in required_vars if not os.environ.get(var)]
+    if missing:
+        raise EnvironmentError(
+            f"Missing required environment variables for licensed notebooks: {', '.join(missing)}"
+        )
+
+
 def get_num_workers() -> int | str:
     """
     Determine the number of parallel workers for pytest-xdist.
@@ -45,42 +64,30 @@ def map_target_args(target_args):
     return list(groups)
 
 
-def collect_notebooks(target_groups):
+def collect_notebooks(target_groups) -> list[str]:
     """
     Return the list of notebooks to test based on the target groups.
-    - If target_groups is None, return all default notebooks (with all groups excluded).
+    - If target_groups is None, return all notebooks minus any group exclusions.
     - If only one group is present, return only that group's notebooks.
-    - If target_groups is a dict with 'combine_default_with', combine default notebooks with those groups.
-    - Otherwise, return all default notebooks plus the specified groups.
+    - If multiple groups are present, return only the notebooks from the specified groups.
+    - Otherwise, if target_groups is a dict with 'combine_default_with', combine all notebooks minus group exclusions with those groups.
     """
     if target_groups is None:
-        return get_target_notebooks(include=None)
+        return get_target_notebooks(include_only=None)
+    if isinstance(target_groups, list):
+        if len(target_groups) == 1:
+            group = target_groups[0]
+            exclusion_groups = get_excluded_notebook_groups()
+            return exclusion_groups.get(group, [])
+        else:
+            return get_target_notebooks(include_only=target_groups)
     if isinstance(target_groups, dict) and "combine_default_with" in target_groups:
         groups = target_groups["combine_default_with"]
-        default = get_target_notebooks(include=None)
-        group_notebooks = get_target_notebooks(include=groups)
+        default = get_target_notebooks(include_only=None)
+        group_notebooks = get_target_notebooks(include_only=groups)
         # Combine and deduplicate
         return sorted(set(default + group_notebooks))
-    if isinstance(target_groups, list) and len(target_groups) == 1:
-        group = target_groups[0]
-        exclusion_groups = get_excluded_notebook_groups()
-        return exclusion_groups.get(group, [])
-    return get_target_notebooks(include=target_groups)
-
-
-def set_licensed_env_vars():
-    """
-    Set environment variables for licensed notebooks.
-    """
-    envs = {
-        "GOOGLE_CLIENT_ID": "dummy-google-client-id",
-        "GOOGLE_CLIENT_SECRET": "dummy-google-client-secret",
-        "AUTH0_CLIENT_ID": "dummy-auth0-client-id",
-        "AUTH0_CLIENT_SECRET": "dummy-auth0-client-secret",
-        "AUTH0_DOMAIN": "dummy-auth0-domain",
-    }
-    for var, val in envs.items():
-        os.environ.setdefault(var, val)
+    raise ValueError(f"Unexpected target_groups value: {target_groups!r}")
 
 
 def main():

@@ -1,8 +1,5 @@
 SHELL := /bin/bash
 
-PLAYWRIGHT_HEADLESS ?= 1
-export PLAYWRIGHT_HEADLESS
-
 .PHONY: env check format test review restore upgrade
 
 env:
@@ -17,10 +14,16 @@ format: env
 	uv run ruff format .
 
 test: check format
-	uv run python tests/test_notebooks.py
+	uv run python tests/test_notebooks.py --target=ce
 
 test-licensed: check format
-	uv run python tests/test_notebooks.py
+	uv run python tests/test_notebooks.py --target=licensed
+
+test-long: check format
+	uv run python tests/test_notebooks.py --target=long-running
+
+test-all: check format
+	uv run python tests/test_notebooks.py --target=ce,licensed,long-running
 
 render: check format
 	uv run playwright install

@@ -3,14 +3,14 @@ import sys
 import time
 import logging
 from typing import List
-from exclusion_utils import get_included_notebooks
+from exclusion_utils import get_target_notebooks
 from playwright.sync_api import sync_playwright, TimeoutError, Page
 
 # =====================
 # Configuration
 # =====================
 JUPYTER_LAB_URL = os.getenv("JUPYTER_LAB_URL", "http://localhost:8888/lab/tree/")
-HEADLESS = os.getenv("PLAYWRIGHT_HEADLESS", "0") != "0"
+HEADLESS = os.getenv("PLAYWRIGHT_HEADLESS", "1") != "0"
 SLOW_MO = int(os.getenv("PLAYWRIGHT_SLOWMO", "2000"))
 SHUTDOWN_DIALOG_TIMEOUT = 3000  # ms to wait for shutdown dialog
 RESTART_DIALOG_TIMEOUT = 3000  # ms to wait for restart dialog
@@ -32,7 +32,7 @@ logger = logging.getLogger("notebook-renderer")
 # =====================
 # Notebook selection
 # =====================
-notebooks: List[str] = get_included_notebooks()
+notebooks: List[str] = get_target_notebooks(include_only=None)
 logger.info(f"Found {len(notebooks)} notebooks to render:")
 for notebook in notebooks:
     logger.info(f"  - {notebook}")

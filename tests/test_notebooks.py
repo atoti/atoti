@@ -9,13 +9,14 @@ from exclusion_utils import resolve_target_notebooks, add_and_validate_target_ar
 def get_num_workers() -> int | str:
     """
     Determine the number of parallel workers for pytest-xdist.
-    On macOS 13 GitHub runners, reduce workers to avoid CPU overload.
+    On GitHub runner, reduce workers to 2.
+    Otherwise on local machine, set workers to 'auto'.
     """
-    is_mac_github_runner = pf.system() == "Darwin" and pf.release() == "22.6.0"
-    cpu_count = os.cpu_count()
-    if is_mac_github_runner and cpu_count is not None and cpu_count == 4:
-        return cpu_count - 3
-    return "auto"
+    is_github_runner = os.environ.get("GITHUB_ACTIONS") == "true"
+    if is_github_runner:
+        return 2
+    else:
+        return "auto"
 
 
 def main():

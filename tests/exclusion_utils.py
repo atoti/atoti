@@ -64,31 +64,40 @@ def get_target_notebook_paths(
     exclusion_groups = get_excluded_notebook_groups()
 
     if include_only is None:
-        # Default: all notebooks minus any group exclusions
+        # Gather all exclusions from all groups
         all_exclusions = set(nb for group in exclusion_groups.values() for nb in group)
+
+        # Separate exclusions into files and directories
         excluded_files = {p for p in all_exclusions if p.endswith(".ipynb")}
         excluded_dirs = {
             p.rstrip("/") for p in all_exclusions if not p.endswith(".ipynb")
         }
 
+        # Exclude if the path matches a file or is inside an excluded directory
         def is_excluded(notebook_path: str) -> bool:
-            return notebook_path in excluded_files or any(
+            in_excluded_file = notebook_path in excluded_files
+            in_excluded_dir = any(
                 notebook_path.startswith(d + "/") for d in excluded_dirs
             )
+            return in_excluded_file or in_excluded_dir
 
-        return sorted(nb for nb in notebook_paths if not is_excluded(nb))
+        included_notebooks = [nb for nb in notebook_paths if not is_excluded(nb)]
+        return sorted(included_notebooks)
 
-    # Only include notebooks from specified groups
-    include_groups = (
-        set(include_only)
-        if isinstance(include_only, (list, tuple, set))
-        else {include_only}
-    )
+    # Ensure include_groups is always a set
+    if isinstance(include_only, (list, tuple, set)):
+        include_groups = set(include_only)
+    else:
+        include_groups = {include_only}
+
+    # Gather all notebooks from the specified groups that exist in notebook_paths
     group_notebooks = set()
     for group in include_groups:
-        for nb in exclusion_groups.get(group, []):
+        notebooks_in_group = exclusion_groups.get(group, [])
+        for nb in notebooks_in_group:
             if nb in notebook_paths:
                 group_notebooks.add(nb)
+
     return sorted(group_notebooks)
 
 

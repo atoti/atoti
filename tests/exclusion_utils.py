@@ -151,11 +151,31 @@ def resolve_target_notebooks(target_args: list[str]) -> list[str]:
     raise ValueError("No valid target groups specified.")
 
 
+def set_licensed_env_vars():
+    """
+    Ensure required environment variables for licensed notebooks are set in the OS environment.
+    Raise an error if any are missing.
+    """
+    required_vars = [
+        "GOOGLE_CLIENT_ID",
+        "GOOGLE_CLIENT_SECRET",
+        "AUTH0_CLIENT_ID",
+        "AUTH0_CLIENT_SECRET",
+        "AUTH0_DOMAIN",
+    ]
+    missing = [var for var in required_vars if not os.environ.get(var)]
+    if missing:
+        raise EnvironmentError(
+            f"Missing required environment variables for licensed notebooks: {', '.join(missing)}"
+        )
+
+
 def add_and_validate_target_args(parser):
     """
     Add the --target argument to the parser, parse args, and validate that at least one group is provided.
+    If the 'licensed' group is present, ensure required environment variables are set.
     Returns the parsed args object.
-    Exits with error if no valid target is provided.
+    Exits with error if no valid target is provided or if required env vars are missing.
     """
     parser.add_argument(
         "--target",
@@ -170,8 +190,18 @@ def add_and_validate_target_args(parser):
     targets_nonempty = (
         any(t.strip() != "" for t in args.target) if args.target else False
     )
-
     if not targets_provided or not targets_nonempty:
         print("Error: You must specify at least one group for --target.")
         sys.exit(2)
+
+    # Normalize and check for 'licensed' group
+    normalized_targets = []
+    for arg in args.target:
+        for part in arg.split(","):
+            normalized = part.strip().lower().replace(" ", "-")
+            if normalized:
+                normalized_targets.append(normalized)
+    if "licensed" in normalized_targets:
+        set_licensed_env_vars()
+
     return args

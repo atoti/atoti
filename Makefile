@@ -9,11 +9,11 @@ env:
 	uv run pre-commit install
 
 # Check code formatting using ruff
-check: env
+check:
 	uv run ruff format --check .
 
 # Format code using ruff
-format: env
+format:
 	uv run ruff format .
 
 # Run default notebook tests

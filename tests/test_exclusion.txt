@@ -5,9 +5,6 @@
 02-technical-guides/auto-cube/main.ipynb
 02-technical-guides/auto-cube/main-advanced.ipynb
 02-technical-guides/var-benchmark/main.ipynb
-02-technical-guides/directquery-vector/main.ipynb
-02-technical-guides/directquery-intro/main.ipynb
-02-technical-guides/virtual-hierarchies/main.ipynb
 
 # --- Atoti Locked Notebooks ---
 02-technical-guides/security-implementation/01-Basic-authentication.ipynb
@@ -16,6 +13,9 @@
 02-technical-guides/security-implementation/04-LDAP.ipynb
 02-technical-guides/security-implementation/main.ipynb
 02-technical-guides/internationalization/main.ipynb
+02-technical-guides/directquery-vector/main.ipynb
+02-technical-guides/directquery-intro/main.ipynb
+02-technical-guides/virtual-hierarchies/main.ipynb
 
 # --- Academy Notebooks ---
 01-atoti-academy/introduction-to-atoti/main.ipynb

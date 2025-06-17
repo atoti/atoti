@@ -162,6 +162,19 @@ def set_licensed_env_vars():
         "AUTH0_CLIENT_ID",
         "AUTH0_CLIENT_SECRET",
         "AUTH0_DOMAIN",
+        "SNOWFLAKE_ACCOUNT_IDENTIFIER",
+        "SNOWFLAKE_USERNAME",
+        "SNOWFLAKE_PASSWORD",
+        "SNOWFLAKE_ROLE",
+        "SNOWFLAKE_WAREHOUSE",
+        "SNOWFLAKE_DATABASE",
+        "SNOWFLAKE_SCHEMA",
+        "CLICKHOUSE_HOST",
+        "CLICKHOUSE_DB",
+        "CLICKHOUSE_PORT",
+        "CLICKHOUSE_USER",
+        "CLICKHOUSE_PASSWORD",
+        "DQ_GOOGLE_CREDENTIAL",
     ]
     missing = [var for var in required_vars if not os.environ.get(var)]
     if missing:

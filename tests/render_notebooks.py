@@ -1,9 +1,13 @@
+import argparse
 import os
 import sys
 import time
 import logging
 from typing import List
-from exclusion_utils import get_target_notebooks
+from exclusion_utils import (
+    resolve_target_notebooks,
+    add_and_validate_target_args,
+)
 from playwright.sync_api import sync_playwright, TimeoutError, Page
 
 # =====================
@@ -28,14 +32,6 @@ logging.basicConfig(
     datefmt="%Y-%m-%d %H:%M:%S",
 )
 logger = logging.getLogger("notebook-renderer")
-
-# =====================
-# Notebook selection
-# =====================
-notebooks: List[str] = get_target_notebooks(include_only=None)
-logger.info(f"Found {len(notebooks)} notebooks to render:")
-for notebook in notebooks:
-    logger.info(f"  - {notebook}")
 
 
 # =====================
@@ -205,6 +201,15 @@ def main() -> None:
     Launch browser, run all notebook tests, collect results, and print a summary.
     Exit with error if any failures. Shows 'FAIL' in summary for failed notebooks.
     """
+    parser = argparse.ArgumentParser(
+        description="Render target notebooks with Playwright."
+    )
+    args = add_and_validate_target_args(parser)
+    notebooks = resolve_target_notebooks(args.target)
+    logger.info(f"Found {len(notebooks)} notebooks to render:")
+    for notebook in notebooks:
+        logger.info(f"  - {notebook}")
+
     total_start_time = time.time()
     results: List[dict] = []
     failures: List[str] = []

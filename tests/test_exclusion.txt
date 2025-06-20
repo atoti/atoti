@@ -5,20 +5,28 @@
 02-technical-guides/auto-cube/main.ipynb
 02-technical-guides/auto-cube/main-advanced.ipynb
 02-technical-guides/var-benchmark/main.ipynb
-02-technical-guides/directquery-vector/main.ipynb
-02-technical-guides/directquery-intro/main.ipynb
-02-technical-guides/virtual-hierarchies/main.ipynb
 
-# --- Atoti Unlocked Notebooks ---
+# --- Atoti Locked Notebooks ---
 02-technical-guides/security-implementation/01-Basic-authentication.ipynb
 02-technical-guides/security-implementation/02-OIDC-Auth0.ipynb
 02-technical-guides/security-implementation/03-OIDC-Google.ipynb
 02-technical-guides/security-implementation/04-LDAP.ipynb
 02-technical-guides/security-implementation/main.ipynb
 02-technical-guides/internationalization/main.ipynb
+02-technical-guides/directquery-vector/main.ipynb
+02-technical-guides/directquery-intro/main.ipynb
+02-technical-guides/virtual-hierarchies/main.ipynb
 
 # --- Academy Notebooks ---
 01-atoti-academy/introduction-to-atoti/main.ipynb
+
+# --- Long Running Notebooks ---
+02-technical-guides/atoti-pandas-comparison/main.ipynb
+02-technical-guides/atoti-pandas-comparison/pandas-main.ipynb
+02-technical-guides/var-benchmark/data_generator.ipynb
+02-technical-guides/var-benchmark/main.ipynb
+03-use-cases/01-finance/retail-banking/credit-card-analytics/cc_data_processing.ipynb
+03-use-cases/01-finance/retail-banking/credit-card-analytics/main.ipynb
 
 # --- Invalid Named Notebooks ---
 Untitled

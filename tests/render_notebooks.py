@@ -1,23 +1,26 @@
+import argparse
 import os
 import sys
 import time
 import logging
 from typing import List
-from exclusion_utils import get_included_notebooks
+from exclusion_utils import (
+    resolve_target_notebooks,
+    add_and_validate_target_args,
+)
 from playwright.sync_api import sync_playwright, TimeoutError, Page
 
 # =====================
 # Configuration
 # =====================
 JUPYTER_LAB_URL = os.getenv("JUPYTER_LAB_URL", "http://localhost:8888/lab/tree/")
-HEADLESS = os.getenv("PLAYWRIGHT_HEADLESS", "0") != "0"
+HEADLESS = os.getenv("PLAYWRIGHT_HEADLESS", "1") != "0"
 SLOW_MO = int(os.getenv("PLAYWRIGHT_SLOWMO", "2000"))
 SHUTDOWN_DIALOG_TIMEOUT = 3000  # ms to wait for shutdown dialog
 RESTART_DIALOG_TIMEOUT = 3000  # ms to wait for restart dialog
 RESTART_IDLE_TIMEOUT = 5000  # ms to wait for kernel idle after restart
 RUN_START_TIMEOUT = 1000  # ms to wait for cell to go busy
-RUN_IDLE_TIMEOUT = 300000  # ms to wait for cell to return to idle
-
+RUN_IDLE_TIMEOUT = 600000  # ms to wait for cell to go idle after execution
 
 # =====================
 # Logging setup
@@ -28,14 +31,6 @@ logging.basicConfig(
     datefmt="%Y-%m-%d %H:%M:%S",
 )
 logger = logging.getLogger("notebook-renderer")
-
-# =====================
-# Notebook selection
-# =====================
-notebooks: List[str] = get_included_notebooks()
-logger.info(f"Found {len(notebooks)} notebooks to render:")
-for notebook in notebooks:
-    logger.info(f"  - {notebook}")
 
 
 # =====================
@@ -205,6 +200,26 @@ def main() -> None:
     Launch browser, run all notebook tests, collect results, and print a summary.
     Exit with error if any failures. Shows 'FAIL' in summary for failed notebooks.
     """
+    parser = argparse.ArgumentParser(
+        description="Render target notebooks with Playwright."
+    )
+    args = add_and_validate_target_args(parser)
+    notebooks = resolve_target_notebooks(args.target)
+    logger.info(f"Found {len(notebooks)} notebooks to render:")
+    for notebook in notebooks:
+        logger.info(f"  - {notebook}")
+
+    # Normalize all target group names for consistent logic
+    normalized_targets = []
+    for arg in args.target:
+        for part in arg.split(","):
+            normalized = part.strip().lower().replace(" ", "-")
+            if normalized:
+                normalized_targets.append(normalized)
+    if "long-running" in normalized_targets:
+        global RUN_IDLE_TIMEOUT
+        RUN_IDLE_TIMEOUT = 7200000  # ms
+
     total_start_time = time.time()
     results: List[dict] = []
     failures: List[str] = []

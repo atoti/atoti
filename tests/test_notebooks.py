@@ -1,33 +1,65 @@
-from exclusion_utils import get_included_notebooks
-import pytest
-import platform as pf
+import argparse
 import os
+import platform as pf
 import sys
+import pytest
+from exclusion_utils import resolve_target_notebooks, add_and_validate_target_args
 
-platform = pf.system()
-release = pf.release()
 
-# Reduce number of workers on macos-13 GitHub Action runner to avoid CPU overload
-if platform == "Darwin" and release == "22.6.0":
-    num_workers = os.cpu_count() - 2
-else:
-    num_workers = "auto"
+def get_num_workers() -> int | str:
+    """
+    Determine the number of parallel workers for pytest-xdist.
+    On GitHub runner, reduce workers to 2.
+    Otherwise on local machine, set workers to 'auto'.
+    """
+    is_github_runner = os.environ.get("GITHUB_ACTIONS") == "true"
+    if is_github_runner:
+        return 2
+    else:
+        return "auto"
 
-notebooks = get_included_notebooks()
-for notebook in notebooks:
-    print(notebook)
 
-if __name__ == "__main__":
+def main():
+    # Parse and validate CLI arguments
+    parser = argparse.ArgumentParser(
+        description="Test target notebooks with Pytest and Nbmake."
+    )
+    args = add_and_validate_target_args(parser)
+    notebooks = resolve_target_notebooks(args.target)
+    for nb in notebooks:
+        print(nb)
+
+    # Determine timeout based on whether 'long-running' is in the targets
+    normalized_targets = []
+    for arg in args.target:
+        for part in arg.split(","):
+            normalized = part.strip().lower().replace(" ", "-")
+            if normalized:
+                normalized_targets.append(normalized)
+    if "long-running" in normalized_targets:
+        nbmake_timeout = 7200
+    else:
+        nbmake_timeout = 600
+
+    # Prepare pytest arguments for notebook testing
+    html_report = f"reports/report-{pf.system()}-{pf.release()}.html"
+    junit_report = f"reports/junit-{pf.system()}-{pf.release()}.xml"
     pytest_args = [
         "--nbmake",
-        "--nbmake-timeout=600",
+        f"--nbmake-timeout={nbmake_timeout}",
         "-n",
-        f"{num_workers}",
+        f"{get_num_workers()}",
         "--dist",
         "worksteal",
         "-v",
-        f"--html=reports/report-{platform}-{release}.html",
+        f"--html={html_report}",
         "--self-contained-html",
-        f"--junitxml=reports/junit-{platform}-{release}.xml",
+        f"--junitxml={junit_report}",
     ] + notebooks
+
+    # Run pytest with the constructed arguments
     sys.exit(pytest.main(pytest_args))
+
+
+if __name__ == "__main__":
+    main()

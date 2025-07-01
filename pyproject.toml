@@ -35,7 +35,7 @@ dependencies = [
     "protobuf >=5.28.2, <7",
     "scikit-learn >=1.5.2, <2",
     "folium >=0.17.0, <1",
-    "atoti[aws,azure,gcp,jupyterlab,kafka,jdbc]==0.9.6",
+    "atoti[aws,azure,gcp,jupyterlab,kafka,jdbc]==0.9.7",
     "pandas == 2.3.0",
     "jupyterlab == 4.3.4",
     "ruff >=0.6.9, <1",

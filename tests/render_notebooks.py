@@ -89,8 +89,8 @@ def restart_kernel(
 
 def run_all_code_cells(
     page: Page,
+    idle_timeout: int,
     start_timeout: int = RUN_START_TIMEOUT,
-    idle_timeout: int = RUN_IDLE_TIMEOUT,
 ) -> None:
     """
     Execute all visible code cells in the notebook, ensuring each cell completes
@@ -153,7 +153,7 @@ def save_notebook(page: Page, nb: str) -> None:
     logger.info("  💾 Notebook saved")
 
 
-def run_notebook(nb: str, page: Page) -> float:
+def run_notebook(nb: str, page: Page, idle_timeout: int) -> float:
     """
     Open a notebook, restart its kernel, run all code cells, save, and close the
     notebook. Returns execution duration in minutes, seconds.
@@ -164,7 +164,7 @@ def run_notebook(nb: str, page: Page) -> float:
         page.goto(JUPYTER_LAB_URL + nb)
         shutdown_kernel(page)
         restart_kernel(page)
-        run_all_code_cells(page)
+        run_all_code_cells(page, idle_timeout=idle_timeout)
         save_notebook(page, nb)
         close_tab(page)
         nb_duration = time.time() - nb_start_time
@@ -216,9 +216,9 @@ def main() -> None:
             normalized = part.strip().lower().replace(" ", "-")
             if normalized:
                 normalized_targets.append(normalized)
+    run_idle_timeout = RUN_IDLE_TIMEOUT  # Use default
     if "long-running" in normalized_targets:
-        global RUN_IDLE_TIMEOUT
-        RUN_IDLE_TIMEOUT = 7200000  # ms
+        run_idle_timeout = 7200000  # ms
 
     total_start_time = time.time()
     results: List[dict] = []
@@ -228,7 +228,7 @@ def main() -> None:
             with browser.new_page() as page:
                 for nb in notebooks:
                     try:
-                        duration = run_notebook(nb, page)
+                        duration = run_notebook(nb, page, idle_timeout=run_idle_timeout)
                         results.append(
                             {"name": nb, "status": "COMPLETE", "duration": duration}
                         )

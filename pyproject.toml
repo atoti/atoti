@@ -43,11 +43,11 @@ dependencies = [
     "jupyter-resource-usage>=1.1.0",
     "pytest == 8.4.1",
     "pytest-html == 4.1.1",
-    "pytest-xdist == 3.7.0",
+    "pytest-xdist == 3.8.0",
     "nbdime == 4.0.2",
     "nbmake == 1.5.5",
     "pre-commit == 4.2.0",
-    "playwright == 1.52.0",
+    "playwright == 1.53.0",
     "pyportfolioopt == 1.5.6"
 ]
 

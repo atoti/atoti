@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/v/release/atoti/atoti" alt="github">
+  <img src="https://img.shields.io/github/v/release/atoti/atoti?color=#4cc71f" alt="github">
   <img src="https://img.shields.io/pypi/dm/atoti" alt="github">
   <img src="https://github.com/github/docs/actions/workflows/test.yml/badge.svg" alt="gha">
   <a href="https://github.com/atoti/atoti/discussions"><img src="https://img.shields.io/github/discussions/atoti/atoti" alt="GitHub Discussion"></a>

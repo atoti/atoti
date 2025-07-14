@@ -75,7 +75,7 @@ uv run jupyter-lab
 ### 💬 Discussions and issues
 
 You can use:
-- [Discussions](https://github.com/atoti/atoti/discussions) to ask questions or suggest new features
+- [Discussions](https://github.com/atoti/atoti/discussions) to ask questions or suggest new features.
 - [Issues](https://github.com/atoti/atoti/issues) to report problems.
 
 By starting a discussion or opening an issue, you agree with Atoti's [terms of use](https://www.atoti.io/terms) and [privacy policy](https://www.atoti.io/privacy-policy).

@@ -48,7 +48,12 @@ dependencies = [
     "nbmake == 1.5.5",
     "pre-commit == 4.2.0",
     "playwright == 1.53.0",
-    "pyportfolioopt == 1.5.6"
+    "pyportfolioopt == 1.5.6",
+    "langgraph",
+    "langchain",
+    "langchain-ollama",
+    "langchain-community",
+    "langchain-chroma"
 ]
 
 [tool.source]

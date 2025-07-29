@@ -41,27 +41,27 @@ test-all: check format
 render: check format
 	uv run playwright install
 	uv run playwright install-deps
-	./tests/scripts/render.sh default
+	./tests/scripts/jupyter_and_render.sh default
 
 # Render licensed notebooks in JupyterLab using Playwright
 render-licensed: check format
 	./tests/scripts/install_dq.sh
 	uv run playwright install
 	uv run playwright install-deps
-	./tests/scripts/render.sh licensed
+	./tests/scripts/jupyter_and_render.sh licensed
 
 # Render long-running notebooks in JupyterLab using Playwright
 render-long: check format
 	uv run playwright install
 	uv run playwright install-deps
-	./tests/scripts/render.sh long-running
+	./tests/scripts/jupyter_and_render.sh long-running
 
 # Render all notebooks in JupyterLab using Playwright
 render-all: check format
 	./tests/scripts/install_dq.sh
 	uv run playwright install
 	uv run playwright install-deps
-	./tests/scripts/render.sh default licensed long-running
+	./tests/scripts/jupyter_and_render.sh default licensed long-running
 
 # Launch JupyterLab for review
 review:

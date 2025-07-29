@@ -55,7 +55,7 @@ class DocumentProcessingState(TypedDict):
     # Q&A State
     user_question: str
     question_type: str  # 'general' or 'code'
-    selected_model: str  # 'mistral' or 'codestral'
+    selected_model: str  # 'mistral' or 'devstral'
     retrieved_docs: List[Document]
     context: str
     response: str
@@ -96,7 +96,7 @@ class AdvancedAtotiQASystem:
 
     def __init__(self):
         self.llm = None  # Mistral for general Q&A
-        self.code_llm = None  # Codestral for code generation
+        self.code_llm = None  # Devstral for code generation
         self.graph = None
         self.qa_graph = None  # Separate graph for Q&A only
         self.embeddings = None
@@ -107,25 +107,25 @@ class AdvancedAtotiQASystem:
 
         # Initialize Mistral LLM for general documentation Q&A
         self.llm = ChatOllama(
-            model="mistral:latest",
+            model="mistral-small:latest",
             temperature=0.1,  # Lower temperature for more consistent responses
         )
         print("✅ Mistral LLM initialized for documentation Q&A")
 
-        # Initialize Codestral LLM for code generation and fixing
+        # Initialize Devstral LLM for code generation and fixing
         try:
             self.code_llm = ChatOllama(
-                model="codestral:latest",
+                model="devstral:latest",
                 temperature=0.1,  # Low temperature for precise code generation
             )
-            print("✅ Codestral LLM initialized for code generation")
+            print("✅ Devstral LLM initialized for code generation")
         except Exception as e:
-            print(f"⚠️ Codestral not available, falling back to Mistral for code: {e}")
-            self.code_llm = self.llm  # Fallback to Mistral if Codestral unavailable
+            print(f"⚠️ Devstral not available, falling back to Mistral for code: {e}")
+            self.code_llm = self.llm  # Fallback to Mistral if Devstral unavailable
 
         # Initialize embeddings
         try:
-            self.embeddings = OllamaEmbeddings(model="nomic-embed-text")
+            self.embeddings = OllamaEmbeddings(model="mxbai-embed-large")
             print("✅ Ollama embeddings initialized")
         except Exception as e:
             print(f"❌ Failed to initialize embeddings: {e}")
@@ -250,11 +250,11 @@ class AdvancedAtotiQASystem:
         Returns:
             tuple: (question_type, selected_model)
                 question_type: 'general' or 'code'
-                selected_model: 'mistral' or 'codestral'
+                selected_model: 'mistral' or 'devstral'
         """
         question_lower = question.lower()
 
-        # Code-related keywords that should trigger Codestral
+        # Code-related keywords that should trigger Devstral
         code_keywords = [
             # Direct code requests
             "code",
@@ -324,7 +324,7 @@ class AdvancedAtotiQASystem:
         )
 
         if is_code_question or has_code_patterns:
-            return "code", "codestral"
+            return "code", "devstral"
         else:
             return "general", "mistral"
 
@@ -614,11 +614,11 @@ class AdvancedAtotiQASystem:
             if not self.embeddings:
                 raise Exception("Embeddings not initialized")
 
-            processing_log.append("Embeddings model ready: nomic-embed-text")
+            processing_log.append("Embeddings model ready: mxbai-embed-large")
 
             return {
                 **state,
-                "embeddings_model": "nomic-embed-text",
+                "embeddings_model": "mxbai-embed-large",
                 "current_step": "create_embeddings",
                 "step_count": state["step_count"] + 1,
                 "processing_log": processing_log,
@@ -796,11 +796,11 @@ class AdvancedAtotiQASystem:
             context = "\n".join(context_parts)
 
             # Select the appropriate model
-            llm = self.code_llm if selected_model == "codestral" else self.llm
+            llm = self.code_llm if selected_model == "devstral" else self.llm
 
             # Create specialized prompts based on question type
             if question_type == "code":
-                template = """You are Codestral, an expert code assistant specialized in the Atoti Python SDK.
+                template = """You are Devstral, an expert code assistant specialized in the Atoti Python SDK.
 
 INSTRUCTIONS:
 - Generate COMPLETE, WORKING Python code examples
@@ -1016,7 +1016,7 @@ ANSWER (based only on the provided context):"""
             "raw_documents": [],
             "cleaned_documents": [],
             "document_chunks": [],
-            "embeddings_model": "nomic-embed-text",
+            "embeddings_model": "mxbai-embed-large",
             "processing_stats": {},
             "user_question": question,
             "question_type": "",  # Will be determined by classification
@@ -1046,12 +1046,12 @@ ANSWER (based only on the provided context):"""
 
     async def ask_code_question(self, question: str, vectordb_path: str = None) -> dict:
         """
-        Ask a code-specific question, forcing the use of Codestral.
+        Ask a code-specific question, forcing the use of Devstral.
 
         This is useful when you want to ensure code generation regardless of
         the automatic classification.
         """
-        print(f"💻 Code Question (Forced Codestral): {question}")
+        print(f"💻 Code Question (Forced Devstral): {question}")
 
         # Create state for Q&A mode but force code classification
         qa_state = {
@@ -1060,11 +1060,11 @@ ANSWER (based only on the provided context):"""
             "raw_documents": [],
             "cleaned_documents": [],
             "document_chunks": [],
-            "embeddings_model": "nomic-embed-text",
+            "embeddings_model": "mxbai-embed-large",
             "processing_stats": {},
             "user_question": question,
             "question_type": "code",  # Force code type
-            "selected_model": "codestral",  # Force Codestral
+            "selected_model": "devstral",  # Force Devstral
             "retrieved_docs": [],
             "context": "",
             "response": "",
@@ -1075,7 +1075,7 @@ ANSWER (based only on the provided context):"""
             "error_message": "",
             "processing_log": [
                 "Starting FORCED CODE Q&A mode",
-                "Skipped classification - forced Codestral",
+                "Skipped classification - forced Devstral",
             ],
             "document_quality_score": 1.0,
             "response_quality_score": 0.0,
@@ -1184,11 +1184,11 @@ async def example_qa_session():
         # General documentation questions (should use Mistral)
         ("What is a cube in Atoti?", "general"),
         ("Explain the concept of measures in Atoti", "general"),
-        # Code generation questions (should use Codestral)
+        # Code generation questions (should use Devstral)
         ("Show me code to create a session in Atoti", "code"),
         ("How do I implement a cube with measures? Give me code", "code"),
         ("Write Python code to load data into Atoti from pandas", "code"),
-        # Code fixing questions (should use Codestral)
+        # Code fixing questions (should use Devstral)
         ("Fix this code: session = atoti.create_session()", "code"),
     ]
 
@@ -1208,10 +1208,10 @@ async def example_qa_session():
         print("-" * 30)
 
     # Demonstrate forced code generation
-    print("\n🔧 Testing forced Codestral usage:")
+    print("\n🔧 Testing forced Devstral usage:")
     code_result = await qa_system.ask_code_question("What is the purpose of Atoti?")
     if "error" not in code_result:
-        print("✅ Successfully forced Codestral for general question")
+        print("✅ Successfully forced Devstral for general question")
     else:
         print(f"❌ Forced code question failed: {code_result['error']}")
 
@@ -1219,7 +1219,7 @@ async def example_qa_session():
 async def main():
     """Main function demonstrating the dual-model Atoti Q&A system."""
     print("🚀 Advanced Dual-Model Atoti Q&A System with LangGraph")
-    print("🧠 Mistral for Documentation + Codestral for Code Generation")
+    print("🧠 Mistral for Documentation + Devstral for Code Generation")
     print("=" * 70)
 
     # Run document processing example
@@ -1231,17 +1231,17 @@ async def main():
     print("\n🎉 Dual-model examples completed!")
     print("\n💡 Pro tips:")
     print("  • ask_question() - Automatic model selection")
-    print("  • ask_code_question() - Force Codestral for code generation")
+    print("  • ask_code_question() - Force Devstral for code generation")
 
 
 # 6. INTERACTIVE MODE
 async def interactive_mode():
     """Run in interactive Q&A mode with dual-model support."""
     print("🎯 Interactive Dual-Model Atoti Q&A System")
-    print("🧠 Mistral for Documentation + Codestral for Code")
+    print("🧠 Mistral for Documentation + Devstral for Code")
     print("Commands:")
     print("  • Regular question: Ask normally")
-    print("  • Force code: Start with 'code:' to force Codestral")
+    print("  • Force code: Start with 'code:' to force Devstral")
     print("  • Type 'quit' to exit")
     print("-" * 50)
 

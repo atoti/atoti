@@ -29,6 +29,6 @@ nohup uv run jupyter-lab \
 wait_for_jupyter 127.0.0.1 8888 5
 echo "JupyterLab is running"
 
-# Pass all arguments to render_notebooks.py as a space/comma separated list for --target
+# Pass all arguments to 03_render_notebooks.py as a space/comma separated list for --target
 targets=$(IFS=, ; echo "$*")
-uv run python tests/render_notebooks.py --target="$targets"
+uv run python tests/03_render_notebooks.py --target="$targets"

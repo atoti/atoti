@@ -21,21 +21,21 @@ format: env
 
 # Run default notebook tests
 test: check format
-	uv run python tests/test_notebooks.py --target=default
+	uv run python tests/01_test_notebooks.py --target=default
 
 # Run tests for licensed notebooks
 test-licensed: check format
 	./tests/scripts/install_dq.sh
-	uv run python tests/test_notebooks.py --target=licensed
+	uv run python tests/01_test_notebooks.py --target=licensed
 
 # Run tests for long-running notebooks
 test-long: check format
-	uv run python tests/test_notebooks.py --target=long-running
+	uv run python tests/01_test_notebooks.py --target=long-running
 
 # Run all notebook tests
 test-all: check format
 	./tests/scripts/install_dq.sh
-	uv run python tests/test_notebooks.py --target=default,licensed,long-running
+	uv run python tests/01_test_notebooks.py --target=default,licensed,long-running
 
 # Render default notebooks in JupyterLab using Playwright
 render: check format

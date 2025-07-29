@@ -95,6 +95,7 @@ class AdvancedAtotiQASystem:
     def __init__(self):
         self.llm = None
         self.graph = None
+        self.qa_graph = None  # Separate graph for Q&A only
         self.embeddings = None
 
     def setup(self):
@@ -117,6 +118,10 @@ class AdvancedAtotiQASystem:
 
         # Build the comprehensive processing graph
         self.graph = self._build_document_processing_graph()
+
+        # Build the separate Q&A-only graph
+        self.qa_graph = self._build_qa_only_graph()
+
         print("✅ Advanced system setup complete!")
         return True
 
@@ -174,11 +179,11 @@ class AdvancedAtotiQASystem:
                 "retry_load": "load_documents",
                 "retry_clean": "clean_html",
                 "retry_chunk": "chunk_documents",
-                "qa_ready": "retrieve_docs",
+                "qa_ready": END,  # End document processing workflow here
             },
         )
 
-        # Q&A FLOW
+        # Q&A FLOW (completely separate from document processing)
         workflow.add_edge("retrieve_docs", "generate_answer")
         workflow.add_edge("generate_answer", "validate_answer")
 
@@ -190,6 +195,35 @@ class AdvancedAtotiQASystem:
         )
 
         return workflow.compile()
+
+    def _build_qa_only_graph(self):
+        """
+        Build a separate, lightweight graph just for Q&A that doesn't involve document processing.
+        This prevents URL loading errors when asking questions.
+        """
+        # Create a simple Q&A-only graph
+        qa_workflow = StateGraph(DocumentProcessingState)
+
+        # Q&A PROCESSING NODES ONLY
+        qa_workflow.add_node("retrieve_docs", self._retrieve_relevant_docs)
+        qa_workflow.add_node("generate_answer", self._generate_answer)
+        qa_workflow.add_node("validate_answer", self._validate_answer)
+
+        # ENTRY POINT for Q&A
+        qa_workflow.set_entry_point("retrieve_docs")
+
+        # Q&A FLOW
+        qa_workflow.add_edge("retrieve_docs", "generate_answer")
+        qa_workflow.add_edge("generate_answer", "validate_answer")
+
+        # CONDITIONAL ROUTING FOR ANSWER QUALITY
+        qa_workflow.add_conditional_edges(
+            "validate_answer",
+            self._should_retry_answer,
+            {"retry": "generate_answer", "finish": END},
+        )
+
+        return qa_workflow.compile()
 
     # 2. DOCUMENT PROCESSING NODES (Integrated from index_docs.py)
     def _initialize_processing(
@@ -832,8 +866,8 @@ ANSWER (based only on the provided context):"""
         }
 
         try:
-            # Start from document retrieval step
-            final_state = await self.graph.ainvoke(qa_state, {"start": "retrieve_docs"})
+            # Use the separate Q&A graph that doesn't involve document processing
+            final_state = await self.qa_graph.ainvoke(qa_state)
             self._display_qa_results(final_state)
             return final_state
         except Exception as e:

@@ -391,17 +391,16 @@ class AdvancedAtotiQASystem:
         self, state: DocumentProcessingState
     ) -> DocumentProcessingState:
         """Load documents using RecursiveUrlLoader (from index_docs.py)."""
-        print("📥 Loading documents from web...")
+        print(f"📥 Loading documents from web: {state['source_url']}")
 
         processing_log = state.get("processing_log", [])
         processing_log.append("Starting document loading...")
-        print(state["source_url"])
 
         try:
             # Recreate the exact loader configuration from index_docs.py
             loader = RecursiveUrlLoader(
                 url=state["source_url"],
-                max_depth=4,
+                max_depth=5,
                 prevent_outside=True,
                 use_async=False,
                 timeout=60,
@@ -560,7 +559,7 @@ class AdvancedAtotiQASystem:
         self, state: DocumentProcessingState
     ) -> DocumentProcessingState:
         """Split documents into chunks (from index_docs.py)."""
-        print("✂️ Splitting documents into chunks...")
+        print("✂️  Splitting documents into chunks...")
 
         cleaned_documents = state.get("cleaned_documents", [])
         processing_log = state.get("processing_log", [])
@@ -638,7 +637,7 @@ class AdvancedAtotiQASystem:
         self, state: DocumentProcessingState
     ) -> DocumentProcessingState:
         """Build Chroma vector database (from index_docs.py)."""
-        print("🗄️ Building vector database...")
+        print("🗄️  Building vector database...")
 
         document_chunks = state.get("document_chunks", [])
         vectordb_path = state["vectordb_path"]
@@ -828,7 +827,7 @@ Explanation:
 [Detailed explanation of the code and how it addresses the question]
 """
             else:
-                template = """You are an expert assistant for the Atoti Python SDK documentation.
+                template = """You are Mistral, an expert documentation assistant for the Atoti Python SDK.
 
 INSTRUCTIONS:
 - ONLY answer questions about Atoti Python SDK
@@ -836,6 +835,9 @@ INSTRUCTIONS:
 - If the context doesn't contain relevant information, say "I don't have information about this topic in the Atoti documentation provided."
 - Be precise and cite specific methods, classes, or examples from the context
 - Provide conceptual explanations and understanding
+- Include necessary imports (import atoti as tt, import pandas as pd, etc.)
+- Classes from Atoti Python SDK should be used via the alias, tt
+- Use ONLY Atoti Python SDK methods and classes from the provided context
 
 CONTEXT FROM ATOTI DOCUMENTATION:
 {context}

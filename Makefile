@@ -2,6 +2,9 @@ SHELL := /bin/bash
 
 .PHONY: env check format test test-licensed test-long test-all render render-licensed render-long review restore upgrade
 
+ai:
+	uv run python tests/utils/upgrade_notebooks.py interactive
+
 # Set up the Python environment and install pre-commit hooks
 env:
 	pip install --quiet --disable-pip-version-check uv
@@ -72,3 +75,4 @@ restore:
 # Run all tests and render notebooks
 upgrade:
 	make test-all && make render-all
+

@@ -6,13 +6,13 @@ import sys
 
 
 def get_excluded_notebook_groups(
-    exclusion_file: str = "tests/test_exclusion.txt",
+    exclusion_file: Union[str, Path] = Path(__file__).parent / "test_exclusion.txt",
 ) -> dict:
     """
     Parse the exclusion file and return a dictionary mapping group names to lists of excluded notebook paths.
     Each group is defined by a header line (e.g., # --- GroupName ---), followed by notebook paths.
     """
-    exclusion_path = Path(exclusion_file)
+    exclusion_path = Path(exclusion_file)  # Convert to Path in case a string was passed
     groups = {}
     current_group = None
     if exclusion_path.exists():
@@ -41,11 +41,22 @@ def get_all_notebook_paths() -> List[str]:
     Return all notebook paths in the project as relative paths with forward slashes.
     Ignores checkpoint files.
     """
-    return [
-        os.path.relpath(nb_path, ".").replace("\\", "/")
-        for nb_path in glob.glob("./*/**/*.ipynb", recursive=True)
-        if "ipynb_checkpoints" not in nb_path
-    ]
+    # Find the project root (go up from tests/utils to the project root)
+    script_path = Path(__file__)
+    project_root = script_path.parent.parent.parent
+
+    # Change to project root temporarily to get correct relative paths
+    original_cwd = os.getcwd()
+    try:
+        os.chdir(project_root)
+        notebooks = [
+            os.path.relpath(nb_path, ".").replace("\\", "/")
+            for nb_path in glob.glob("./*/**/*.ipynb", recursive=True)
+            if "ipynb_checkpoints" not in nb_path
+        ]
+        return notebooks
+    finally:
+        os.chdir(original_cwd)
 
 
 def get_target_notebook_paths(

@@ -3,7 +3,7 @@ import os
 import platform as pf
 import sys
 import pytest
-from exclusion_utils import resolve_target_notebooks, add_and_validate_target_args
+from utils.exclusion_logic import resolve_target_notebooks, add_and_validate_target_args
 
 
 def get_num_workers() -> int | str:

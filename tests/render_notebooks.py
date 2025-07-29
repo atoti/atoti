@@ -4,7 +4,7 @@ import sys
 import time
 import logging
 from typing import List
-from exclusion_utils import (
+from utils.exclusion_logic import (
     resolve_target_notebooks,
     add_and_validate_target_args,
 )

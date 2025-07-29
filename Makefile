@@ -3,7 +3,7 @@ SHELL := /bin/bash
 .PHONY: env check format test test-licensed test-long test-all render render-licensed render-long review restore upgrade
 
 ai:
-	uv run python tests/utils/upgrade_notebooks.py interactive
+	uv run python tests/utils/agents.py interactive
 
 # Set up the Python environment and install pre-commit hooks
 env:

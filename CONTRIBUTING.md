@@ -26,7 +26,7 @@ We welcome any contributions from the community!
 
 6. Create the folder and notebooks.
 
-    * Make sure to add any notebooks responsible for data pre-processing to the [list of untested notebooks](tests/test_exclusion.txt).
+    * Make sure to add any notebooks responsible for data pre-processing to the [list of untested notebooks](tests/utils/test_exclusion.txt).
     * Notebooks using Atoti should be tested to ensure users can run it.
 
 7. If a dependency is missing run `uv add <DEPENDENCY_NAME>`. 

@@ -54,6 +54,8 @@ class DocumentProcessingState(TypedDict):
 
     # Q&A State
     user_question: str
+    question_type: str  # 'general' or 'code'
+    selected_model: str  # 'mistral' or 'codestral'
     retrieved_docs: List[Document]
     context: str
     response: str
@@ -93,20 +95,33 @@ class AdvancedAtotiQASystem:
     """
 
     def __init__(self):
-        self.llm = None
+        self.llm = None  # Mistral for general Q&A
+        self.code_llm = None  # Codestral for code generation
         self.graph = None
         self.qa_graph = None  # Separate graph for Q&A only
         self.embeddings = None
 
     def setup(self):
-        """Initialize the LLM, embeddings, and build the processing graph."""
+        """Initialize the LLMs, embeddings, and build the processing graph."""
         print("🔧 Setting up Advanced Atoti Document Processing & Q&A System...")
 
-        # Initialize LLM (using Ollama)
+        # Initialize Mistral LLM for general documentation Q&A
         self.llm = ChatOllama(
             model="mistral:latest",
             temperature=0.1,  # Lower temperature for more consistent responses
         )
+        print("✅ Mistral LLM initialized for documentation Q&A")
+
+        # Initialize Codestral LLM for code generation and fixing
+        try:
+            self.code_llm = ChatOllama(
+                model="codestral:latest",
+                temperature=0.1,  # Low temperature for precise code generation
+            )
+            print("✅ Codestral LLM initialized for code generation")
+        except Exception as e:
+            print(f"⚠️ Codestral not available, falling back to Mistral for code: {e}")
+            self.code_llm = self.llm  # Fallback to Mistral if Codestral unavailable
 
         # Initialize embeddings
         try:
@@ -122,7 +137,7 @@ class AdvancedAtotiQASystem:
         # Build the separate Q&A-only graph
         self.qa_graph = self._build_qa_only_graph()
 
-        print("✅ Advanced system setup complete!")
+        print("✅ Advanced dual-model system setup complete!")
         return True
 
     def _build_document_processing_graph(self):
@@ -205,14 +220,16 @@ class AdvancedAtotiQASystem:
         qa_workflow = StateGraph(DocumentProcessingState)
 
         # Q&A PROCESSING NODES ONLY
+        qa_workflow.add_node("classify_question", self._classify_and_route_question)
         qa_workflow.add_node("retrieve_docs", self._retrieve_relevant_docs)
         qa_workflow.add_node("generate_answer", self._generate_answer)
         qa_workflow.add_node("validate_answer", self._validate_answer)
 
         # ENTRY POINT for Q&A
-        qa_workflow.set_entry_point("retrieve_docs")
+        qa_workflow.set_entry_point("classify_question")
 
         # Q&A FLOW
+        qa_workflow.add_edge("classify_question", "retrieve_docs")
         qa_workflow.add_edge("retrieve_docs", "generate_answer")
         qa_workflow.add_edge("generate_answer", "validate_answer")
 
@@ -224,6 +241,119 @@ class AdvancedAtotiQASystem:
         )
 
         return qa_workflow.compile()
+
+    # INTELLIGENT MODEL SELECTION
+    def _classify_question_type(self, question: str) -> tuple[str, str]:
+        """
+        Classify the question to determine which model to use.
+
+        Returns:
+            tuple: (question_type, selected_model)
+                question_type: 'general' or 'code'
+                selected_model: 'mistral' or 'codestral'
+        """
+        question_lower = question.lower()
+
+        # Code-related keywords that should trigger Codestral
+        code_keywords = [
+            # Direct code requests
+            "code",
+            "example",
+            "implement",
+            "write",
+            "create",
+            "build",
+            "develop",
+            "function",
+            "method",
+            "class",
+            "script",
+            "program",
+            # Code fixing/debugging
+            "fix",
+            "debug",
+            "error",
+            "bug",
+            "issue",
+            "problem",
+            "broken",
+            "not working",
+            "fails",
+            "exception",
+            "traceback",
+            # Specific programming patterns
+            "how to code",
+            "how to implement",
+            "show me code",
+            "code snippet",
+            "sample code",
+            "working example",
+            "complete example",
+            # API usage patterns
+            "api",
+            "import",
+            "from atoti",
+            "session.",
+            "cube.",
+            "table.",
+            "measure",
+            "hierarchy",
+            "query",
+            "mdx",
+            # Python-specific
+            "python",
+            "pandas",
+            "dataframe",
+            "numpy",
+            "jupyter",
+            "notebook",
+        ]
+
+        # Check if question contains code-related keywords
+        is_code_question = any(keyword in question_lower for keyword in code_keywords)
+
+        # Check for code patterns (like code blocks, function calls, etc.)
+        has_code_patterns = (
+            "()" in question  # Function calls
+            or "def " in question  # Function definitions
+            or "import " in question  # Import statements
+            or "session." in question  # Atoti session usage
+            or "cube." in question  # Cube operations
+            or "=" in question  # Assignment
+            or "print(" in question  # Print statements
+        )
+
+        if is_code_question or has_code_patterns:
+            return "code", "codestral"
+        else:
+            return "general", "mistral"
+
+    # ENHANCED Q&A PROCESSING NODES
+    def _classify_and_route_question(
+        self, state: DocumentProcessingState
+    ) -> DocumentProcessingState:
+        """Classify the question and select the appropriate model."""
+        user_question = state.get("user_question", "")
+
+        question_type, selected_model = self._classify_question_type(user_question)
+
+        print(
+            f"🧠 Question classified as: {question_type.upper()} → Using {selected_model.upper()}"
+        )
+
+        processing_log = state.get("processing_log", [])
+        processing_log.append(
+            f"Question type: {question_type}, Model: {selected_model}"
+        )
+
+        return {
+            **state,
+            "question_type": question_type,
+            "selected_model": selected_model,
+            "processing_log": processing_log,
+            "current_step": "classify_question",
+            "step_count": state["step_count"] + 1,
+        }
 
     # 2. DOCUMENT PROCESSING NODES (Integrated from index_docs.py)
     def _initialize_processing(
@@ -645,12 +775,14 @@ class AdvancedAtotiQASystem:
     def _generate_answer(
         self, state: DocumentProcessingState
     ) -> DocumentProcessingState:
-        """Generate answer using retrieved documents."""
-        print("🤖 Generating answer...")
-
+        """Generate answer using retrieved documents with model selection."""
         user_question = state["user_question"]
+        question_type = state.get("question_type", "general")
+        selected_model = state.get("selected_model", "mistral")
         retrieved_docs = state.get("retrieved_docs", [])
         processing_log = state.get("processing_log", [])
+
+        print(f"🤖 Generating {question_type} answer using {selected_model.upper()}...")
 
         try:
             # Format context from retrieved documents
@@ -664,14 +796,46 @@ class AdvancedAtotiQASystem:
 
             context = "\n".join(context_parts)
 
-            # Create prompt for Atoti-specific Q&A
-            template = """You are an expert assistant for the Atoti Python SDK documentation.
+            # Select the appropriate model
+            llm = self.code_llm if selected_model == "codestral" else self.llm
+
+            # Create specialized prompts based on question type
+            if question_type == "code":
+                template = """You are Codestral, an expert code assistant specialized in the Atoti Python SDK.
+
+INSTRUCTIONS:
+- Generate COMPLETE, WORKING Python code examples
+- Use ONLY Atoti Python SDK methods and classes from the provided context
+- Include necessary imports (import atoti as tt, import pandas as pd, etc.)
+- Provide runnable code with proper error handling
+- Add clear comments explaining each step
+- If fixing code, show the corrected version with explanations
+- Test your code mentally before providing it
+
+CONTEXT FROM ATOTI DOCUMENTATION:
+{context}
+
+QUESTION: {question}
+
+RESPONSE:
+Provide complete, working Python code with explanations:
+
+```python
+# [Your complete code here]
+```
+
+Explanation:
+[Detailed explanation of the code and how it addresses the question]
+"""
+            else:
+                template = """You are an expert assistant for the Atoti Python SDK documentation.
 
 INSTRUCTIONS:
 - ONLY answer questions about Atoti Python SDK
 - ONLY use information explicitly stated in the provided context
 - If the context doesn't contain relevant information, say "I don't have information about this topic in the Atoti documentation provided."
 - Be precise and cite specific methods, classes, or examples from the context
+- Provide conceptual explanations and understanding
 
 CONTEXT FROM ATOTI DOCUMENTATION:
 {context}
@@ -681,11 +845,13 @@ QUESTION: {question}
 ANSWER (based only on the provided context):"""
 
             prompt = ChatPromptTemplate.from_template(template)
-            chain = prompt | self.llm | StrOutputParser()
+            chain = prompt | llm | StrOutputParser()
 
             response = chain.invoke({"context": context, "question": user_question})
 
-            processing_log.append("Answer generated successfully")
+            processing_log.append(
+                f"Answer generated successfully using {selected_model}"
+            )
 
             return {
                 **state,
@@ -851,6 +1017,8 @@ ANSWER (based only on the provided context):"""
             "embeddings_model": "nomic-embed-text",
             "processing_stats": {},
             "user_question": question,
+            "question_type": "",  # Will be determined by classification
+            "selected_model": "",  # Will be determined by classification
             "retrieved_docs": [],
             "context": "",
             "response": "",
@@ -872,6 +1040,55 @@ ANSWER (based only on the provided context):"""
             return final_state
         except Exception as e:
             print(f"❌ Error in Q&A processing: {e}")
+            return {"error": str(e)}
+
+    async def ask_code_question(self, question: str, vectordb_path: str = None) -> dict:
+        """
+        Ask a code-specific question, forcing the use of Codestral.
+
+        This is useful when you want to ensure code generation regardless of
+        the automatic classification.
+        """
+        print(f"💻 Code Question (Forced Codestral): {question}")
+
+        # Create state for Q&A mode but force code classification
+        qa_state = {
+            "source_url": "",
+            "vectordb_path": vectordb_path or "./atoti_docs_vectordb",
+            "raw_documents": [],
+            "cleaned_documents": [],
+            "document_chunks": [],
+            "embeddings_model": "nomic-embed-text",
+            "processing_stats": {},
+            "user_question": question,
+            "question_type": "code",  # Force code type
+            "selected_model": "codestral",  # Force Codestral
+            "retrieved_docs": [],
+            "context": "",
+            "response": "",
+            "confidence": 0.0,
+            "current_step": "qa_ready",
+            "step_count": 1,  # Skip classification
+            "retry_count": 0,
+            "error_message": "",
+            "processing_log": [
+                "Starting FORCED CODE Q&A mode",
+                "Skipped classification - forced Codestral",
+            ],
+            "document_quality_score": 1.0,
+            "response_quality_score": 0.0,
+            "validation_passed": True,
+        }
+
+        try:
+            # Skip classification and go straight to document retrieval
+            final_state = await self.qa_graph.ainvoke(
+                qa_state, {"start": "retrieve_docs"}
+            )
+            self._display_qa_results(final_state)
+            return final_state
+        except Exception as e:
+            print(f"❌ Error in code Q&A processing: {e}")
             return {"error": str(e)}
 
     def _display_processing_results(self, state: dict):
@@ -906,6 +1123,8 @@ ANSWER (based only on the provided context):"""
         response = state.get("response", "No response generated")
         quality_score = state.get("response_quality_score", 0)
         retrieved_docs = state.get("retrieved_docs", [])
+        question_type = state.get("question_type", "unknown")
+        selected_model = state.get("selected_model", "unknown")
 
         print("\n" + "=" * 70)
         print("💡 ANSWER")
@@ -914,6 +1133,8 @@ ANSWER (based only on the provided context):"""
 
         print(f"\n📊 Quality Score: {quality_score:.1%}")
         print(f"📚 Sources Used: {len(retrieved_docs)} documents")
+        print(f"🧠 Question Type: {question_type.upper()}")
+        print(f"🤖 Model Used: {selected_model.upper()}")
 
         if quality_score < 0.5:
             print("⚠️ Low quality score - please verify the information")
@@ -948,50 +1169,79 @@ async def example_document_processing():
 
 
 async def example_qa_session():
-    """Example of how to ask questions."""
-    print("\n🤖 Running Q&A Example")
+    """Example of how to ask questions with dual-model support."""
+    print("\n🤖 Running Dual-Model Q&A Example")
     print("=" * 50)
 
     # Initialize the system
     qa_system = AdvancedAtotiQASystem()
     qa_system.setup()
 
-    # Example questions about Atoti
+    # Example questions showing automatic model selection
     questions = [
-        "How do I create a session in Atoti?",
-        "What is a cube in Atoti?",
-        "How do I add measures to a cube?",
+        # General documentation questions (should use Mistral)
+        ("What is a cube in Atoti?", "general"),
+        ("Explain the concept of measures in Atoti", "general"),
+        # Code generation questions (should use Codestral)
+        ("Show me code to create a session in Atoti", "code"),
+        ("How do I implement a cube with measures? Give me code", "code"),
+        ("Write Python code to load data into Atoti from pandas", "code"),
+        # Code fixing questions (should use Codestral)
+        ("Fix this code: session = atoti.create_session()", "code"),
     ]
 
-    for question in questions:
+    print("🎯 Testing automatic model selection:")
+    for question, expected_type in questions:
+        print(f"\n📝 Question: {question}")
+        print(f"   Expected: {expected_type.upper()}")
+
         result = await qa_system.ask_question(question)
+
         if "error" not in result:
-            print(f"✅ Successfully answered: {question}")
+            actual_type = result.get("question_type", "unknown")
+            model_used = result.get("selected_model", "unknown")
+            print(f"   ✅ Classified as: {actual_type.upper()} → {model_used.upper()}")
         else:
-            print(f"❌ Failed to answer: {question}")
+            print(f"   ❌ Failed: {result['error']}")
         print("-" * 30)
+
+    # Demonstrate forced code generation
+    print("\n🔧 Testing forced Codestral usage:")
+    code_result = await qa_system.ask_code_question("What is the purpose of Atoti?")
+    if "error" not in code_result:
+        print("✅ Successfully forced Codestral for general question")
+    else:
+        print(f"❌ Forced code question failed: {code_result['error']}")
 
 
 async def main():
-    """Main function demonstrating the Atoti Q&A system."""
-    print("🚀 Advanced Atoti Q&A System with LangGraph")
-    print("=" * 60)
+    """Main function demonstrating the dual-model Atoti Q&A system."""
+    print("🚀 Advanced Dual-Model Atoti Q&A System with LangGraph")
+    print("🧠 Mistral for Documentation + Codestral for Code Generation")
+    print("=" * 70)
 
     # Run document processing example
     await example_document_processing()
 
-    # Run Q&A example
+    # Run dual-model Q&A example
     await example_qa_session()
 
-    print("\n🎉 Examples completed!")
+    print("\n🎉 Dual-model examples completed!")
+    print("\n💡 Pro tips:")
+    print("  • ask_question() - Automatic model selection")
+    print("  • ask_code_question() - Force Codestral for code generation")
 
 
 # 6. INTERACTIVE MODE
 async def interactive_mode():
-    """Run in interactive Q&A mode."""
-    print("🎯 Interactive Atoti Q&A System")
-    print("Type 'quit' to exit")
-    print("-" * 30)
+    """Run in interactive Q&A mode with dual-model support."""
+    print("🎯 Interactive Dual-Model Atoti Q&A System")
+    print("🧠 Mistral for Documentation + Codestral for Code")
+    print("Commands:")
+    print("  • Regular question: Ask normally")
+    print("  • Force code: Start with 'code:' to force Codestral")
+    print("  • Type 'quit' to exit")
+    print("-" * 50)
 
     qa_system = AdvancedAtotiQASystem()
     qa_system.setup()
@@ -1014,7 +1264,14 @@ async def interactive_mode():
                 print("👋 Goodbye!")
                 break
 
-            await qa_system.ask_question(question)
+            # Check for forced code mode
+            if question.lower().startswith("code:"):
+                # Remove the "code:" prefix and use forced code mode
+                actual_question = question[5:].strip()
+                await qa_system.ask_code_question(actual_question)
+            else:
+                # Use automatic model selection
+                await qa_system.ask_question(question)
 
         except KeyboardInterrupt:
             print("\n👋 Goodbye!")

@@ -53,7 +53,8 @@ dependencies = [
     "langchain",
     "langchain-ollama",
     "langchain-community",
-    "langchain-chroma"
+    "langchain-chroma",
+    "langfuse>=3.2.1",
 ]
 
 [tool.source]

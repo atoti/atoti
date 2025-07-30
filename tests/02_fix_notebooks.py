@@ -27,6 +27,24 @@ from pathlib import Path
 from typing import Dict, List, Optional, TypedDict, Any
 from datetime import datetime
 
+# LangFuse integration for comprehensive observability
+try:
+    from langfuse import Langfuse, observe
+
+    LANGFUSE_AVAILABLE = True
+    print("📊 LangFuse available for observability")
+except ImportError:
+    LANGFUSE_AVAILABLE = False
+    print("⚠️  LangFuse not available. Install with: uv add langfuse")
+
+    # Create mock decorators to prevent errors
+    def observe(name=None, **kwargs):
+        def decorator(func):
+            return func
+
+        return decorator
+
+
 from langgraph.graph import StateGraph, END
 from langchain_ollama import ChatOllama
 from langchain.prompts import ChatPromptTemplate
@@ -118,14 +136,41 @@ class ContextualNotebookFixer:
     """
     LangGraph-based notebook fixer that builds and maintains context
     across retry attempts, learning from each failure to improve the next attempt.
+
+    Enhanced with LangFuse observability for comprehensive monitoring.
     """
 
     def __init__(self, max_attempts: int = 5):
         self.max_attempts = max_attempts
+
+        # Initialize LangFuse for observability
+        self.langfuse = None
+        if LANGFUSE_AVAILABLE:
+            try:
+                # Initialize LangFuse client
+                self.langfuse = Langfuse(
+                    public_key=os.getenv("LANGFUSE_PUBLIC_KEY", ""),
+                    secret_key=os.getenv("LANGFUSE_SECRET_KEY", ""),
+                    host=os.getenv("LANGFUSE_HOST", "https://cloud.langfuse.com"),
+                )
+
+                print("✅ LangFuse observability initialized")
+
+                # Create a session for this notebook fixing run
+                self.session_id = (
+                    f"notebook-fixing-{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+                )
+
+            except Exception as e:
+                print(f"⚠️  LangFuse initialization failed: {e}")
+                self.langfuse = None
+
+        # Initialize ChatOllama
         self.devstral = ChatOllama(
             model="codestral:latest",
             temperature=0.2,  # Slightly higher for creative problem solving
         )
+
         self.graph = None
         self._build_contextual_workflow()
 
@@ -283,6 +328,11 @@ class ContextualNotebookFixer:
 
         return state
 
+    @(
+        observe(name="analyze_with_accumulated_context")
+        if LANGFUSE_AVAILABLE
+        else lambda x: x
+    )
     def _analyze_with_accumulated_context(
         self, state: IterativeFixingState
     ) -> IterativeFixingState:
@@ -295,6 +345,27 @@ class ContextualNotebookFixer:
             return state
 
         notebook = state["current_notebook"]
+
+        # Add LangFuse observability - create trace span manually
+        span = None
+        if LANGFUSE_AVAILABLE and self.langfuse:
+            try:
+                span = self.langfuse.start_as_current_span(
+                    name=f"contextual_analysis_attempt_{state['attempt_number']}",
+                    metadata={
+                        "notebook_path": notebook.notebook_path,
+                        "attempt_number": state["attempt_number"],
+                        "max_attempts": self.max_attempts,
+                        "total_attempts": state["total_attempts"],
+                        "previous_attempts_count": len(state["previous_errors"]),
+                        "accumulated_knowledge_length": len(
+                            state["accumulated_knowledge"]
+                        ),
+                        "strategy_effectiveness": state["strategy_effectiveness"],
+                    },
+                )
+            except Exception as e:
+                print(f"⚠️  LangFuse span creation failed: {e}")
 
         # Build rich context prompt with ALL previous attempt information
         context_prompt = ChatPromptTemplate.from_template("""
@@ -349,6 +420,19 @@ class ContextualNotebookFixer:
             )
 
             state["current_error_analysis"] = analysis
+
+            # Update LangFuse span with results
+            if span:
+                try:
+                    self.langfuse.update_current_span(
+                        output={
+                            "analysis_length": len(analysis),
+                            "previous_context_length": len(previous_context),
+                            "success": True,
+                        }
+                    )
+                except Exception as e:
+                    print(f"⚠️  LangFuse span update failed: {e}")
 
             log_msg = (
                 f"🔍 Contextual analysis complete (attempt {state['attempt_number']})"
@@ -451,6 +535,7 @@ class ContextualNotebookFixer:
 
         return state
 
+    @observe(name="generate_fixes_with_context") if LANGFUSE_AVAILABLE else lambda x: x
     def _generate_fixes_with_context(
         self, state: IterativeFixingState
     ) -> IterativeFixingState:
@@ -459,6 +544,28 @@ class ContextualNotebookFixer:
 
         if not state["current_notebook"]:
             return state
+
+        # Add LangFuse observability - create trace span manually
+        span = None
+        if LANGFUSE_AVAILABLE and self.langfuse:
+            try:
+                span = self.langfuse.start_as_current_span(
+                    name=f"fix_generation_attempt_{state['attempt_number']}",
+                    metadata={
+                        "notebook_path": state["current_notebook"].notebook_path
+                        if state["current_notebook"]
+                        else "unknown",
+                        "attempt_number": state["attempt_number"],
+                        "previous_strategies": state["previous_strategies"],
+                        "what_failed_count": len(state["what_failed"]),
+                        "what_worked_count": len(state["what_worked"]),
+                        "accumulated_knowledge_length": len(
+                            state["accumulated_knowledge"]
+                        ),
+                    },
+                )
+            except Exception as e:
+                print(f"⚠️  LangFuse span creation failed: {e}")
 
         # Context-aware fix generation
         fix_prompt = ChatPromptTemplate.from_template("""
@@ -508,6 +615,20 @@ class ContextualNotebookFixer:
             # Parse fixes (simplified)
             state["current_fixes"] = [f"Strategy: {strategy}", fixes_response]
 
+            # Update LangFuse span with results
+            if span:
+                try:
+                    self.langfuse.update_current_span(
+                        output={
+                            "strategy_selected": strategy,
+                            "fixes_count": len(state["current_fixes"]),
+                            "fixes_response_length": len(fixes_response),
+                            "success": True,
+                        }
+                    )
+                except Exception as e:
+                    print(f"⚠️  LangFuse span update failed: {e}")
+
             log_msg = f"🛠️  Generated contextual fixes (strategy: {strategy})"
             state["processing_log"].append(log_msg)
             print(log_msg)
@@ -517,6 +638,15 @@ class ContextualNotebookFixer:
             state["processing_log"].append(error_msg)
             print(error_msg)
             state["current_fixes"] = []
+
+            # Update LangFuse span with error
+            if span:
+                try:
+                    self.langfuse.update_current_span(
+                        output={"error": str(e), "success": False}
+                    )
+                except Exception as e2:
+                    print(f"⚠️  LangFuse error logging failed: {e2}")
 
         return state
 
@@ -780,10 +910,34 @@ class ContextualNotebookFixer:
 
         return state
 
+    @(
+        observe(name="fix_with_context_accumulation")
+        if LANGFUSE_AVAILABLE
+        else lambda x: x
+    )
     async def fix_with_context_accumulation(
         self, failed_notebooks: List[NotebookFailure]
     ) -> Dict[str, Any]:
         """Main method to fix notebooks with full context accumulation."""
+
+        # Create LangFuse trace for the entire fixing session
+        session_span = None
+        if LANGFUSE_AVAILABLE and self.langfuse:
+            try:
+                session_span = self.langfuse.start_as_current_span(
+                    name="notebook_fixing_session",
+                    metadata={
+                        "session_id": self.session_id,
+                        "total_notebooks": len(failed_notebooks),
+                        "max_attempts_per_notebook": self.max_attempts,
+                        "notebook_paths": [
+                            nb.notebook_path for nb in failed_notebooks[:5]
+                        ],  # First 5 for brevity
+                    },
+                )
+            except Exception as e:
+                print(f"⚠️  LangFuse session span creation failed: {e}")
+
         initial_state = IterativeFixingState(
             failed_notebooks=failed_notebooks.copy(),
             current_notebook=None,
@@ -817,7 +971,47 @@ class ContextualNotebookFixer:
 
         # Execute the contextual workflow with recursion limit configuration
         config = {"recursion_limit": 100}
-        final_state = await self.graph.ainvoke(initial_state, config)
+
+        try:
+            final_state = await self.graph.ainvoke(initial_state, config)
+
+            # Update LangFuse with final results
+            if session_span:
+                try:
+                    self.langfuse.update_current_span(
+                        output={
+                            "success_count": final_state["success_count"],
+                            "failure_count": final_state["failure_count"],
+                            "total_attempts": final_state["total_attempts"],
+                            "success_rate": final_state["success_count"]
+                            / len(failed_notebooks)
+                            if failed_notebooks
+                            else 0,
+                            "average_attempts": final_state["total_attempts"]
+                            / len(failed_notebooks)
+                            if failed_notebooks
+                            else 0,
+                            "strategy_effectiveness": final_state[
+                                "strategy_effectiveness"
+                            ],
+                            "accumulated_knowledge_length": len(
+                                final_state["accumulated_knowledge"]
+                            ),
+                        }
+                    )
+                except Exception as e:
+                    print(f"⚠️  LangFuse session span update failed: {e}")
+
+        except Exception as e:
+            # Log error to LangFuse
+            if session_span:
+                try:
+                    self.langfuse.update_current_span(
+                        output={"error": str(e), "success": False}
+                    )
+                except Exception as e2:
+                    print(f"⚠️  LangFuse error logging failed: {e2}")
+            raise
 
         return {
             "success_count": final_state["success_count"],

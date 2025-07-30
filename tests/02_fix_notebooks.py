@@ -18,14 +18,17 @@ import argparse
 import asyncio
 import json
 import os
-import platform as pf
 import subprocess
 import sys
 import xml.etree.ElementTree as ET
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, List, Optional, TypedDict, Any
 from datetime import datetime
+import subprocess
+import re
+import os
 
 # LangFuse integration for comprehensive observability
 try:
@@ -131,6 +134,9 @@ class IterativeFixingState(TypedDict):
     total_attempts: int
     processing_log: List[str]
 
+    # Working copy safety
+    original_notebook_path: str
+
 
 class ContextualNotebookFixer:
     """
@@ -191,8 +197,8 @@ class ContextualNotebookFixer:
         workflow.add_node(
             "generate_contextual_fixes", self._generate_fixes_with_context
         )
-        workflow.add_node("apply_fixes", self._apply_fixes)
-        workflow.add_node("test_and_capture", self._test_and_capture_results)
+        workflow.add_node("apply_fixes_nbdime", self._apply_fixes_with_nbdime)
+        workflow.add_node("test_with_pytest", self._test_with_pytest)
         workflow.add_node("update_context", self._update_context_from_attempt)
         workflow.add_node("evaluate_progress", self._evaluate_progress)
 
@@ -213,9 +219,9 @@ class ContextualNotebookFixer:
         workflow.add_edge("prepare_notebook", "analyze_with_context")
         workflow.add_edge("analyze_with_context", "learn_from_history")
         workflow.add_edge("learn_from_history", "generate_contextual_fixes")
-        workflow.add_edge("generate_contextual_fixes", "apply_fixes")
-        workflow.add_edge("apply_fixes", "test_and_capture")
-        workflow.add_edge("test_and_capture", "update_context")
+        workflow.add_edge("generate_contextual_fixes", "apply_fixes_nbdime")
+        workflow.add_edge("apply_fixes_nbdime", "test_with_pytest")
+        workflow.add_edge("test_with_pytest", "update_context")
         workflow.add_edge("update_context", "evaluate_progress")
 
         # CRITICAL: The iterative retry decision with context
@@ -299,28 +305,49 @@ class ContextualNotebookFixer:
     def _prepare_notebook_context(
         self, state: IterativeFixingState
     ) -> IterativeFixingState:
-        """Prepare notebook context and backup original content."""
+        """Prepare notebook context by creating a working copy."""
         state["current_step"] = "prepare_notebook"
 
         if not state["current_notebook"]:
             return state
 
-        notebook_path = state["current_notebook"].notebook_path
+        original_notebook_path = state["current_notebook"].notebook_path
+
+        # Create a working copy with -fix suffix before the extension
+        path_parts = original_notebook_path.rsplit(".", 1)
+        if len(path_parts) == 2:
+            working_notebook_path = f"{path_parts[0]}-fix.{path_parts[1]}"
+        else:
+            working_notebook_path = f"{original_notebook_path}-fix"
 
         try:
-            with open(notebook_path, "r", encoding="utf-8") as f:
+            # Copy original to working file
+            subprocess.run(
+                ["cp", original_notebook_path, working_notebook_path], check=True
+            )
+
+            # Update the notebook path to point to the working copy
+            state["current_notebook"].notebook_path = working_notebook_path
+
+            # Load content from the working copy
+            with open(working_notebook_path, "r", encoding="utf-8") as f:
                 content = f.read()
                 state["notebook_content"] = content
-                state["original_content_backup"] = (
-                    content  # Keep original for reference
-                )
+                state["original_content_backup"] = content
+
+            # Store the original path for reference
+            state["original_notebook_path"] = original_notebook_path
+
+            log_msg = f"📄 Created working copy: {working_notebook_path}"
+            state["processing_log"].append(log_msg)
+            print(log_msg)
 
             log_msg = f"📖 Loaded notebook content: {len(content)} characters"
             state["processing_log"].append(log_msg)
             print(log_msg)
 
         except Exception as e:
-            error_msg = f"❌ Failed to load notebook: {e}"
+            error_msg = f"❌ Failed to create working copy or load notebook: {e}"
             state["processing_log"].append(error_msg)
             print(error_msg)
             state["notebook_content"] = ""
@@ -422,6 +449,7 @@ class ContextualNotebookFixer:
         Original Error Type: {error_type}
         Original Error: {original_error}
         Original Error Output: {original_error_output}
+        Current Error Context: {current_error_context}
         Attempt: {attempt_number} of {max_attempts}
         
         COMPLETE CONTEXT FROM PREVIOUS ATTEMPTS:
@@ -444,9 +472,11 @@ class ContextualNotebookFixer:
         5. Specific strategy for this attempt that's different from: {previous_strategies}
         6. What to avoid based on what failed: {what_failed}
         7. Key code sections that likely need modification
+        8. If there's a NEW current error, focus on that rather than the original
         
         Use ALL the accumulated context to provide deeper insights than previous attempts.
         Focus on the specific error details and notebook content to identify the exact issue.
+        If the current error is different from the original, analyze the progression and what the fixes achieved.
         """)
 
         try:
@@ -460,12 +490,20 @@ class ContextualNotebookFixer:
                 "   Sending context, error details, and notebook content to Devstral..."
             )
 
+            # Use current error context if available, otherwise fall back to original
+            current_error = (
+                state["current_notebook"].current_error_context
+                if state["current_notebook"].current_error_context
+                else state["current_notebook"].original_failure_message
+            )
+
             analysis = chain.invoke(
                 {
                     "notebook_path": notebook.notebook_path,
                     "error_type": notebook.failure_type,
                     "original_error": notebook.original_failure_message,
                     "original_error_output": notebook.original_error_output,
+                    "current_error_context": current_error,
                     "attempt_number": state["attempt_number"],
                     "max_attempts": self.max_attempts,
                     "previous_context": previous_context,
@@ -804,15 +842,19 @@ class ContextualNotebookFixer:
 
     def _extract_code_changes(self, fixes_response: str) -> List[Dict[str, str]]:
         """Extract specific code changes from Devstral's response."""
-        import re
-
         changes = []
 
+        # Debug: Let's see what we're trying to parse
+        print(f"\n🔍 DEBUG: Parsing fixes response (length: {len(fixes_response)})")
+        print(f"    First 200 chars: {fixes_response[:200]}...")
+
         # Look for code blocks in the response
-        # Pattern to find "Original code" and "New code" sections
+        # Updated pattern to handle the actual format from Devstral
         change_pattern = r"### Change \d+:([^#]*?)(?=### Change \d+:|## VERIFICATION|$)"
 
         change_matches = re.findall(change_pattern, fixes_response, re.DOTALL)
+
+        print(f"    Found {len(change_matches)} change matches")
 
         for i, change_text in enumerate(change_matches):
             change_info = {"description": f"Change {i + 1}"}
@@ -822,21 +864,25 @@ class ContextualNotebookFixer:
             if lines:
                 change_info["description"] = lines[0].strip()
 
-            # Extract original code
+            # More flexible patterns for original and new code
             original_match = re.search(
-                r"\*\*Original code.*?\*\*:.*?```python\n(.*?)```",
+                r"\*\*Original code.*?\*\*:.*?```python\s*(.*?)```",
                 change_text,
                 re.DOTALL,
             )
             if original_match:
                 change_info["original_code"] = original_match.group(1).strip()
+                print(
+                    f"    ✅ Extracted original code: {change_info['original_code'][:50]}..."
+                )
 
             # Extract new code
             new_match = re.search(
-                r"\*\*New code.*?\*\*:.*?```python\n(.*?)```", change_text, re.DOTALL
+                r"\*\*New code.*?\*\*:.*?```python\s*(.*?)```", change_text, re.DOTALL
             )
             if new_match:
                 change_info["new_code"] = new_match.group(1).strip()
+                print(f"    ✅ Extracted new code: {change_info['new_code'][:50]}...")
 
             # Extract reason
             reason_match = re.search(
@@ -845,13 +891,38 @@ class ContextualNotebookFixer:
             if reason_match:
                 change_info["reason"] = reason_match.group(1).strip()
 
+            # If we found either original or new code, add the change
             if change_info.get("original_code") or change_info.get("new_code"):
                 changes.append(change_info)
+                print(f"    ✅ Added change: {change_info['description']}")
+            else:
+                print(f"    ⚠️  No code found for: {change_info['description']}")
 
+        # If no structured changes found, try to extract any code blocks
+        if not changes:
+            print("    🔍 No structured changes found, looking for any code blocks...")
+            code_blocks = re.findall(r"```python\s*(.*?)```", fixes_response, re.DOTALL)
+            if len(code_blocks) >= 2:
+                # Assume first is original, second is new
+                changes.append(
+                    {
+                        "description": "Code replacement from blocks",
+                        "original_code": code_blocks[0].strip(),
+                        "new_code": code_blocks[1].strip(),
+                        "reason": "Extracted from code blocks",
+                    }
+                )
+                print(
+                    f"    ✅ Extracted from code blocks: {len(code_blocks)} blocks found"
+                )
+
+        print(f"    📋 Total changes extracted: {len(changes)}")
         return changes
 
-    def _apply_fixes(self, state: IterativeFixingState) -> IterativeFixingState:
-        """Apply fixes with backup and tracking - enhanced with detailed change visibility."""
+    def _apply_fixes_with_nbdime(
+        self, state: IterativeFixingState
+    ) -> IterativeFixingState:
+        """Apply fixes by properly modifying notebook cells - preserving JSON structure."""
         state["current_step"] = "apply_fixes"
 
         if not state["current_notebook"] or not state["current_fixes"]:
@@ -859,111 +930,120 @@ class ContextualNotebookFixer:
 
         notebook_path = state["current_notebook"].notebook_path
 
-        print(f"\n🔧 APPLYING FIXES - Attempt {state['attempt_number']}")
-        print(f"📂 Notebook: {notebook_path}")
+        print(
+            f"\n🔧 APPLYING FIXES TO NOTEBOOK CELLS - Attempt {state['attempt_number']}"
+        )
+        print(f"📂 Working Copy: {notebook_path}")
         print("=" * 80)
 
-        # Create backup only on first attempt
-        if state["attempt_number"] == 1:
-            backup_path = (
-                f"{notebook_path}.backup.{datetime.now().strftime('%Y%m%d_%H%M%S')}"
-            )
-            try:
-                subprocess.run(["cp", notebook_path, backup_path], check=True)
-                log_msg = f"📋 Created backup: {backup_path}"
-                state["processing_log"].append(log_msg)
-                print(log_msg)
-            except Exception as e:
-                error_msg = f"❌ Backup failed: {e}"
-                state["processing_log"].append(error_msg)
-                print(error_msg)
+        # No need to create backup since we're already working on a copy
+        # The original file is safely preserved
 
-        # Extract and display the specific changes being made
+        # Extract code changes from Devstral's response
         fixes_response = (
             state["current_fixes"][1] if len(state["current_fixes"]) > 1 else ""
         )
-
-        print("\n📝 PROPOSED CHANGES SUMMARY:")
-        print("-" * 50)
-
-        if "## PROBLEM ANALYSIS" in fixes_response:
-            analysis_section = fixes_response.split("## PROBLEM ANALYSIS")[1].split(
-                "## CODE CHANGES"
-            )[0]
-            print(f"🔍 Problem Analysis: {analysis_section.strip()[:200]}...")
-
-        # Show the changes that would be applied
         code_changes = self._extract_code_changes(fixes_response)
 
-        if code_changes:
-            print(f"\n🛠️  SPECIFIC CODE CHANGES TO APPLY ({len(code_changes)} changes):")
-            for i, change in enumerate(code_changes, 1):
-                print(
-                    f"\n  📌 Change {i}: {change.get('description', 'No description')}"
-                )
-
-                if change.get("original_code"):
-                    print(f"    🔴 REMOVING:")
-                    original_lines = change["original_code"].split("\n")
-                    for line_num, line in enumerate(
-                        original_lines[:5], 1
-                    ):  # Show first 5 lines
-                        print(f"       {line_num}: {line}")
-                    if len(original_lines) > 5:
-                        print(f"       ... ({len(original_lines) - 5} more lines)")
-
-                if change.get("new_code"):
-                    print(f"    🟢 ADDING:")
-                    new_lines = change["new_code"].split("\n")
-                    for line_num, line in enumerate(
-                        new_lines[:5], 1
-                    ):  # Show first 5 lines
-                        print(f"       {line_num}: {line}")
-                    if len(new_lines) > 5:
-                        print(f"       ... ({len(new_lines) - 5} more lines)")
-
-                if change.get("reason"):
-                    print(f"    💡 Reason: {change['reason']}")
-        else:
+        if not code_changes:
             print("    ⚠️  No specific code changes extracted from Devstral's response")
-            print("    📄 Raw response preview:")
-            print(f"    {fixes_response[:300]}...")
+            return state
 
-        # In a real implementation, this is where you would:
-        # 1. Parse the notebook JSON
-        # 2. Apply the specific code changes to cells
-        # 3. Save the modified notebook
-        #
-        # For this demonstration, we'll simulate the application
+        print(f"\n🛠️  APPLYING {len(code_changes)} CODE CHANGES TO NOTEBOOK CELLS:")
+
+        modifications_made = []
+
         try:
-            # TODO: Implement actual notebook modification logic here
-            # This would involve:
-            # - Loading the notebook as JSON
-            # - Finding the cells that match the "original_code" patterns
-            # - Replacing them with the "new_code"
-            # - Saving the modified notebook
+            # Load the notebook as JSON
+            with open(notebook_path, "r", encoding="utf-8") as f:
+                notebook_data = json.load(f)
 
-            print(f"\n⚙️  SIMULATING FIX APPLICATION...")
-            print(f"    📖 Loading notebook: {notebook_path}")
-            print(f"    🔧 Applying {len(code_changes)} code changes...")
-            print(f"    💾 Saving modified notebook...")
+            print(
+                f"📖 Loaded notebook with {len(notebook_data.get('cells', []))} cells"
+            )
 
-            log_msg = f"🔧 Applied {len(state['current_fixes'])} fixes using {state['current_strategy']} strategy"
-            state["processing_log"].append(log_msg)
-            print(f"\n✅ {log_msg}")
+            # Apply each code change to the appropriate cells
+            for i, change in enumerate(code_changes, 1):
+                original_code = change.get("original_code", "").strip()
+                new_code = change.get("new_code", "").strip()
+                description = change.get("description", f"Change {i}")
 
-            # Store detailed information about what was attempted
-            if code_changes:
-                change_summary = (
-                    f"Applied {len(code_changes)} code changes: "
-                    + ", ".join(
-                        [
-                            change.get("description", f"Change {i}")
-                            for i, change in enumerate(code_changes, 1)
-                        ]
-                    )
+                # Add AI-generated comment to the new code
+                if new_code:
+                    new_code_with_comment = f"# THIS IS AI GENERATED\n{new_code}"
+                else:
+                    new_code_with_comment = new_code
+
+                # Find and replace code in matching cells
+                found_and_replaced = False
+                for cell in notebook_data.get("cells", []):
+                    if cell.get("cell_type") == "code":
+                        cell_source = self._get_cell_source_as_string(cell)
+
+                        if original_code and original_code in cell_source:
+                            print(f"  ✅ Applying: {description}")
+                            print(f"    🔍 Found: {original_code[:50]}...")
+                            print(
+                                f"    🔧 Replacing with: {new_code_with_comment[:50]}..."
+                            )
+
+                            updated_source = cell_source.replace(
+                                original_code, new_code_with_comment
+                            )
+                            self._set_cell_source_from_string(cell, updated_source)
+                            modifications_made.append(description)
+                            found_and_replaced = True
+                            break
+
+                        elif original_code:
+                            # Try to find a key line from the original code
+                            lines = [
+                                line.strip()
+                                for line in original_code.split("\n")
+                                if line.strip()
+                            ]
+                            if lines:
+                                key_line = lines[0]
+                                if key_line in cell_source:
+                                    print(f"  🔍 Found key line for: {description}")
+                            print(f"    � Key line: {key_line}")
+
+                            # Replace the key line with the new code (with AI comment)
+                            updated_source = cell_source.replace(
+                                key_line, new_code_with_comment
+                            )
+                            self._set_cell_source_from_string(cell, updated_source)
+                            modifications_made.append(f"{description} (key line match)")
+                            found_and_replaced = True
+                            break
+                        else:
+                            print(f"  ⚠️  Could not find code for: {description}")
+                else:
+                    print(f"  ⚠️  No original code specified for: {description}")
+
+            # Save the modified notebook if we made changes
+            if modifications_made:
+                with open(notebook_path, "w", encoding="utf-8") as f:
+                    json.dump(notebook_data, f, indent=1, ensure_ascii=False)
+
+                print(
+                    f"\n✅ Successfully applied {len(modifications_made)} modifications:"
                 )
+                for mod in modifications_made:
+                    print(f"    ✓ {mod}")
+
+                log_msg = f"🔧 Applied {len(modifications_made)} code changes to notebook cells"
+                state["processing_log"].append(log_msg)
+                print(f"\n✅ {log_msg}")
+
+                # Update state with what was changed
+                change_summary = "Applied changes: " + "; ".join(modifications_made)
                 state["processing_log"].append(change_summary)
+
+            else:
+                warning_msg = "⚠️  No modifications were applied to the notebook"
+                state["processing_log"].append(warning_msg)
+                print(warning_msg)
 
         except Exception as e:
             error_msg = f"❌ Fix application failed: {e}"
@@ -973,18 +1053,50 @@ class ContextualNotebookFixer:
         print("=" * 80)
         return state
 
-    def _test_and_capture_results(
-        self, state: IterativeFixingState
-    ) -> IterativeFixingState:
-        """Test fixes and capture detailed results for context building."""
-        state["current_step"] = "test_and_capture"
+    def _get_cell_source_as_string(self, cell: dict) -> str:
+        """Convert notebook cell source to a single string."""
+        source = cell.get("source", [])
+        if isinstance(source, list):
+            return "".join(source)
+        elif isinstance(source, str):
+            return source
+        else:
+            return ""
+
+    def _set_cell_source_from_string(self, cell: dict, source_string: str):
+        """Set notebook cell source from a string, maintaining notebook format."""
+        # Split into lines and add newlines where needed
+        lines = source_string.split("\n")
+
+        # Convert to the list format that notebooks expect
+        cell_source = []
+        for i, line in enumerate(lines):
+            if i == len(lines) - 1 and line == "":
+                # Don't add empty string at the end
+                continue
+            elif i == len(lines) - 1:
+                # Last line without newline
+                cell_source.append(line)
+            else:
+                # Line with newline
+                cell_source.append(line + "\n")
+
+        cell["source"] = cell_source
+
+    def _test_with_pytest(self, state: IterativeFixingState) -> IterativeFixingState:
+        """Test the modified notebook using pytest - simple and reliable."""
+        state["current_step"] = "test_with_pytest"
 
         if not state["current_notebook"]:
             return state
 
         notebook_path = state["current_notebook"].notebook_path
 
-        # Run test
+        print(f"\n🧪 TESTING WITH PYTEST - Attempt {state['attempt_number']}")
+        print(f"📂 Notebook: {notebook_path}")
+        print("=" * 80)
+
+        # Simple pytest command
         test_cmd = [
             "uv",
             "run",
@@ -994,13 +1106,12 @@ class ContextualNotebookFixer:
             "--nbmake",
             "--nbmake-timeout=300",
             "-v",
+            "--tb=short",
             notebook_path,
         ]
 
         try:
-            log_msg = f"🧪 Testing fixes (attempt {state['attempt_number']})"
-            state["processing_log"].append(log_msg)
-            print(log_msg)
+            print(f"🧪 Running pytest on modified notebook...")
 
             result = subprocess.run(
                 test_cmd,
@@ -1015,20 +1126,70 @@ class ContextualNotebookFixer:
             )
 
             if state["current_success"]:
+                print("✅ SUCCESS! Notebook runs without errors!")
+                print("🎉 Devstral's fixes worked!")
                 log_msg = f"✅ Success on attempt {state['attempt_number']}!"
             else:
+                print("❌ FAILED - Notebook still has errors")
+                print("\n📜 ERROR OUTPUT:")
+                print("-" * 40)
+
+                # Show relevant error information
+                error_output = result.stderr + "\n" + result.stdout
+
+                # Extract key error lines
+                error_lines = []
+                for line in error_output.split("\n"):
+                    if any(
+                        keyword in line.lower()
+                        for keyword in [
+                            "error:",
+                            "traceback",
+                            "failed",
+                            "exception",
+                            "syntaxerror",
+                            "nameerror",
+                        ]
+                    ):
+                        error_lines.append(line.strip())
+
+                if error_lines:
+                    print("Key errors found:")
+                    for line in error_lines[-5:]:  # Show last 5 error lines
+                        print(f"  {line}")
+                else:
+                    # Show last part of stderr if no specific errors found
+                    if result.stderr:
+                        print("Last stderr output:")
+                        print(result.stderr[-300:])
+
+                print("-" * 40)
                 log_msg = f"❌ Failed attempt {state['attempt_number']}"
 
+                # Update current error context for next iteration
+                new_error = ""
+                if error_lines:
+                    new_error = "; ".join(error_lines[-3:])  # Take last 3 error lines
+
+                if (
+                    new_error
+                    and new_error != state["current_notebook"].original_failure_message
+                ):
+                    print(f"\n🔄 NEW ERROR DETECTED:")
+                    print(f"   {new_error[:200]}...")
+                    state["current_notebook"].current_error_context = new_error
+
             state["processing_log"].append(log_msg)
-            print(log_msg)
+            print(f"\n{log_msg}")
 
         except Exception as e:
-            error_msg = f"❌ Test execution failed: {e}"
+            error_msg = f"❌ Pytest execution failed: {e}"
             state["processing_log"].append(error_msg)
             print(error_msg)
             state["current_success"] = False
-            state["current_test_output"] = f"Test execution error: {e}"
+            state["current_test_output"] = f"Pytest execution error: {e}"
 
+        print("=" * 80)
         return state
 
     def _update_context_from_attempt(
@@ -1137,12 +1298,47 @@ class ContextualNotebookFixer:
         return decision
 
     def _finalize_notebook(self, state: IterativeFixingState) -> IterativeFixingState:
-        """Finalize the current notebook and prepare for next."""
+        """Finalize the current notebook by handling working copy."""
         state["current_step"] = "finalize_notebook"
 
-        if state["current_success"]:
-            state["success_count"] += 1
-        else:
+        if not state["current_notebook"]:
+            return state
+
+        working_notebook_path = state["current_notebook"].notebook_path
+        original_notebook_path = state.get("original_notebook_path", "")
+
+        try:
+            if state["current_success"]:
+                # Success: Keep both original and fixed copy for inspection
+                log_msg = f"✅ Success! Fixed copy available for inspection: {working_notebook_path}"
+                state["processing_log"].append(log_msg)
+                print(log_msg)
+                log_msg = f"📄 Original notebook preserved: {original_notebook_path}"
+                state["processing_log"].append(log_msg)
+                print(log_msg)
+
+                state["success_count"] += 1
+            else:
+                # Failure: Keep working copy for inspection, preserve original
+                log_msg = f"📄 Failed working copy preserved for inspection: {working_notebook_path}"
+                state["processing_log"].append(log_msg)
+                print(log_msg)
+
+                # Restore original path to the notebook for reference
+                if original_notebook_path:
+                    state["current_notebook"].notebook_path = original_notebook_path
+                    log_msg = (
+                        f"📄 Original notebook preserved: {original_notebook_path}"
+                    )
+                    state["processing_log"].append(log_msg)
+                    print(log_msg)
+
+                state["failure_count"] += 1
+
+        except Exception as e:
+            error_msg = f"❌ Error finalizing notebook: {e}"
+            state["processing_log"].append(error_msg)
+            print(error_msg)
             state["failure_count"] += 1
 
         # Move to next notebook
@@ -1232,6 +1428,7 @@ class ContextualNotebookFixer:
             failure_count=0,
             total_attempts=0,
             processing_log=[],
+            original_notebook_path="",
         )
 
         # Execute the contextual workflow with recursion limit configuration

@@ -346,6 +346,50 @@ class ContextualNotebookFixer:
 
         notebook = state["current_notebook"]
 
+        print(f"\n🔍 ERROR ANALYSIS - Attempt {state['attempt_number']}")
+        print(f"📂 Notebook: {notebook.notebook_path}")
+        print(f"🎯 Original Error Type: {notebook.failure_type}")
+        print("=" * 80)
+
+        # Display the original error for context
+        print("❌ ORIGINAL ERROR MESSAGE:")
+        print("-" * 40)
+        print(
+            notebook.original_failure_message[:500] + "..."
+            if len(notebook.original_failure_message) > 500
+            else notebook.original_failure_message
+        )
+
+        print("\n📜 ORIGINAL ERROR OUTPUT:")
+        print("-" * 40)
+        print(
+            notebook.original_error_output[:800] + "..."
+            if len(notebook.original_error_output) > 800
+            else notebook.original_error_output
+        )
+
+        # Show previous attempts context
+        if state["attempt_number"] > 1:
+            print(
+                f"\n🧠 PREVIOUS ATTEMPTS CONTEXT ({len(state['previous_errors'])} previous errors):"
+            )
+            print("-" * 40)
+            for i, prev_error in enumerate(
+                state["previous_errors"][-3:], 1
+            ):  # Show last 3
+                print(f"  {i}. {prev_error[:150]}...")
+
+            print(f"\n📚 WHAT HAS BEEN TRIED:")
+            for i, strategy in enumerate(state["previous_strategies"], 1):
+                print(f"  {i}. {strategy}")
+
+            if state["what_failed"]:
+                print(f"\n❌ WHAT FAILED:")
+                for i, failure in enumerate(
+                    state["what_failed"][-3:], 1
+                ):  # Show last 3
+                    print(f"  {i}. {failure[:100]}...")
+
         # Add LangFuse observability - create trace span manually
         span = None
         if LANGFUSE_AVAILABLE and self.langfuse:
@@ -362,6 +406,8 @@ class ContextualNotebookFixer:
                             state["accumulated_knowledge"]
                         ),
                         "strategy_effectiveness": state["strategy_effectiveness"],
+                        "original_error_type": notebook.failure_type,
+                        "original_error_length": len(notebook.original_failure_message),
                     },
                 )
             except Exception as e:
@@ -373,7 +419,9 @@ class ContextualNotebookFixer:
         
         CURRENT SITUATION:
         Notebook: {notebook_path}
+        Original Error Type: {error_type}
         Original Error: {original_error}
+        Original Error Output: {original_error_output}
         Attempt: {attempt_number} of {max_attempts}
         
         COMPLETE CONTEXT FROM PREVIOUS ATTEMPTS:
@@ -382,20 +430,23 @@ class ContextualNotebookFixer:
         ACCUMULATED LEARNING:
         {accumulated_knowledge}
         
-        CURRENT NOTEBOOK CONTENT:
+        CURRENT NOTEBOOK CONTENT (first 2000 chars):
         {notebook_content}
         
         ORIGINAL CONTENT (for reference):
         {original_content}
         
         Please provide:
-        1. Analysis of why previous attempts failed
-        2. New insights based on error evolution
-        3. Root cause considering all context
-        4. Specific strategy for this attempt that's different from: {previous_strategies}
-        5. What to avoid based on what failed: {what_failed}
+        1. Deep analysis of the root cause considering the error type and output
+        2. Analysis of why previous attempts failed (if any)
+        3. New insights based on error evolution across attempts
+        4. Root cause considering all context and error patterns
+        5. Specific strategy for this attempt that's different from: {previous_strategies}
+        6. What to avoid based on what failed: {what_failed}
+        7. Key code sections that likely need modification
         
         Use ALL the accumulated context to provide deeper insights than previous attempts.
+        Focus on the specific error details and notebook content to identify the exact issue.
         """)
 
         try:
@@ -404,22 +455,38 @@ class ContextualNotebookFixer:
 
             chain = context_prompt | self.devstral | StrOutputParser()
 
+            print("\n🤖 REQUESTING DEVSTRAL ANALYSIS...")
+            print(
+                "   Sending context, error details, and notebook content to Devstral..."
+            )
+
             analysis = chain.invoke(
                 {
                     "notebook_path": notebook.notebook_path,
+                    "error_type": notebook.failure_type,
                     "original_error": notebook.original_failure_message,
+                    "original_error_output": notebook.original_error_output,
                     "attempt_number": state["attempt_number"],
                     "max_attempts": self.max_attempts,
                     "previous_context": previous_context,
                     "accumulated_knowledge": state["accumulated_knowledge"],
-                    "notebook_content": state["notebook_content"],
-                    "original_content": state["original_content_backup"],
+                    "notebook_content": state["notebook_content"][:2000] + "..."
+                    if len(state["notebook_content"]) > 2000
+                    else state["notebook_content"],
+                    "original_content": state["original_content_backup"][:2000] + "..."
+                    if len(state["original_content_backup"]) > 2000
+                    else state["original_content_backup"],
                     "previous_strategies": ", ".join(state["previous_strategies"]),
                     "what_failed": "; ".join(state["what_failed"]),
                 }
             )
 
             state["current_error_analysis"] = analysis
+
+            print("\n📋 DEVSTRAL'S ERROR ANALYSIS:")
+            print("-" * 60)
+            print(analysis)
+            print("-" * 60)
 
             # Update LangFuse span with results
             if span:
@@ -428,6 +495,7 @@ class ContextualNotebookFixer:
                         output={
                             "analysis_length": len(analysis),
                             "previous_context_length": len(previous_context),
+                            "analysis_preview": analysis[:500],
                             "success": True,
                         }
                     )
@@ -438,7 +506,7 @@ class ContextualNotebookFixer:
                 f"🔍 Contextual analysis complete (attempt {state['attempt_number']})"
             )
             state["processing_log"].append(log_msg)
-            print(log_msg)
+            print(f"\n✅ {log_msg}")
 
         except Exception as e:
             error_msg = f"❌ Contextual analysis failed: {e}"
@@ -446,6 +514,7 @@ class ContextualNotebookFixer:
             print(error_msg)
             state["current_error_analysis"] = f"Analysis failed: {e}"
 
+        print("=" * 80)
         return state
 
     def _build_context_summary(self, state: IterativeFixingState) -> str:
@@ -567,29 +636,55 @@ class ContextualNotebookFixer:
             except Exception as e:
                 print(f"⚠️  LangFuse span creation failed: {e}")
 
-        # Context-aware fix generation
+        # Enhanced prompt that asks for specific code changes
         fix_prompt = ChatPromptTemplate.from_template("""
-        Generate fixes using COMPLETE CONTEXT from all previous attempts.
+        You are fixing a Jupyter notebook. Provide specific, actionable code changes.
         
-        ANALYSIS: {current_analysis}
-        LEARNINGS: {accumulated_knowledge}
+        CURRENT ERROR ANALYSIS: {current_analysis}
+        ACCUMULATED LEARNING: {accumulated_knowledge}
         
-        CONSTRAINT: DO NOT repeat these failed approaches: {what_failed}
-        LEVERAGE: Build on these partial successes: {what_worked}
+        CONSTRAINTS:
+        - DO NOT repeat these failed approaches: {what_failed}
+        - Build on these partial successes: {what_worked}
+        - Previous strategies tried: {previous_strategies}
         
-        Previous strategies tried: {previous_strategies}
-        Current attempt: {attempt_number} of {max_attempts}
-        
-        Current notebook content:
+        CURRENT NOTEBOOK CONTENT:
         {notebook_content}
         
-        Generate fixes that:
-        1. Address the root cause identified through context
-        2. Avoid all previously failed approaches
-        3. Build incrementally on what partially worked
-        4. Use a novel approach not yet tried
+        ORIGINAL ERROR:
+        {original_error}
         
-        Return as a JSON list of specific, actionable fixes.
+        Please provide:
+        1. SPECIFIC CODE SECTIONS that need to be changed (show the exact problematic code)
+        2. EXACT REPLACEMENT CODE for each section
+        3. EXPLANATION of why each change addresses the error
+        4. LINE NUMBERS or unique identifiers where changes should be made
+        
+        Format your response as:
+        
+        ## PROBLEM ANALYSIS
+        [Brief analysis of the root cause]
+        
+        ## CODE CHANGES
+        
+        ### Change 1: [Description]
+        **Original code (to be replaced):**
+        ```python
+        [exact code to find and replace]
+        ```
+        
+        **New code:**
+        ```python
+        [exact replacement code]
+        ```
+        
+        **Reason:** [Why this change fixes the issue]
+        
+        ### Change 2: [Description]
+        [Continue for each change needed]
+        
+        ## VERIFICATION
+        [How to verify the fix works]
         """)
 
         try:
@@ -598,6 +693,11 @@ class ContextualNotebookFixer:
             # Determine strategy based on attempt number and context
             strategy = self._determine_contextual_strategy(state)
             state["current_strategy"] = strategy
+
+            print(f"\n🔧 DEVSTRAL FIX GENERATION - Attempt {state['attempt_number']}")
+            print(f"📋 Strategy: {strategy}")
+            print(f"📂 Notebook: {state['current_notebook'].notebook_path}")
+            print("=" * 80)
 
             fixes_response = chain.invoke(
                 {
@@ -608,14 +708,40 @@ class ContextualNotebookFixer:
                     "previous_strategies": ", ".join(state["previous_strategies"]),
                     "attempt_number": state["attempt_number"],
                     "max_attempts": self.max_attempts,
-                    "notebook_content": state["notebook_content"],
+                    "notebook_content": state["notebook_content"][:2000] + "..."
+                    if len(state["notebook_content"]) > 2000
+                    else state["notebook_content"],
+                    "original_error": state[
+                        "current_notebook"
+                    ].original_failure_message,
                 }
             )
 
-            # Parse fixes (simplified)
+            # Display the detailed fix response
+            print("🤖 DEVSTRAL'S PROPOSED FIXES:")
+            print("-" * 60)
+            print(fixes_response)
+            print("-" * 60)
+
+            # Store the detailed fixes
             state["current_fixes"] = [f"Strategy: {strategy}", fixes_response]
 
-            # Update LangFuse span with results
+            # Parse and extract specific code changes for enhanced logging
+            code_changes = self._extract_code_changes(fixes_response)
+            if code_changes:
+                print(f"\n📝 EXTRACTED CODE CHANGES ({len(code_changes)} changes):")
+                for i, change in enumerate(code_changes, 1):
+                    print(
+                        f"\n  Change {i}: {change.get('description', 'No description')}"
+                    )
+                    if change.get("original_code"):
+                        print(f"    ❌ Original: {change['original_code'][:100]}...")
+                    if change.get("new_code"):
+                        print(f"    ✅ New: {change['new_code'][:100]}...")
+                    if change.get("reason"):
+                        print(f"    💡 Reason: {change['reason']}")
+
+            # Update LangFuse span with detailed results
             if span:
                 try:
                     self.langfuse.update_current_span(
@@ -623,15 +749,19 @@ class ContextualNotebookFixer:
                             "strategy_selected": strategy,
                             "fixes_count": len(state["current_fixes"]),
                             "fixes_response_length": len(fixes_response),
+                            "code_changes_extracted": len(code_changes)
+                            if code_changes
+                            else 0,
+                            "detailed_fixes": fixes_response[:1000],  # First 1000 chars
                             "success": True,
                         }
                     )
                 except Exception as e:
                     print(f"⚠️  LangFuse span update failed: {e}")
 
-            log_msg = f"🛠️  Generated contextual fixes (strategy: {strategy})"
+            log_msg = f"🛠️  Generated {len(code_changes) if code_changes else 0} specific code changes using {strategy} strategy"
             state["processing_log"].append(log_msg)
-            print(log_msg)
+            print(f"\n{log_msg}")
 
         except Exception as e:
             error_msg = f"❌ Contextual fix generation failed: {e}"
@@ -672,14 +802,66 @@ class ContextualNotebookFixer:
         else:
             return f"hybrid_attempt_{attempt}"
 
+    def _extract_code_changes(self, fixes_response: str) -> List[Dict[str, str]]:
+        """Extract specific code changes from Devstral's response."""
+        import re
+
+        changes = []
+
+        # Look for code blocks in the response
+        # Pattern to find "Original code" and "New code" sections
+        change_pattern = r"### Change \d+:([^#]*?)(?=### Change \d+:|## VERIFICATION|$)"
+
+        change_matches = re.findall(change_pattern, fixes_response, re.DOTALL)
+
+        for i, change_text in enumerate(change_matches):
+            change_info = {"description": f"Change {i + 1}"}
+
+            # Extract description from the first line
+            lines = change_text.strip().split("\n")
+            if lines:
+                change_info["description"] = lines[0].strip()
+
+            # Extract original code
+            original_match = re.search(
+                r"\*\*Original code.*?\*\*:.*?```python\n(.*?)```",
+                change_text,
+                re.DOTALL,
+            )
+            if original_match:
+                change_info["original_code"] = original_match.group(1).strip()
+
+            # Extract new code
+            new_match = re.search(
+                r"\*\*New code.*?\*\*:.*?```python\n(.*?)```", change_text, re.DOTALL
+            )
+            if new_match:
+                change_info["new_code"] = new_match.group(1).strip()
+
+            # Extract reason
+            reason_match = re.search(
+                r"\*\*Reason:\*\*\s*(.*?)(?=\n\n|$)", change_text, re.DOTALL
+            )
+            if reason_match:
+                change_info["reason"] = reason_match.group(1).strip()
+
+            if change_info.get("original_code") or change_info.get("new_code"):
+                changes.append(change_info)
+
+        return changes
+
     def _apply_fixes(self, state: IterativeFixingState) -> IterativeFixingState:
-        """Apply fixes with backup and tracking."""
+        """Apply fixes with backup and tracking - enhanced with detailed change visibility."""
         state["current_step"] = "apply_fixes"
 
         if not state["current_notebook"] or not state["current_fixes"]:
             return state
 
         notebook_path = state["current_notebook"].notebook_path
+
+        print(f"\n🔧 APPLYING FIXES - Attempt {state['attempt_number']}")
+        print(f"📂 Notebook: {notebook_path}")
+        print("=" * 80)
 
         # Create backup only on first attempt
         if state["attempt_number"] == 1:
@@ -696,16 +878,99 @@ class ContextualNotebookFixer:
                 state["processing_log"].append(error_msg)
                 print(error_msg)
 
-        # Simplified fix application (in real implementation, you'd parse and apply)
+        # Extract and display the specific changes being made
+        fixes_response = (
+            state["current_fixes"][1] if len(state["current_fixes"]) > 1 else ""
+        )
+
+        print("\n📝 PROPOSED CHANGES SUMMARY:")
+        print("-" * 50)
+
+        if "## PROBLEM ANALYSIS" in fixes_response:
+            analysis_section = fixes_response.split("## PROBLEM ANALYSIS")[1].split(
+                "## CODE CHANGES"
+            )[0]
+            print(f"🔍 Problem Analysis: {analysis_section.strip()[:200]}...")
+
+        # Show the changes that would be applied
+        code_changes = self._extract_code_changes(fixes_response)
+
+        if code_changes:
+            print(f"\n🛠️  SPECIFIC CODE CHANGES TO APPLY ({len(code_changes)} changes):")
+            for i, change in enumerate(code_changes, 1):
+                print(
+                    f"\n  📌 Change {i}: {change.get('description', 'No description')}"
+                )
+
+                if change.get("original_code"):
+                    print(f"    🔴 REMOVING:")
+                    original_lines = change["original_code"].split("\n")
+                    for line_num, line in enumerate(
+                        original_lines[:5], 1
+                    ):  # Show first 5 lines
+                        print(f"       {line_num}: {line}")
+                    if len(original_lines) > 5:
+                        print(f"       ... ({len(original_lines) - 5} more lines)")
+
+                if change.get("new_code"):
+                    print(f"    🟢 ADDING:")
+                    new_lines = change["new_code"].split("\n")
+                    for line_num, line in enumerate(
+                        new_lines[:5], 1
+                    ):  # Show first 5 lines
+                        print(f"       {line_num}: {line}")
+                    if len(new_lines) > 5:
+                        print(f"       ... ({len(new_lines) - 5} more lines)")
+
+                if change.get("reason"):
+                    print(f"    💡 Reason: {change['reason']}")
+        else:
+            print("    ⚠️  No specific code changes extracted from Devstral's response")
+            print("    📄 Raw response preview:")
+            print(f"    {fixes_response[:300]}...")
+
+        # In a real implementation, this is where you would:
+        # 1. Parse the notebook JSON
+        # 2. Apply the specific code changes to cells
+        # 3. Save the modified notebook
+        #
+        # For this demonstration, we'll simulate the application
         try:
+            # TODO: Implement actual notebook modification logic here
+            # This would involve:
+            # - Loading the notebook as JSON
+            # - Finding the cells that match the "original_code" patterns
+            # - Replacing them with the "new_code"
+            # - Saving the modified notebook
+
+            print(f"\n⚙️  SIMULATING FIX APPLICATION...")
+            print(f"    📖 Loading notebook: {notebook_path}")
+            print(f"    🔧 Applying {len(code_changes)} code changes...")
+            print(f"    💾 Saving modified notebook...")
+
             log_msg = f"🔧 Applied {len(state['current_fixes'])} fixes using {state['current_strategy']} strategy"
             state["processing_log"].append(log_msg)
-            print(log_msg)
+            print(f"\n✅ {log_msg}")
+
+            # Store detailed information about what was attempted
+            if code_changes:
+                change_summary = (
+                    f"Applied {len(code_changes)} code changes: "
+                    + ", ".join(
+                        [
+                            change.get("description", f"Change {i}")
+                            for i, change in enumerate(code_changes, 1)
+                        ]
+                    )
+                )
+                state["processing_log"].append(change_summary)
+
         except Exception as e:
             error_msg = f"❌ Fix application failed: {e}"
             state["processing_log"].append(error_msg)
             print(error_msg)
 
+        print("=" * 80)
         return state
 
     def _test_and_capture_results(

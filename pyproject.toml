@@ -55,6 +55,7 @@ dependencies = [
     "langchain-community",
     "langchain-chroma",
     "langfuse>=3.2.1",
+    "ollmcp>=0.16.0",
 ]
 
 [tool.source]

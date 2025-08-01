@@ -56,6 +56,8 @@ dependencies = [
     "langchain-chroma",
     "langfuse>=3.2.1",
     "ollmcp>=0.16.0",
+    "crewai>=0.152.0",
+    "chromadb>=1.0.15",
 ]
 
 [tool.source]

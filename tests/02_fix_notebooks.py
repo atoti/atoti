@@ -1,1742 +1,691 @@
 #!/usr/bin/env python3
 """
-Context-Aware Iterative Notebook Fixing with LangGraph
+CrewAI Agentic Flow for Jupyter Notebook Fixing using RAG and Ollama Devstral
 
-This implementation demonstrates how LangGraph can maintain rich state and context
-across multiple retry attempts, allowing Devstral to learn from previous failures
-and progressively improve its fixing attempts.
-
-Key Features:
-- Accumulates error context across attempts
-- Tracks what was tried and what failed
-- Builds a comprehensive failure history
-- Uses previous attempt context to improve next attempt
-- Continues until success or exhaustion
+This system creates a multi-agent workflow that:
+1. Analyzes notebook failures using RAG from your vectordb
+2. Fixes issues using Ollama's Devstral model
+3. Iteratively tests and improves until issues are resolved
+4. Uses fully open-source tools (CrewAI + Ollama + ChromaDB)
 """
 
-import argparse
-import asyncio
 import json
-import os
 import subprocess
-import sys
-import xml.etree.ElementTree as ET
-import re
-from dataclasses import dataclass, field
-from pathlib import Path
-from typing import Dict, List, Optional, TypedDict, Any
+from typing import Dict, Any
 from datetime import datetime
-import subprocess
-import re
-import os
 
-# LangFuse integration for comprehensive observability
+# Configuration constants
+NOTEBOOK_EXECUTION_TIMEOUT = 120  # seconds
+NOTEBOOK_EXECUTION_CELL_TIMEOUT = 60  # seconds
+MAX_ERROR_CONTEXT_LINES = 40
+MAX_RAW_ERROR_LINES = 30
+MAX_FILE_CONTENT_PREVIEW = 2000  # characters
+
+# CrewAI imports
 try:
-    from langfuse import Langfuse, observe
+    from crewai import Agent, Task, Crew, Process
+    from crewai.tools import BaseTool
 
-    LANGFUSE_AVAILABLE = True
-    print("📊 LangFuse available for observability")
+    CREWAI_AVAILABLE = True
 except ImportError:
-    LANGFUSE_AVAILABLE = False
-    print("⚠️  LangFuse not available. Install with: uv add langfuse")
-
-    # Create mock decorators to prevent errors
-    def observe(name=None, **kwargs):
-        def decorator(func):
-            return func
-
-        return decorator
-
-
-from langgraph.graph import StateGraph, END
-from langchain_ollama import ChatOllama
-from langchain.prompts import ChatPromptTemplate
-from langchain.schema.output_parser import StrOutputParser
-
-
-@dataclass
-class FixAttempt:
-    """Represents a single fix attempt with full context."""
-
-    attempt_number: int
-    strategy_used: str
-    error_analysis: str
-    fixes_applied: List[str]
-    test_output: str
-    test_passed: bool
-    error_message: str
-    timestamp: datetime
-    lessons_learned: str = ""
-
-
-@dataclass
-class NotebookFailure:
-    """Enhanced notebook failure with context accumulation."""
-
-    notebook_path: str
-    classname: str
-    test_name: str
-    failure_type: str
-    original_failure_message: str
-    original_error_output: str
-    execution_time: float
-
-    # Context accumulation fields
-    attempt_history: List[FixAttempt] = field(default_factory=list)
-    current_error_context: str = ""
-    learning_summary: str = ""
-
-
-class IterativeFixingState(TypedDict):
-    """Rich state that accumulates context across all retry attempts."""
-
-    # Current processing context
-    failed_notebooks: List[NotebookFailure]
-    current_notebook: Optional[NotebookFailure]
-    current_notebook_index: int
-
-    # Rich context accumulation
-    notebook_content: str
-    original_content_backup: str
-
-    # Iterative context building
-    attempt_number: int
-    max_attempts: int
-
-    # Context from previous attempts
-    previous_errors: List[str]
-    previous_fixes: List[str]
-    previous_strategies: List[str]
-    what_worked: List[str]
-    what_failed: List[str]
-    error_patterns: List[str]
-
-    # Current attempt state
-    current_error_analysis: str
-    current_strategy: str
-    current_fixes: List[str]
-    current_test_output: str
-    current_success: bool
-
-    # Learning and adaptation
-    accumulated_knowledge: str
-    strategy_effectiveness: Dict[str, int]
-    common_patterns: List[str]
-
-    # Workflow control
-    current_step: str
-    should_continue_notebook: bool
-    should_continue_processing: bool
-
-    # Results tracking
-    success_count: int
-    failure_count: int
-    total_attempts: int
-    processing_log: List[str]
-
-    # Working copy safety
-    original_notebook_path: str
-
-
-class ContextualNotebookFixer:
-    """
-    LangGraph-based notebook fixer that builds and maintains context
-    across retry attempts, learning from each failure to improve the next attempt.
-
-    Enhanced with LangFuse observability for comprehensive monitoring.
-    """
-
-    def __init__(self, max_attempts: int = 5):
-        self.max_attempts = max_attempts
-
-        # Initialize LangFuse for observability
-        self.langfuse = None
-        if LANGFUSE_AVAILABLE:
-            try:
-                # Initialize LangFuse client
-                self.langfuse = Langfuse(
-                    public_key=os.getenv("LANGFUSE_PUBLIC_KEY", ""),
-                    secret_key=os.getenv("LANGFUSE_SECRET_KEY", ""),
-                    host=os.getenv("LANGFUSE_HOST", "https://cloud.langfuse.com"),
-                )
-
-                print("✅ LangFuse observability initialized")
-
-                # Create a session for this notebook fixing run
-                self.session_id = (
-                    f"notebook-fixing-{datetime.now().strftime('%Y%m%d_%H%M%S')}"
-                )
-
-            except Exception as e:
-                print(f"⚠️  LangFuse initialization failed: {e}")
-                self.langfuse = None
-
-        # Initialize ChatOllama
-        self.devstral = ChatOllama(
-            model="codestral:latest",
-            temperature=0.2,  # Slightly higher for creative problem solving
-        )
-
-        self.graph = None
-        self._build_contextual_workflow()
-
-    def _build_contextual_workflow(self):
-        """Build LangGraph workflow that accumulates context across attempts."""
-        workflow = StateGraph(IterativeFixingState)
-
-        # Workflow nodes
-        workflow.add_node("initialize", self._initialize_processing)
-        workflow.add_node("select_notebook", self._select_next_notebook)
-        workflow.add_node("prepare_notebook", self._prepare_notebook_context)
-
-        # ITERATIVE CONTEXT LOOP NODES
-        workflow.add_node(
-            "analyze_with_context", self._analyze_with_accumulated_context
-        )
-        workflow.add_node("learn_from_history", self._learn_from_attempt_history)
-        workflow.add_node(
-            "generate_contextual_fixes", self._generate_fixes_with_context
-        )
-        workflow.add_node("apply_fixes_nbdime", self._apply_fixes_with_nbdime)
-        workflow.add_node("test_with_pytest", self._test_with_pytest)
-        workflow.add_node("update_context", self._update_context_from_attempt)
-        workflow.add_node("evaluate_progress", self._evaluate_progress)
-
-        workflow.add_node("finalize_notebook", self._finalize_notebook)
-        workflow.add_node("complete", self._complete_processing)
-
-        # Workflow edges
-        workflow.set_entry_point("initialize")
-        workflow.add_edge("initialize", "select_notebook")
-
-        # Notebook selection decision
-        workflow.add_conditional_edges(
-            "select_notebook",
-            self._decide_notebook_continuation,
-            {"process": "prepare_notebook", "complete": "complete"},
-        )
-
-        workflow.add_edge("prepare_notebook", "analyze_with_context")
-        workflow.add_edge("analyze_with_context", "learn_from_history")
-        workflow.add_edge("learn_from_history", "generate_contextual_fixes")
-        workflow.add_edge("generate_contextual_fixes", "apply_fixes_nbdime")
-        workflow.add_edge("apply_fixes_nbdime", "test_with_pytest")
-        workflow.add_edge("test_with_pytest", "update_context")
-        workflow.add_edge("update_context", "evaluate_progress")
-
-        # CRITICAL: The iterative retry decision with context
-        workflow.add_conditional_edges(
-            "evaluate_progress",
-            self._decide_retry_with_context,
-            {
-                "retry": "analyze_with_context",  # Loop back with accumulated context
-                "success": "finalize_notebook",  # Success, move to next notebook
-                "exhausted": "finalize_notebook",  # Max attempts reached
-            },
-        )
-
-        workflow.add_edge("finalize_notebook", "select_notebook")
-        workflow.add_edge("complete", END)
-
-        # Compile with higher recursion limit to allow for retry loops
-        # Each notebook can have max_attempts (5) * number of nodes in retry loop (~8) = ~40 recursions
-        # Plus overhead for multiple notebooks, so set limit to 100
-        self.graph = workflow.compile()
-
-    def _initialize_processing(
-        self, state: IterativeFixingState
-    ) -> IterativeFixingState:
-        """Initialize the contextual processing workflow."""
-        state["current_step"] = "initialize"
-        state["current_notebook_index"] = 0
-        state["success_count"] = 0
-        state["failure_count"] = 0
-        state["total_attempts"] = 0
-        state["processing_log"] = []
-        state["should_continue_processing"] = True
-
-        # Initialize context tracking
-        state["strategy_effectiveness"] = {}
-        state["common_patterns"] = []
-        state["accumulated_knowledge"] = ""
-
-        log_msg = f"🚀 Starting contextual notebook fixing for {len(state['failed_notebooks'])} notebooks"
-        state["processing_log"].append(log_msg)
-        print(log_msg)
-
-        return state
-
-    def _select_next_notebook(
-        self, state: IterativeFixingState
-    ) -> IterativeFixingState:
-        """Select next notebook and initialize its context."""
-        state["current_step"] = "select_notebook"
-
-        if state["current_notebook_index"] < len(state["failed_notebooks"]):
-            state["current_notebook"] = state["failed_notebooks"][
-                state["current_notebook_index"]
-            ]
-            state["should_continue_processing"] = True
-
-            # Reset notebook-specific context
-            state["attempt_number"] = 0
-            state["should_continue_notebook"] = True
-            state["previous_errors"] = []
-            state["previous_fixes"] = []
-            state["previous_strategies"] = []
-            state["what_worked"] = []
-            state["what_failed"] = []
-            state["error_patterns"] = []
-
-            notebook_path = state["current_notebook"].notebook_path
-            log_msg = f"📋 Starting contextual fixing for: {notebook_path}"
-            state["processing_log"].append(log_msg)
-            print(log_msg)
-        else:
-            state["should_continue_processing"] = False
-            state["current_notebook"] = None
-
-        return state
-
-    def _decide_notebook_continuation(self, state: IterativeFixingState) -> str:
-        """Decide whether to process next notebook or complete."""
-        return "process" if state["should_continue_processing"] else "complete"
-
-    def _prepare_notebook_context(
-        self, state: IterativeFixingState
-    ) -> IterativeFixingState:
-        """Prepare notebook context by creating a working copy."""
-        state["current_step"] = "prepare_notebook"
-
-        if not state["current_notebook"]:
-            return state
-
-        original_notebook_path = state["current_notebook"].notebook_path
-
-        # Create a working copy with -fix suffix before the extension
-        path_parts = original_notebook_path.rsplit(".", 1)
-        if len(path_parts) == 2:
-            working_notebook_path = f"{path_parts[0]}-fix.{path_parts[1]}"
-        else:
-            working_notebook_path = f"{original_notebook_path}-fix"
-
-        try:
-            # Copy original to working file
-            subprocess.run(
-                ["cp", original_notebook_path, working_notebook_path], check=True
-            )
-
-            # Update the notebook path to point to the working copy
-            state["current_notebook"].notebook_path = working_notebook_path
-
-            # Load content from the working copy
-            with open(working_notebook_path, "r", encoding="utf-8") as f:
-                content = f.read()
-                state["notebook_content"] = content
-                state["original_content_backup"] = content
-
-            # Store the original path for reference
-            state["original_notebook_path"] = original_notebook_path
-
-            log_msg = f"📄 Created working copy: {working_notebook_path}"
-            state["processing_log"].append(log_msg)
-            print(log_msg)
-
-            log_msg = f"📖 Loaded notebook content: {len(content)} characters"
-            state["processing_log"].append(log_msg)
-            print(log_msg)
-
-        except Exception as e:
-            error_msg = f"❌ Failed to create working copy or load notebook: {e}"
-            state["processing_log"].append(error_msg)
-            print(error_msg)
-            state["notebook_content"] = ""
-            state["original_content_backup"] = ""
-
-        return state
-
-    @(
-        observe(name="analyze_with_accumulated_context")
-        if LANGFUSE_AVAILABLE
-        else lambda x: x
+    print("❌ CrewAI not available. Install with: uv add crewai")
+    CREWAI_AVAILABLE = False
+
+# RAG and Vector DB imports
+try:
+    from langchain_ollama import OllamaEmbeddings, ChatOllama
+    from langchain_chroma import Chroma
+
+    RAG_AVAILABLE = True
+except ImportError:
+    print(
+        "❌ RAG dependencies not available. Install with: pip install langchain-ollama langchain-chroma"
     )
-    def _analyze_with_accumulated_context(
-        self, state: IterativeFixingState
-    ) -> IterativeFixingState:
-        """Analyze errors using ALL accumulated context from previous attempts."""
-        state["current_step"] = "analyze_with_context"
-        state["attempt_number"] += 1
-        state["total_attempts"] += 1
+    RAG_AVAILABLE = False
 
-        if not state["current_notebook"]:
-            return state
 
-        notebook = state["current_notebook"]
+class NotebookExecutionTool(BaseTool):
+    """Tool for executing notebook cells and capturing output."""
 
-        print(f"\n🔍 ERROR ANALYSIS - Attempt {state['attempt_number']}")
-        print(f"📂 Notebook: {notebook.notebook_path}")
-        print(f"🎯 Original Error Type: {notebook.failure_type}")
-        print("=" * 80)
+    name: str = "notebook_execution"
+    description: str = (
+        "Execute a Jupyter notebook and return the output or error. "
+        "Use the exact notebook file path as the notebook_path parameter. "
+        "This will execute the entire notebook."
+    )
 
-        # Display the original error for context
-        print("❌ ORIGINAL ERROR MESSAGE:")
-        print("-" * 40)
-        print(
-            notebook.original_failure_message[:500] + "..."
-            if len(notebook.original_failure_message) > 500
-            else notebook.original_failure_message
-        )
-
-        print("\n📜 ORIGINAL ERROR OUTPUT:")
-        print("-" * 40)
-        print(
-            notebook.original_error_output[:800] + "..."
-            if len(notebook.original_error_output) > 800
-            else notebook.original_error_output
-        )
-
-        # Show previous attempts context
-        if state["attempt_number"] > 1:
-            print(
-                f"\n🧠 PREVIOUS ATTEMPTS CONTEXT ({len(state['previous_errors'])} previous errors):"
-            )
-            print("-" * 40)
-            for i, prev_error in enumerate(
-                state["previous_errors"][-3:], 1
-            ):  # Show last 3
-                print(f"  {i}. {prev_error[:150]}...")
-
-            print(f"\n📚 WHAT HAS BEEN TRIED:")
-            for i, strategy in enumerate(state["previous_strategies"], 1):
-                print(f"  {i}. {strategy}")
-
-            if state["what_failed"]:
-                print(f"\n❌ WHAT FAILED:")
-                for i, failure in enumerate(
-                    state["what_failed"][-3:], 1
-                ):  # Show last 3
-                    print(f"  {i}. {failure[:100]}...")
-
-        # Add LangFuse observability - create trace span manually
-        span = None
-        if LANGFUSE_AVAILABLE and self.langfuse:
-            try:
-                span = self.langfuse.start_as_current_span(
-                    name=f"contextual_analysis_attempt_{state['attempt_number']}",
-                    metadata={
-                        "notebook_path": notebook.notebook_path,
-                        "attempt_number": state["attempt_number"],
-                        "max_attempts": self.max_attempts,
-                        "total_attempts": state["total_attempts"],
-                        "previous_attempts_count": len(state["previous_errors"]),
-                        "accumulated_knowledge_length": len(
-                            state["accumulated_knowledge"]
-                        ),
-                        "strategy_effectiveness": state["strategy_effectiveness"],
-                        "original_error_type": notebook.failure_type,
-                        "original_error_length": len(notebook.original_failure_message),
-                    },
-                )
-            except Exception as e:
-                print(f"⚠️  LangFuse span creation failed: {e}")
-
-        # Build rich context prompt with ALL previous attempt information
-        context_prompt = ChatPromptTemplate.from_template("""
-        You are an expert Python debugger with access to the complete history of previous fix attempts.
-        
-        CURRENT SITUATION:
-        Notebook: {notebook_path}
-        Original Error Type: {error_type}
-        Original Error: {original_error}
-        Original Error Output: {original_error_output}
-        Current Error Context: {current_error_context}
-        Attempt: {attempt_number} of {max_attempts}
-        
-        COMPLETE CONTEXT FROM PREVIOUS ATTEMPTS:
-        {previous_context}
-        
-        ACCUMULATED LEARNING:
-        {accumulated_knowledge}
-        
-        CURRENT NOTEBOOK CONTENT (first 2000 chars):
-        {notebook_content}
-        
-        ORIGINAL CONTENT (for reference):
-        {original_content}
-        
-        Please provide:
-        1. Deep analysis of the root cause considering the error type and output
-        2. Analysis of why previous attempts failed (if any)
-        3. New insights based on error evolution across attempts
-        4. Root cause considering all context and error patterns
-        5. Specific strategy for this attempt that's different from: {previous_strategies}
-        6. What to avoid based on what failed: {what_failed}
-        7. Key code sections that likely need modification
-        8. If there's a NEW current error, focus on that rather than the original
-        
-        Use ALL the accumulated context to provide deeper insights than previous attempts.
-        Focus on the specific error details and notebook content to identify the exact issue.
-        If the current error is different from the original, analyze the progression and what the fixes achieved.
-        """)
-
+    def _run(self, notebook_path: str) -> str:
+        """Execute a notebook and return results."""
         try:
-            # Build previous context summary
-            previous_context = self._build_context_summary(state)
-
-            chain = context_prompt | self.devstral | StrOutputParser()
-
-            print("\n🤖 REQUESTING DEVSTRAL ANALYSIS...")
-            print(
-                "   Sending context, error details, and notebook content to Devstral..."
+            # Use nbconvert to execute the notebook - it will stop at first error
+            result = subprocess.run(
+                [
+                    "uv",
+                    "run",
+                    "jupyter",
+                    "nbconvert",
+                    "--to",
+                    "notebook",
+                    "--execute",
+                    f"--ExecutePreprocessor.timeout={NOTEBOOK_EXECUTION_CELL_TIMEOUT}",
+                    "--output",
+                    f"{notebook_path}.executed",
+                    notebook_path,
+                ],
+                capture_output=True,
+                text=True,
+                timeout=NOTEBOOK_EXECUTION_TIMEOUT,
             )
 
-            # Use current error context if available, otherwise fall back to original
-            current_error = (
-                state["current_notebook"].current_error_context
-                if state["current_notebook"].current_error_context
-                else state["current_notebook"].original_failure_message
-            )
-
-            analysis = chain.invoke(
-                {
-                    "notebook_path": notebook.notebook_path,
-                    "error_type": notebook.failure_type,
-                    "original_error": notebook.original_failure_message,
-                    "original_error_output": notebook.original_error_output,
-                    "current_error_context": current_error,
-                    "attempt_number": state["attempt_number"],
-                    "max_attempts": self.max_attempts,
-                    "previous_context": previous_context,
-                    "accumulated_knowledge": state["accumulated_knowledge"],
-                    "notebook_content": state["notebook_content"][:2000] + "..."
-                    if len(state["notebook_content"]) > 2000
-                    else state["notebook_content"],
-                    "original_content": state["original_content_backup"][:2000] + "..."
-                    if len(state["original_content_backup"]) > 2000
-                    else state["original_content_backup"],
-                    "previous_strategies": ", ".join(state["previous_strategies"]),
-                    "what_failed": "; ".join(state["what_failed"]),
-                }
-            )
-
-            state["current_error_analysis"] = analysis
-
-            print("\n📋 DEVSTRAL'S ERROR ANALYSIS:")
-            print("-" * 60)
-            print(analysis)
-            print("-" * 60)
-
-            # Update LangFuse span with results
-            if span:
-                try:
-                    self.langfuse.update_current_span(
-                        output={
-                            "analysis_length": len(analysis),
-                            "previous_context_length": len(previous_context),
-                            "analysis_preview": analysis[:500],
-                            "success": True,
-                        }
-                    )
-                except Exception as e:
-                    print(f"⚠️  LangFuse span update failed: {e}")
-
-            log_msg = (
-                f"🔍 Contextual analysis complete (attempt {state['attempt_number']})"
-            )
-            state["processing_log"].append(log_msg)
-            print(f"\n✅ {log_msg}")
-
-        except Exception as e:
-            error_msg = f"❌ Contextual analysis failed: {e}"
-            state["processing_log"].append(error_msg)
-            print(error_msg)
-            state["current_error_analysis"] = f"Analysis failed: {e}"
-
-        print("=" * 80)
-        return state
-
-    def _build_context_summary(self, state: IterativeFixingState) -> str:
-        """Build a comprehensive summary of all previous attempts."""
-        if (
-            not state["current_notebook"]
-            or not state["current_notebook"].attempt_history
-        ):
-            return "No previous attempts."
-
-        context_parts = []
-
-        for attempt in state["current_notebook"].attempt_history:
-            context_parts.append(f"""
-            ATTEMPT {attempt.attempt_number}:
-            - Strategy: {attempt.strategy_used}
-            - Fixes Applied: {", ".join(attempt.fixes_applied)}
-            - Result: {"SUCCESS" if attempt.test_passed else "FAILED"}
-            - Error: {attempt.error_message}
-            - Lessons: {attempt.lessons_learned}
-            """)
-
-        # Add current error patterns
-        if state["error_patterns"]:
-            context_parts.append(
-                f"\nERROR PATTERNS OBSERVED: {'; '.join(state['error_patterns'])}"
-            )
-
-        return "\n".join(context_parts)
-
-    def _learn_from_attempt_history(
-        self, state: IterativeFixingState
-    ) -> IterativeFixingState:
-        """Extract learnings from the complete attempt history."""
-        state["current_step"] = "learn_from_history"
-
-        if (
-            not state["current_notebook"]
-            or not state["current_notebook"].attempt_history
-        ):
-            state["accumulated_knowledge"] = "First attempt - no previous context."
-            return state
-
-        # Learning prompt to extract insights from history
-        learning_prompt = ChatPromptTemplate.from_template("""
-        Analyze this complete history of fix attempts and extract key learnings:
-        
-        {attempt_history}
-        
-        Previous errors encountered: {previous_errors}
-        What has been tried: {previous_fixes}
-        
-        Extract:
-        1. Patterns in what consistently fails
-        2. Approaches that showed partial progress
-        3. Root cause insights from error evolution
-        4. What should definitely be avoided
-        5. New strategy recommendations
-        
-        Provide actionable insights for the next attempt.
-        """)
-
-        try:
-            history_summary = self._build_context_summary(state)
-
-            chain = learning_prompt | self.devstral | StrOutputParser()
-
-            learnings = chain.invoke(
-                {
-                    "attempt_history": history_summary,
-                    "previous_errors": "; ".join(state["previous_errors"]),
-                    "previous_fixes": "; ".join(state["previous_fixes"]),
-                }
-            )
-
-            state["accumulated_knowledge"] = learnings
-
-            log_msg = f"🧠 Extracted learnings from {len(state['current_notebook'].attempt_history)} previous attempts"
-            state["processing_log"].append(log_msg)
-            print(log_msg)
-
-        except Exception as e:
-            error_msg = f"❌ Learning extraction failed: {e}"
-            state["processing_log"].append(error_msg)
-            print(error_msg)
-            state["accumulated_knowledge"] = "Learning extraction failed"
-
-        return state
-
-    @observe(name="generate_fixes_with_context") if LANGFUSE_AVAILABLE else lambda x: x
-    def _generate_fixes_with_context(
-        self, state: IterativeFixingState
-    ) -> IterativeFixingState:
-        """Generate fixes using full contextual awareness."""
-        state["current_step"] = "generate_contextual_fixes"
-
-        if not state["current_notebook"]:
-            return state
-
-        # Add LangFuse observability - create trace span manually
-        span = None
-        if LANGFUSE_AVAILABLE and self.langfuse:
-            try:
-                span = self.langfuse.start_as_current_span(
-                    name=f"fix_generation_attempt_{state['attempt_number']}",
-                    metadata={
-                        "notebook_path": state["current_notebook"].notebook_path
-                        if state["current_notebook"]
-                        else "unknown",
-                        "attempt_number": state["attempt_number"],
-                        "previous_strategies": state["previous_strategies"],
-                        "what_failed_count": len(state["what_failed"]),
-                        "what_worked_count": len(state["what_worked"]),
-                        "accumulated_knowledge_length": len(
-                            state["accumulated_knowledge"]
-                        ),
-                    },
-                )
-            except Exception as e:
-                print(f"⚠️  LangFuse span creation failed: {e}")
-
-        # Enhanced prompt that asks for specific code changes
-        fix_prompt = ChatPromptTemplate.from_template("""
-        You are fixing a Jupyter notebook. Provide specific, actionable code changes.
-        
-        CURRENT ERROR ANALYSIS: {current_analysis}
-        ACCUMULATED LEARNING: {accumulated_knowledge}
-        
-        CONSTRAINTS:
-        - DO NOT repeat these failed approaches: {what_failed}
-        - Build on these partial successes: {what_worked}
-        - Previous strategies tried: {previous_strategies}
-        
-        CURRENT NOTEBOOK CONTENT:
-        {notebook_content}
-        
-        ORIGINAL ERROR:
-        {original_error}
-        
-        Please provide:
-        1. SPECIFIC CODE SECTIONS that need to be changed (show the exact problematic code)
-        2. EXACT REPLACEMENT CODE for each section
-        3. EXPLANATION of why each change addresses the error
-        4. LINE NUMBERS or unique identifiers where changes should be made
-        
-        Format your response as:
-        
-        ## PROBLEM ANALYSIS
-        [Brief analysis of the root cause]
-        
-        ## CODE CHANGES
-        
-        ### Change 1: [Description]
-        **Original code (to be replaced):**
-        ```python
-        [exact code to find and replace]
-        ```
-        
-        **New code:**
-        ```python
-        [exact replacement code]
-        ```
-        
-        **Reason:** [Why this change fixes the issue]
-        
-        ### Change 2: [Description]
-        [Continue for each change needed]
-        
-        ## VERIFICATION
-        [How to verify the fix works]
-        """)
-
-        try:
-            chain = fix_prompt | self.devstral | StrOutputParser()
-
-            # Determine strategy based on attempt number and context
-            strategy = self._determine_contextual_strategy(state)
-            state["current_strategy"] = strategy
-
-            print(f"\n🔧 DEVSTRAL FIX GENERATION - Attempt {state['attempt_number']}")
-            print(f"📋 Strategy: {strategy}")
-            print(f"📂 Notebook: {state['current_notebook'].notebook_path}")
-            print("=" * 80)
-
-            fixes_response = chain.invoke(
-                {
-                    "current_analysis": state["current_error_analysis"],
-                    "accumulated_knowledge": state["accumulated_knowledge"],
-                    "what_failed": "; ".join(state["what_failed"]),
-                    "what_worked": "; ".join(state["what_worked"]),
-                    "previous_strategies": ", ".join(state["previous_strategies"]),
-                    "attempt_number": state["attempt_number"],
-                    "max_attempts": self.max_attempts,
-                    "notebook_content": state["notebook_content"][:2000] + "..."
-                    if len(state["notebook_content"]) > 2000
-                    else state["notebook_content"],
-                    "original_error": state[
-                        "current_notebook"
-                    ].original_failure_message,
-                }
-            )
-
-            # Display the detailed fix response
-            print("🤖 DEVSTRAL'S PROPOSED FIXES:")
-            print("-" * 60)
-            print(fixes_response)
-            print("-" * 60)
-
-            # Store the detailed fixes
-            state["current_fixes"] = [f"Strategy: {strategy}", fixes_response]
-
-            # Parse and extract specific code changes for enhanced logging
-            code_changes = self._extract_code_changes(fixes_response)
-            if code_changes:
-                print(f"\n📝 EXTRACTED CODE CHANGES ({len(code_changes)} changes):")
-                for i, change in enumerate(code_changes, 1):
-                    print(
-                        f"\n  Change {i}: {change.get('description', 'No description')}"
-                    )
-                    if change.get("original_code"):
-                        print(f"    ❌ Original: {change['original_code'][:100]}...")
-                    if change.get("new_code"):
-                        print(f"    ✅ New: {change['new_code'][:100]}...")
-                    if change.get("reason"):
-                        print(f"    💡 Reason: {change['reason']}")
-
-            # Update LangFuse span with detailed results
-            if span:
-                try:
-                    self.langfuse.update_current_span(
-                        output={
-                            "strategy_selected": strategy,
-                            "fixes_count": len(state["current_fixes"]),
-                            "fixes_response_length": len(fixes_response),
-                            "code_changes_extracted": len(code_changes)
-                            if code_changes
-                            else 0,
-                            "detailed_fixes": fixes_response[:1000],  # First 1000 chars
-                            "success": True,
-                        }
-                    )
-                except Exception as e:
-                    print(f"⚠️  LangFuse span update failed: {e}")
-
-            log_msg = f"🛠️  Generated {len(code_changes) if code_changes else 0} specific code changes using {strategy} strategy"
-            state["processing_log"].append(log_msg)
-            print(f"\n{log_msg}")
-
-        except Exception as e:
-            error_msg = f"❌ Contextual fix generation failed: {e}"
-            state["processing_log"].append(error_msg)
-            print(error_msg)
-            state["current_fixes"] = []
-
-            # Update LangFuse span with error
-            if span:
-                try:
-                    self.langfuse.update_current_span(
-                        output={"error": str(e), "success": False}
-                    )
-                except Exception as e2:
-                    print(f"⚠️  LangFuse error logging failed: {e2}")
-
-        return state
-
-    def _determine_contextual_strategy(self, state: IterativeFixingState) -> str:
-        """Determine strategy based on context and attempt history."""
-        attempt = state["attempt_number"]
-        previous_strategies = state["previous_strategies"]
-
-        strategies = [
-            "minimal_surgical",
-            "dependency_focused",
-            "syntax_aggressive",
-            "logic_rewrite",
-            "environment_adaptation",
-            "complete_overhaul",
-        ]
-
-        # Avoid previously used strategies
-        available_strategies = [s for s in strategies if s not in previous_strategies]
-
-        if available_strategies:
-            return available_strategies[0]
-        else:
-            return f"hybrid_attempt_{attempt}"
-
-    def _extract_code_changes(self, fixes_response: str) -> List[Dict[str, str]]:
-        """Extract specific code changes from Devstral's response."""
-        changes = []
-
-        # Debug: Let's see what we're trying to parse
-        print(f"\n🔍 DEBUG: Parsing fixes response (length: {len(fixes_response)})")
-        print(f"    First 200 chars: {fixes_response[:200]}...")
-
-        # Look for code blocks in the response
-        # Updated pattern to handle the actual format from Devstral
-        change_pattern = r"### Change \d+:([^#]*?)(?=### Change \d+:|## VERIFICATION|$)"
-
-        change_matches = re.findall(change_pattern, fixes_response, re.DOTALL)
-
-        print(f"    Found {len(change_matches)} change matches")
-
-        for i, change_text in enumerate(change_matches):
-            change_info = {"description": f"Change {i + 1}"}
-
-            # Extract description from the first line
-            lines = change_text.strip().split("\n")
-            if lines:
-                change_info["description"] = lines[0].strip()
-
-            # More flexible patterns for original and new code
-            original_match = re.search(
-                r"\*\*Original code.*?\*\*:.*?```python\s*(.*?)```",
-                change_text,
-                re.DOTALL,
-            )
-            if original_match:
-                change_info["original_code"] = original_match.group(1).strip()
-                print(
-                    f"    ✅ Extracted original code: {change_info['original_code'][:50]}..."
-                )
-
-            # Extract new code
-            new_match = re.search(
-                r"\*\*New code.*?\*\*:.*?```python\s*(.*?)```", change_text, re.DOTALL
-            )
-            if new_match:
-                change_info["new_code"] = new_match.group(1).strip()
-                print(f"    ✅ Extracted new code: {change_info['new_code'][:50]}...")
-
-            # Extract reason
-            reason_match = re.search(
-                r"\*\*Reason:\*\*\s*(.*?)(?=\n\n|$)", change_text, re.DOTALL
-            )
-            if reason_match:
-                change_info["reason"] = reason_match.group(1).strip()
-
-            # If we found either original or new code, add the change
-            if change_info.get("original_code") or change_info.get("new_code"):
-                changes.append(change_info)
-                print(f"    ✅ Added change: {change_info['description']}")
+            if result.returncode == 0:
+                return "✅ SUCCESS: Notebook executed successfully without errors"
             else:
-                print(f"    ⚠️  No code found for: {change_info['description']}")
+                # Extract error information neutrally without categorization
+                error_msg = result.stderr
 
-        # If no structured changes found, try to extract any code blocks
-        if not changes:
-            print("    🔍 No structured changes found, looking for any code blocks...")
-            code_blocks = re.findall(r"```python\s*(.*?)```", fixes_response, re.DOTALL)
-            if len(code_blocks) >= 2:
-                # Assume first is original, second is new
-                changes.append(
-                    {
-                        "description": "Code replacement from blocks",
-                        "original_code": code_blocks[0].strip(),
-                        "new_code": code_blocks[1].strip(),
-                        "reason": "Extracted from code blocks",
-                    }
-                )
-                print(
-                    f"    ✅ Extracted from code blocks: {len(code_blocks)} blocks found"
-                )
+                # Look for the cell error section for better context
+                lines = error_msg.split("\n")
+                error_context = []
+                cell_content = []
+                capturing_cell = False
+                capturing_error = False
 
-        print(f"    📋 Total changes extracted: {len(changes)}")
-        return changes
+                for line in lines:
+                    # Look for cell execution markers
+                    if "An error occurred while executing the following cell:" in line:
+                        capturing_cell = True
+                        error_context.append("=== ERROR IN CELL ===")
+                        continue
 
-    def _apply_fixes_with_nbdime(
-        self, state: IterativeFixingState
-    ) -> IterativeFixingState:
-        """Apply fixes by properly modifying notebook cells - preserving JSON structure."""
-        state["current_step"] = "apply_fixes"
+                    # Capture the cell content
+                    if capturing_cell and line.strip().startswith("--"):
+                        if not cell_content:
+                            # Start capturing cell content
+                            continue
+                        else:
+                            # End of cell content
+                            capturing_cell = False
+                            capturing_error = True
+                            error_context.extend(
+                                ["Cell content:"]
+                                + cell_content
+                                + ["", "=== ERROR MESSAGE ==="]
+                            )
+                            continue
 
-        if not state["current_notebook"] or not state["current_fixes"]:
-            return state
+                    if capturing_cell:
+                        cell_content.append(line.strip())
 
-        notebook_path = state["current_notebook"].notebook_path
+                    # Capture error traceback
+                    if capturing_error:
+                        error_context.append(line.strip())
+                        # Stop after reasonable amount of error info
+                        if len(error_context) > MAX_ERROR_CONTEXT_LINES:
+                            break
 
-        print(
-            f"\n🔧 APPLYING FIXES TO NOTEBOOK CELLS - Attempt {state['attempt_number']}"
-        )
-        print(f"📂 Working Copy: {notebook_path}")
-        print("=" * 80)
+                # If we didn't capture structured error, show raw stderr
+                if not error_context:
+                    error_context = ["=== RAW ERROR OUTPUT ==="] + error_msg.split(
+                        "\n"
+                    )[:MAX_RAW_ERROR_LINES]
 
-        # No need to create backup since we're already working on a copy
-        # The original file is safely preserved
+                result_text = "\n".join(error_context)
+                return f"❌ EXECUTION FAILED: Notebook stopped due to error\n\n{result_text}"
 
-        # Extract code changes from Devstral's response
-        fixes_response = (
-            state["current_fixes"][1] if len(state["current_fixes"]) > 1 else ""
-        )
-        code_changes = self._extract_code_changes(fixes_response)
+        except subprocess.TimeoutExpired:
+            return f"❌ Execution timed out after {NOTEBOOK_EXECUTION_TIMEOUT // 60} minutes"
+        except Exception as e:
+            return f"❌ Execution error: {str(e)}"
 
-        if not code_changes:
-            print("    ⚠️  No specific code changes extracted from Devstral's response")
-            return state
 
-        print(f"\n🛠️  APPLYING {len(code_changes)} CODE CHANGES TO NOTEBOOK CELLS:")
+class NotebookEditTool(BaseTool):
+    """Tool for editing notebook cells."""
 
-        modifications_made = []
+    name: str = "notebook_edit"
+    description: str = (
+        "Edit a specific cell in a Jupyter notebook. Requires notebook_path (full file path), "
+        "cell_id (the unique cell identifier), and new_content (the new code for the cell). "
+        "Use cell_id to specify which cell to edit."
+    )
 
+    def _run(self, notebook_path: str, cell_id: str, new_content: str) -> str:
+        """Edit a notebook cell with new content."""
         try:
-            # Load the notebook as JSON
+            import json
+
             with open(notebook_path, "r", encoding="utf-8") as f:
                 notebook_data = json.load(f)
 
-            print(
-                f"📖 Loaded notebook with {len(notebook_data.get('cells', []))} cells"
-            )
+            # Find the target cell by ID
+            target_cell = None
+            for cell in notebook_data.get("cells", []):
+                if cell.get("id") == cell_id:
+                    target_cell = cell
+                    break
 
-            # Apply each code change to the appropriate cells
-            for i, change in enumerate(code_changes, 1):
-                original_code = change.get("original_code", "").strip()
-                new_code = change.get("new_code", "").strip()
-                description = change.get("description", f"Change {i}")
+            if target_cell is None:
+                return f"❌ Cell with ID '{cell_id}' not found in notebook."
 
-                # Add AI-generated comment to the new code
-                if new_code:
-                    new_code_with_comment = f"# THIS IS AI GENERATED\n{new_code}"
-                else:
-                    new_code_with_comment = new_code
+            if target_cell.get("cell_type") != "code":
+                return f"❌ Cell with ID '{cell_id}' is not a code cell (type: {target_cell.get('cell_type')})."
 
-                # Find and replace code in matching cells
-                found_and_replaced = False
-                for cell in notebook_data.get("cells", []):
-                    if cell.get("cell_type") == "code":
-                        cell_source = self._get_cell_source_as_string(cell)
-
-                        if original_code and original_code in cell_source:
-                            print(f"  ✅ Applying: {description}")
-                            print(f"    🔍 Found: {original_code[:50]}...")
-                            print(
-                                f"    🔧 Replacing with: {new_code_with_comment[:50]}..."
-                            )
-
-                            updated_source = cell_source.replace(
-                                original_code, new_code_with_comment
-                            )
-                            self._set_cell_source_from_string(cell, updated_source)
-                            modifications_made.append(description)
-                            found_and_replaced = True
-                            break
-
-                        elif original_code:
-                            # Try to find a key line from the original code
-                            lines = [
-                                line.strip()
-                                for line in original_code.split("\n")
-                                if line.strip()
-                            ]
-                            if lines:
-                                key_line = lines[0]
-                                if key_line in cell_source:
-                                    print(f"  🔍 Found key line for: {description}")
-                            print(f"    � Key line: {key_line}")
-
-                            # Replace the key line with the new code (with AI comment)
-                            updated_source = cell_source.replace(
-                                key_line, new_code_with_comment
-                            )
-                            self._set_cell_source_from_string(cell, updated_source)
-                            modifications_made.append(f"{description} (key line match)")
-                            found_and_replaced = True
-                            break
-                        else:
-                            print(f"  ⚠️  Could not find code for: {description}")
-                else:
-                    print(f"  ⚠️  No original code specified for: {description}")
-
-            # Save the modified notebook if we made changes
-            if modifications_made:
-                with open(notebook_path, "w", encoding="utf-8") as f:
-                    json.dump(notebook_data, f, indent=1, ensure_ascii=False)
-
-                print(
-                    f"\n✅ Successfully applied {len(modifications_made)} modifications:"
-                )
-                for mod in modifications_made:
-                    print(f"    ✓ {mod}")
-
-                log_msg = f"🔧 Applied {len(modifications_made)} code changes to notebook cells"
-                state["processing_log"].append(log_msg)
-                print(f"\n✅ {log_msg}")
-
-                # Update state with what was changed
-                change_summary = "Applied changes: " + "; ".join(modifications_made)
-                state["processing_log"].append(change_summary)
-
+            # Update the cell content
+            # Jupyter notebooks store source as a list of strings
+            if isinstance(new_content, str):
+                # Split into lines and add newlines except for the last line
+                lines = new_content.split("\n")
+                source_lines = []
+                for i, line in enumerate(lines):
+                    if i < len(lines) - 1:  # Not the last line
+                        source_lines.append(line + "\n")
+                    else:  # Last line
+                        source_lines.append(line)
+                target_cell["source"] = source_lines
             else:
-                warning_msg = "⚠️  No modifications were applied to the notebook"
-                state["processing_log"].append(warning_msg)
-                print(warning_msg)
+                target_cell["source"] = [new_content]
+
+            # Clear any previous outputs
+            target_cell["outputs"] = []
+            target_cell["execution_count"] = None
+
+            # Save the notebook back
+            with open(notebook_path, "w", encoding="utf-8") as f:
+                json.dump(notebook_data, f, indent=1, ensure_ascii=False)
+
+            return f"✅ Successfully edited code cell with ID '{cell_id}'"
 
         except Exception as e:
-            error_msg = f"❌ Fix application failed: {e}"
-            state["processing_log"].append(error_msg)
-            print(error_msg)
+            return f"❌ Edit failed: {str(e)}"
 
-        print("=" * 80)
-        return state
 
-    def _get_cell_source_as_string(self, cell: dict) -> str:
-        """Convert notebook cell source to a single string."""
-        source = cell.get("source", [])
-        if isinstance(source, list):
-            return "".join(source)
-        elif isinstance(source, str):
-            return source
-        else:
-            return ""
+class FileReadTool(BaseTool):
+    """Simple tool for reading files."""
 
-    def _set_cell_source_from_string(self, cell: dict, source_string: str):
-        """Set notebook cell source from a string, maintaining notebook format."""
-        # Split into lines and add newlines where needed
-        lines = source_string.split("\n")
+    name: str = "file_read"
+    description: str = "Read the contents of a file. Use file_path parameter with the complete file path."
 
-        # Convert to the list format that notebooks expect
-        cell_source = []
-        for i, line in enumerate(lines):
-            if i == len(lines) - 1 and line == "":
-                # Don't add empty string at the end
-                continue
-            elif i == len(lines) - 1:
-                # Last line without newline
-                cell_source.append(line)
-            else:
-                # Line with newline
-                cell_source.append(line + "\n")
-
-        cell["source"] = cell_source
-
-    def _test_with_pytest(self, state: IterativeFixingState) -> IterativeFixingState:
-        """Test the modified notebook using pytest - simple and reliable."""
-        state["current_step"] = "test_with_pytest"
-
-        if not state["current_notebook"]:
-            return state
-
-        notebook_path = state["current_notebook"].notebook_path
-
-        print(f"\n🧪 TESTING WITH PYTEST - Attempt {state['attempt_number']}")
-        print(f"📂 Notebook: {notebook_path}")
-        print("=" * 80)
-
-        # Simple pytest command
-        test_cmd = [
-            "uv",
-            "run",
-            "python",
-            "-m",
-            "pytest",
-            "--nbmake",
-            "--nbmake-timeout=300",
-            "-v",
-            "--tb=short",
-            notebook_path,
-        ]
-
+    def _run(self, file_path: str) -> str:
+        """Read file contents."""
         try:
-            print(f"🧪 Running pytest on modified notebook...")
+            with open(file_path, "r", encoding="utf-8") as f:
+                content = f.read()
 
-            result = subprocess.run(
-                test_cmd,
-                capture_output=True,
-                text=True,
-                cwd=Path(__file__).parent.parent,
-            )
-
-            state["current_success"] = result.returncode == 0
-            state["current_test_output"] = (
-                f"STDOUT:\n{result.stdout}\nSTDERR:\n{result.stderr}"
-            )
-
-            if state["current_success"]:
-                print("✅ SUCCESS! Notebook runs without errors!")
-                print("🎉 Devstral's fixes worked!")
-                log_msg = f"✅ Success on attempt {state['attempt_number']}!"
+            if len(content) > MAX_FILE_CONTENT_PREVIEW:
+                return f"File contents of {file_path}:\n{content[:MAX_FILE_CONTENT_PREVIEW]}..."
             else:
-                print("❌ FAILED - Notebook still has errors")
-                print("\n📜 ERROR OUTPUT:")
-                print("-" * 40)
-
-                # Show relevant error information
-                error_output = result.stderr + "\n" + result.stdout
-
-                # Extract key error lines
-                error_lines = []
-                for line in error_output.split("\n"):
-                    if any(
-                        keyword in line.lower()
-                        for keyword in [
-                            "error:",
-                            "traceback",
-                            "failed",
-                            "exception",
-                            "syntaxerror",
-                            "nameerror",
-                        ]
-                    ):
-                        error_lines.append(line.strip())
-
-                if error_lines:
-                    print("Key errors found:")
-                    for line in error_lines[-5:]:  # Show last 5 error lines
-                        print(f"  {line}")
-                else:
-                    # Show last part of stderr if no specific errors found
-                    if result.stderr:
-                        print("Last stderr output:")
-                        print(result.stderr[-300:])
-
-                print("-" * 40)
-                log_msg = f"❌ Failed attempt {state['attempt_number']}"
-
-                # Update current error context for next iteration
-                new_error = ""
-                if error_lines:
-                    new_error = "; ".join(error_lines[-3:])  # Take last 3 error lines
-
-                if (
-                    new_error
-                    and new_error != state["current_notebook"].original_failure_message
-                ):
-                    print(f"\n🔄 NEW ERROR DETECTED:")
-                    print(f"   {new_error[:200]}...")
-                    state["current_notebook"].current_error_context = new_error
-
-            state["processing_log"].append(log_msg)
-            print(f"\n{log_msg}")
-
+                return f"File contents of {file_path}:\n{content}"
         except Exception as e:
-            error_msg = f"❌ Pytest execution failed: {e}"
-            state["processing_log"].append(error_msg)
-            print(error_msg)
-            state["current_success"] = False
-            state["current_test_output"] = f"Pytest execution error: {e}"
+            return f"❌ Failed to read file: {str(e)}"
 
-        print("=" * 80)
-        return state
 
-    def _update_context_from_attempt(
-        self, state: IterativeFixingState
-    ) -> IterativeFixingState:
-        """Update accumulated context with results from current attempt."""
-        state["current_step"] = "update_context"
+class DirectoryReadTool(BaseTool):
+    """Simple tool for listing directory contents."""
 
-        if not state["current_notebook"]:
-            return state
+    name: str = "directory_read"
+    description: str = "List the contents of a directory. Use directory_path parameter with the complete directory path."
 
-        # Extract error message from test output
-        error_message = ""
-        if not state["current_success"]:
-            # Extract error from test output (simplified)
-            test_output = state["current_test_output"]
-            if "FAILED" in test_output or "ERROR" in test_output:
-                lines = test_output.split("\n")
-                error_lines = [
-                    line
-                    for line in lines
-                    if any(kw in line for kw in ["Error:", "Failed:", "Exception:"])
-                ]
-                error_message = "; ".join(error_lines[:3])  # Take first 3 error lines
-
-        # Create attempt record
-        attempt = FixAttempt(
-            attempt_number=state["attempt_number"],
-            strategy_used=state["current_strategy"],
-            error_analysis=state["current_error_analysis"],
-            fixes_applied=state["current_fixes"],
-            test_output=state["current_test_output"],
-            test_passed=state["current_success"],
-            error_message=error_message,
-            timestamp=datetime.now(),
-        )
-
-        # Add to notebook's attempt history
-        state["current_notebook"].attempt_history.append(attempt)
-
-        # Update accumulated context lists
-        state["previous_strategies"].append(state["current_strategy"])
-        state["previous_fixes"].extend(state["current_fixes"])
-
-        if state["current_success"]:
-            state["what_worked"].extend(state["current_fixes"])
-        else:
-            state["what_failed"].append(f"{state['current_strategy']}: {error_message}")
-            state["previous_errors"].append(error_message)
-
-            # Extract error patterns
-            if error_message and error_message not in state["error_patterns"]:
-                state["error_patterns"].append(error_message)
-
-        # Update strategy effectiveness
-        if state["current_strategy"] not in state["strategy_effectiveness"]:
-            state["strategy_effectiveness"][state["current_strategy"]] = 0
-        if state["current_success"]:
-            state["strategy_effectiveness"][state["current_strategy"]] += 1
-
-        log_msg = f"📊 Updated context: {len(state['current_notebook'].attempt_history)} attempts recorded"
-        state["processing_log"].append(log_msg)
-        print(log_msg)
-
-        return state
-
-    def _evaluate_progress(self, state: IterativeFixingState) -> IterativeFixingState:
-        """Evaluate progress and determine next action."""
-        state["current_step"] = "evaluate_progress"
-
-        if state["current_success"]:
-            state["should_continue_notebook"] = False
-            log_msg = f"🎉 Notebook fixed after {state['attempt_number']} attempts!"
-        elif state["attempt_number"] >= self.max_attempts:
-            state["should_continue_notebook"] = False
-            log_msg = f"💔 Max attempts ({self.max_attempts}) reached"
-        else:
-            state["should_continue_notebook"] = True
-            log_msg = f"🔄 Continuing with attempt {state['attempt_number'] + 1} using accumulated context"
-
-        state["processing_log"].append(log_msg)
-        print(log_msg)
-
-        return state
-
-    def _decide_retry_with_context(self, state: IterativeFixingState) -> str:
-        """Critical decision point: retry with context, succeed, or exhaust attempts."""
-        decision = ""
-        if state["current_success"]:
-            decision = "success"
-        elif state["should_continue_notebook"]:
-            decision = "retry"  # This loops back to analyze_with_context with ALL accumulated context
-        else:
-            decision = "exhausted"
-
-        # Debug logging
-        debug_msg = (
-            f"🔄 Retry decision: {decision} "
-            f"(attempt {state['attempt_number']}/{self.max_attempts}, "
-            f"success: {state['current_success']}, "
-            f"continue: {state['should_continue_notebook']})"
-        )
-        state["processing_log"].append(debug_msg)
-        print(debug_msg)
-
-        return decision
-
-    def _finalize_notebook(self, state: IterativeFixingState) -> IterativeFixingState:
-        """Finalize the current notebook by handling working copy."""
-        state["current_step"] = "finalize_notebook"
-
-        if not state["current_notebook"]:
-            return state
-
-        working_notebook_path = state["current_notebook"].notebook_path
-        original_notebook_path = state.get("original_notebook_path", "")
-
+    def _run(self, directory_path: str) -> str:
+        """List directory contents."""
         try:
-            if state["current_success"]:
-                # Success: Keep both original and fixed copy for inspection
-                log_msg = f"✅ Success! Fixed copy available for inspection: {working_notebook_path}"
-                state["processing_log"].append(log_msg)
-                print(log_msg)
-                log_msg = f"📄 Original notebook preserved: {original_notebook_path}"
-                state["processing_log"].append(log_msg)
-                print(log_msg)
+            import os
 
-                state["success_count"] += 1
-            else:
-                # Failure: Keep working copy for inspection, preserve original
-                log_msg = f"📄 Failed working copy preserved for inspection: {working_notebook_path}"
-                state["processing_log"].append(log_msg)
-                print(log_msg)
-
-                # Restore original path to the notebook for reference
-                if original_notebook_path:
-                    state["current_notebook"].notebook_path = original_notebook_path
-                    log_msg = (
-                        f"📄 Original notebook preserved: {original_notebook_path}"
-                    )
-                    state["processing_log"].append(log_msg)
-                    print(log_msg)
-
-                state["failure_count"] += 1
-
+            contents = os.listdir(directory_path)
+            return f"Directory contents of {directory_path}:\n" + "\n".join(contents)
         except Exception as e:
-            error_msg = f"❌ Error finalizing notebook: {e}"
-            state["processing_log"].append(error_msg)
-            print(error_msg)
-            state["failure_count"] += 1
+            return f"❌ Failed to read directory: {str(e)}"
 
-        # Move to next notebook
-        state["current_notebook_index"] += 1
 
-        return state
+class RAGSearchTool(BaseTool):
+    """Tool for searching the atoti documentation vectordb."""
 
-    def _complete_processing(self, state: IterativeFixingState) -> IterativeFixingState:
-        """Complete processing with comprehensive summary."""
-        state["current_step"] = "complete"
-
-        summary = f"""
-        🏁 Contextual Notebook Fixing Complete!
-        
-        📊 Results:
-        - Successfully fixed: {state["success_count"]} notebooks
-        - Failed to fix: {state["failure_count"]} notebooks  
-        - Total attempts made: {state["total_attempts"]}
-        - Average attempts per notebook: {state["total_attempts"] / len(state["failed_notebooks"]):.1f}
-        
-        🧠 Strategy Effectiveness:
-        {json.dumps(state["strategy_effectiveness"], indent=2)}
-        
-        🔍 Common Error Patterns:
-        {"; ".join(state["common_patterns"])}
-        """
-
-        state["processing_log"].append(summary)
-        print(summary)
-
-        return state
-
-    @(
-        observe(name="fix_with_context_accumulation")
-        if LANGFUSE_AVAILABLE
-        else lambda x: x
+    name: str = "rag_search"
+    description: str = (
+        "Search the atoti documentation using RAG to find relevant information."
     )
-    async def fix_with_context_accumulation(
-        self, failed_notebooks: List[NotebookFailure]
-    ) -> Dict[str, Any]:
-        """Main method to fix notebooks with full context accumulation."""
 
-        # Create LangFuse trace for the entire fixing session
-        session_span = None
-        if LANGFUSE_AVAILABLE and self.langfuse:
-            try:
-                session_span = self.langfuse.start_as_current_span(
-                    name="notebook_fixing_session",
-                    metadata={
-                        "session_id": self.session_id,
-                        "total_notebooks": len(failed_notebooks),
-                        "max_attempts_per_notebook": self.max_attempts,
-                        "notebook_paths": [
-                            nb.notebook_path for nb in failed_notebooks[:5]
-                        ],  # First 5 for brevity
-                    },
-                )
-            except Exception as e:
-                print(f"⚠️  LangFuse session span creation failed: {e}")
+    def __init__(
+        self,
+        vectordb_path: str = "/Users/aya/Desktop/atoti/atoti_docs_vectordb",
+        **kwargs,
+    ):
+        super().__init__(**kwargs)
+        self._vectordb_path = vectordb_path
+        self._vectordb = None
+        self._embeddings = None
+        self._initialize_rag()
 
-        initial_state = IterativeFixingState(
-            failed_notebooks=failed_notebooks.copy(),
-            current_notebook=None,
-            current_notebook_index=0,
-            notebook_content="",
-            original_content_backup="",
-            attempt_number=0,
-            max_attempts=self.max_attempts,
-            previous_errors=[],
-            previous_fixes=[],
-            previous_strategies=[],
-            what_worked=[],
-            what_failed=[],
-            error_patterns=[],
-            current_error_analysis="",
-            current_strategy="",
-            current_fixes=[],
-            current_test_output="",
-            current_success=False,
-            accumulated_knowledge="",
-            strategy_effectiveness={},
-            common_patterns=[],
-            current_step="",
-            should_continue_notebook=True,
-            should_continue_processing=True,
-            success_count=0,
-            failure_count=0,
-            total_attempts=0,
-            processing_log=[],
-            original_notebook_path="",
-        )
+    def _initialize_rag(self):
+        """Initialize the RAG system with existing vectordb."""
+        try:
+            self._embeddings = OllamaEmbeddings(model="mxbai-embed-large")
+            self._vectordb = Chroma(
+                persist_directory=self._vectordb_path,
+                embedding_function=self._embeddings,
+            )
+            print(f"✅ RAG system initialized with vectordb at {self._vectordb_path}")
+        except Exception as e:
+            print(f"❌ Failed to initialize RAG: {e}")
 
-        # Execute the contextual workflow with recursion limit configuration
-        config = {"recursion_limit": 100}
+    def _run(self, query: str, k: int = 5) -> str:
+        """Search the vectordb for relevant documentation."""
+        if not self._vectordb:
+            return "❌ RAG system not initialized"
 
         try:
-            final_state = await self.graph.ainvoke(initial_state, config)
+            docs = self._vectordb.similarity_search(query, k=k)
+            if not docs:
+                return "❌ No relevant documentation found"
 
-            # Update LangFuse with final results
-            if session_span:
-                try:
-                    self.langfuse.update_current_span(
-                        output={
-                            "success_count": final_state["success_count"],
-                            "failure_count": final_state["failure_count"],
-                            "total_attempts": final_state["total_attempts"],
-                            "success_rate": final_state["success_count"]
-                            / len(failed_notebooks)
-                            if failed_notebooks
-                            else 0,
-                            "average_attempts": final_state["total_attempts"]
-                            / len(failed_notebooks)
-                            if failed_notebooks
-                            else 0,
-                            "strategy_effectiveness": final_state[
-                                "strategy_effectiveness"
-                            ],
-                            "accumulated_knowledge_length": len(
-                                final_state["accumulated_knowledge"]
-                            ),
-                        }
-                    )
-                except Exception as e:
-                    print(f"⚠️  LangFuse session span update failed: {e}")
+            context = "\n\n".join(
+                [f"Document {i + 1}:\n{doc.page_content}" for i, doc in enumerate(docs)]
+            )
+
+            return f"📚 Found {len(docs)} relevant documents:\n\n{context}"
+        except Exception as e:
+            return f"❌ RAG search failed: {e}"
+
+
+class NotebookFixerCrew:
+    """CrewAI-based notebook fixing system with RAG and iterative improvement."""
+
+    def __init__(
+        self, vectordb_path: str = "/Users/aya/Desktop/atoti/atoti_docs_vectordb"
+    ):
+        self.vectordb_path = vectordb_path
+        self.llm = None
+        self.crew = None
+        self.tools = []
+        self._initialize_llm()
+        self._initialize_tools()
+        self._create_agents()
+        # Tasks and crew will be created in fix_notebook method with specific notebook path
+
+    def _initialize_llm(self):
+        """Initialize Ollama Devstral model."""
+        try:
+            self.llm = ChatOllama(
+                model="ollama/devstral:latest",  # Use ollama/ prefix for LiteLLM compatibility
+                temperature=0.1,
+                base_url="http://localhost:11434",
+            )
+            print("✅ Devstral model initialized")
+
+            # Test the LLM connection
+            try:
+                test_response = self.llm.invoke("Hello, are you working?")
+                print(
+                    f"🔗 LLM connection test successful: {test_response.content[:50]}..."
+                )
+            except Exception as test_e:
+                print(f"⚠️ LLM connection test failed: {test_e}")
 
         except Exception as e:
-            # Log error to LangFuse
-            if session_span:
-                try:
-                    self.langfuse.update_current_span(
-                        output={"error": str(e), "success": False}
-                    )
-                except Exception as e2:
-                    print(f"⚠️  LangFuse error logging failed: {e2}")
-            raise
+            print(f"❌ Failed to initialize Devstral: {e}")
+            # Fallback to mistral if devstral is not available
+            try:
+                self.llm = ChatOllama(
+                    model="ollama/mistral:latest",  # Use ollama/ prefix for LiteLLM compatibility
+                    temperature=0.1,
+                    base_url="http://localhost:11434",
+                )
+                print("✅ Fallback to Mistral model")
 
-        return {
-            "success_count": final_state["success_count"],
-            "failure_count": final_state["failure_count"],
-            "total_attempts": final_state["total_attempts"],
-            "strategy_effectiveness": final_state["strategy_effectiveness"],
-            "processing_log": final_state["processing_log"],
-            "accumulated_knowledge": final_state["accumulated_knowledge"],
+                # Test the fallback LLM connection
+                try:
+                    test_response = self.llm.invoke("Hello, are you working?")
+                    print(
+                        f"🔗 Fallback LLM connection test successful: {test_response.content[:50]}..."
+                    )
+                except Exception as test_e:
+                    print(f"⚠️ Fallback LLM connection test failed: {test_e}")
+
+            except Exception as e2:
+                print(f"❌ Failed to initialize any Ollama model: {e2}")
+
+    def _initialize_tools(self):
+        """Initialize all tools for the agents."""
+        self.tools = [
+            NotebookExecutionTool(),
+            NotebookEditTool(),
+            RAGSearchTool(self.vectordb_path),
+            FileReadTool(),
+            DirectoryReadTool(),
+        ]
+        print("✅ Tools initialized")
+
+    def _create_agents(self):
+        """Create specialized agents for the notebook fixing workflow."""
+
+        # Create individual tool instances for each agent to avoid conflicts
+        execution_tool = NotebookExecutionTool()
+        edit_tool = NotebookEditTool()
+        rag_tool = RAGSearchTool(self.vectordb_path)
+        file_read_tool = FileReadTool()
+
+        self.analyzer_agent = Agent(
+            role="Notebook Error Analyzer",
+            goal="Analyze notebook execution errors and identify root causes",
+            backstory="""You are an expert Python developer specializing in Jupyter notebooks and atoti.
+            You can analyze execution errors, understand stack traces, and identify the specific issues
+            that need to be fixed. You use RAG to search documentation for solutions.
+            
+            IMPORTANT: You focus ONLY on notebook files and atoti documentation. You do NOT read
+            atoti source code files, library internals, or other Python modules. Your expertise
+            is in understanding notebook execution and finding solutions in the atoti documentation.""",
+            tools=[execution_tool, rag_tool, file_read_tool],
+            llm=self.llm,
+            verbose=True,
+            allow_delegation=False,
+        )
+
+        self.fixer_agent = Agent(
+            role="Code Fixer",
+            goal="Execute the fix recommended by the analyzer by editing the correct cell and confirming the save",
+            backstory="""You are a precise code editor focused on implementing fixes that have already been analyzed.
+            Your job is straightforward execution:
+            - Take the fix recommendations from the analyzer
+            - Implement the recommended fix using notebook_edit tool
+            - Verify the notebook was properly saved by reading it back
+            
+            You don't need to research or analyze - the analyzer has already determined what needs to be fixed.
+            Your expertise is in precise execution and ensuring edits are applied correctly.
+            
+            IMPORTANT: You work ONLY with notebook files. You do NOT read atoti source code files, 
+            library internals, or other Python modules.
+            
+            AVAILABLE TOOLS:
+            - notebook_edit: Edit a specific cell in a Jupyter notebook using cell_id
+            - file_read: Read the contents of files to verify changes
+            
+            You MUST use these tools to complete your tasks. Do not provide manual instructions.""",
+            tools=[edit_tool, file_read_tool],
+            llm=self.llm,
+            verbose=True,
+            allow_delegation=False,
+        )
+
+        self.validator_agent = Agent(
+            role="Solution Validator",
+            goal="Test fixes and ensure they work correctly",
+            backstory="""You are a QA engineer who validates that fixes actually resolve the issues.
+            You run tests, check outputs, and ensure the notebook executes successfully from start
+            to finish without errors.
+            
+            IMPORTANT: You focus ONLY on notebook execution and validation. You do NOT read
+            atoti source code files, library internals, or other Python modules. Your role is
+            to validate notebook execution and identify any remaining errors.""",
+            tools=[execution_tool, file_read_tool],
+            llm=self.llm,
+            verbose=True,
+            allow_delegation=False,
+        )
+
+        print("✅ Agents created")
+
+        # Debug: Print tool information
+        print(f"🔧 Fixer agent tools: {[tool.name for tool in self.fixer_agent.tools]}")
+        print(
+            f"🔧 Analyzer agent tools: {[tool.name for tool in self.analyzer_agent.tools]}"
+        )
+        print(
+            f"🔧 Validator agent tools: {[tool.name for tool in self.validator_agent.tools]}"
+        )
+
+    def _create_tasks(self, notebook_path: str):
+        """Create tasks for the notebook fixing workflow with specific notebook path."""
+
+        self.analysis_task = Task(
+            description=f"""Analyze the notebook and provide a fix recommendation.
+
+            NOTEBOOK PATH: {notebook_path}
+            
+            YOUR ROLE: You are an ANALYZER ONLY. You do NOT edit files. You only analyze and recommend.
+            
+            STEP 1 - EXECUTE: Execute the notebook using notebook_execution tool with notebook_path: {notebook_path}
+            STEP 2 - READ NOTEBOOK: Read the notebook file using file_read tool with file_path: {notebook_path}
+            STEP 3 - SEARCH DOCS: Use RAG search tool to find relevant atoti documentation for any errors found
+            STEP 4 - PROVIDE RECOMMENDATION: Output your analysis in the required format below
+            
+            CRITICAL PATH RESTRICTIONS:
+            - ALWAYS use the exact path provided: {notebook_path}
+            - Do NOT construct your own paths or use relative paths
+            - Do NOT read any files other than: {notebook_path}
+            - Do NOT attempt to edit any files - you are an analyzer only
+            
+            OUTPUT REQUIREMENTS - Provide EXACTLY this format:
+            CELL_ID: [cell_id] (the exact cell ID from the notebook)
+            FIXED_CODE: 
+            ```python
+            [exact corrected code for the cell]
+            ```
+            
+            ANALYSIS PROCESS:
+            - Focus on the FIRST ERROR found - this is usually the root cause that triggers cascading failures
+            - Identify which code cell contains the error by its unique cell ID
+            - Based on atoti documentation, write the corrected version of that cell's code
+            - Provide the complete corrected cell content, not just the changed line
+            
+            When reading the notebook file, look for code cells and their IDs like:
+            "cell_type": "code",
+            "id": "abc12345-1234-1234-1234-123456789abc"
+            
+            Use the exact cell ID in your output.
+            
+            IMPORTANT REMINDERS:
+            - You ANALYZE and RECOMMEND only
+            - The CodeFixer will implement your recommendation
+            - Use ONLY the provided path: {notebook_path}
+            - Output must include CELL_ID and FIXED_CODE in the exact format above
+            """,
+            agent=self.analyzer_agent,
+            expected_output="CELL_ID and FIXED_CODE in the specified format for direct implementation",
+        )
+
+        self.fixing_task = Task(
+            description=f"""Execute the fix provided by the analyzer.
+
+            NOTEBOOK PATH: {notebook_path}
+            
+            STEP 1 - PARSE ANALYZER OUTPUT: Extract the CELL_ID and FIXED_CODE from the analyzer's output
+            STEP 2 - IMPLEMENT FIX: Use notebook_edit tool with notebook_path: {notebook_path}, cell_id and new_content from analyzer
+            STEP 3 - VERIFY SAVE: Use file_read tool with file_path: {notebook_path} to confirm the notebook was properly saved
+            
+            IMPORTANT FILE RESTRICTIONS:
+            - ONLY read the target notebook file: {notebook_path}
+            - Do NOT read atoti source files, library code, or other Python modules
+            - Focus purely on executing the exact fix provided by the analyzer
+            
+            EXECUTION PRINCIPLES:
+            - Look for "CELL_ID: [cell_id]" in the analyzer output
+            - Look for "FIXED_CODE:" followed by a python code block in the analyzer output
+            - Use notebook_edit with the exact cell_id and code content provided
+            - Confirm the file was saved correctly by reading it back
+            
+            EXAMPLE WORKFLOW:
+            1. Parse analyzer output to get:
+               cell_id="[the-actual-cell-id-from-analyzer]" 
+               new_content="import pandas as pd\\nimport atoti as tt\\n\\nsession = tt.Session.connect()"
+            2. notebook_edit(notebook_path="{notebook_path}", 
+               cell_id="[the-actual-cell-id-from-analyzer]", 
+               new_content="[exact code from analyzer]")
+            3. file_read(file_path="{notebook_path}") → Verify the change was saved
+            
+            CRITICAL: 
+            - Use ONLY the notebook path: {notebook_path}
+            - Execute the exact fix from analyzer and confirm the notebook was saved correctly.
+            """,
+            agent=self.fixer_agent,
+            expected_output="Fix implemented exactly as provided by analyzer and notebook save confirmed",
+        )
+
+        self.validation_task = Task(
+            description=f"""Validate the fix and check for any remaining errors.
+
+            NOTEBOOK PATH: {notebook_path}
+            
+            STEP 1 - EXECUTE: Run the notebook using notebook_execution tool with notebook_path: {notebook_path}
+            STEP 2 - READ NOTEBOOK: Read the notebook file using file_read tool with file_path: {notebook_path} to verify current state
+            STEP 3 - ANALYZE RESULTS: 
+                - If NO errors: Report complete success
+                - If NEW errors appear: Provide detailed analysis of the NEXT error found
+                - Report any remaining issues that need another iteration
+            
+            IMPORTANT FILE RESTRICTIONS:
+            - ONLY read the target notebook file: {notebook_path}
+            - Do NOT read atoti source files, library code, or other Python modules
+            - Focus on notebook validation and execution results only
+            
+            CRITICAL ERROR CASCADE DETECTION:
+            After fixing the first error, NEW errors may become visible that were hidden before.
+            If you find any remaining errors, provide:
+            - Exact error message and location of the NEXT error
+            - Whether this is a new error revealed after the fix
+            - Detailed analysis for the next iteration
+            
+            CRITICAL: 
+            - Use ONLY the notebook path: {notebook_path}
+            - Either confirm complete success OR identify the next error for iteration.
+            """,
+            agent=self.validator_agent,
+            expected_output="Complete success confirmation OR detailed next error analysis for iteration",
+        )
+
+        print("✅ Tasks created")
+
+    def _create_crew(self):
+        """Create the CrewAI crew with sequential process."""
+        self.crew = Crew(
+            agents=[self.analyzer_agent, self.fixer_agent, self.validator_agent],
+            tasks=[self.analysis_task, self.fixing_task, self.validation_task],
+            process=Process.sequential,
+            verbose=True,
+        )
+        print("✅ Crew created")
+
+    def fix_notebook(
+        self, notebook_path: str, max_iterations: int = 3
+    ) -> Dict[str, Any]:
+        """
+        Fix a notebook with iterative improvement until it works or max iterations reached.
+
+        Args:
+            notebook_path: Path to the notebook to fix
+            max_iterations: Maximum number of fix-test cycles
+
+        Returns:
+            Dictionary with results including success status and logs
+        """
+        if not CREWAI_AVAILABLE or not RAG_AVAILABLE:
+            return {"error": "Required dependencies not available"}
+
+        print(f"🚀 Starting notebook fixing process for: {notebook_path}")
+
+        # Create tasks and crew with the specific notebook path
+        self._create_tasks(notebook_path)
+        self._create_crew()
+
+        results = {
+            "notebook_path": notebook_path,
+            "success": False,
+            "iterations": 0,
+            "logs": [],
+            "final_status": "",
         }
 
+        for iteration in range(max_iterations):
+            results["iterations"] = iteration + 1
+            print(f"\n🔄 Iteration {iteration + 1}/{max_iterations}")
 
-# JUnit parsing and main function (similar to before but simpler for focus on context)
-def parse_junit_xml(xml_file_path: str) -> List[NotebookFailure]:
-    """Parse JUnit XML and create NotebookFailure objects with context tracking."""
-    failed_notebooks = []
+            try:
+                # Create a backup of the notebook
+                backup_path = f"{notebook_path}.backup.{iteration}"
+                subprocess.run(["cp", notebook_path, backup_path])
 
-    try:
-        tree = ET.parse(xml_file_path)
-        root = tree.getroot()
+                # Run the crew to analyze and fix
+                crew_result = self.crew.kickoff()
 
-        print(f"📊 Parsing JUnit XML: {xml_file_path}")
-
-        for testcase in root.findall(".//testcase"):
-            failure = testcase.find("failure")
-            error = testcase.find("error")
-
-            if failure is not None or error is not None:
-                classname = testcase.get("classname", "")
-                test_name = testcase.get("name", "")
-                execution_time = float(testcase.get("time", 0))
-
-                print(
-                    f"🔍 Found failed test - classname: {classname}, test_name: {test_name}"
+                results["logs"].append(
+                    {
+                        "iteration": iteration + 1,
+                        "timestamp": datetime.now().isoformat(),
+                        "result": str(crew_result),
+                    }
                 )
 
-                # Convert classname to notebook path
-                # Example: "02-technical-guides.multidimensional-analysis.main.ipynb"
-                # becomes "02-technical-guides/multidimensional-analysis/main.ipynb"
+                # Check validation result from our tool instead of external jupyter
+                execution_tool = NotebookExecutionTool()
+                validation_result = execution_tool._run(notebook_path=notebook_path)
 
-                if classname.endswith(".ipynb"):
-                    # Classname already includes the .ipynb extension
-                    # Split on dots, but keep .ipynb as part of the filename
-                    parts = classname.split(".")
-                    # The last part should be "ipynb", second to last should be filename
-                    if len(parts) >= 2 and parts[-1] == "ipynb":
-                        # Rejoin filename with extension
-                        filename = f"{parts[-2]}.ipynb"
-                        # Directory path is everything except the last two parts
-                        if len(parts) > 2:
-                            directory_path = "/".join(parts[:-2])
-                            notebook_path = f"{directory_path}/{filename}"
-                        else:
-                            notebook_path = filename
-                    else:
-                        # Fallback: just replace dots with slashes
-                        notebook_path = classname.replace(".", "/")
+                if "✅ SUCCESS" in validation_result:
+                    print(
+                        f"✅ Notebook fixed successfully in iteration {iteration + 1}"
+                    )
+                    results["success"] = True
+                    results["final_status"] = "Successfully fixed and validated"
+                    break
+                elif "❌ EXECUTION FAILED" in validation_result:
+                    print(f"🔄 Error found in iteration {iteration + 1}, continuing...")
+                    results["logs"][-1]["execution_error"] = validation_result
+                    # Continue to next iteration to fix the newly discovered error
                 else:
-                    # Classname doesn't include .ipynb, need to construct path
-                    if test_name.endswith(".ipynb"):
-                        # Use test_name as filename
-                        notebook_filename = test_name
-                        # Extract directory from classname
-                        path_parts = classname.split(".")
-                        if len(path_parts) > 1:
-                            # Use all parts as directory path
-                            directory_path = "/".join(path_parts)
-                            notebook_path = f"{directory_path}/{notebook_filename}"
-                        else:
-                            notebook_path = notebook_filename
-                    else:
-                        # Neither classname nor test_name has .ipynb, add it
-                        notebook_path = classname.replace(".", "/") + ".ipynb"
+                    print(f"❌ Iteration {iteration + 1} had unexpected result...")
+                    results["logs"][-1]["execution_error"] = validation_result
 
-                # Resolve full path
-                workspace_root = Path(__file__).parent.parent
-                full_notebook_path = workspace_root / notebook_path
-
-                print(f"🔍 Resolving path: {notebook_path} -> {full_notebook_path}")
-
-                # Try alternative path resolution if file doesn't exist
-                if not full_notebook_path.exists():
-                    print(f"⚠️  Notebook not found at {full_notebook_path}")
-
-                    # Try using just the test_name as filename in workspace root
-                    alt_path = workspace_root / test_name
-                    if alt_path.exists():
-                        full_notebook_path = alt_path
-                        print(f"✅ Found alternative path: {alt_path}")
-                    else:
-                        # Try searching for the notebook by name
-                        notebook_name = (
-                            test_name
-                            if test_name.endswith(".ipynb")
-                            else f"{test_name}.ipynb"
-                        )
-                        search_results = list(workspace_root.rglob(notebook_name))
-                        if search_results:
-                            full_notebook_path = search_results[0]
-                            print(f"✅ Found by search: {full_notebook_path}")
-                        else:
-                            print(f"❌ Could not locate notebook: {notebook_name}")
-                            continue
-
-                # Extract failure details
-                if failure is not None:
-                    failure_type = "test_failure"
-                    failure_message = failure.get("message", "")
-                    error_output = failure.text or ""
-                elif error is not None:
-                    failure_type = "test_error"
-                    failure_message = error.get("message", "")
-                    error_output = error.text or ""
-
-                failed_notebook = NotebookFailure(
-                    notebook_path=str(full_notebook_path),
-                    classname=classname,
-                    test_name=test_name,
-                    failure_type=failure_type,
-                    original_failure_message=failure_message,
-                    original_error_output=error_output,
-                    execution_time=execution_time,
+            except Exception as e:
+                error_msg = f"❌ Error in iteration {iteration + 1}: {str(e)}"
+                print(error_msg)
+                results["logs"].append(
+                    {
+                        "iteration": iteration + 1,
+                        "error": error_msg,
+                        "timestamp": datetime.now().isoformat(),
+                    }
                 )
 
-                failed_notebooks.append(failed_notebook)
-                print(f"✅ Added failed notebook: {full_notebook_path}")
+        if not results["success"]:
+            results["final_status"] = f"Failed to fix after {max_iterations} iterations"
 
-    except Exception as e:
-        print(f"❌ Error parsing JUnit XML {xml_file_path}: {e}")
-        import traceback
+        # Save results to file
+        results_path = f"{notebook_path}.fix_results.json"
+        with open(results_path, "w") as f:
+            json.dump(results, f, indent=2)
 
-        traceback.print_exc()
-
-    print(f"📊 Total failed notebooks found: {len(failed_notebooks)}")
-    return failed_notebooks
-
-
-def get_latest_junit_report() -> Optional[str]:
-    """Find the latest JUnit XML report in the reports directory."""
-    reports_dir = Path("reports")
-
-    print(f"🔍 Looking for JUnit reports in: {reports_dir.absolute()}")
-
-    if not reports_dir.exists():
-        print(f"❌ Reports directory does not exist: {reports_dir.absolute()}")
-        return None
-
-    # Look for files matching the pattern junit-*.xml
-    junit_files = list(reports_dir.glob("junit-*.xml"))
-
-    print(f"📊 Found {len(junit_files)} JUnit XML files:")
-    for file in junit_files:
-        print(f"  - {file} (modified: {datetime.fromtimestamp(file.stat().st_mtime)})")
-
-    if not junit_files:
-        print("❌ No JUnit XML files found matching pattern 'junit-*.xml'")
-        return None
-
-    # Return the most recent file
-    latest_file = max(junit_files, key=lambda f: f.stat().st_mtime)
-    print(f"✅ Using latest JUnit report: {latest_file}")
-
-    return str(latest_file)
+        print(f"\n📊 Results saved to: {results_path}")
+        return results
 
 
-async def main():
-    """Main entry point for contextual notebook fixing."""
-    parser = argparse.ArgumentParser(
-        description="Fix notebooks with context accumulation across retry attempts"
-    )
-    parser.add_argument("--junit-xml", help="Path to JUnit XML report file")
-    parser.add_argument(
-        "--max-attempts", type=int, default=5, help="Maximum attempts per notebook"
-    )
-    parser.add_argument(
-        "--run-final-test", action="store_true", help="Run final test after fixing"
-    )
-
-    args = parser.parse_args()
-
-    # Find JUnit XML file
-    if args.junit_xml:
-        junit_file = args.junit_xml
-        if not Path(junit_file).exists():
-            print(f"❌ Specified JUnit XML file does not exist: {junit_file}")
-            sys.exit(1)
-    else:
-        junit_file = get_latest_junit_report()
-        if not junit_file:
-            print(
-                "❌ No JUnit XML report found. Run 'make test' first to generate reports."
-            )
-            print("💡 Expected to find files matching pattern: reports/junit-*.xml")
-            sys.exit(1)
-
-    print(f"📊 Using JUnit report: {junit_file}")
-
-    # Validate the JUnit XML file
-    try:
-        tree = ET.parse(junit_file)
-        root = tree.getroot()
-        total_tests = len(root.findall(".//testcase"))
-        print(f"📊 JUnit XML contains {total_tests} test cases")
-    except Exception as e:
-        print(f"❌ Invalid JUnit XML file: {e}")
-        sys.exit(1)
-
-    # Parse failed notebooks
-    failed_notebooks = parse_junit_xml(junit_file)
-
-    if not failed_notebooks:
-        print("🎉 No failing notebooks found! All tests are passing.")
+def main():
+    """Main function to demonstrate the notebook fixing system."""
+    if not CREWAI_AVAILABLE or not RAG_AVAILABLE:
+        print("❌ Missing dependencies. Please install:")
+        print("uv add crewai langchain-ollama langchain-chroma chromadb")
         return
 
-    print(f"📋 Found {len(failed_notebooks)} failing notebooks:")
-    for notebook in failed_notebooks:
-        print(f"  - {Path(notebook.notebook_path)}")
+    # Initialize the notebook fixer crew
+    fixer = NotebookFixerCrew()
 
-    # Initialize contextual fixer
-    print(
-        f"🧠 Initializing contextual fixer (max {args.max_attempts} attempts per notebook)..."
-    )
-    fixer = ContextualNotebookFixer(max_attempts=args.max_attempts)
+    # Fix the specified notebook
+    notebook_path = "/Users/aya/Desktop/atoti/02-technical-guides/multidimensional-analysis/main.ipynb"
 
-    # Execute contextual fixing
-    results = await fixer.fix_with_context_accumulation(failed_notebooks)
+    print(f"🎯 Fixing notebook: {notebook_path}")
+    results = fixer.fix_notebook(notebook_path, max_iterations=3)
 
-    # Optional final test
-    if args.run_final_test:
-        print("🧪 Running final validation...")
-        try:
-            result = subprocess.run(["make", "test"], capture_output=True, text=True)
-            print(
-                "✅ All tests pass!"
-                if result.returncode == 0
-                else "❌ Some tests still failing"
-            )
-        except Exception as e:
-            print(f"❌ Final test failed: {e}")
+    # Print summary
+    print("\n" + "=" * 60)
+    print("📋 FIXING SUMMARY")
+    print("=" * 60)
+    print(f"Notebook: {results['notebook_path']}")
+    print(f"Success: {results['success']}")
+    print(f"Iterations: {results['iterations']}")
+    print(f"Status: {results['final_status']}")
 
-    # Save comprehensive log
-    log_file = f"contextual_fixing_log_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
-    with open(log_file, "w") as f:
-        f.write("\n".join(results["processing_log"]))
-        f.write(f"\n\nFinal Knowledge Base:\n{results['accumulated_knowledge']}")
+    if results["success"]:
+        print("\n🎉 Notebook has been successfully fixed!")
+    else:
+        print("\n😞 Notebook fixing failed. Check the logs for details.")
 
-    print(f"📝 Comprehensive log saved to: {log_file}")
-    print(
-        f"🎯 Success rate: {results['success_count']}/{results['success_count'] + results['failure_count']}"
-    )
-
-    # Summary of results
-    if results["success_count"] > 0:
-        print(f"✅ Successfully fixed {results['success_count']} notebooks")
-    if results["failure_count"] > 0:
-        print(
-            f"❌ Failed to fix {results['failure_count']} notebooks after {args.max_attempts} attempts each"
-        )
-
-    print(f"📊 Total attempts made: {results['total_attempts']}")
-    if results["total_attempts"] > 0:
-        avg_attempts = results["total_attempts"] / len(failed_notebooks)
-        print(f"📈 Average attempts per notebook: {avg_attempts:.1f}")
+    return results
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()

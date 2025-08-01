@@ -138,64 +138,268 @@ class NotebookExecutionTool(BaseTool):
             return f"❌ Execution error: {str(e)}"
 
 
+class NotebookAnalysisTool(BaseTool):
+    """Tool for analyzing notebook structure and identifying problematic cells based on execution errors."""
+
+    name: str = "notebook_analysis"
+    description: str = (
+        "Analyze a Jupyter notebook to identify the problematic cell based on execution errors. "
+        "Takes execution_error_output (from notebook_execution tool) and notebook_path to identify "
+        "which specific cell is causing the error."
+    )
+
+    def _run(self, notebook_path: str, execution_error_output: str = None) -> str:
+        """Analyze notebook and identify problematic cell based on execution errors."""
+        try:
+            import nbformat
+
+            # Read the notebook using nbformat
+            with open(notebook_path, "r", encoding="utf-8") as f:
+                notebook = nbformat.read(f, as_version=4)
+
+            # Find all code cells
+            code_cells = []
+            cell_number = 1
+
+            for cell in notebook.cells:
+                if cell.cell_type == "code":
+                    code_cells.append(
+                        {
+                            "number": cell_number,
+                            "id": cell.get("id", "unknown"),
+                            "source": cell.source.strip(),
+                            "has_output": len(cell.get("outputs", [])) > 0,
+                            "execution_count": cell.get("execution_count"),
+                        }
+                    )
+                    cell_number += 1
+
+            if not code_cells:
+                return "❌ No code cells found in the notebook."
+
+            # If no execution error provided, just return cell structure
+            if not execution_error_output or "✅ SUCCESS" in execution_error_output:
+                result = (
+                    f"📋 Found {len(code_cells)} code cells (no errors detected):\n\n"
+                )
+                for cell_info in code_cells:
+                    source_preview = (
+                        cell_info["source"][:200] + "..."
+                        if len(cell_info["source"]) > 200
+                        else cell_info["source"]
+                    )
+                    result += f"Cell #{cell_info['number']}:\n```python\n{source_preview}\n```\n\n"
+                return result
+
+            # Parse execution error to identify the failing cell
+            error_analysis = self._parse_execution_error(execution_error_output)
+            failing_cell_number = self._identify_failing_cell(
+                error_analysis, code_cells
+            )
+
+            # Compile simple analysis report
+            result = "🔍 NOTEBOOK ERROR ANALYSIS\n"
+            result += "=" * 40 + "\n\n"
+
+            # Error summary
+            result += f"❌ FAILING CELL: #{failing_cell_number}\n"
+            result += f"🐛 ERROR TYPE: {error_analysis['error_type']}\n"
+            result += f"💬 ERROR MESSAGE: {error_analysis['error_message']}\n\n"
+
+            # Failing cell code
+            result += f"📝 PROBLEMATIC CODE (Cell #{failing_cell_number}):\n"
+            result += "```python\n"
+            result += code_cells[failing_cell_number - 1]["source"]
+            result += "\n```\n"
+
+            return result
+
+        except Exception as e:
+            return f"❌ Analysis failed: {str(e)}"
+
+    def _parse_execution_error(self, execution_output: str) -> dict:
+        """Parse execution error output to extract key information."""
+        error_info = {
+            "cell_content": "",
+            "error_message": "",
+            "error_type": "",
+            "full_traceback": [],
+        }
+
+        lines = execution_output.split("\n")
+        capturing_cell = False
+        capturing_error = False
+
+        for line in lines:
+            if "Cell content:" in line:
+                capturing_cell = True
+                continue
+            elif "=== ERROR MESSAGE ===" in line:
+                capturing_cell = False
+                capturing_error = True
+                continue
+
+            if capturing_cell and line.strip():
+                error_info["cell_content"] += line.strip() + "\n"
+            elif capturing_error:
+                error_info["full_traceback"].append(line.strip())
+                # Look for error type patterns
+                if ("Error:" in line or "Exception:" in line) and not error_info[
+                    "error_type"
+                ]:
+                    error_info["error_type"] = line.strip()
+                # Capture the most specific error message
+                if (
+                    line.strip()
+                    and not line.startswith("File ")
+                    and not line.startswith("  ")
+                ):
+                    if "Error:" in line or "Exception:" in line:
+                        error_info["error_message"] = line.strip()
+
+        # Fallback if we didn't get structured error info
+        if not error_info["error_message"] and error_info["full_traceback"]:
+            # Look for the last meaningful line in traceback
+            for line in reversed(error_info["full_traceback"]):
+                if line.strip() and ("Error" in line or "Exception" in line):
+                    error_info["error_message"] = line.strip()
+                    break
+
+        return error_info
+
+    def _identify_failing_cell(self, error_analysis: dict, code_cells: list) -> int:
+        """Identify which code cell number failed based on error content."""
+        cell_content = error_analysis["cell_content"].strip()
+
+        if not cell_content:
+            return 1  # Default to first cell if no content captured
+
+        # Look for exact or partial matches
+        best_match_score = 0
+        best_match_cell = 1
+
+        for i, cell in enumerate(code_cells):
+            cell_source = cell["source"].strip()
+
+            # Calculate match score
+            if cell_content in cell_source:
+                return i + 1  # Exact substring match
+            elif cell_source in cell_content:
+                return i + 1  # Cell is subset of error content
+            else:
+                # Calculate similarity by counting common lines
+                cell_lines = set(
+                    line.strip() for line in cell_source.split("\n") if line.strip()
+                )
+                error_lines = set(
+                    line.strip() for line in cell_content.split("\n") if line.strip()
+                )
+                common_lines = len(cell_lines.intersection(error_lines))
+
+                if common_lines > best_match_score:
+                    best_match_score = common_lines
+                    best_match_cell = i + 1
+
+        return best_match_cell
+
+
 class NotebookEditTool(BaseTool):
-    """Tool for editing notebook cells."""
+    """Tool for editing notebook cells using nbformat for robust cell handling."""
 
     name: str = "notebook_edit"
     description: str = (
-        "Edit a specific cell in a Jupyter notebook. Requires notebook_path (full file path), "
-        "cell_id (the unique cell identifier), and new_content (the new code for the cell). "
-        "Use cell_id to specify which cell to edit."
+        "Edit a notebook cell using analysis output from the analyzer agent. "
+        "Requires notebook_path and analysis_output (from analyzer agent). "
+        "Automatically extracts the failing cell number and recommended code from the analysis."
     )
 
-    def _run(self, notebook_path: str, cell_id: str, new_content: str) -> str:
-        """Edit a notebook cell with new content."""
+    def _run(self, notebook_path: str, analysis_output: str) -> str:
+        """Edit a notebook cell using analysis output to determine cell and code."""
         try:
-            import json
+            import nbformat
 
+            # Extract cell number from analysis output
+            cell_number = self._extract_failing_cell_from_analysis(analysis_output)
+            if cell_number is None:
+                # Provide more detailed error information
+                return f"❌ Could not extract failing cell number from analysis output. Analysis output preview: {analysis_output[:500]}..."
+
+            # Extract recommended code from analysis output
+            new_content = self._extract_fixed_code_from_analysis(analysis_output)
+            if new_content is None:
+                return f"❌ Could not extract FIXED_CODE from analysis output. Cell number found: {cell_number}. Analysis output preview: {analysis_output[:500]}..."
+
+            # Read the notebook using nbformat
             with open(notebook_path, "r", encoding="utf-8") as f:
-                notebook_data = json.load(f)
+                notebook = nbformat.read(f, as_version=4)
 
-            # Find the target cell by ID
-            target_cell = None
-            for cell in notebook_data.get("cells", []):
-                if cell.get("id") == cell_id:
-                    target_cell = cell
-                    break
+            # Find code cells only (skip markdown cells in numbering)
+            code_cells = [cell for cell in notebook.cells if cell.cell_type == "code"]
 
-            if target_cell is None:
-                return f"❌ Cell with ID '{cell_id}' not found in notebook."
+            if cell_number < 1 or cell_number > len(code_cells):
+                return f"❌ Cell number {cell_number} is out of range. Found {len(code_cells)} code cells."
 
-            if target_cell.get("cell_type") != "code":
-                return f"❌ Cell with ID '{cell_id}' is not a code cell (type: {target_cell.get('cell_type')})."
+            # Get the target cell (convert 1-based to 0-based indexing)
+            target_cell = code_cells[cell_number - 1]
 
             # Update the cell content
-            # Jupyter notebooks store source as a list of strings
-            if isinstance(new_content, str):
-                # Split into lines and add newlines except for the last line
-                lines = new_content.split("\n")
-                source_lines = []
-                for i, line in enumerate(lines):
-                    if i < len(lines) - 1:  # Not the last line
-                        source_lines.append(line + "\n")
-                    else:  # Last line
-                        source_lines.append(line)
-                target_cell["source"] = source_lines
-            else:
-                target_cell["source"] = [new_content]
+            target_cell.source = new_content
 
-            # Clear any previous outputs
-            target_cell["outputs"] = []
-            target_cell["execution_count"] = None
+            # Clear any previous outputs and execution count
+            target_cell.outputs = []
+            target_cell.execution_count = None
 
-            # Save the notebook back
+            # Save the notebook back using nbformat
             with open(notebook_path, "w", encoding="utf-8") as f:
-                json.dump(notebook_data, f, indent=1, ensure_ascii=False)
+                nbformat.write(notebook, f)
 
-            return f"✅ Successfully edited code cell with ID '{cell_id}'"
+            return f"✅ Successfully edited code cell #{cell_number} (ID: {target_cell.get('id', 'unknown')})"
 
         except Exception as e:
             return f"❌ Edit failed: {str(e)}"
+
+    def _extract_failing_cell_from_analysis(self, analysis_output: str) -> int:
+        """Extract the failing cell number from analyzer agent output."""
+        import re
+
+        # Look for "CELL_NUMBER: X" pattern from analyzer agent output
+        match = re.search(r"CELL_NUMBER:\s*(\d+)", analysis_output)
+        if match:
+            return int(match.group(1))
+
+        # Fallback: look for "FAILING CELL: #X" pattern from analysis tool output
+        match = re.search(r"❌ FAILING CELL: #(\d+)", analysis_output)
+        if match:
+            return int(match.group(1))
+
+        # Additional fallback: look for other Cell patterns
+        match = re.search(r"Cell #(\d+)", analysis_output)
+        if match:
+            return int(match.group(1))
+
+        return None
+
+    def _extract_fixed_code_from_analysis(self, analysis_output: str) -> str:
+        """Extract the FIXED_CODE from analyzer output."""
+        import re
+
+        # Look for FIXED_CODE: followed by code block
+        pattern = r"FIXED_CODE:\s*```python\s*(.*?)\s*```"
+        match = re.search(pattern, analysis_output, re.DOTALL)
+        if match:
+            return match.group(1).strip()
+
+        # Fallback: look for any code block after FIXED_CODE
+        pattern = r"FIXED_CODE:\s*(.*?)(?=\n\n|\n[A-Z]|$)"
+        match = re.search(pattern, analysis_output, re.DOTALL)
+        if match:
+            code = match.group(1).strip()
+            # Remove markdown code block markers if present
+            code = re.sub(r"^```python\s*", "", code)
+            code = re.sub(r"\s*```$", "", code)
+            return code.strip()
+
+        return None
 
 
 class FileReadTool(BaseTool):
@@ -240,7 +444,8 @@ class RAGSearchTool(BaseTool):
 
     name: str = "rag_search"
     description: str = (
-        "Search the atoti documentation using RAG to find relevant information."
+        "Search the atoti documentation using RAG to find relevant information. "
+        "Use 'query' parameter for the search text. Returns top 5 most relevant documents."
     )
 
     def __init__(
@@ -266,13 +471,14 @@ class RAGSearchTool(BaseTool):
         except Exception as e:
             print(f"❌ Failed to initialize RAG: {e}")
 
-    def _run(self, query: str, k: int = 5) -> str:
+    def _run(self, query: str) -> str:
         """Search the vectordb for relevant documentation."""
         if not self._vectordb:
             return "❌ RAG system not initialized"
 
         try:
-            docs = self._vectordb.similarity_search(query, k=k)
+            # Use fixed k=5 to avoid parameter validation issues
+            docs = self._vectordb.similarity_search(query, k=5)
             if not docs:
                 return "❌ No relevant documentation found"
 
@@ -346,6 +552,7 @@ class NotebookFixerCrew:
         """Initialize all tools for the agents."""
         self.tools = [
             NotebookExecutionTool(),
+            NotebookAnalysisTool(),
             NotebookEditTool(),
             RAGSearchTool(self.vectordb_path),
             FileReadTool(),
@@ -358,6 +565,7 @@ class NotebookFixerCrew:
 
         # Create individual tool instances for each agent to avoid conflicts
         execution_tool = NotebookExecutionTool()
+        analysis_tool = NotebookAnalysisTool()
         edit_tool = NotebookEditTool()
         rag_tool = RAGSearchTool(self.vectordb_path)
         file_read_tool = FileReadTool()
@@ -369,39 +577,42 @@ class NotebookFixerCrew:
             You can analyze execution errors, understand stack traces, and identify the specific issues
             that need to be fixed. You use RAG to search documentation for solutions.
             
+            CRITICAL ROLE RESTRICTIONS:
+            - You are an ANALYZER ONLY - you do NOT edit files or re-run notebooks
+            - You ONLY execute notebooks once to capture errors, then analyze those errors
+            - You do NOT update, modify, or re-execute notebooks after analysis
+            - Your job ends with providing a fix recommendation in the required format
+            - You work under manager supervision and can delegate to other agents when needed
+            
             IMPORTANT: You focus ONLY on notebook files and atoti documentation. You do NOT read
             atoti source code files, library internals, or other Python modules. Your expertise
             is in understanding notebook execution and finding solutions in the atoti documentation.""",
-            tools=[execution_tool, rag_tool, file_read_tool],
+            tools=[execution_tool, analysis_tool, rag_tool],
             llm=self.llm,
             verbose=True,
-            allow_delegation=False,
+            allow_delegation=True,
         )
 
         self.fixer_agent = Agent(
             role="Code Fixer",
             goal="Execute the fix recommended by the analyzer by editing the correct cell and confirming the save",
-            backstory="""You are a precise code editor focused on implementing fixes that have already been analyzed.
-            Your job is straightforward execution:
-            - Take the fix recommendations from the analyzer
-            - Implement the recommended fix using notebook_edit tool
-            - Verify the notebook was properly saved by reading it back
+            backstory="""You are a precise code editor focused ONLY on implementing fixes.
+            Your job is simple execution:
+            - Take the exact fix recommendations from the analyzer
+            - Edit the notebook using the notebook_edit tool
+            - Verify the save using the file_read tool
             
-            You don't need to research or analyze - the analyzer has already determined what needs to be fixed.
-            Your expertise is in precise execution and ensuring edits are applied correctly.
+            You do NOT analyze, research, or make decisions about what to fix.
+            The analyzer has already determined what needs to be fixed.
+            You simply execute the exact instructions provided.
+            You work under manager supervision and follow delegation instructions.
             
-            IMPORTANT: You work ONLY with notebook files. You do NOT read atoti source code files, 
-            library internals, or other Python modules.
-            
-            AVAILABLE TOOLS:
-            - notebook_edit: Edit a specific cell in a Jupyter notebook using cell_id
-            - file_read: Read the contents of files to verify changes
-            
-            You MUST use these tools to complete your tasks. Do not provide manual instructions.""",
+            CRITICAL: You work ONLY with notebook editing and file reading.
+            You do NOT use RAG search or do any analysis.""",
             tools=[edit_tool, file_read_tool],
             llm=self.llm,
             verbose=True,
-            allow_delegation=False,
+            allow_delegation=True,
         )
 
         self.validator_agent = Agent(
@@ -410,6 +621,7 @@ class NotebookFixerCrew:
             backstory="""You are a QA engineer who validates that fixes actually resolve the issues.
             You run tests, check outputs, and ensure the notebook executes successfully from start
             to finish without errors.
+            You work under manager supervision and can provide feedback to other agents when needed.
             
             IMPORTANT: You focus ONLY on notebook execution and validation. You do NOT read
             atoti source code files, library internals, or other Python modules. Your role is
@@ -417,7 +629,7 @@ class NotebookFixerCrew:
             tools=[execution_tool, file_read_tool],
             llm=self.llm,
             verbose=True,
-            allow_delegation=False,
+            allow_delegation=True,
         )
 
         print("✅ Agents created")
@@ -439,112 +651,86 @@ class NotebookFixerCrew:
 
             NOTEBOOK PATH: {notebook_path}
             
-            YOUR ROLE: You are an ANALYZER ONLY. You do NOT edit files. You only analyze and recommend.
+            TASK OVERVIEW: Analyze a failing Jupyter notebook to identify errors and provide fix recommendations.
+            This task should be completed by the Notebook Error Analyzer agent.
             
-            STEP 1 - EXECUTE: Execute the notebook using notebook_execution tool with notebook_path: {notebook_path}
-            STEP 2 - READ NOTEBOOK: Read the notebook file using file_read tool with file_path: {notebook_path}
-            STEP 3 - SEARCH DOCS: Use RAG search tool to find relevant atoti documentation for any errors found
-            STEP 4 - PROVIDE RECOMMENDATION: Output your analysis in the required format below
+            EXECUTION STEPS:
+            1. Execute the notebook to capture errors
+            2. Analyze the execution errors to identify the failing cell
+            3. Search documentation for solutions using RAG
+            4. Provide a structured fix recommendation
             
-            CRITICAL PATH RESTRICTIONS:
-            - ALWAYS use the exact path provided: {notebook_path}
-            - Do NOT construct your own paths or use relative paths
-            - Do NOT read any files other than: {notebook_path}
-            - Do NOT attempt to edit any files - you are an analyzer only
-            
-            OUTPUT REQUIREMENTS - Provide EXACTLY this format:
-            CELL_ID: [cell_id] (the exact cell ID from the notebook)
+            REQUIRED OUTPUT FORMAT:
+            CELL_NUMBER: [cell_number]
             FIXED_CODE: 
             ```python
             [exact corrected code for the cell]
             ```
             
-            ANALYSIS PROCESS:
-            - Focus on the FIRST ERROR found - this is usually the root cause that triggers cascading failures
-            - Identify which code cell contains the error by its unique cell ID
-            - Based on atoti documentation, write the corrected version of that cell's code
-            - Provide the complete corrected cell content, not just the changed line
-            
-            When reading the notebook file, look for code cells and their IDs like:
-            "cell_type": "code",
-            "id": "abc12345-1234-1234-1234-123456789abc"
-            
-            Use the exact cell ID in your output.
-            
-            IMPORTANT REMINDERS:
-            - You ANALYZE and RECOMMEND only
-            - The CodeFixer will implement your recommendation
-            - Use ONLY the provided path: {notebook_path}
-            - Output must include CELL_ID and FIXED_CODE in the exact format above
+            CONSTRAINTS:
+            - Use exact path: {notebook_path}
+            - Focus on the FIRST error found
+            - Provide complete cell content, not partial fixes
+            - Use varied RAG search strategies to find comprehensive solutions
             """,
             agent=self.analyzer_agent,
-            expected_output="CELL_ID and FIXED_CODE in the specified format for direct implementation",
+            expected_output="CELL_NUMBER and FIXED_CODE in the specified format for direct implementation",
         )
 
         self.fixing_task = Task(
-            description=f"""Execute the fix provided by the analyzer.
+            description=f"""Implement the fix recommended by the analyzer.
 
             NOTEBOOK PATH: {notebook_path}
             
-            STEP 1 - PARSE ANALYZER OUTPUT: Extract the CELL_ID and FIXED_CODE from the analyzer's output
-            STEP 2 - IMPLEMENT FIX: Use notebook_edit tool with notebook_path: {notebook_path}, cell_id and new_content from analyzer
-            STEP 3 - VERIFY SAVE: Use file_read tool with file_path: {notebook_path} to confirm the notebook was properly saved
+            TASK OVERVIEW: Apply the exact fix provided by the analysis task to the notebook.
+            This task should be completed by the Code Fixer agent.
             
-            IMPORTANT FILE RESTRICTIONS:
-            - ONLY read the target notebook file: {notebook_path}
-            - Do NOT read atoti source files, library code, or other Python modules
-            - Focus purely on executing the exact fix provided by the analyzer
+            EXECUTION STEPS:
+            1. Extract fix details from the analysis task output
+            2. Edit the specified notebook cell with the recommended code
+            3. Save the changes and confirm successful modification
             
-            EXECUTION PRINCIPLES:
-            - Look for "CELL_ID: [cell_id]" in the analyzer output
-            - Look for "FIXED_CODE:" followed by a python code block in the analyzer output
-            - Use notebook_edit with the exact cell_id and code content provided
-            - Confirm the file was saved correctly by reading it back
+            DEPENDENCIES:
+            - Requires completion of the analysis task
+            - Uses the CELL_NUMBER and FIXED_CODE from analysis output
             
-            EXAMPLE WORKFLOW:
-            1. Parse analyzer output to get:
-               cell_id="[the-actual-cell-id-from-analyzer]" 
-               new_content="import pandas as pd\\nimport atoti as tt\\n\\nsession = tt.Session.connect()"
-            2. notebook_edit(notebook_path="{notebook_path}", 
-               cell_id="[the-actual-cell-id-from-analyzer]", 
-               new_content="[exact code from analyzer]")
-            3. file_read(file_path="{notebook_path}") → Verify the change was saved
-            
-            CRITICAL: 
-            - Use ONLY the notebook path: {notebook_path}
-            - Execute the exact fix from analyzer and confirm the notebook was saved correctly.
+            CONSTRAINTS:
+            - Use exact path: {notebook_path}
+            - Only edit the specified cell, do not modify other parts
+            - Confirm save was successful before completing
             """,
             agent=self.fixer_agent,
-            expected_output="Fix implemented exactly as provided by analyzer and notebook save confirmed",
+            expected_output="Notebook edited and save confirmed, or clear error message if editing failed",
         )
 
         self.validation_task = Task(
-            description=f"""Validate the fix and check for any remaining errors.
+            description=f"""Validate the implemented fix and confirm it works.
 
             NOTEBOOK PATH: {notebook_path}
             
-            STEP 1 - EXECUTE: Run the notebook using notebook_execution tool with notebook_path: {notebook_path}
-            STEP 2 - READ NOTEBOOK: Read the notebook file using file_read tool with file_path: {notebook_path} to verify current state
-            STEP 3 - ANALYZE RESULTS: 
-                - If NO errors: Report complete success
-                - If NEW errors appear: Provide detailed analysis of the NEXT error found
-                - Report any remaining issues that need another iteration
+            TASK OVERVIEW: Test the fixed notebook to ensure the errors are resolved.
+            This task should be completed by the Solution Validator agent.
             
-            IMPORTANT FILE RESTRICTIONS:
-            - ONLY read the target notebook file: {notebook_path}
-            - Do NOT read atoti source files, library code, or other Python modules
-            - Focus on notebook validation and execution results only
+            EXECUTION STEPS:
+            1. Execute the fixed notebook to check for errors
+            2. Verify the notebook state and content
+            3. Report success or identify any remaining issues
             
-            CRITICAL ERROR CASCADE DETECTION:
-            After fixing the first error, NEW errors may become visible that were hidden before.
-            If you find any remaining errors, provide:
-            - Exact error message and location of the NEXT error
-            - Whether this is a new error revealed after the fix
-            - Detailed analysis for the next iteration
+            DEPENDENCIES:
+            - Requires completion of the fixing task
+            - Validates the changes made by the Code Fixer agent
             
-            CRITICAL: 
-            - Use ONLY the notebook path: {notebook_path}
-            - Either confirm complete success OR identify the next error for iteration.
+            SUCCESS CRITERIA:
+            - Notebook executes without errors
+            - All cells run successfully
+            
+            FAILURE HANDLING:
+            - If errors remain, provide detailed analysis for next iteration
+            - Identify specific error messages and locations
+            
+            CONSTRAINTS:
+            - Use exact path: {notebook_path}
+            - Focus only on execution validation
             """,
             agent=self.validator_agent,
             expected_output="Complete success confirmation OR detailed next error analysis for iteration",
@@ -553,14 +739,15 @@ class NotebookFixerCrew:
         print("✅ Tasks created")
 
     def _create_crew(self):
-        """Create the CrewAI crew with sequential process."""
+        """Create the CrewAI crew with hierarchical process and manager."""
         self.crew = Crew(
             agents=[self.analyzer_agent, self.fixer_agent, self.validator_agent],
             tasks=[self.analysis_task, self.fixing_task, self.validation_task],
-            process=Process.sequential,
+            process=Process.hierarchical,
+            manager_llm=self.llm,
             verbose=True,
         )
-        print("✅ Crew created")
+        print("✅ Crew created with hierarchical process and manager")
 
     def fix_notebook(
         self, notebook_path: str, max_iterations: int = 3

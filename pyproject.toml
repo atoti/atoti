@@ -58,6 +58,7 @@ dependencies = [
     "ollmcp>=0.16.0",
     "crewai>=0.152.0",
     "chromadb>=1.0.15",
+    "nbformat>=5.10.4",
 ]
 
 [tool.source]

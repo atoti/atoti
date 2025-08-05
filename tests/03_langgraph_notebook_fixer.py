@@ -21,11 +21,20 @@ This system uses LangGraph to create a sophisticated workflow that follows the e
 """
 
 import json
+import os
 import subprocess
 import logging
 import time
+import nbformat
 from typing import Dict, Any, List, Optional, TypedDict
 from datetime import datetime
+import time
+import logging
+import json
+import subprocess
+import os
+import re
+import nbformat
 import re
 
 # LangGraph imports
@@ -39,6 +48,7 @@ from langchain_chroma import Chroma
 # Configuration constants
 NOTEBOOK_EXECUTION_TIMEOUT = 120  # seconds
 MAX_FILE_CONTENT_PREVIEW = None  # No character limit - show everything
+VERBOSE_LOGGING = False  # Set to True for detailed debugging output
 
 
 def setup_logging(log_level=logging.INFO):
@@ -108,72 +118,74 @@ def log_tool_execution(
 
 
 def log_workflow_progress(logger, state: Dict[str, Any]):
-    """Log detailed workflow progress and metrics with complete state visibility."""
-    progress_percent = (
-        state.get("iteration_count", 0) / max(state.get("max_iterations", 1), 1)
-    ) * 100
+    """Log concise workflow progress focused on key information."""
+    # Calculate actual progress
+    current_iteration = state.get("iteration_count", 0)
+    max_iterations = state.get("max_iterations", 3)
+    status = state.get("upgrade_status", "unknown")
 
-    logger.info("=" * 80)
-    logger.info(f"📈 WORKFLOW PROGRESS: {progress_percent:.1f}%")
-    logger.info("=" * 80)
-    logger.info(f"📁 Notebook: {state.get('notebook_path', 'Unknown')}")
-    logger.info(f"🎯 Target API: {state.get('target_api_version', 'Latest')}")
-    logger.info(f"📊 Status: {state.get('upgrade_status', 'Unknown')}")
-    logger.info(
-        f"🔄 Iteration: {state.get('iteration_count', 0)}/{state.get('max_iterations', 0)}"
-    )
-    logger.info(
-        f"🚨 Search Attempts: {state.get('search_attempts', 0)}/{state.get('max_search_attempts', 3)}"
-    )
-    logger.info(
-        f"🧠 Planning Attempts: {state.get('planning_attempts', 0)}/{state.get('max_planning_attempts', 3)}"
-    )
+    # Determine progress percentage based on actual workflow state
+    if status == "success":
+        progress = 100.0
+        status_display = "🟢 SUCCESS"
+    elif status == "failed":
+        progress = 0.0
+        status_display = "🔴 FAILED"
+    elif status == "retry":
+        progress = min((current_iteration / max_iterations) * 100, 90)
+        status_display = "🟡 RETRYING"
+    elif status == "applied":
+        progress = 80.0
+        status_display = "🔵 VALIDATING"
+    else:
+        # Progress based on iterations completed (each iteration is ~33% of work)
+        progress = min(
+            (current_iteration / max_iterations) * 100, 90
+        )  # Max 90% until success
+        status_display = f"🟠 {status.upper()}"
 
-    # Show complete state details
-    if state.get("execution_error"):
-        logger.info("📋 CURRENT EXECUTION ERROR:")
-        logger.info(f"   {state['execution_error']}")
+    # Create progress bar (30 characters wide)
+    filled = int(progress / 100 * 30)
+    bar = "█" * filled + "░" * (30 - filled)
 
-    if state.get("error_details"):
+    logger.info("=" * 60)
+    logger.info(f"[{bar}] {progress:.0f}% | {status_display}")
+    logger.info(f"ITERATION: {current_iteration}/{max_iterations}")
+
+    # Only show essential error information when there's an active error
+    if status in ["error", "retry"] and state.get("error_details"):
         error_details = state["error_details"]
-        logger.info("🔍 EXTRACTED ERROR DETAILS:")
-        logger.info(f"   🐛 Type: {error_details.get('error_type', 'Unknown')}")
-        logger.info(f"   💬 Message: {error_details.get('error_message', 'Unknown')}")
-        logger.info(
-            f"   � Failing Code: {error_details.get('failing_code', 'Not detected')}"
-        )
+        error_type = error_details.get("error_type", "Unknown")
+        failing_code = error_details.get("failing_code", "Unknown")
+        # Truncate long failing code for readability
+        if len(failing_code) > 50:
+            failing_code = failing_code[:47] + "..."
+        logger.info(f"� Error: {error_type} in '{failing_code}'")
 
-    if state.get("rag_search_results"):
-        logger.info(
-            f"📚 RAG SEARCH RESULTS: {len(state['rag_search_results'])} searches completed"
-        )
-        for i, result in enumerate(state["rag_search_results"], 1):
-            result_preview = result[:200] if len(result) > 200 else result
-            logger.info(f"   📄 Search {i}: {result_preview}...")
-
-    if state.get("migration_plan"):
+    # Show migration plan status only when ready (most important information)
+    if state.get("migration_plan", {}).get("status") == "READY":
         plan = state["migration_plan"]
-        logger.info("📋 MIGRATION PLAN:")
-        logger.info(f"   📊 Status: {plan.get('status', 'Unknown')}")
-        if plan.get("before_code"):
-            logger.info(f"   � Before Code: {len(plan['before_code'])} characters")
-        if plan.get("after_code"):
-            logger.info(f"   ✨ After Code: {len(plan['after_code'])} characters")
-        if plan.get("reasoning"):
-            logger.info(f"   🧠 Reasoning: {plan['reasoning']}")
+        before_code = (
+            plan.get("before_code", "")[:30] + "..."
+            if len(plan.get("before_code", "")) > 30
+            else plan.get("before_code", "")
+        )
+        after_code = (
+            plan.get("after_code", "")[:30] + "..."
+            if len(plan.get("after_code", "")) > 30
+            else plan.get("after_code", "")
+        )
+        logger.info(f"✅ Fix Ready: '{before_code}' → '{after_code}'")
 
-    if state.get("backup_paths"):
-        logger.info(f"📁 BACKUPS: {len(state['backup_paths'])} files created")
-        for backup in state["backup_paths"]:
-            logger.info(f"   💾 {backup}")
-
-    logger.info("=" * 80)
+    logger.info("=" * 60)
 
 
 class NotebookUpgradeState(TypedDict):
     """State object that tracks the entire notebook upgrade process"""
 
     notebook_path: str
+    original_notebook_path: Optional[str]  # Track original path
+    working_copy_path: Optional[str]  # Track working copy path
     current_api_version: Optional[str]
     target_api_version: str
     execution_error: Optional[str]
@@ -551,6 +563,8 @@ class NotebookUpgradeWorkflow:
         # Initial state
         initial_state: NotebookUpgradeState = {
             "notebook_path": notebook_path,
+            "original_notebook_path": None,
+            "working_copy_path": None,
             "current_api_version": None,
             "target_api_version": "latest",
             "execution_error": None,
@@ -619,23 +633,32 @@ class NotebookUpgradeWorkflow:
     # Node Functions (State Processors)
 
     def initialize_upgrade(self, state: NotebookUpgradeState) -> NotebookUpgradeState:
-        """Initialize the upgrade process and create backup."""
+        """Initialize the upgrade process and create a single working copy."""
         node_start_time = time.time()
         self.current_node = "initialize"
         self.logger.info("🚀 NODE: initialize_upgrade")
         self.logger.info(f"📁 Target notebook: {state['notebook_path']}")
 
         try:
-            # Create backup
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            backup_path = f"{state['notebook_path']}.backup.{timestamp}.{state['iteration_count']}"
-            subprocess.run(["cp", state["notebook_path"], backup_path], check=True)
+            # Create working copy with specific naming convention
+            timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
+            # Extract base filename without extension
+            base_path = os.path.splitext(state["notebook_path"])[0]
+            working_copy = f"{base_path}-working-copy-{timestamp}.ipynb"
 
-            state["backup_paths"].append(backup_path)
+            # Create working copy
+            subprocess.run(["cp", state["notebook_path"], working_copy], check=True)
+
+            # Update state to work on the working copy
+            state["original_notebook_path"] = state["notebook_path"]
+            state["notebook_path"] = working_copy
+            state["backup_paths"] = []  # No backups created
+            state["working_copy_path"] = working_copy
             state["upgrade_status"] = "analyzing"
 
             node_time = time.time() - node_start_time
-            self.logger.info(f"📁 Created backup: {backup_path}")
+            self.logger.info(f"🔧 Created working copy: {working_copy}")
+            self.logger.info("📝 All operations will now work on the working copy")
             self.logger.info(f"✅ initialize_upgrade completed in {node_time:.2f}s")
 
             log_workflow_progress(self.logger, state)
@@ -644,7 +667,7 @@ class NotebookUpgradeWorkflow:
         except Exception as e:
             self.logger.error(f"❌ initialize_upgrade failed: {e}")
             state["upgrade_status"] = "failed"
-            state["execution_error"] = f"Backup creation failed: {e}"
+            state["execution_error"] = f"Working copy creation failed: {e}"
             return state
 
     def execute_notebook(self, state: NotebookUpgradeState) -> NotebookUpgradeState:
@@ -673,12 +696,12 @@ class NotebookUpgradeWorkflow:
 
         if "✅ SUCCESS" in execution_result:
             self.logger.info(
-                "✅ STEP 1 COMPLETE: Notebook executed successfully - no errors to fix!"
+                "🎉 STEP 1 ✅ COMPLETE: Notebook executed successfully - no errors to fix!"
             )
             state["upgrade_status"] = "success"
         else:
             self.logger.info(
-                "❌ STEP 1 COMPLETE: Found errors - proceeding to analysis"
+                "🔍 STEP 1 ✅ COMPLETE: Found errors - proceeding to analysis"
             )
             state["upgrade_status"] = "error"
 
@@ -700,10 +723,11 @@ class NotebookUpgradeWorkflow:
         )
 
         error_msg = state["execution_error"]
-        self.logger.info("📝 COMPLETE RAW ERROR MESSAGE:")
-        self.logger.info("─" * 80)
-        self.logger.info(error_msg)
-        self.logger.info("─" * 80)
+        # Log error summary instead of full error (reduce noise)
+        error_summary = (
+            error_msg.split("\n")[-1] if "\n" in error_msg else error_msg[:100]
+        )
+        self.logger.info(f"📝 Error Summary: {error_summary}")
 
         # Extract error details using regex patterns
         error_details = {
@@ -712,9 +736,8 @@ class NotebookUpgradeWorkflow:
             "failing_code": self._extract_failing_code(error_msg),
         }
 
-        # Show detailed extraction process
-        self.logger.info("🔧 ERROR EXTRACTION PROCESS:")
-        self.logger.info(f"   🔍 Searching for error patterns in message...")
+        # Show concise extraction results
+        self.logger.info("🔧 ERROR EXTRACTION RESULTS:")
         self.logger.info(f"   ✅ Error Type: '{error_details['error_type']}'")
         self.logger.info(f"   ✅ Error Message: '{error_details['error_message']}'")
         self.logger.info(f"   ✅ Failing Code: '{error_details['failing_code']}'")
@@ -734,7 +757,7 @@ class NotebookUpgradeWorkflow:
         self.logger.info("   📝 Will search: 'atoti breaking changes latest version'")
 
         analysis_time = time.time() - node_start_time
-        self.logger.info("✅ STEP 2 COMPLETE: Error analysis ready for RAG search")
+        self.logger.info("🔍 STEP 2 ✅ COMPLETE: Error analysis ready for RAG search")
         self.logger.info(f"⏱️ Step 2 completed in {analysis_time:.2f}s")
 
         log_workflow_progress(self.logger, state)
@@ -767,48 +790,43 @@ class NotebookUpgradeWorkflow:
 
         error_details = state["error_details"]
         error_msg = state["execution_error"]
+        failing_code = error_details.get("failing_code", "")
 
-        # Construct targeted search queries for minimal fixes
-        queries = []
-
-        # Add specific queries for this type of error
-        if "create_session" in error_msg:
-            queries.extend(
-                [
-                    "Session.start() simple example",
-                    "tt.Session.start basic usage",
-                    "create_session replaced Session.start",
-                ]
-            )
-        elif "Session(" in error_msg:
-            queries.extend(
-                [
-                    "Session() replaced Session.start",
-                    "Session constructor deprecated",
-                ]
-            )
-
-        # Add generic minimal upgrade queries
-        queries.extend(
-            [
-                "atoti simple session creation",
-                "basic session start example",
-                "minimal atoti session setup",
-            ]
+        # Use LLM to generate targeted search queries
+        self.logger.info("🤖 GENERATING TARGETED SEARCH QUERIES WITH LLM")
+        queries = self._generate_search_queries_with_llm(
+            error_msg, failing_code, error_details
         )
 
-        self.logger.info(
-            f"🎯 Built {len(queries)} targeted search queries from error analysis"
-        )
-        self.logger.debug(f"📝 Search queries: {queries}")
+        self.logger.info(f"🎯 LLM generated {len(queries)} targeted search queries")
+        self.logger.info("📝 Generated search queries:")
+        for i, query in enumerate(queries):
+            self.logger.info(f"   {i + 1}. {query}")
+
+        # CONSOLE OUTPUT - Ensure queries are visible
+        print("\n" + "🎯" * 60)
+        print("🎯 EXACT RAG SEARCH QUERIES GENERATED BY LLM:")
+        print("🎯" * 60)
+        for i, query in enumerate(queries[:3]):
+            print(f"🎯 RAG QUERY {i + 1}: '{query}'")
+        print("🎯" * 60 + "\n")
 
         # Perform RAG searches with complete visibility
         rag_results = []
+
+        # ENHANCED QUERY DISPLAY - Show exact queries being sent to RAG
+        self.logger.info("🎯" + "=" * 80)
+        self.logger.info("🎯 EXACT RAG SEARCH QUERIES TO BE EXECUTED:")
+        self.logger.info("🎯" + "=" * 80)
+        for i, query in enumerate(queries[:3]):  # Show which queries will be used
+            self.logger.info(f"🎯 RAG QUERY {i + 1}: '{query}'")
+        self.logger.info("🎯" + "=" * 80)
+
         for i, query in enumerate(queries[:3]):  # Limit to 3 searches
             search_start_time = time.time()
             self.logger.info("─" * 80)
             self.logger.info(f"🔍 EXECUTING RAG SEARCH {i + 1}/3")
-            self.logger.info(f"📝 Query: '{query}'")
+            self.logger.info(f"� EXACT QUERY BEING SENT TO VECTORDB: '{query}'")
             self.logger.info("🔄 Searching vectordb...")
 
             result = self.tools["rag_search"]._run(query)
@@ -829,7 +847,7 @@ class NotebookUpgradeWorkflow:
         total_search_time = time.time() - node_start_time
         self.logger.info(f"📚 Completed {len(queries[:3])} RAG searches")
         self.logger.info(
-            "✅ STEP 3 COMPLETE: Documentation searched, ready for solution planning"
+            "📚 STEP 3 ✅ COMPLETE: Documentation searched, ready for solution planning"
         )
         self.logger.info(f"⏱️ Step 3 completed in {total_search_time:.2f}s")
 
@@ -926,11 +944,9 @@ class NotebookUpgradeWorkflow:
 
         try:
             llm_start_time = time.time()
-            self.logger.info("🤖 STEP 4A: SENDING COMPLETE CONTEXT TO LLM")
-            self.logger.info("─" * 80)
-            self.logger.info("📝 COMPLETE PROMPT BEING SENT:")
-            self.logger.info(prompt)
-            self.logger.info("─" * 80)
+            self.logger.info(
+                "🤖 STEP 4A: Analyzing documentation to create upgrade plan..."
+            )
             self.logger.info("⏳ Waiting for LLM response...")
 
             response = self.llm.invoke(prompt)
@@ -938,10 +954,6 @@ class NotebookUpgradeWorkflow:
             llm_time = time.time() - llm_start_time
 
             self.logger.info(f"🤖 LLM response received in {llm_time:.2f}s")
-            self.logger.info("─" * 80)
-            self.logger.info("📝 COMPLETE LLM RESPONSE:")
-            self.logger.info(plan_text)
-            self.logger.info("─" * 80)
 
             # Parse the LLM response
             self.logger.info("🔧 PARSING LLM RESPONSE:")
@@ -965,7 +977,7 @@ class NotebookUpgradeWorkflow:
                 state["before_code"] = upgrade_plan.get("before_code")
                 state["after_code"] = upgrade_plan.get("after_code")
                 self.logger.info(
-                    "✅ STEP 4A COMPLETE: New working code determined - ready to apply changes"
+                    "🧠 STEP 4A ✅ COMPLETE: New working code determined - ready to apply changes"
                 )
                 self.logger.info("🔧 CODE CHANGES TO BE APPLIED:")
                 self.logger.info(
@@ -1042,7 +1054,9 @@ class NotebookUpgradeWorkflow:
         )
 
         if "✅ Successfully" in edit_result:
-            self.logger.info("✅ STEP 4B COMPLETE: Code changes applied successfully")
+            self.logger.info(
+                "🔧 STEP 4B ✅ COMPLETE: Code changes applied successfully"
+            )
             state["upgrade_status"] = "applied"
         else:
             self.logger.error(f"❌ Failed to apply changes: {edit_result}")
@@ -1080,7 +1094,7 @@ class NotebookUpgradeWorkflow:
 
         if "✅ SUCCESS" in validation_result:
             self.logger.info(
-                "🎉 STEP 5 COMPLETE: Validation successful - notebook now works!"
+                "🎉 STEP 5 ✅ COMPLETE: Validation successful - notebook now works!"
             )
             self.logger.info("✅ ALL ERRORS RESOLVED - No further iterations needed")
             state["upgrade_status"] = "success"
@@ -1115,9 +1129,33 @@ class NotebookUpgradeWorkflow:
             time.time() - self.workflow_start_time if self.workflow_start_time else 0
         )
 
+        # If successful, copy working copy back to original location
+        if state["upgrade_status"] == "success":
+            try:
+                original_path = state.get(
+                    "original_notebook_path", state["notebook_path"]
+                )
+                working_copy = state.get("working_copy_path")
+
+                if working_copy and original_path:
+                    subprocess.run(["cp", working_copy, original_path], check=True)
+                    self.logger.info(
+                        f"✅ Copied successful changes back to: {original_path}"
+                    )
+
+                    # Clean up working copy
+                    if os.path.exists(working_copy):
+                        os.remove(working_copy)
+                        self.logger.info(f"🧹 Cleaned up working copy: {working_copy}")
+
+            except Exception as e:
+                self.logger.warning(f"⚠️ Failed to copy working copy back: {e}")
+
         # Prepare final results
         final_result = {
-            "notebook_path": state["notebook_path"],
+            "notebook_path": state.get(
+                "original_notebook_path", state["notebook_path"]
+            ),
             "success": state["upgrade_status"] == "success",
             "iterations": state["iteration_count"],
             "final_status": state["upgrade_status"],
@@ -1133,40 +1171,13 @@ class NotebookUpgradeWorkflow:
 
         state["final_result"] = final_result
 
-        # Save results to file with timestamp
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        results_path = f"{state['notebook_path']}.upgrade_results_{timestamp}.json"
-        try:
-            with open(results_path, "w") as f:
-                json.dump(final_result, f, indent=2)
-            self.logger.info(f"📁 Results saved to: {results_path}")
-        except Exception as e:
-            self.logger.error(f"❌ Failed to save results: {e}")
-
-        # Final summary logging
-        self.logger.info("=" * 60)
-        self.logger.info("📋 FINAL UPGRADE SUMMARY")
-        self.logger.info("=" * 60)
-        self.logger.info(f"📁 Notebook: {final_result['notebook_path']}")
-        self.logger.info(f"✅ Success: {final_result['success']}")
-        self.logger.info(f"🔄 Iterations: {final_result['iterations']}")
-        self.logger.info(f"📊 Final Status: {final_result['final_status']}")
-        self.logger.info(f"⏱️ Total Time: {final_result['total_time']:.2f}s")
-        self.logger.info(f"📁 Backups: {len(final_result.get('backup_paths', []))}")
-
-        if final_result["success"]:
-            self.logger.info("🎉 UPGRADE COMPLETED SUCCESSFULLY!")
-        else:
-            self.logger.warning("😞 UPGRADE COMPLETED WITH ISSUES")
-            if final_result.get("error_details"):
-                error_type = final_result["error_details"].get("error_type", "Unknown")
-                self.logger.warning(f"🐛 Last Error Type: {error_type}")
+        # Final summary logging with beautiful table
+        self._log_beautiful_summary(final_result, state)
 
         finalize_time = time.time() - node_start_time
         self.logger.info(
             f"✅ finalize_upgrade_results completed in {finalize_time:.2f}s"
         )
-        self.logger.info("=" * 60)
 
         return state
 
@@ -1236,10 +1247,8 @@ class NotebookUpgradeWorkflow:
             llm_time = time.time() - llm_start_time
 
             self.logger.info(f"🤖 LLM response received in {llm_time:.2f}s")
-            self.logger.info("📝 COMPLETE LLM RESPONSE:")
-            self.logger.info(fix_text)
 
-            # Parse the direct fix response
+            # Parse the direct fix response (skip verbose logging in normal mode)
             direct_fix = self._parse_direct_fix(fix_text)
             state["direct_fix_result"] = direct_fix
 
@@ -1282,6 +1291,83 @@ class NotebookUpgradeWorkflow:
 
         log_workflow_progress(self.logger, state)
         return state
+
+    # Helper Methods for Enhanced Display
+
+    def _log_beautiful_summary(
+        self, final_result: Dict[str, Any], state: Dict[str, Any]
+    ):
+        """Log a beautiful summary table with the upgrade results."""
+
+        # Extract key information
+        success = final_result["success"]
+        status_icon = "✅ SUCCESS" if success else "❌ FAILED"
+        status_color = "🟢" if success else "🔴"
+
+        total_time = final_result["total_time"]
+        iterations = final_result["iterations"]
+        notebook_name = final_result["notebook_path"].split("/")[-1]
+
+        # Get fix information if available
+        fix_info = "No changes needed"
+        if state.get("migration_plan", {}).get("status") == "READY":
+            plan = state["migration_plan"]
+            before_code = (
+                plan.get("before_code", "")[:25] + "..."
+                if len(plan.get("before_code", "")) > 25
+                else plan.get("before_code", "")
+            )
+            after_code = (
+                plan.get("after_code", "")[:25] + "..."
+                if len(plan.get("after_code", "")) > 25
+                else plan.get("after_code", "")
+            )
+            fix_info = f"{before_code} → {after_code}"
+
+        # Log the beautiful table
+        self.logger.info("")
+        self.logger.info(
+            "┌─────────────────────────────────────────────────────────────┐"
+        )
+        self.logger.info(
+            "│                    🔧 UPGRADE SUMMARY 🔧                   │"
+        )
+        self.logger.info(
+            "├─────────────────────────────────────────────────────────────┤"
+        )
+        self.logger.info(f"│ Status:      {status_icon:<45} │")
+        self.logger.info(f"│ Notebook:    {notebook_name:<45} │")
+        self.logger.info(f"│ Time:        {total_time:.2f}s{'':<40} │")
+        self.logger.info(f"│ Iterations:  {iterations:<45} │")
+        if success and fix_info != "No changes needed":
+            self.logger.info(f"│ Fix Applied: {fix_info:<45} │")
+        elif not success and state.get("error_details", {}).get("error_type"):
+            error_type = state["error_details"]["error_type"]
+            self.logger.info(f"│ Last Error:  {error_type:<45} │")
+        self.logger.info(
+            "└─────────────────────────────────────────────────────────────┘"
+        )
+
+        if success:
+            self.logger.info("🎉 UPGRADE COMPLETED SUCCESSFULLY!")
+            self.logger.info("✅ Changes applied to original notebook")
+        else:
+            self.logger.info("😞 UPGRADE COMPLETED WITH ISSUES")
+            self.logger.info("📁 Original notebook unchanged")
+        self.logger.info("")
+
+    def _log_progress_bar(self, current: int, total: int, status: str):
+        """Log a progress bar showing current step completion."""
+        if total == 0:
+            percentage = 0
+        else:
+            percentage = min(int((current / total) * 100), 100)
+
+        # Create progress bar (40 characters wide)
+        filled = int(percentage / 100 * 40)
+        bar = "█" * filled + "░" * (40 - filled)
+
+        self.logger.info(f"Progress: [{bar}] {percentage:3d}% | {status}")
 
     # Routing Functions (Conditional Logic)
 
@@ -1568,17 +1654,119 @@ class NotebookUpgradeWorkflow:
 
         return fix
 
+    def _generate_search_queries_with_llm(
+        self, error_msg: str, failing_code: str, error_details: Dict[str, Any]
+    ) -> List[str]:
+        """Use LLM to generate targeted search queries based on the error context."""
+        self.logger.info("🤖 Generating search queries with LLM...")
+
+        error_type = error_details.get("error_type", "Unknown")
+        error_message = error_details.get("error_message", "Unknown")
+
+        prompt = f"""
+        You are an expert at searching atoti documentation. Generate 3-5 targeted search queries to find solutions for this error.
+        
+        ERROR TYPE: {error_type}
+        ERROR MESSAGE: {error_message}
+        
+        FAILING CODE:
+        ```python
+        {failing_code}
+        ```
+        
+        FULL ERROR:
+        {error_msg[:500]}...
+        
+        INSTRUCTIONS:
+        1. Generate specific search queries that would find relevant documentation
+        2. Focus on the exact API methods, functions, or concepts mentioned in the error
+        3. Include both specific and general queries
+        4. Make queries short and targeted (3-8 words each)
+        5. Include version upgrade/migration queries if this seems like an API change
+        
+        Provide your response as a simple list, one query per line, like:
+        
+        atoti Session.start basic example
+        create_session deprecated replacement
+        session configuration latest API
+        atoti migration guide
+        """
+
+        try:
+            llm_start_time = time.time()
+            self.logger.info("🤖 Sending query generation request to LLM...")
+
+            response = self.llm.invoke(prompt)
+            query_text = response.content
+            llm_time = time.time() - llm_start_time
+
+            self.logger.info(f"🤖 LLM query generation completed in {llm_time:.2f}s")
+            self.logger.info("📝 COMPLETE LLM RESPONSE:")
+            self.logger.info(query_text)
+
+            # Parse queries from response
+            queries = []
+            lines = query_text.strip().split("\n")
+            for line in lines:
+                line = line.strip()
+                # Skip empty lines and obvious non-query lines
+                if (
+                    line
+                    and not line.startswith("#")
+                    and not line.startswith("Query")
+                    and len(line.split()) >= 2
+                ):
+                    # Remove any numbering or bullet points
+                    line = re.sub(r"^\d+\.?\s*", "", line)
+                    line = re.sub(r"^[•\-*]\s*", "", line)
+                    queries.append(line.strip())
+
+            # Ensure we have at least some fallback queries
+            if not queries:
+                self.logger.warning(
+                    "⚠️ LLM didn't generate valid queries, using fallback"
+                )
+                queries = [
+                    f"atoti {error_type}",
+                    "atoti API migration guide",
+                    "atoti session creation example",
+                ]
+
+            # Limit to maximum 5 queries
+            queries = queries[:5]
+
+            self.logger.info(
+                f"📝 Successfully parsed {len(queries)} queries from LLM response"
+            )
+            return queries
+
+        except Exception as e:
+            self.logger.error(f"❌ Failed to generate queries with LLM: {e}")
+            # Fallback to basic queries
+            return [
+                f"atoti {error_type}",
+                "atoti API migration guide",
+                "atoti session creation example",
+            ]
+
 
 def main():
     """Main function to demonstrate the LangGraph 5-step notebook upgrade system."""
     print("🚀 Starting LangGraph Notebook Upgrade System")
     print("=" * 60)
-    print("🔄 5-STEP ITERATIVE WORKFLOW:")
-    print("1. Test Notebook → Execute to analyze errors")
-    print("2. Analyze Error → Extract details for RAG queries")
-    print("3. RAG Search → Find solutions in documentation")
-    print("4. Plan & Apply Fix → Update broken code cells")
-    print("5. Validate & Iterate → Retest until all errors resolved")
+    print("🔄 5-STEP WORKFLOW:")
+    print("")
+    print("  1. 📱 Execute Notebook → Test and capture errors")
+    print("  2. 🔍 Analyze Errors → Extract key information")
+    print("  3. 📚 Search Documentation → Find solutions via RAG")
+    print("  4. 🧠 Plan & Apply Fix → Update broken code")
+    print("  5. 🧪 Validate & Iterate → Retest until success")
+    print("")
+    print("🤖 Features:")
+    print("  • Two-tier intelligence (Direct LLM + RAG fallback)")
+    print("  • Circuit breaker protection (Max 3 attempts each)")
+    print("  • LLM-generated search queries")
+    print("  • Working copy backup strategy")
     print("=" * 60)
 
     # Initialize the upgrade workflow
@@ -1590,6 +1778,9 @@ def main():
 
     print(f"\n🎯 Target notebook: {notebook_path}")
     print("🔄 Starting 5-step upgrade process with max 3 iterations...")
+    print("=" * 60)
+
+    print("\n🚀 STARTING WORKFLOW EXECUTION...")
     print("=" * 60)
 
     start_time = time.time()
@@ -1605,9 +1796,6 @@ def main():
     print(f"🔄 Iterations: {results.get('iterations', 'N/A')}")
     print(f"📊 Status: {results.get('final_status', 'Unknown')}")
     print(f"⏱️  Total Time: {results.get('total_time', total_time):.2f}s")
-
-    if results.get("backup_paths"):
-        print(f"📁 Backups Created: {len(results['backup_paths'])}")
 
     print("=" * 60)
 

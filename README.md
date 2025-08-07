@@ -62,6 +62,12 @@ Atoti Python SDK requires one of the following Python versions:
 
 In addition, Atoti Python SDK requires Java 21 if you want to use your own JDK. If you do not have a JDK, Atoti is bundled with [jdk4py](https://github.com/activeviam/jdk4py). We use [uv](https://github.com/astral-sh/uv) for better virtual environment and dependency management. We strongly recommend against mixing `uv` and `conda`.
 
+## GitHub Codespaces
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&repo=atoti/atoti&ref=ac-70-adding-devcontainer)
+
+## JupyterLab
+
 > **Note:** Start `jupyter-lab` at the root of this repository.
 
 #### uv

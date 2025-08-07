@@ -20,4 +20,4 @@ WORKDIR /atoti
 RUN uv sync
 
 # Set container executable
-CMD [ "uv", "run", "jupyter-lab", "--ip=0.0.0.0", "--allow-root", "--no-browser", "--NotebookApp.token=''", "--NotebookApp.password=''" ]
+CMD [ "uv", "run", "jupyter-lab", "--ip=0.0.0.0", "--allow-root", "--no-browser", "--IdentityProvider.token=''", "--ServerApp.password=''" ]

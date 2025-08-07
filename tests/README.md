@@ -1,11 +1,34 @@
 <p align="center">
-  <img src="https://data.atoti.io/notebooks/banners/atoti-logo.png" alt="Atoti logo" style="width: 50%;">
-</p>  
-
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://data.atoti.io/notebooks/banners/Atoti_Logo_White-01.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://data.atoti.io/notebooks/banners/Atoti_Logo_Purple-01.svg">
+    <img alt="atoti-logo" width="50%">
+  </picture>
+</p>
 
 <p align="center">
+  <a href="https://github.com/atoti/atoti/releases/latest"><img src="https://img.shields.io/github/v/release/atoti/atoti?color=#4cc71f" alt="github"></a>
+  <a href="https://pypistats.org/packages/atoti"><img src="https://img.shields.io/pypi/dm/atoti" alt="github"></a>
+  <a href="https://github.com/atoti/atoti/actions/workflows/test.yaml"><img src="https://github.com/atoti/atoti/actions/workflows/test.yaml/badge.svg" alt="gha"></a>
   <a href="https://github.com/atoti/atoti/discussions"><img src="https://img.shields.io/github/discussions/atoti/atoti" alt="GitHub Discussion"></a>
-  <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fatoti%2Fnotebooks&count_bg=%23FF7375&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false" alt="Hits"></a>
-  <a href="https://stackoverflow.com/questions/tagged/atoti"><img src="https://img.shields.io/badge/StackOverflow-atoti-f58024.svg" alt="stackoverflow"></a>
-</p>  
+</p> 
 
+<p align="center">
+  <a href="https://www.linkedin.com/company/activeviam/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin"></a>
+</p>
+
+## Testing
+
+Run the following `make` rules at the root of the repository:
+
+`make test`
+
+Tests notebooks using [pytest](https://docs.pytest.org/en/stable/) and [nbmake](https://github.com/treebeardtech/nbmake) to test code cells with a specified version of `atoti` in `pyproject.toml`. Formatted results are outputted to `./reports`.
+
+`make render`
+
+Automates web browser execution using `jupyterlab` and `playwright` to generate and embed images of Atoti-specific JupyterLab widgets and data model visualizations within notebooks.
+
+`make upgrade`
+
+Combines the `make test` and `make render` rules to comprehensively test notebook code cells and render JupyterLab widgets.

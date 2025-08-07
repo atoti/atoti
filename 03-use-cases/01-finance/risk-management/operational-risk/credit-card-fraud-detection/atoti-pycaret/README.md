@@ -6,22 +6,38 @@ By creating a small [Flask application](https://flask.palletsprojects.com/en/2.2
 
 # Installation
 
-If using Poetry in a Windows environment, it is recommended to use Python 3.8 due to llvmlite and numpy requirements for PyCaret:  
-`poetry env use $(py -3.8 -c 'import sys; print(sys.executable)')`
+Extract the contents from within `source.zip` and change directory to the extracted `source` folder.
 
-Set up the virtual environment for the project using the below command:
+We can use either `uv` or `Docker` to build and run our application.
+
+## uv
+
+Set up the virtual environment and dependencies for the project using the below command:
+
+💡 **Note:** If using uv in a Windows environment, it is recommended to use Python 3.8 due to llvmlite and numpy requirements for PyCaret.
+
 ```
-poetry install
+uv sync --python 3.8
 ```
 
-Refer to the [poetry documentation](https://python-poetry.org/docs/master/#installing-with-the-official-installer) for more information on the package manager.
-
-
-# Runtime
 To launch the Flask application, run the following command:
+
 ```
-poetry run python .\automl\prediction.py
+uv run python .\automl\prediction.py
 ```
+
+Refer to the [uv documentation](https://docs.astral.sh/uv/) for more information on the package manager.
+
+## Docker
+
+Execute the following commands to build a Docker container and run `PyCaret` from within a Docker container:
+
+```bash
+docker build -f Dockerfile -t atoti-pycaret .
+docker run -it -p 105:105 atoti-pycaret
+```
+
+## Runtime
 
 You should able to see the following:
 
@@ -52,5 +68,4 @@ You can verify that the requests are received by the endpoint through the shell 
 
 <img src="../img/request_received.png"/>  
 
-
-The endpoint returns a Pandas Dataframe containing the features and their corresponding prediction.
+The endpoint returns a Pandas DataFrame containing the features and their corresponding prediction.

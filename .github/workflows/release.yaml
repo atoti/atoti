@@ -1,0 +1,31 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+  
+jobs:
+  release:
+    name: "Tagged Release"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Create GitHub Release
+        uses: marvinpinto/action-automatic-releases@v1.2.1
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+     
+      - name: Notify Slack
+        if: success()
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+            --data "{\"text\":\"🎉 New Atoti Notebooks release published: ${{ github.ref_name }}\n📦 View Release: https://github.com/${{ github.repository }}/releases/tag/${{ github.ref_name }}\"}" \
+            ${{ secrets.SLACK_WEBHOOK_URL }}

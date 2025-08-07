@@ -1,0 +1,9 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'collector'
+    scrape_interval: 5s
+    static_configs:
+      - targets: [ 'collector:6666' ]

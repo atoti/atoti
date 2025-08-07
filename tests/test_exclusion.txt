@@ -1,24 +1,55 @@
-03-use-cases/01-finance/front-office/cumulative-pnl
-03-use-cases/01-finance/front-office/pnl-explained
+# --- Data Preprocessing Notebooks ---
+02-technical-guides/var-benchmark/data_generator.ipynb
+
+# --- Notebooks with Alternative Connectors ---
+02-technical-guides/auto-cube/main.ipynb
+02-technical-guides/auto-cube/main-advanced.ipynb
+02-technical-guides/var-benchmark/main.ipynb
+
+# --- Atoti Locked Notebooks ---
+02-technical-guides/security-implementation/01-Basic-authentication.ipynb
+02-technical-guides/security-implementation/02-OIDC-Auth0.ipynb
+02-technical-guides/security-implementation/03-OIDC-Google.ipynb
+02-technical-guides/security-implementation/04-LDAP.ipynb
+02-technical-guides/security-implementation/main.ipynb
+02-technical-guides/internationalization/main.ipynb
+02-technical-guides/directquery-vector/main.ipynb
+02-technical-guides/directquery-intro/main.ipynb
+02-technical-guides/virtual-hierarchies/main.ipynb
+
+# --- Academy Notebooks ---
+01-atoti-academy/introduction-to-atoti/main.ipynb
+
+# --- Long Running Notebooks ---
+02-technical-guides/atoti-pandas-comparison/main.ipynb
+02-technical-guides/atoti-pandas-comparison/pandas-main.ipynb
+02-technical-guides/var-benchmark/data_generator.ipynb
+02-technical-guides/var-benchmark/main.ipynb
+03-use-cases/01-finance/retail-banking/credit-card-analytics/cc_data_processing.ipynb
+03-use-cases/01-finance/retail-banking/credit-card-analytics/main.ipynb
+
+# --- Invalid Named Notebooks ---
+Untitled
+
+# --- To Be Categorized ---
+03-use-cases/01-finance/insurance/price-elasticity/main.ipynb
+03-use-cases/01-finance/retail-banking/credit-card-analytics/cc_data_processing.ipynb
+03-use-cases/01-finance/retail-banking/credit-card-analytics/main.ipynb
+02-technical-guides/atoti-pandas-comparison
+02-technical-guides/observability-with-otel
+03-use-cases/01-finance/risk-management/liquidity-risk/irrbb/main.ipynb
 03-use-cases/01-finance/front-office/real-time-risk
 03-use-cases/01-finance/front-office/real-time-risk
 03-use-cases/01-finance/risk-management/credit-risk/ifrs9
 03-use-cases/01-finance/risk-management/credit-risk/ifrs9
 03-use-cases/01-finance/risk-management/credit-risk/sa-ccr
-03-use-cases/01-finance/risk-management/credit-risk/xva
 03-use-cases/01-finance/risk-management/credit-risk/collateral-shortfall-forecast
-03-use-cases/01-finance/risk-management/liquidity-risk/irrbb
-03-use-cases/01-finance/risk-management/market-risk/sbm
-03-use-cases/01-finance/risk-management/market-risk/stressed-var-calibration
-03-use-cases/01-finance/risk-management/market-risk/pnl-explained
-03-use-cases/01-finance/risk-management/market-risk/value-at-risk
 03-use-cases/01-finance/risk-management/operational-risk/credit-card-fraud-detection
 03-use-cases/01-finance/risk-management/operational-risk/credit-card-fraud-detection
 03-use-cases/01-finance/treasury/collateral-shortfall-forecast
 03-use-cases/01-finance/treasury/collateral-shortfall-monitoring
 03-use-cases/01-finance/treasury/intraday-liquidity
 03-use-cases/01-finance/insurance/customer360
-03-use-cases/01-finance/insurance/price-elasticity
 03-use-cases/01-finance/portfolio-management/alt-data
 03-use-cases/01-finance/portfolio-management/cvar-optimizer
 03-use-cases/01-finance/portfolio-management/optimize-with-constraints
@@ -61,5 +92,6 @@
 03-use-cases/03-community-fun/burritos
 03-use-cases/03-community-fun/christmas-nyan
 03-use-cases/03-community-fun/monte-carlo-pi
+03-use-cases/03-community-fun/pizza-shop
 03-use-cases/03-community-fun/pokemon
 03-use-cases/03-community-fun/wine-analytics

@@ -16,6 +16,8 @@ Using Atoti, we can evaluate the performance of the portfolio and compare the op
 
 <br/> 
 
+
+
 ## Data preparation - Historical stock pricing 
 
 In the python script [tickers.py](./utils/tickers.py), we created functions to download 3 years of historical data from yahoo Finance using the Python library [yfinance](https://pypi.org/project/yfinance/).

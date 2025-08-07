@@ -30,7 +30,7 @@ def load_tables(session):
         keys=["AsOfDate", "TradeId", "TimePoint"],
         table_name="Monte Carlo Data",
         array_separator=";",
-        types={"TimePoint": tt.type.INT, "AsOfDate": tt.type.LOCAL_DATE},
+        data_types={"TimePoint": tt.type.INT, "AsOfDate": tt.type.LOCAL_DATE},
     )
 
     # Reading future scenario date labels
@@ -38,7 +38,10 @@ def load_tables(session):
         "data/simulation-dates.csv",
         keys=["AsOfDate", "TimePoint"],
         table_name="Monte Carlo Date Labels",
-        types={"TimePointDate": tt.type.LOCAL_DATE, "AsOfDate": tt.type.LOCAL_DATE},
+        data_types={
+            "TimePointDate": tt.type.LOCAL_DATE,
+            "AsOfDate": tt.type.LOCAL_DATE,
+        },
     )
 
     # Reading trade attributes
@@ -46,7 +49,7 @@ def load_tables(session):
         "data/trades-attributes.csv",
         keys=["AsOfDate", "TradeId"],
         table_name="Trade Attributes",
-        types={
+        data_types={
             "MaturityDate": tt.type.LOCAL_DATE,
             "BreakDate": tt.type.LOCAL_DATE,
             "AsOfDate": tt.type.LOCAL_DATE,
@@ -117,7 +120,7 @@ def launch_cube(getData="N"):
         download_data()
 
     # Starting atoti session
-    session = tt.Session()
+    session = tt.Session.start()
     base_table = load_tables(session)
     cube = session.create_cube(base_table, "Monte Carlo Analytics")
     create_hierarchies(session)

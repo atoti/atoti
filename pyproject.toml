@@ -1,53 +1,59 @@
-[tool.poetry]
+[project]
 name = "notebooks"
 version = "0.1.0"
 description = "Gallery of atoti notebooks"
-authors = ["atoti <contact@atoti.io>"]
+readme = "README.md"
+requires-python = ">=3.10, <3.12"
+dependencies = [
+    "boto3 >=1.35.36, <2",
+    "s3fs >=2024.6.1, <2026",
+    "fsspec >=2024.6.1, <2026",
+    "wget >=3.2, <4",
+    "treelib >=1.6.4, <2",
+    "matplotlib >=3.9.2, <4",
+    "praw >=7.7.0, <8",
+    "seaborn >=0.13.2, <1",
+    "statsmodels >=0.14.4, <1",
+    "imblearn >=0.0, <1",
+    "ipywidgets >=8.1.5, <9",
+    "openpyxl >=3.1.5, <4",
+    "haversine >=2.8.0, <3",
+    "watchdog >=5.0.3, <7",
+    "quantlib >=1.36, <2",
+    "kafka-python >=2.0.2, <3",
+    "xgboost >=2.1.1, <4",
+    "natsort >=8.3.1, <9",
+    "tabulate >=0.9.0, <1",
+    "orjson >=3.10.7, <4",
+    "lxml >=5.3.0, <7",
+    "html5lib >=1.1, <2",
+    "yfinance >=0.2.44, <1",
+    "pyopls >=20.3.post1, <21",
+    "nltk >=3.9.1, <4",
+    "textblob >=0.18.0, <1",
+    "llvmlite >=0.43.0, <1",
+    "protobuf >=5.28.2, <7",
+    "scikit-learn >=1.5.2, <2",
+    "folium >=0.17.0, <1",
+    "atoti[aws,azure,gcp,jupyterlab,kafka,jdbc]==0.9.7",
+    "pandas == 2.3.1",
+    "jupyterlab == 4.3.4",
+    "ruff >=0.6.9, <1",
+    "memory-profiler>=0.61.0",
+    "jupyter-resource-usage>=1.1.0",
+    "pytest == 8.4.1",
+    "pytest-html == 4.1.1",
+    "pytest-xdist == 3.8.0",
+    "nbdime == 4.0.2",
+    "nbmake == 1.5.5",
+    "pre-commit == 4.2.0",
+    "playwright == 1.54.0",
+    "pyportfolioopt == 1.5.6"
+]
 
-[tool.poetry.dependencies]
-python = ">=3.9.0,<3.9.7 || >3.9.7,<3.11"
-boto3 = {version = "^1.17.102", source = "PyPi"}
-s3fs = {version = "^2021.10.0", source = "PyPi"}
-fsspec = {version = "^2021.10.0", source = "PyPI"}
-wget = {version = "^3.2", source = "PyPI"}
-treelib = {version = "^1.6.4", source = "PyPI"}
-matplotlib = {version = "^3.7.1", source = "PyPI"}
-praw = {version = "^7.7.0", source = "PyPI"}
-seaborn = {version = "^0.12.2", source = "PyPI"}
-statsmodels = {version = "^0.14.0", source = "PyPI"}
-imblearn = {version = "^0.0", source = "PyPI"}
-ipywidgets = {version = "^8.0.6", source = "PyPI"}
-openpyxl = {version = "^3.1.2", source = "PyPI"}
-haversine = {version = "^2.8.0", source = "PyPI"}
-watchdog = {version = "^3.0.0", source = "PyPI"}
-quantlib = {version = "^1.30", source = "PyPI"}
-kafka-python = {version = "^2.0.2", source = "PyPI"}
-xgboost = {version = "^1.7.5", source = "PyPI"}
-natsort = {version = "^8.3.1", source = "PyPI"}
-tabulate = {version = "^0.9.0", source = "PyPI"}
-orjson = {version = "^3.8.14", source = "PyPI"}
-lxml = {version = "^4.9.2", source = "PyPI"}
-html5lib = {version = "^1.1", source = "PyPI"}
-yfinance = {version = "^0.2.18", source = "PyPI"}
-pyopls = {version = "^20.3.post1", source = "PyPI"}
-nltk = {version = "^3.8.1", source = "PyPI"}
-textblob = {version = "^0.17.1", source = "PyPI"}
-llvmlite = {version = "^0.40.0", source = "PyPI"}
-protobuf = {version = "^4.23.2", source = "PyPI"}
-pyportfolioopt = {version = "^1.5.5", source = "PyPI"}
-tsfresh = {version = "^0.20.0", source = "PyPI"}
-scikit-learn = {version = "^1.3.0", source = "PyPI"}
-folium = {version = "^0.14.0", source = "PyPI"}
-atoti = {version = "0.8.11", extras = ["aws", "azure", "gcp", "jupyterlab", "kafka", "sql"], source = "PyPI"}
-pandas = {version = "2.0.3", source = "PyPI"}
-
-[tool.poetry.dev-dependencies]
-black = { extras = ["jupyter"], version = "*" }
-
-[[tool.poetry.source]]
+[tool.source]
 name = "PyPI"
 priority = "primary"
 
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+[tool.ruff]
+extend-include = ["*.ipynb"]

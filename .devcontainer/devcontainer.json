@@ -15,5 +15,6 @@
             "label": "atoti"
         }
     },
-    "postCreateCommand": "uv add jupyter-server-proxy && uv run jupyter-lab --ip=0.0.0.0 --allow-root --no-browser --IdentityProvider.token='' --ServerApp.password=''"
+    "postCreateCommand": "uv add jupyter-server-proxy && uv run jupyter-lab --ip=0.0.0.0 --allow-root --no-browser --IdentityProvider.token='' --ServerApp.password=''",
+    "postAttachCommand": "code --command github.codespaces.viewCreationLog"
 }

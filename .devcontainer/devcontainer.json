@@ -3,6 +3,9 @@
         "context": "..", // Refers to the parent directory of .devcontainer
         "dockerfile": "../docker/Dockerfile"
     },
+    "containerEnv": {
+        "UV_LINK_MODE": "copy"
+    },
     "forwardPorts": [8888, 9092],
     "portsAttributes": {
         "8888": {
@@ -12,5 +15,5 @@
             "label": "atoti"
         }
     },
-    "postCreateCommand": "uv add jupyter-server-proxy && uv run jupyter-lab --ip=0.0.0.0 --allow-root --no-browser"
+    "postCreateCommand": "uv add jupyter-server-proxy && uv run jupyter-lab --ip=0.0.0.0 --allow-root --no-browser --IdentityProvider.token='' --ServerApp.password=''"
 }

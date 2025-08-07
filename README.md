@@ -64,6 +64,8 @@ In addition, Atoti Python SDK requires Java 21 if you want to use your own JDK. 
 
 ## GitHub Codespaces
 
+Get started with no setup required! Click the button below!
+
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&repo=atoti/atoti&ref=ac-70-adding-devcontainer)
 
 ## JupyterLab

@@ -1,8 +1,7 @@
 {
     "build": {
-        // Path is relative to the devcontainer.json file.
-        "dockerfile": "Dockerfile"
-
+        "context": "..", // Refers to the parent directory of .devcontainer
+        "dockerfile": "../docker/Dockerfile"
     },
     "forwardPorts": [8888, 9092],
     "portsAttributes": {
@@ -12,6 +11,5 @@
         "9092": {
             "label": "atoti"
         }
-    },
-    "postCreateCommand": "jupyter-lab --ip=0.0.0.0 --allow-root --no-browser"
+    }
 }

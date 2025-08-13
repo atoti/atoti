@@ -96,17 +96,16 @@ def run_all_code_cells(
     Execute all visible code cells in the notebook, ensuring each cell completes
     before moving to the next.
     """
-    page.wait_for_selector("div.jp-NotebookPanel:not(.lm-mod-hidden)", state="visible")
+    page.wait_for_selector("div.jp-NotebookPanel:not(.lm-mod-hidden)", state="attached")
     page.click("div.jp-NotebookPanel:not(.lm-mod-hidden)")
     cells = page.locator(
         "div.jp-NotebookPanel:not(.lm-mod-hidden) .jp-Cell.jp-CodeCell"
     )
-    visible_cells = [
-        cells.nth(i) for i in range(cells.count()) if cells.nth(i).is_visible()
-    ]
-    total = len(visible_cells)
-    logger.info(f"  ▶️  Running {total} visible code cells…")
-    for run_index, cell in enumerate(visible_cells, 1):
+    # Get all code cells
+    all_cells = [cells.nth(i) for i in range(cells.count())]
+    total = len(all_cells)
+    logger.info(f"  ▶️  Running {total} code cells…")
+    for run_index, cell in enumerate(all_cells, 1):
         logger.info(f"     → Code cell {run_index}/{total}")
         cell.scroll_into_view_if_needed()
         cell.evaluate("el => el.focus()")
@@ -135,12 +134,12 @@ def close_tab(page: Page) -> None:
     Close the currently active notebook tab in JupyterLab.
     """
     page.click('li.lm-MenuBar-item:has-text("File")')
-    item = page.get_by_role("menuitem", name="Close Tab")
-    if item.is_visible() and item.is_enabled():
+    try:
+        item = page.get_by_role("menuitem", name="Close Tab")
         item.click()
         logger.info("  🙅 Close tab")
-    else:
-        logger.warning("  ⚠️ 'Close Tab' is disabled, nothing to do")
+    except Exception:
+        logger.warning("  ⚠️ 'Close Tab' is not available, nothing to do")
 
 
 def save_notebook(page: Page, nb: str) -> None:
@@ -148,8 +147,11 @@ def save_notebook(page: Page, nb: str) -> None:
     Save the current notebook using the JupyterLab File menu.
     """
     page.click('li.lm-MenuBar-item:has-text("File")')
-    save_sel = 'li.lm-Menu-item[data-command="docmanager:save"]:not(.lm-mod-disabled)'
-    page.click(save_sel)
+    save_sel = 'li.lm-Menu-item[data-command="docmanager:save"] .lm-Menu-itemLabel:has-text("Save Notebook")'
+    page.wait_for_selector(save_sel, state="visible")
+    # Focus on the save button before clicking
+    page.locator(save_sel).focus()
+    page.click(save_sel, timeout=60000)
     logger.info("  💾 Notebook saved")
 
 

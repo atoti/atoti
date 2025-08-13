@@ -22,6 +22,7 @@
 03-use-cases/01-finance/front-office/real-time-risk
 
 # --- To Be Categorized ---
+01-atoti-academy/introduction-to-atoti/main.ipynb
 03-use-cases/01-finance/risk-management/credit-risk/ifrs9
 03-use-cases/01-finance/risk-management/credit-risk/sa-ccr
 03-use-cases/01-finance/risk-management/credit-risk/collateral-shortfall-forecast

@@ -14,7 +14,7 @@ def get_num_workers() -> int | str:
     """
     is_github_runner = os.environ.get("GITHUB_ACTIONS") == "true"
     if is_github_runner:
-        return 1
+        return 2
     else:
         return "auto"
 

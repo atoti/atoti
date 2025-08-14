@@ -26,12 +26,11 @@
 <tr>
     <td><b>Notebooks</b></td>
     <td><b>Version</b></td>
-    <td><b>Related media</b></td>
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./irrbb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.7-1C900C" alt="Latest version" /></td>
-<td><a href="https://www.atoti.io/articles/irrbb-with-atoti/?utm_source=github">📰&nbsp;Measuring Interest Rate Risk in the Banking Book (IRRBB) with Atoti</a></td><td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> cube</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
+<td rowspan="1"><a href="./irrbb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> cube</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 </table>
 

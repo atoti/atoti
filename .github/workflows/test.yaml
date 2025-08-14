@@ -13,7 +13,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest, macos-13]
+        os: [ubuntu-latest, windows-latest, macos-latest]
         python: ["3.10.11"]
         node-version: [16.x]
       fail-fast: false
@@ -37,7 +37,7 @@ jobs:
           java-version: '21'
 
       - name: Install libomp
-        if: ${{ matrix.os == 'macos-latest' || matrix.os == 'macos-13' }}
+        if: ${{ matrix.os == 'macos-latest' }}
         run: brew install libomp
 
       - name: Install uv

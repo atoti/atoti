@@ -42,9 +42,9 @@ Check out [atoti.io](https://www.atoti.io/) for more info. For enterprise soluti
 
 Welcome! This repository has some neat things to get you up and running with Atoti. Stay here to find out:
 
-* <a href="./01-atoti-academy/"><img src="https://img.shields.io/badge/Atoti%20Academy-9E4F8A" alt="Atoti Academy"></a>&nbsp; — Get started with Atoti using our introductory notebooks.
-* <a href="./02-technical-guides/"><img src="https://img.shields.io/badge/Technical%20Guides-9E4F8A" alt="Technical Guides"></a>&nbsp; — Learn specific technical operations in Atoti.
-* <a href="./03-use-cases/"><img src="https://img.shields.io/badge/Use%20Cases-9E4F8A" alt="Use Cases"></a>&nbsp; — Adapt Atoti to a specific business use case.
+* <a href="./01-atoti-academy/"><img src="https://img.shields.io/badge/Atoti%20Academy-9E4F8A" alt="Atoti Academy"></a>&nbsp; — Get started with Atoti using our introductory notebooks
+* <a href="./02-technical-guides/"><img src="https://img.shields.io/badge/Technical%20Guides-9E4F8A" alt="Technical Guides"></a>&nbsp; — Learn specific technical operations in Atoti
+* <a href="./03-use-cases/"><img src="https://img.shields.io/badge/Use%20Cases-9E4F8A" alt="Use Cases"></a>&nbsp; — Adapt Atoti to a specific business use case
 
 Moving to production? Navigate to our Project Template repository to learn how to implement Atoti projects:
 
@@ -75,19 +75,19 @@ uv run jupyter-lab
 ### 💬 Discussions and issues
 
 You can use:
-- [Discussions](https://github.com/atoti/atoti/discussions) to ask questions or suggest new features.
-- [Issues](https://github.com/atoti/atoti/issues) to report problems.
+- [Discussions](https://github.com/atoti/atoti/discussions) to ask questions or suggest new features
+- [Issues](https://github.com/atoti/atoti/issues) to report problems
 
 By starting a discussion or opening an issue, you agree with Atoti's [terms of use](https://www.atoti.io/terms) and [privacy policy](https://www.atoti.io/privacy-policy).
 
 
 ### 📚 Other resources
 
-- [Documentation](https://docs.atoti.io/latest/index.html)
-- [Tutorial](https://docs.atoti.io/latest/getting_started/tutorial/tutorial.html)
-- [Guides](https://www.atoti.io/guides/)
-- [Articles](https://www.atoti.io/articles/)
-- [Videos](https://www.atoti.io/resources/videos/)
+- [Documentation](https://docs.activeviam.com/products/atoti/python-sdk/latest/index.html)
+- [Tutorial](https://docs.activeviam.com/products/atoti/python-sdk/latest/getting_started/tutorial/tutorial.html)
+- [Guides](https://docs.activeviam.com/products/atoti/python-sdk/latest/guides/index.html)
+- [Articles](https://www.atoti.activeviam.com/articles/)
+- [Videos](https://www.atoti.activeviam.com/videos/)
 
 
 <br/>

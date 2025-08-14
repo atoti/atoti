@@ -17,9 +17,13 @@
 03-use-cases/01-finance/retail-banking/credit-card-analytics/cc_data_processing.ipynb
 03-use-cases/01-finance/retail-banking/credit-card-analytics/main.ipynb
 
-# -- Needs Docker Container Running ---
+# --- Needs Docker Container Running ---
 02-technical-guides/observability-with-otel/main.ipynb
 03-use-cases/01-finance/front-office/real-time-risk
+
+# --- Data Generators ---
+03-use-cases/01-finance/portfolio-management/cvar-optimizer/01_data_generation.ipynb
+03-use-cases/01-finance/treasury/intraday-liquidity/data_generator.ipynb
 
 # --- To Be Categorized ---
 01-atoti-academy/introduction-to-atoti/main.ipynb

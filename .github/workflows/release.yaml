@@ -23,6 +23,7 @@ jobs:
         with:
           token: "${{ secrets.GITHUB_TOKEN }}"
           generate_release_notes: true
+          make_latest: true
      
       - name: Notify Slack
         if: success()

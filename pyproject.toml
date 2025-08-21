@@ -46,7 +46,7 @@ dependencies = [
     "pytest-xdist == 3.8.0",
     "nbdime == 4.0.2",
     "nbmake == 1.5.5",
-    "pre-commit == 4.2.0",
+    "pre-commit == 4.3.0",
     "playwright == 1.54.0",
     "pyportfolioopt == 1.5.6"
 ]

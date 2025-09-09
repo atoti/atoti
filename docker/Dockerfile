@@ -1,5 +1,4 @@
-# Set explicit platform (to account for ARM-based Macbooks)
-FROM --platform=linux/amd64 python:3.10.13-slim-bookworm
+FROM python:3.10.13-slim-bookworm
 
 # Install system and dependencies
 RUN apt-get update \

@@ -1,4 +1,5 @@
 import argparse
+import gc
 import os
 import sys
 import time
@@ -372,34 +373,14 @@ def main() -> None:
     total_start_time = time.time()
     results: List[dict] = []
     failures: List[str] = []
-    browser_crashes = 0
-    max_browser_crashes = 3  # Restart browser after this many crashes
-
-    def should_restart_browser():
-        return browser_crashes >= max_browser_crashes
 
     with sync_playwright() as pw:
         browser = create_browser(pw)
 
         try:
-            notebook_count = len(notebooks)
-            notebook_idx = 0
+            for idx, nb in enumerate(notebooks, 1):
+                logger.info(f"Processing notebook {idx}/{len(notebooks)}")
 
-            while notebook_idx < notebook_count:
-                nb = notebooks[notebook_idx]
-                logger.info(f"Processing notebook {notebook_idx + 1}/{notebook_count}")
-
-                if should_restart_browser():
-                    logger.warning(
-                        f"🔄 Restarting browser after {browser_crashes} crashes"
-                    )
-                    browser.close()
-                    import gc
-
-                    gc.collect()
-                    time.sleep(5)
-                    browser = create_browser(pw)
-                    browser_crashes = 0
                 try:
                     with browser.new_page() as page:
                         page.set_default_timeout(180000)
@@ -411,25 +392,22 @@ def main() -> None:
                         )
 
                 except Exception as e:
-                    error_type = classify_error(str(e))
-                    if error_type == "crash":
-                        browser_crashes += 1
-                        logger.error(
-                            f"🔥 Browser crash on {nb} (crash #{browser_crashes})"
-                        )
+                    if "crash" in str(e).lower() or "target closed" in str(e).lower():
+                        logger.error(f"🔥 Browser crash on {nb}, restarting...")
+                        browser.close()
+                        gc.collect()
+                        time.sleep(2)
+                        browser = create_browser(pw)
                     else:
                         logger.error(f"❌ Error on {nb}: {e}")
+
                     results.append({"name": nb, "status": "FAIL", "duration": 0})
                     failures.append(nb)
 
-                notebook_idx += 1
-
-                if notebook_idx % 5 == 0:
-                    logger.info("🧹 Performing memory cleanup")
-                    import gc
-
+                # Efficient memory cleanup every 5 notebooks
+                if idx % 5 == 0:
+                    logger.info("🧹 Memory cleanup")
                     gc.collect()
-                    time.sleep(1)
 
         finally:
             browser.close()

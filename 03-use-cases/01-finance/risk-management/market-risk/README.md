@@ -29,19 +29,19 @@
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./sbm">sbm&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./sbm">sbm&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> rolling windows</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./../../../../03-use-cases/01-finance/front-office/pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./../../../../03-use-cases/01-finance/front-office/pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>table join</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 </table>

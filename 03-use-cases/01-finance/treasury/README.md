@@ -37,7 +37,7 @@
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./intraday-liquidity">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./intraday-liquidity">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ranking</kbd>&nbsp;</td>
 </tr>
 </table>

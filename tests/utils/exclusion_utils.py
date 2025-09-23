@@ -6,7 +6,7 @@ import sys
 
 
 def get_excluded_notebook_groups(
-    exclusion_file: str = "tests/test_exclusion.txt",
+    exclusion_file: str = "tests/utils/test_exclusion.txt",
 ) -> dict:
     """
     Parse the exclusion file and return a dictionary mapping group names to lists of excluded notebook paths.
@@ -103,26 +103,65 @@ def get_target_notebook_paths(
 
 def resolve_target_notebooks(target_args: list[str]) -> list[str]:
     """
-    Return the list of notebooks to test based on the target groups.
+    Return the list of notebooks to test based on the target groups or individual notebook paths.
     - If target_args is ['default'] or None, return all notebooks minus any group exclusions.
     - If only one group is present, return only that group's notebooks.
     - If multiple groups are present, return only the notebooks from the specified groups.
     - If 'default' is present with other groups, combine the set of all notebooks minus group exclusions, with those groups.
+    - If individual notebook paths are provided (ending with .ipynb), include them directly.
     """
     target_to_exclusion_group_map = {
         "licensed": "Atoti Locked Notebooks",
         "long-running": "Long Running Notebooks",
     }
-    # Normalize all target arguments into a flat list of group keys
+
+    # Normalize all target arguments into a flat list
     normalized_targets = []
+    individual_notebooks = []
+
     for arg in target_args:
         split_targets = arg.split(",")
         for part in split_targets:
-            normalized = part.strip().lower().replace(" ", "-")
-            if normalized:
+            part = part.strip()
+            if not part:
+                continue
+
+            # Check if this is an individual notebook path
+            if part.endswith(".ipynb"):
+                # Normalize path separators and ensure it's relative
+                normalized_path = part.replace("\\", "/")
+                if normalized_path.startswith("./"):
+                    normalized_path = normalized_path[2:]
+                individual_notebooks.append(normalized_path)
+            else:
+                # This is a group name
+                normalized = part.lower().replace(" ", "-")
                 normalized_targets.append(normalized)
 
-    # Handle special cases for group selection
+    # If we have individual notebooks, validate they exist and return them (plus any groups)
+    all_notebook_paths = get_all_notebook_paths()
+    validated_individual_notebooks = []
+
+    for notebook in individual_notebooks:
+        if notebook in all_notebook_paths:
+            validated_individual_notebooks.append(notebook)
+        else:
+            # Try to find a match with different path variations
+            possible_matches = [
+                nb for nb in all_notebook_paths if nb.endswith(notebook)
+            ]
+            if len(possible_matches) == 1:
+                validated_individual_notebooks.append(possible_matches[0])
+            elif len(possible_matches) > 1:
+                raise ValueError(
+                    f"Ambiguous notebook path '{notebook}'. Multiple matches found: {possible_matches}"
+                )
+            else:
+                raise ValueError(
+                    f"Notebook not found: '{notebook}'. Available notebooks can be listed with the 'default' target."
+                )
+
+    # Handle group-based resolution
     only_default = normalized_targets == ["default"]
     only_licensed = normalized_targets == ["licensed"]
     only_long_running = normalized_targets == ["long-running"]
@@ -132,23 +171,34 @@ def resolve_target_notebooks(target_args: list[str]) -> list[str]:
         target_to_exclusion_group_map.get(key, key) for key in filtered_targets
     )
 
+    group_notebooks = []
+
     if only_default:
-        return get_target_notebook_paths(include_only=None)
-    if only_licensed:
-        return get_target_notebook_paths(
+        group_notebooks = get_target_notebook_paths(include_only=None)
+    elif only_licensed:
+        group_notebooks = get_target_notebook_paths(
             include_only=target_to_exclusion_group_map["licensed"]
         )
-    if only_long_running:
-        return get_target_notebook_paths(
+    elif only_long_running:
+        group_notebooks = get_target_notebook_paths(
             include_only=target_to_exclusion_group_map["long-running"]
         )
-    if has_default and resolved_groups:
+    elif has_default and resolved_groups:
         default_notebooks = get_target_notebook_paths(include_only=None)
+        target_group_notebooks = get_target_notebook_paths(include_only=resolved_groups)
+        group_notebooks = sorted(set(default_notebooks + target_group_notebooks))
+    elif resolved_groups:
         group_notebooks = get_target_notebook_paths(include_only=resolved_groups)
-        return sorted(set(default_notebooks + group_notebooks))
-    if resolved_groups:
-        return get_target_notebook_paths(include_only=resolved_groups)
-    raise ValueError("No valid target groups specified.")
+    elif not normalized_targets and not individual_notebooks:
+        raise ValueError("No valid target groups or notebook paths specified.")
+
+    # Combine individual notebooks and group notebooks
+    all_notebooks = sorted(set(validated_individual_notebooks + group_notebooks))
+
+    if not all_notebooks:
+        raise ValueError("No notebooks found for the specified targets.")
+
+    return all_notebooks
 
 
 def set_licensed_env_vars():
@@ -194,7 +244,7 @@ def add_and_validate_target_args(parser):
         "--target",
         nargs="*",
         required=True,
-        help="Comma-separated list of group names to target (e.g. --target=default,licensed,long-running)",
+        help="Comma-separated list of group names (default, licensed, long-running) or individual notebook paths (e.g. --target=default,licensed or --target=02-technical-guides/auto-cube/main.ipynb)",
     )
     args = parser.parse_args()
 

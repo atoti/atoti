@@ -44,7 +44,7 @@
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> statistical computation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./credit-risk/xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./credit-risk/xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> switch</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -69,7 +69,7 @@
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./liquidity-risk/irrbb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./liquidity-risk/irrbb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> cube</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -90,19 +90,19 @@
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./market-risk/sbm">sbm&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./market-risk/sbm">sbm&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> rolling windows</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./../../../03-use-cases/01-finance/front-office/pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./../../../03-use-cases/01-finance/front-office/pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>table join</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./market-risk/value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.8-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./market-risk/value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 </table>

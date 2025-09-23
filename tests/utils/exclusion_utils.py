@@ -6,7 +6,7 @@ import sys
 
 
 def get_excluded_notebook_groups(
-    exclusion_file: str = "tests/test_exclusion.txt",
+    exclusion_file: str = "tests/utils/test_exclusion.txt",
 ) -> dict:
     """
     Parse the exclusion file and return a dictionary mapping group names to lists of excluded notebook paths.

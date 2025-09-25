@@ -83,39 +83,36 @@ def execute_cell_with_timing(page: Page, cell, run_index: int, timeout: int) -> 
     """Execute a single cell and return execution time."""
     cell.wait_for(state="attached", timeout=CONFIG["timeouts"]["cell_attach"])
     cell.scroll_into_view_if_needed()
-    page.wait_for_timeout(500)
+    page.wait_for_timeout(100)  # Reduced from 500ms to 100ms
     cell.evaluate("el => el.focus()")
 
     start_time = time.time()
     page.keyboard.press("Shift+Enter")
 
-    # Check if execution started
+    # Check if execution started - balanced timeout for fast vs normal cells
     try:
         page.wait_for_selector(
-            SELECTORS["notebook"]["exec_busy"], state="attached", timeout=5000
+            SELECTORS["notebook"]["exec_busy"],
+            state="attached",
+            timeout=800,  # 800ms - fast enough to catch quick cells, slow enough for normal ones
         )
-    except TimeoutError:
-        # Check execution count in prompt to see if cell completed quickly
-        try:
-            execution_count = cell.locator(
-                SELECTORS["notebook"]["input_prompt"]
-            ).text_content()
-            if execution_count and any(c.isdigit() for c in execution_count):
-                return time.time() - start_time
-        except Exception:
-            pass
-        raise TimeoutError(f"Cell {run_index + 1} execution may not have started")
-
-    # Wait for completion
-    try:
+        # Wait for completion
         page.wait_for_selector(
             SELECTORS["notebook"]["exec_idle"], state="attached", timeout=timeout
         )
-        return time.time() - start_time
     except TimeoutError:
+        # Fast cell completed before busy indicator appeared - check execution count
+        execution_count = cell.locator(
+            SELECTORS["notebook"]["input_prompt"]
+        ).text_content()
+        if execution_count and any(c.isdigit() for c in execution_count):
+            return time.time() - start_time
+        # If no execution count, it's a real timeout
         execution_time = time.time() - start_time
         logger.warning(f"⚠️  Cell {run_index + 1} timeout after {execution_time:.1f}s")
         raise
+
+    return time.time() - start_time
 
 
 def setup_notebook_panel(page: Page, nb: str, base_timeout: int) -> int:

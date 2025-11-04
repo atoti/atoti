@@ -29,7 +29,7 @@
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./bucket-analysis">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./bucket-analysis">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 </table>

@@ -33,7 +33,7 @@
 <td rowspan="1"><kbd>switch</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> sql connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./price-elasticity">price-elasticity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./price-elasticity">price-elasticity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 </table>

@@ -56,15 +56,15 @@ Want to try Atoti Python SDK? You can [register online for an evaluation license
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/front-office/cumulative-pnl">cumulative-pnl&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/front-office/cumulative-pnl">cumulative-pnl&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/front-office/pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/front-office/pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./01-finance/front-office/real-time-risk">real-time-risk&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./01-finance/front-office/real-time-risk">real-time-risk&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>kafka connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> kafka connector</kbd>&nbsp;<kbd> local file</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -88,7 +88,7 @@ Want to try Atoti Python SDK? You can [register online for an evaluation license
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/retail-banking/credit-card-analytics">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/retail-banking/credit-card-analytics">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -125,7 +125,7 @@ Want to try Atoti Python SDK? You can [register online for an evaluation license
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> statistical computation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> switch</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -150,7 +150,7 @@ Want to try Atoti Python SDK? You can [register online for an evaluation license
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/liquidity-risk/irrbb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/liquidity-risk/irrbb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> cube</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -171,19 +171,19 @@ Want to try Atoti Python SDK? You can [register online for an evaluation license
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/sbm">sbm&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/sbm">sbm&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> rolling windows</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./../03-use-cases/01-finance/front-office/pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./../03-use-cases/01-finance/front-office/pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>table join</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -240,7 +240,7 @@ Want to try Atoti Python SDK? You can [register online for an evaluation license
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ranking</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -266,7 +266,7 @@ Want to try Atoti Python SDK? You can [register online for an evaluation license
 <td rowspan="1"><kbd>switch</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> sql connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/insurance/price-elasticity">price-elasticity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/insurance/price-elasticity">price-elasticity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -292,7 +292,7 @@ Want to try Atoti Python SDK? You can [register online for an evaluation license
 <td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/portfolio-management/cvar-optimizer"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/portfolio-management/cvar-optimizer"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -318,7 +318,7 @@ Want to try Atoti Python SDK? You can [register online for an evaluation license
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/quantitative-strategy/bucket-analysis">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/quantitative-strategy/bucket-analysis">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -577,11 +577,11 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/insurance/price-elasticity">price-elasticity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/insurance/price-elasticity">price-elasticity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/retail-banking/credit-card-analytics">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/retail-banking/credit-card-analytics">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -681,7 +681,7 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/front-office/cumulative-pnl">cumulative-pnl&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/front-office/cumulative-pnl">cumulative-pnl&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -703,11 +703,11 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> statistical computation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/sbm">sbm&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/sbm">sbm&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> switch</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -719,7 +719,7 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ranking</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -829,15 +829,15 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/front-office/cumulative-pnl">cumulative-pnl&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/front-office/cumulative-pnl">cumulative-pnl&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/front-office/pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/front-office/pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/insurance/price-elasticity">price-elasticity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/insurance/price-elasticity">price-elasticity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -845,23 +845,23 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/portfolio-management/cvar-optimizer"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/portfolio-management/cvar-optimizer"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/liquidity-risk/irrbb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/liquidity-risk/irrbb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> cube</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/sbm">sbm&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/sbm">sbm&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> rolling windows</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -975,7 +975,7 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/front-office/cumulative-pnl">cumulative-pnl&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/front-office/cumulative-pnl">cumulative-pnl&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -987,7 +987,7 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/portfolio-management/cvar-optimizer"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/portfolio-management/cvar-optimizer"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -995,11 +995,11 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/quantitative-strategy/bucket-analysis">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/quantitative-strategy/bucket-analysis">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/liquidity-risk/irrbb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/liquidity-risk/irrbb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> cube</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1007,23 +1007,23 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> statistical computation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/sbm">sbm&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/sbm">sbm&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> rolling windows</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> switch</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ranking</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -1115,7 +1115,7 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/front-office/cumulative-pnl">cumulative-pnl&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/front-office/cumulative-pnl">cumulative-pnl&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1123,7 +1123,7 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>switch</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> sql connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/retail-banking/credit-card-analytics">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/retail-banking/credit-card-analytics">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1133,7 +1133,7 @@ Double-click on tile to go to feature section.
 <tr>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ranking</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -1219,7 +1219,7 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./01-finance/front-office/real-time-risk">real-time-risk&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./01-finance/front-office/real-time-risk">real-time-risk&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>kafka connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> kafka connector</kbd>&nbsp;<kbd> local file</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1229,7 +1229,7 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>switch</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> sql connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/insurance/price-elasticity">price-elasticity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/insurance/price-elasticity">price-elasticity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1237,7 +1237,7 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/portfolio-management/cvar-optimizer"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/portfolio-management/cvar-optimizer"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1249,7 +1249,7 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ranking</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -1387,11 +1387,11 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/front-office/cumulative-pnl">cumulative-pnl&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/front-office/cumulative-pnl">cumulative-pnl&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./01-finance/front-office/real-time-risk">real-time-risk&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./01-finance/front-office/real-time-risk">real-time-risk&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>kafka connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> kafka connector</kbd>&nbsp;<kbd> local file</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1405,7 +1405,7 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/portfolio-management/cvar-optimizer"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/portfolio-management/cvar-optimizer"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1413,11 +1413,11 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/quantitative-strategy/bucket-analysis">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/quantitative-strategy/bucket-analysis">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/retail-banking/credit-card-analytics">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/retail-banking/credit-card-analytics">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1437,15 +1437,15 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> statistical computation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> rolling windows</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> switch</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -1587,7 +1587,7 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/portfolio-management/cvar-optimizer"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/portfolio-management/cvar-optimizer"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1595,7 +1595,7 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/liquidity-risk/irrbb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/liquidity-risk/irrbb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> cube</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1603,15 +1603,15 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> statistical computation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> rolling windows</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> switch</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -1637,11 +1637,11 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/front-office/pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/front-office/pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./01-finance/front-office/real-time-risk">real-time-risk&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./01-finance/front-office/real-time-risk">real-time-risk&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>kafka connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> kafka connector</kbd>&nbsp;<kbd> local file</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1651,7 +1651,7 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>switch</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> sql connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/insurance/price-elasticity">price-elasticity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/insurance/price-elasticity">price-elasticity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1659,11 +1659,11 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/quantitative-strategy/bucket-analysis">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/quantitative-strategy/bucket-analysis">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/retail-banking/credit-card-analytics">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/retail-banking/credit-card-analytics">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1683,19 +1683,19 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> statistical computation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/sbm">sbm&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/sbm">sbm&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> rolling windows</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> switch</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1859,15 +1859,15 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/front-office/cumulative-pnl">cumulative-pnl&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/front-office/cumulative-pnl">cumulative-pnl&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/quantitative-strategy/bucket-analysis">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/quantitative-strategy/bucket-analysis">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ranking</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -1931,11 +1931,11 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/front-office/pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/front-office/pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/insurance/price-elasticity">price-elasticity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/insurance/price-elasticity">price-elasticity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1943,7 +1943,7 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/portfolio-management/cvar-optimizer"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/portfolio-management/cvar-optimizer"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1959,7 +1959,7 @@ Double-click on tile to go to feature section.
 <tr>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/liquidity-risk/irrbb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/liquidity-risk/irrbb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> cube</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1967,19 +1967,19 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> statistical computation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/sbm">sbm&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/sbm">sbm&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> rolling windows</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> switch</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -2127,27 +2127,27 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/front-office/pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/front-office/pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/insurance/price-elasticity">price-elasticity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/insurance/price-elasticity">price-elasticity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/retail-banking/credit-card-analytics">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/retail-banking/credit-card-analytics">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/liquidity-risk/irrbb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/liquidity-risk/irrbb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> cube</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> rolling windows</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -2297,7 +2297,7 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/front-office/cumulative-pnl">cumulative-pnl&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/front-office/cumulative-pnl">cumulative-pnl&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -2305,11 +2305,11 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>switch</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> sql connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/quantitative-strategy/bucket-analysis">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/quantitative-strategy/bucket-analysis">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/retail-banking/credit-card-analytics">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/retail-banking/credit-card-analytics">credit-card-analytics&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -2323,11 +2323,11 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> statistical computation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> rolling windows</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ranking</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -2445,15 +2445,15 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/front-office/cumulative-pnl">cumulative-pnl&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/front-office/cumulative-pnl">cumulative-pnl&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/front-office/pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/front-office/pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./01-finance/front-office/real-time-risk">real-time-risk&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./01-finance/front-office/real-time-risk">real-time-risk&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>kafka connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> kafka connector</kbd>&nbsp;<kbd> local file</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -2463,7 +2463,7 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>switch</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> sql connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/insurance/price-elasticity">price-elasticity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/insurance/price-elasticity">price-elasticity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -2471,7 +2471,7 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/quantitative-strategy/bucket-analysis">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/quantitative-strategy/bucket-analysis">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -2481,15 +2481,15 @@ Double-click on tile to go to feature section.
 <tr>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/sbm">sbm&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/sbm">sbm&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> rolling windows</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -2501,7 +2501,7 @@ Double-click on tile to go to feature section.
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> transactions</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ranking</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -2637,11 +2637,11 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/front-office/pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/front-office/pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/quantitative-strategy/bucket-analysis">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/quantitative-strategy/bucket-analysis">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -2651,7 +2651,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 <tr>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/sbm">sbm&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/sbm">sbm&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -2727,7 +2727,7 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./01-finance/front-office/real-time-risk">real-time-risk&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./01-finance/front-office/real-time-risk">real-time-risk&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>kafka connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> kafka connector</kbd>&nbsp;<kbd> local file</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -2737,7 +2737,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td rowspan="1"><kbd>switch</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> sql connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/quantitative-strategy/bucket-analysis">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/quantitative-strategy/bucket-analysis">bucket-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -2753,15 +2753,15 @@ Use case is currently not available for these industries. Reach out to <a href="
 <tr>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/liquidity-risk/irrbb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/liquidity-risk/irrbb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> cube</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/sbm">sbm&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/sbm">sbm&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ranking</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -2817,11 +2817,11 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/front-office/cumulative-pnl">cumulative-pnl&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/front-office/cumulative-pnl">cumulative-pnl&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./01-finance/front-office/real-time-risk">real-time-risk&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./01-finance/front-office/real-time-risk">real-time-risk&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>kafka connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> kafka connector</kbd>&nbsp;<kbd> local file</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -2833,11 +2833,11 @@ Use case is currently not available for these industries. Reach out to <a href="
 <tr>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> switch</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/treasury/intraday-liquidity">intraday-liquidity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ranking</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -2933,7 +2933,7 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./01-finance/front-office/real-time-risk">real-time-risk&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./01-finance/front-office/real-time-risk">real-time-risk&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>kafka connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> kafka connector</kbd>&nbsp;<kbd> local file</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -2991,11 +2991,11 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/front-office/pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/front-office/pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/insurance/price-elasticity">price-elasticity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/insurance/price-elasticity">price-elasticity&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -3003,7 +3003,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/portfolio-management/cvar-optimizer"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/portfolio-management/cvar-optimizer"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -3027,15 +3027,15 @@ Use case is currently not available for these industries. Reach out to <a href="
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> statistical computation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/stressed-var-calibration">stressed-var-calibration&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> rolling windows</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/market-risk/value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/market-risk/value-at-risk">value-at-risk&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> switch</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -3173,7 +3173,7 @@ Use case is currently not available for these industries. Reach out to <a href="
 <tr>
 </tr>
 <tr>
-<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./01-finance/risk-management/credit-risk/xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> switch</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 </table>

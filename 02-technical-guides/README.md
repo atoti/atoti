@@ -36,95 +36,95 @@
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./aggregate-provider">aggregate-provider&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./aggregate-provider">aggregate-provider&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./auto-cube">auto-cube&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./auto-cube">auto-cube&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./conditional-functions">conditional-functions&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./conditional-functions">conditional-functions&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> switch</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./currency-conv-with-weighted-ave">currency-conv-with-weighted-ave&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./currency-conv-with-weighted-ave">currency-conv-with-weighted-ave&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./currency-conversion">currency-conversion&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./currency-conversion">currency-conversion&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./currency-conversion-with-lookup">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./currency-conversion-with-lookup">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./directquery-intro"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./directquery-intro"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> bigquery</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./directquery-vector"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./directquery-vector"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> direct query</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> snowflake</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./internationalization"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./internationalization"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./multidimensional-analysis">multidimensional-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./multidimensional-analysis">multidimensional-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> drill through</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./rollup-hierarchies">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./rollup-hierarchies">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./var-benchmark">var-benchmark&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./var-benchmark">var-benchmark&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> table partition</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./virtual-hierarchies"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;virtual-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./virtual-hierarchies"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;virtual-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> clickhouse</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./weighted-averages">weighted-averages&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./weighted-averages">weighted-averages&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>pandas</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./security-implementation"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./security-implementation"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
 </tr>
 <tr>
 </tr>
 <tr>
-<td rowspan="1"><a href="./topcount">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./topcount">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./excel-and-atoti">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./excel-and-atoti">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>atoti to excel connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> atoti to excel connector</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> local file</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
 </tr>
 <tr>
-<td rowspan="1"><a href="./table-creation-and-data-loads">table-creation-and-data-loads&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./table-creation-and-data-loads">table-creation-and-data-loads&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>CSV</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./hierarchies">hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./hierarchies">hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./atoti-pandas-comparison">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./atoti-pandas-comparison">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./observability-with-otel"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./observability-with-otel"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -214,23 +214,23 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./atoti-pandas-comparison">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./atoti-pandas-comparison">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./auto-cube">auto-cube&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./auto-cube">auto-cube&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./internationalization"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./internationalization"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./rollup-hierarchies">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./rollup-hierarchies">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./security-implementation"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./security-implementation"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -258,27 +258,27 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./conditional-functions">conditional-functions&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./conditional-functions">conditional-functions&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> switch</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./currency-conv-with-weighted-ave">currency-conv-with-weighted-ave&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./currency-conv-with-weighted-ave">currency-conv-with-weighted-ave&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./currency-conversion">currency-conversion&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./currency-conversion">currency-conversion&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./currency-conversion-with-lookup">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./currency-conversion-with-lookup">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./topcount">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./topcount">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -304,41 +304,41 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./currency-conversion-with-lookup">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./currency-conversion-with-lookup">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./directquery-vector"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./directquery-vector"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> direct query</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> snowflake</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./internationalization"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./internationalization"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./observability-with-otel"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./observability-with-otel"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./rollup-hierarchies">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./rollup-hierarchies">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./security-implementation"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./security-implementation"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
 </tr>
 <tr>
 </tr>
 <tr>
-<td rowspan="1"><a href="./topcount">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./topcount">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./var-benchmark">var-benchmark&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./var-benchmark">var-benchmark&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> table partition</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -364,27 +364,27 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./atoti-pandas-comparison">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./atoti-pandas-comparison">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./conditional-functions">conditional-functions&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./conditional-functions">conditional-functions&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> switch</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./directquery-vector"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./directquery-vector"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> direct query</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> snowflake</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./internationalization"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./internationalization"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./multidimensional-analysis">multidimensional-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./multidimensional-analysis">multidimensional-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> drill through</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -410,7 +410,7 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -436,67 +436,67 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./atoti-pandas-comparison">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./atoti-pandas-comparison">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./auto-cube">auto-cube&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./auto-cube">auto-cube&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./currency-conv-with-weighted-ave">currency-conv-with-weighted-ave&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./currency-conv-with-weighted-ave">currency-conv-with-weighted-ave&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./currency-conversion">currency-conversion&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./currency-conversion">currency-conversion&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./directquery-intro"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./directquery-intro"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> bigquery</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./directquery-vector"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./directquery-vector"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> direct query</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> snowflake</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./excel-and-atoti">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./excel-and-atoti">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>atoti to excel connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> atoti to excel connector</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> local file</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
 </tr>
 <tr>
-<td rowspan="1"><a href="./internationalization"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./internationalization"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./rollup-hierarchies">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./rollup-hierarchies">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./security-implementation"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./security-implementation"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
 </tr>
 <tr>
 </tr>
 <tr>
-<td rowspan="1"><a href="./table-creation-and-data-loads">table-creation-and-data-loads&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./table-creation-and-data-loads">table-creation-and-data-loads&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>CSV</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./var-benchmark">var-benchmark&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./var-benchmark">var-benchmark&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> table partition</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./virtual-hierarchies"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;virtual-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./virtual-hierarchies"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;virtual-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> clickhouse</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./weighted-averages">weighted-averages&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./weighted-averages">weighted-averages&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>pandas</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -522,37 +522,37 @@ Double-click on tile to go to feature section.
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./atoti-pandas-comparison">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./atoti-pandas-comparison">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./currency-conversion-with-lookup">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./currency-conversion-with-lookup">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./excel-and-atoti">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./excel-and-atoti">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>atoti to excel connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> atoti to excel connector</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> local file</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
 </tr>
 <tr>
-<td rowspan="1"><a href="./hierarchies">hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./hierarchies">hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./internationalization"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./internationalization"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./multidimensional-analysis">multidimensional-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./multidimensional-analysis">multidimensional-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> drill through</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./table-creation-and-data-loads">table-creation-and-data-loads&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./table-creation-and-data-loads">table-creation-and-data-loads&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>CSV</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -582,27 +582,27 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./aggregate-provider">aggregate-provider&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./aggregate-provider">aggregate-provider&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./atoti-pandas-comparison">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./atoti-pandas-comparison">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./directquery-vector"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./directquery-vector"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> direct query</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> snowflake</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./observability-with-otel"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./observability-with-otel"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./var-benchmark">var-benchmark&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./var-benchmark">var-benchmark&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> table partition</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -628,45 +628,45 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./currency-conv-with-weighted-ave">currency-conv-with-weighted-ave&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./currency-conv-with-weighted-ave">currency-conv-with-weighted-ave&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./currency-conversion">currency-conversion&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./currency-conversion">currency-conversion&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./excel-and-atoti">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./excel-and-atoti">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>atoti to excel connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> atoti to excel connector</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> local file</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
 </tr>
 <tr>
-<td rowspan="1"><a href="./hierarchies">hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./hierarchies">hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./multidimensional-analysis">multidimensional-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./multidimensional-analysis">multidimensional-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> drill through</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./observability-with-otel"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./observability-with-otel"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./table-creation-and-data-loads">table-creation-and-data-loads&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./table-creation-and-data-loads">table-creation-and-data-loads&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>CSV</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./topcount">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./topcount">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./var-benchmark">var-benchmark&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./var-benchmark">var-benchmark&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> table partition</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -692,7 +692,7 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -718,69 +718,69 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./aggregate-provider">aggregate-provider&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./aggregate-provider">aggregate-provider&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./atoti-pandas-comparison">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./atoti-pandas-comparison">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./auto-cube">auto-cube&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./auto-cube">auto-cube&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./conditional-functions">conditional-functions&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./conditional-functions">conditional-functions&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> switch</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./currency-conv-with-weighted-ave">currency-conv-with-weighted-ave&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./currency-conv-with-weighted-ave">currency-conv-with-weighted-ave&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./currency-conversion">currency-conversion&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./currency-conversion">currency-conversion&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./currency-conversion-with-lookup">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./currency-conversion-with-lookup">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./excel-and-atoti">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./excel-and-atoti">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>atoti to excel connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> atoti to excel connector</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> local file</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
 </tr>
 <tr>
-<td rowspan="1"><a href="./internationalization"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./internationalization"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./multidimensional-analysis">multidimensional-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./multidimensional-analysis">multidimensional-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> drill through</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./observability-with-otel"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./observability-with-otel"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./rollup-hierarchies">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./rollup-hierarchies">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./topcount">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./topcount">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./var-benchmark">var-benchmark&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./var-benchmark">var-benchmark&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> table partition</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./weighted-averages">weighted-averages&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./weighted-averages">weighted-averages&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>pandas</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -806,33 +806,33 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./atoti-pandas-comparison">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./atoti-pandas-comparison">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./currency-conversion-with-lookup">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./currency-conversion-with-lookup">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./excel-and-atoti">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./excel-and-atoti">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>atoti to excel connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> atoti to excel connector</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> local file</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
 </tr>
 <tr>
-<td rowspan="1"><a href="./hierarchies">hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./hierarchies">hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./internationalization"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./internationalization"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./topcount">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./topcount">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -858,11 +858,11 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./hierarchies">hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./hierarchies">hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -888,49 +888,49 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./aggregate-provider">aggregate-provider&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./aggregate-provider">aggregate-provider&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./auto-cube">auto-cube&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./auto-cube">auto-cube&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> port</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./currency-conversion-with-lookup">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./currency-conversion-with-lookup">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./directquery-vector"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./directquery-vector"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> direct query</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> snowflake</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./internationalization"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./internationalization"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;internationalization&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./observability-with-otel"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./observability-with-otel"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./rollup-hierarchies">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./rollup-hierarchies">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./security-implementation"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./security-implementation"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
 </tr>
 <tr>
 </tr>
 <tr>
-<td rowspan="1"><a href="./topcount">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./topcount">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./var-benchmark">var-benchmark&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./var-benchmark">var-benchmark&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> table partition</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -956,15 +956,15 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./directquery-intro"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./directquery-intro"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> bigquery</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./directquery-vector"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./directquery-vector"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> direct query</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> snowflake</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./virtual-hierarchies"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;virtual-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./virtual-hierarchies"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;virtual-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> clickhouse</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -990,7 +990,7 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./excel-and-atoti">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./excel-and-atoti">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>atoti to excel connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> atoti to excel connector</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> local file</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1018,19 +1018,19 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./multidimensional-analysis">multidimensional-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./multidimensional-analysis">multidimensional-analysis&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>cumulative aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> drill through</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./rollup-hierarchies">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./rollup-hierarchies">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./topcount">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./topcount">topcount&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -1056,31 +1056,31 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./aggregate-provider">aggregate-provider&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./aggregate-provider">aggregate-provider&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./directquery-intro"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./directquery-intro"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-intro&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> bigquery</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./directquery-vector"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./directquery-vector"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> direct query</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> snowflake</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./observability-with-otel"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./observability-with-otel"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;observability-with-otel&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> query</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./rollup-hierarchies">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./rollup-hierarchies">rollup-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./var-benchmark">var-benchmark&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./var-benchmark">var-benchmark&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> table partition</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./virtual-hierarchies"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;virtual-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./virtual-hierarchies"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;virtual-hierarchies&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>direct query</kbd>&nbsp;<kbd> clickhouse</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -1106,15 +1106,15 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./currency-conversion-with-lookup">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./currency-conversion-with-lookup">currency-conversion-with-lookup&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./directquery-vector"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./directquery-vector"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;directquery-vector&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> direct query</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> snowflake</kbd>&nbsp;<kbd> aggregate provider</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./excel-and-atoti">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./excel-and-atoti">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>atoti to excel connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> atoti to excel connector</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> local file</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1142,7 +1142,7 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./excel-and-atoti">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./excel-and-atoti">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>atoti to excel connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> atoti to excel connector</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> local file</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1170,7 +1170,7 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./security-implementation"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./security-implementation"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;security-implementation&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>s3</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> CSV</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> logs configuration</kbd>&nbsp;<kbd> roles and restrictions</kbd>&nbsp;<kbd> authentication</kbd>&nbsp;</td>
 </tr>
 <tr>
@@ -1198,17 +1198,17 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./atoti-pandas-comparison">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./atoti-pandas-comparison">atoti-pandas-comparison&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>s3</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> s3</kbd>&nbsp;<kbd> parquet</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./excel-and-atoti">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./excel-and-atoti">excel-and-atoti&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>atoti to excel connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> atoti to excel connector</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> local file</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
 </tr>
 <tr>
-<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 </table>
@@ -1234,7 +1234,7 @@ Use case is currently not available for these industries. Reach out to <a href="
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.9-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./introductory-tutorial">introductory-tutorial&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> pandas</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> JupyterLab extension</kbd>&nbsp;<kbd> date format</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> port</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 </table>

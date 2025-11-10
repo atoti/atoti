@@ -41,7 +41,7 @@ dependencies = [
     "ruff >=0.6.9, <1",
     "memory-profiler>=0.61.0",
     "jupyter-resource-usage>=1.1.0",
-    "pytest == 8.4.2",
+    "pytest == 9.0.0",
     "pytest-html == 4.1.1",
     "pytest-xdist == 3.8.0",
     "nbdime == 4.0.2",

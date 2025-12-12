@@ -3,7 +3,7 @@ name = "notebooks"
 version = "0.1.0"
 description = "Gallery of atoti notebooks"
 readme = "README.md"
-requires-python = ">=3.10, <3.12"
+requires-python = ">=3.11, <3.12"
 dependencies = [
     "boto3 >=1.35.36, <2",
     "s3fs >=2024.6.1, <2026",
@@ -35,9 +35,9 @@ dependencies = [
     "protobuf >=5.28.2, <7",
     "scikit-learn >=1.5.2, <2",
     "folium >=0.17.0, <1",
-    "atoti[aws,azure,gcp,jupyterlab,kafka,jdbc]==0.9.10",
+    "atoti[aws,azure,gcp,jupyterlab,kafka,jdbc]==0.9.11.dev20251210080526+ba3b981",
     "pandas == 2.3.3",
-    "jupyterlab == 4.3.4",
+    "jupyterlab >= 4.3.5, <5",
     "ruff >=0.6.9, <1",
     "memory-profiler>=0.61.0",
     "jupyter-resource-usage>=1.1.0",

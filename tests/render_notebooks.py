@@ -48,6 +48,7 @@ SELECTORS = {
         "exec_busy": "div.jp-Notebook-ExecutionIndicator[data-status='busy']",
         "exec_idle": "div.jp-Notebook-ExecutionIndicator[data-status='idle']",
         "input_prompt": ".jp-InputArea-prompt",
+        "error_output": ".jp-OutputArea-output[data-mime-type='application/vnd.jupyter.stderr'], .jp-OutputArea-output .jp-RenderedText[data-mime-type='application/vnd.jupyter.stderr']",
     },
 }
 
@@ -79,8 +80,10 @@ def handle_file_changed_dialog(page: Page) -> None:
         pass
 
 
-def execute_cell_with_timing(page: Page, cell, run_index: int, timeout: int) -> float:
-    """Execute a single cell and return execution time."""
+def execute_cell_with_timing(
+    page: Page, cell, run_index: int, timeout: int
+) -> tuple[float, bool]:
+    """Execute a single cell and return (execution time, has_error)."""
     cell.wait_for(state="attached", timeout=CONFIG["timeouts"]["cell_attach"])
     cell.scroll_into_view_if_needed()
     page.wait_for_timeout(100)  # Reduced from 500ms to 100ms
@@ -106,13 +109,19 @@ def execute_cell_with_timing(page: Page, cell, run_index: int, timeout: int) -> 
             SELECTORS["notebook"]["input_prompt"]
         ).text_content()
         if execution_count and any(c.isdigit() for c in execution_count):
-            return time.time() - start_time
+            execution_time = time.time() - start_time
+            # Check for errors in the cell output
+            has_error = cell.locator(SELECTORS["notebook"]["error_output"]).count() > 0
+            return execution_time, has_error
         # If no execution count, it's a real timeout
         execution_time = time.time() - start_time
         logger.warning(f"⚠️  Cell {run_index + 1} timeout after {execution_time:.1f}s")
         raise
 
-    return time.time() - start_time
+    execution_time = time.time() - start_time
+    # Check for errors in the cell output
+    has_error = cell.locator(SELECTORS["notebook"]["error_output"]).count() > 0
+    return execution_time, has_error
 
 
 def setup_notebook_panel(page: Page, nb: str, base_timeout: int) -> int:
@@ -137,7 +146,8 @@ def setup_notebook_panel(page: Page, nb: str, base_timeout: int) -> int:
     ]
     if any(keyword in notebook_name for keyword in intensive_keywords):
         return min(900000, base_timeout * 5)
-    return min(base_timeout, 600000)  # 10 minutes absolute maximum
+    # Use the base_timeout directly (respects long-running timeout of 7200000ms = 2 hours)
+    return base_timeout
 
 
 def cleanup_memory(page: Page = None) -> None:
@@ -211,8 +221,8 @@ def restart_kernel_with_shutdown(page: Page) -> None:
 
 def run_all_code_cells(
     page: Page, idle_timeout: int, start_timeout: int = None
-) -> None:
-    """Execute all visible code cells in the notebook."""
+) -> bool:
+    """Execute all visible code cells in the notebook. Returns True if any cell had errors."""
     if start_timeout is None:
         start_timeout = CONFIG["timeouts"]["run_start"]
     page.wait_for_selector(
@@ -228,30 +238,38 @@ def run_all_code_cells(
         total = cells.count()
         if total == 0:
             logger.error("❌ No code cells found in notebook")
-            return
+            return True  # No cells is considered an error
     except Exception as e:
         logger.error(f"❌ Failed to find code cells: {e}")
-        return
+        return True  # Failed to find cells is an error
 
     logger.info(f"  ▶️  Running {total} code cells…")
     consecutive_failures = 0
     current_timeout = idle_timeout
+    has_any_errors = False
 
     for run_index in range(total):
         if consecutive_failures >= 3:
             logger.error(
                 f"❌ Aborting execution after {consecutive_failures} consecutive failures"
             )
+            has_any_errors = True
             break
 
         try:
             cell = cells.nth(run_index)
-            execution_time = execute_cell_with_timing(
+            execution_time, has_error = execute_cell_with_timing(
                 page, cell, run_index, current_timeout
             )
-            logger.info(
-                f"     → Code cell {run_index + 1}/{total}: Completed in {execution_time:.1f}s"
-            )
+            if has_error:
+                logger.error(
+                    f"     → Code cell {run_index + 1}/{total}: Completed in {execution_time:.1f}s ❌ WITH ERROR"
+                )
+                has_any_errors = True
+            else:
+                logger.info(
+                    f"     → Code cell {run_index + 1}/{total}: Completed in {execution_time:.1f}s"
+                )
             consecutive_failures = 0
 
         except Exception as e:
@@ -261,8 +279,13 @@ def run_all_code_cells(
                 raise
             logger.error(f"❌ Error in cell {run_index + 1}: {e}")
             consecutive_failures += 1
+            has_any_errors = True
 
-    logger.info("  💯 Run all cells completed")
+    if has_any_errors:
+        logger.warning("  ⚠️  Run all cells completed with errors")
+    else:
+        logger.info("  💯 Run all cells completed successfully")
+    return has_any_errors
 
 
 def cleanup_notebook(page: Page, nb: str) -> None:
@@ -285,8 +308,8 @@ def cleanup_notebook(page: Page, nb: str) -> None:
         logger.warning("  ⚠️ 'Close Tab' is not available, nothing to do")
 
 
-def run_notebook(nb: str, page: Page, idle_timeout: int) -> float:
-    """Open a notebook, restart kernel, run cells, save and close. Returns execution time."""
+def run_notebook(nb: str, page: Page, idle_timeout: int) -> tuple[float, bool]:
+    """Open a notebook, restart kernel, run cells, save and close. Returns (execution time, has_errors)."""
     logger.info(f"→ {nb}")
     nb_start_time = time.time()
     try:
@@ -303,7 +326,7 @@ def run_notebook(nb: str, page: Page, idle_timeout: int) -> float:
             restart_kernel_with_shutdown(page)
         except Exception:
             logger.warning(f"⚠️  Kernel restart failed for {nb}")
-        run_all_code_cells(page, idle_timeout=current_timeout)
+        has_errors = run_all_code_cells(page, idle_timeout=current_timeout)
 
         try:
             cleanup_notebook(page, nb)
@@ -313,10 +336,11 @@ def run_notebook(nb: str, page: Page, idle_timeout: int) -> float:
         cleanup_memory(page)
 
         nb_duration = time.time() - nb_start_time
+        status_icon = "❌" if has_errors else "✔"
         logger.info(
-            f"✔ {nb} (Duration: {int(nb_duration // 60)}m {int(nb_duration % 60)}s)"
+            f"{status_icon} {nb} (Duration: {int(nb_duration // 60)}m {int(nb_duration % 60)}s)"
         )
-        return nb_duration
+        return nb_duration, has_errors
 
     except Exception as e:
         error_msg = str(e)
@@ -392,10 +416,15 @@ def main() -> None:
                         page.set_default_timeout(180000)
                         page.set_extra_http_headers({"Cache-Control": "no-cache"})
 
-                        duration = run_notebook(nb, page, idle_timeout=run_idle_timeout)
-                        results.append(
-                            {"name": nb, "status": "COMPLETE", "duration": duration}
+                        duration, has_errors = run_notebook(
+                            nb, page, idle_timeout=run_idle_timeout
                         )
+                        status = "FAIL" if has_errors else "COMPLETE"
+                        results.append(
+                            {"name": nb, "status": status, "duration": duration}
+                        )
+                        if has_errors:
+                            failures.append(nb)
 
                 except Exception as e:
                     if "crash" in str(e).lower() or "target closed" in str(e).lower():

@@ -111,9 +111,7 @@ EXTRA_INDEX_URL="https://${ARTIFACTORY_USERNAME}:${ARTIFACTORY_API_KEY}@${DOMAIN
 
 # Add or update [tool.uv] section with extra-index-url
 if ! grep -q "\[tool\.uv\]" "$PYPROJECT_FILE"; then
-    echo "" >> "$PYPROJECT_FILE"
-    echo "[tool.uv]" >> "$PYPROJECT_FILE"
-    echo "extra-index-url = [\"${EXTRA_INDEX_URL}\"]" >> "$PYPROJECT_FILE"
+    printf "\n\n[tool.uv]\nextra-index-url = [\"${EXTRA_INDEX_URL}\"]" >> "$PYPROJECT_FILE"
 elif ! grep -q "extra-index-url" "$PYPROJECT_FILE"; then
     if [[ "$OSTYPE" == "darwin"* ]]; then
         sed -i '' "/\[tool\.uv\]/a\\

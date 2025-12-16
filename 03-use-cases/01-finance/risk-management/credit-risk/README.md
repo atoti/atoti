@@ -39,7 +39,7 @@
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> filter</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> statistical computation</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> date difference</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./xva">xva&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.11-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>filter</kbd>&nbsp;<kbd> switch</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;<kbd> source simulation</kbd>&nbsp;<kbd> shift</kbd>&nbsp;</td>
 </tr>
 <tr>

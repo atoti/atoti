@@ -33,7 +33,7 @@
 <td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./cvar-optimizer"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./cvar-optimizer"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;cvar-optimizer&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.11-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>custom widget</kbd>&nbsp;<kbd> nonlinear aggregation</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> endpoint</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> cube query</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>

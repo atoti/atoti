@@ -29,7 +29,7 @@
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./irrbb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./irrbb"><img src="https://img.shields.io/badge/🔒-Atoti-291A40" />&nbsp;irrbb&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.11-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> vector aggregation</kbd>&nbsp;<kbd> quantile</kbd>&nbsp;<kbd> session query</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> cube</kbd>&nbsp;<kbd> memory</kbd>&nbsp;</td>
 </tr>
 </table>

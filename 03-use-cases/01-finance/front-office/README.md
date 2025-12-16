@@ -29,15 +29,15 @@
     <td><b>Features</b></td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./cumulative-pnl">cumulative-pnl&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./cumulative-pnl">cumulative-pnl&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.11-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>where</kbd>&nbsp;<kbd> configuration</kbd>&nbsp;<kbd> cumulative aggregation</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> data type mapping</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> date bucket</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="1"><a href="./pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
+<td rowspan="1"><a href="./pnl-explained">pnl-explained&nbsp;</a></td><td rowspan="1"><img src="https://img.shields.io/badge/0.9.11-1C900C" alt="Latest version" /></td>
 <td rowspan="1"><kbd>configuration</kbd>&nbsp;<kbd> table join</kbd>&nbsp;<kbd> visualization</kbd>&nbsp;<kbd> dashboarding</kbd>&nbsp;<kbd> content persistence</kbd>&nbsp;<kbd> drill down</kbd>&nbsp;<kbd> roll up</kbd>&nbsp;<kbd> parameter simulation</kbd>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan="2"><a href="./real-time-risk">real-time-risk&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.10-1C900C" alt="Latest version" /></td>
+<td rowspan="2"><a href="./real-time-risk">real-time-risk&nbsp;</a></td><td rowspan="2"><img src="https://img.shields.io/badge/0.9.11-1C900C" alt="Latest version" /></td>
 <td rowspan="2"><kbd>kafka connector</kbd>&nbsp;<kbd> data load</kbd>&nbsp;<kbd> hierarchy manipulation</kbd>&nbsp;<kbd> memory configuration</kbd>&nbsp;<kbd> table load</kbd>&nbsp;<kbd> memory</kbd>&nbsp;<kbd> data ordering</kbd>&nbsp;<kbd> kafka connector</kbd>&nbsp;<kbd> local file</kbd>&nbsp;</td>
 </tr>
 <tr>

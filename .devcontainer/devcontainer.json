@@ -1,0 +1,35 @@
+{
+  "name": "Atoti Notebooks",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "21"
+    }
+  },
+  "postCreateCommand": "pip install uv && uv sync",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-toolsai.jupyter",
+        "ms-python.python",
+        "ms-toolsai.jupyter-renderers",
+        "charliermarsh.ruff"
+      ]
+    }
+  },
+  "forwardPorts": [9090, 9095, 9096],
+  "portsAttributes": {
+    "9090": {
+      "label": "Atoti UI (default)",
+      "onAutoForward": "notify"
+    },
+    "9095": {
+      "label": "Atoti UI (alt 1)",
+      "onAutoForward": "notify"
+    },
+    "9096": {
+      "label": "Atoti UI (alt 2)",
+      "onAutoForward": "notify"
+    }
+  }
+}

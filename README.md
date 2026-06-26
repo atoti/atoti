@@ -17,7 +17,9 @@
   <a href="https://www.linkedin.com/company/activeviam/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin"></a>
 </p>
 
-### 🔍 Overview  
+# Deprecation notice: The notebooks in this repository use Atoti Python SDK 0.9.11
+
+### 🔍 Overview
 
 Atoti is a Data Analytics platform with a best-in-class calculation engine, a visualization suite, and a real-time OLAP cube — all rolled into one. Atoti is made by [ActiveViam](https://www.activeviam.com/), which includes a free Community Edition.
 
